@@ -1,0 +1,25 @@
+prontera,143,179,3	script	Recorde	2_F_MAGICMASTER,{
+query_sql "SELECT COUNT(*) FROM `char` WHERE `online` = 1",.atl;
+ 
+mes "[^00BCBCRecorde^000000]";
+mes "Atualmente tem ^00BFFF"+.atl+"^000000 players online!";
+close;
+end;
+ 
+ 
+ 
+OnInit: waitingroom "["+$Onlinefld+"] Recorde Online ",0; end;
+ 
+OnPCLoginEvent:
+        query_sql "SELECT COUNT(*) FROM `char` Where `online`=1",.@e;
+        if(.@e > $Onlinefld)
+        {
+                announce "[ Recorde ] O recorde de [ "+$Onlinefld+" ] jogadores Online foi batido.",bc_all;
+                sleep 5000;
+                set $Onlinefld, .@e;
+                announce "[ Recorde ] Novo recorde é de [ "+$Onlinefld+" ] jogadores no momento.",bc_all;
+                delwaitingroom "Recorde";
+                waitingroom "["+$Onlinefld+"] Recorde Online ",0;
+        }
+end;
+}

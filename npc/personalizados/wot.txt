@@ -1,0 +1,257 @@
+arena_room,100,88,0	script	War of Treasure	2_F_MAGICMASTER,{
+
+//====================== Configurações do Npc ============================//
+// Nome do npc
+set @npc$,"[ ^6A5ACDWar of Treasure^000000 ]";
+
+// Level minimo da conta de gm do seu servidor
+set @lv,99;
+
+//====================== Não mecha daqui pra baixo ============================//
+
+if (getgmlevel() < @lv){
+mes @npc$;
+mes "Bem vindo à War of Treasure!";
+mes "O que você deveja fazer?";
+next;
+switch(select("Entrar na Wot:Informações:Sair"))
+{
+case 1:
+if(!getcharid(2)){
+mes @npc$;
+mes "Desculpe, mas você precisar estar em uma guild para entrar na WoT.";
+close;
+}
+if($ligou == 0){
+mes @npc$;
+mes "Desculpe, mas você não pode entrar enquanto a WoT estiver fechada.";
+close;
+}
+mes @npc$;
+mes "Tudo bem, te levarei até lá!";
+close2;
+warp "prt_are_in",97,30;
+end;
+
+case 2:
+mes @npc$;
+mes "WoT é um evento que ocorre algumas vezes ao dia. ";
+next;
+mes @npc$;
+mes "Quando o evento abrir, você deverá falar comigo para ser levado para um mapa especial.";
+next;
+mes @npc$;
+mes "Depois de 5 minutos o evento é fechado, e quem estiver no mapa, deverá batalhar até que os baús apareçam.";
+next;
+mes @npc$;
+mes "Quem quebrar os baús, receberá um prêmio a escolha do Administrador.";
+close;
+
+case 3:
+mes @npc$;
+mes "Tudo bem estarei aqui se precisar.";
+close;
+}
+}
+
+mes @npc$;
+mes "Bem vindo, "+strcharinfo(0)+"."; 
+mes "O que deseja fazer?";
+next;
+switch(select("Entrar na Wot:Manipular evento:Sair"))
+{
+	case 1:
+	mes @npc$;
+	mes "Tudo bem, te levarei até lá.";
+	close2;
+	warp "prt_are_in",97,30;
+
+	case 2:
+	mes @npc$;
+	mes "O que o senhor deseja fazer?";
+	next;
+	switch(select("Iniciar evento:Configurar premiação:Sair"))
+	{
+		case 1:
+		if($ligou == 0){
+		mes @npc$;
+		mes "O evento foi iniciado com sucesso.";
+		close2;
+		callsub EventoWOT;
+		end;
+		}
+
+		if($ligou == 1){
+		mes @npc$;
+		mes "O evento já foi iniciado.";
+		close;
+		}
+
+		case 2:	
+		mes @npc$;
+		mes "Deseja configurar a premiação da WoT?";
+		next;
+		switch(select("Sim:Não"))
+		{
+			case 1:
+			mes @npc$;
+			mes "Insira o ID do primeiro item que poderá ser dropado!";
+			input @id_wot;
+			next;
+			mes @npc$;
+			mes "Insira o ID do segundo item que poderá ser dropado!";
+			input @id_wot2;
+			next;
+			mes @npc$;
+			mes "Insira o ID do terceiro item que poderá ser dropado!";
+			input @id_wot3;
+			next;
+			mes @npc$;
+			mes "Insira o ID do quarto item que poderá ser dropado!";
+			input @id_wot4;
+			next;
+			mes @npc$;
+			mes "Insira o ID do quinto item que poderá ser dropado!";
+			input @id_wot5;
+			next;
+			mes @npc$;
+			mes "Você escolheu como prêmios:";
+			mes "1 "+getitemname(@id_wot);
+			mes "1 "+getitemname(@id_wot2);
+			mes "1 "+getitemname(@id_wot3);
+			mes "1 "+getitemname(@id_wot4);
+			mes "1 "+getitemname(@id_wot5);
+			close2;
+			set $item_wot,@id_wot;
+			set $item_wot2,@id_wot2;
+			set $item_wot3,@id_wot3;
+			set $item_wot4,@id_wot4;
+			set $item_wot5,@id_wot5;
+			end;
+	
+			case 2:
+			mes @npc$;
+			mes "Tudo bem, estarei aqui se precisar.";
+			close;
+		}
+
+		case 3:
+		mes @npc$;
+		mes "Tudo bem, estarei aqui se precisar.";
+		close;
+	}
+
+	case 3:
+	mes @npc$;
+	mes "Tudo bem, estarei aqui se precisar.";
+	close;
+}
+
+OnClock0100:
+//OnClock0300:
+//OnClock0600:
+OnClock0900:
+OnClock1200:
+OnClock1830:
+OnClock2210:
+EventoWOT:
+
+killmonsterall "prt_are_in";
+set $ligou,1;
+announce "O evento WOT será iniciado na Arena de izlude!!!",8;
+sleep 6000;
+announce "[War of Treasure] A WoT está aberta, vocês tem 5 minutos para entrar!",8;
+sleep 60000;
+announce "[War of Treasure] A WoT irá começar em 4 minutos!",8;
+sleep 60000;
+announce "[War of Treasure] A WoT irá começar em 3 minutos!",8;
+sleep 60000;
+announce "[War of Treasure] A WoT irá começar em 2 minutos!",8;
+sleep 60000;
+announce "[War of Treasure] A WoT irá começar em 1 minuto, corram!",8;
+sleep 60000;
+set $ligou,0;
+gvgon "prt_are_in";
+announce "[War of Treasure] A WoT começou, boa sorte à todos!",8;
+
+
+sleep 60000;
+announce "[War of Treasure] Os báus aparecerão em 5 minutos!",8;
+
+
+sleep 60000;
+mapannounce "prt_are_in","[War of Treasure] Os báus aparecerão em 4 minutos!",8;
+
+
+sleep 60000;
+mapannounce "prt_are_in","[War of Treasure] Os báus aparecerão em 3 minutos!",8;
+
+
+sleep 60000;
+mapannounce "prt_are_in","[War of Treasure] Os báus aparecerão em 2 minutos!",8;
+
+
+sleep 60000;
+mapannounce "prt_are_in","[War of Treasure] Os báus aparecerão em 1 minuto!",8;
+
+
+sleep 60000;
+announce "[War of Treasure] Os baús apareceram, quem irá pega-los?",8;
+monster "prt_are_in",178,140,"Baú do Tesouro",1324,1,"War of Treasure::OnThisMobDeath";
+monster "prt_are_in",22,89,"Baú do Tesouro",1324,1,"War of Treasure::OnThisMobDeath";
+mapannounce "prt_are_in","Todos serão teleportados em 1 minutos",8;
+sleep 60000;
+gvgoff "prt_are_in";	
+mapwarp "prt_are_in","arena_room",97,89;
+killmonsterall "prt_are_in";
+end;
+OnThisMobDeath:
+set @premio_wot, rand(1,5);
+if(@premio_wot == 1){
+set @GID,getcharid(2);
+getitem $item_wot,1;
+announce "O jogador [ "+strcharinfo(0)+" ] do clã [" + getguildname(.@GID) + "] acaba de destruir um dos baús!",bc_yellow; end;
+}
+if(@premio_wot == 2){
+set @GID,getcharid(2);
+getitem $item_wot,2;
+announce "O jogador [ "+strcharinfo(0)+" ] do clã [" + getguildname(.@GID) + "] acaba de destruir um dos baús!",bc_yellow; end;
+}
+if(@premio_wot == 3){
+set @GID,getcharid(2);
+getitem $item_wot,3;
+announce "O jogador [ "+strcharinfo(0)+" ] do clã [" + getguildname(.@GID) + "] acaba de destruir um dos baús!",bc_yellow; end;
+}
+if(@premio_wot == 4){
+set @GID,getcharid(2);
+getitem $item_wot,4;
+announce "O jogador [ "+strcharinfo(0)+" ] do clã [" + getguildname(.@GID) + "] acaba de destruir um dos baús!",bc_yellow; end;
+}
+if(@premio_wot == 5){
+set @GID,getcharid(2);
+getitem $item_wot,5;
+announce "O jogador [ "+strcharinfo(0)+" ] do clã [" + getguildname(.@GID) + "] acaba de destruir um dos baús!",bc_yellow; end;
+}
+
+// Variável para bom funcionamento.
+OnInit:
+set $ligou,0;
+end;
+}
+
+// Portais
+
+prt_are_in,55,13,0	warp	War Of Treasure2	1,1,prt_are_in,177,129
+prt_are_in,177,127,0	warp	War Of Treasure3	1,1,prt_are_in,57,13
+prt_are_in,21,75,0	warp	War Of Treasure4	1,1,prt_are_in,140,13
+prt_are_in,142,13,0	warp	War Of Treasure5	1,1,prt_are_in,21,77
+
+// Mapflag
+prt_are_in	mapflag	noloot
+prt_are_in	mapflag	nobranch
+prt_are_in	mapflag	nomemo
+prt_are_in	mapflag	nosave
+prt_are_in	mapflag	noteleport
+prt_are_in	mapflag	noreturn
+prt_are_in	mapflag	nowarp
+prt_are_in	mapflag	nowarpto

@@ -1,0 +1,33 @@
+﻿  grammar.c
+  libconfig.c
+  scanctx.c
+  scanner.c
+  strbuf.c
+  mutex.c
+  thread.c
+  account_sql.c
+  ipban_sql.c
+  login.c
+  loginlog_sql.c
+  mac.c
+  conf.c
+  core.c
+  console.c
+  db.c
+  ers.c
+  memmgr.c
+  md5calc.c
+  nullpo.c
+  random.c
+  showmsg.c
+  socket.c
+  sql.c
+  strlib.c
+  sysinfo.c
+  timer.c
+  utils.c
+  mt19937ar.c
+  Generating code
+  Finished generating code
+  login-server.vcxproj -> C:\Users\sabino\Desktop\Emulador\bRSabino\trunk\vcproj-14\..\login-server.exe
+  login-server.vcxproj -> ..\login-server.pdb (Full PDB)
