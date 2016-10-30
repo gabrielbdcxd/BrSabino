@@ -55,21 +55,21 @@ OnTouch:
 set @vendtalks$,"espadas de uma mão"; callfunc "npctalk"; end;
 }
 -	shop	esp1vipn	-1,1103:120,1106:20000,1109:30000,1111:60000,1114:65000,1118:25000,1120:-1,1125:34000,1124:100000,1127:59000,1128:65000
-sec_in02,72,140,6	script	Frederik#Espadas2	826,9,9,{
+sec_in02,134,176,6	script	Frederik#Espadas2	826,9,9,{
 set @vendspeaks$,"espadas pesadas"; set @dname$,"[^0000FFFrederik - Espadas Pesadas^000000]"; callfunc "npcspeak";
 if(getgroupid() >= 0) {callshop "esp2vipn",1; end;}
 OnTouch:
 set @vendtalks$,"espadas de duas mãos"; callfunc "npctalk"; end;
 }
 -	shop	esp2vipn	-1,1152:20000,1155:45000,1158:80000,1162:68000,1163:84000,1164:200000,1165:200000
-sec_in02,81,117,6	script	Cris Godrik#Adagas	87,9,9,{
+sec_in02,132,176,6	script	Cris Godrik#Adagas	87,9,9,{
 set @vendspeaks$,"adagas e facas"; set @dname$,"[^0000FFCris Godrik - Adagas^000000]"; callfunc "npcspeak";
 if(getgroupid() >= 0) {callshop "adagvipn",1; end;}
 OnTouch:
 set @vendtalks$,"adagas diversas"; callfunc "npctalk"; end;
 }
 -	shop	adagvipn	-1,1201:50,1204:1250,1207:2400,1211:-1,1214:-1,1217:-1,1220:43000,1226:49000,1251:-1,1253:-1,1255:40000
-sec_in02,152,204,6	script	Innus#Ninjas	730,9,9,{
+sec_in02,130,176,6	script	Innus#Ninjas	730,9,9,{
 set @vendspeaks$,"segredos ninja"; set @dname$,"[^0000FFInnus - Ninja^000000]"; callfunc "npcspeak";
 if(getgroupid() <= 0) {callshop "ninvipn",1; end;}
 if(getgroupid() >= 1) {callshop "ninvips",1; end;}
