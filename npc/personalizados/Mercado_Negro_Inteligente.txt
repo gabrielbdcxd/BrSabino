@@ -194,7 +194,7 @@ OnTouch:
 set @vendtalks$,"anéis"; callfunc "npctalk"; end;
 }
 -	shop	acesvipn	-1,2609:-1,2610:30000,2611:25000,2612:15000,2615:100000,2616:100000,2621:30000
-sec_in02,174,92,2	script	Fernando#Justiceiro	806,9,9,{
+sec_in02,151,153,2	script	Fernando#Justiceiro	806,9,9,{
 set @vendspeaks$,"armas de fogo e projéteis"; set @dname$,"[^0000FFFernando - Justiceiro^000000]"; callfunc "npcspeak";
 if(getgroupid() >= 1) {callshop "justvips",1; end;}
 if(getgroupid() == 0) {callshop "justvipn",1; end;}
@@ -203,7 +203,7 @@ set @vendtalks$,"armas e balas"; callfunc "npctalk"; end;
 }
 -	shop	justvips	-1,13200:-1,13201:-1,13202:-1,13203:-1,13204:-1,13205:-1,13206:-1,13207:-1,13102:20000,13103:30000,13104:48000,13105:58000,13106:100000,13100:4500,13101:14500,13150:3000,13151:17500,13152:27500,13153:23500,13155:32000,13156:56000,13154:12000,13158:130000,13159:140000,13157:80000,13160:110000,13161:120000,13162:230000
 -	shop	justvipn	-1,13200:-1,13201:-1,13202:-1,13102:20000,13104:48000,13106:100000,13100:4500,13150:3000,13151:17500,13153:23500,13155:32000,13156:56000,13154:12000,13158:130000,13157:80000,13160:110000
-sec_in02,184,112,2	script	Juliana#Pet	882,9,9,{
+sec_in02,152,170,2	script	Juliana#Pet	882,9,9,{
 set @vendspeaks$,"comidas para Pets"; set @dname$,"[^0000FFJuliana - PetShop^000000]"; callfunc "npcspeak";
 if(getgroupid() >= 0) {callshop "petvipn",1; end;}
 OnTouch:
