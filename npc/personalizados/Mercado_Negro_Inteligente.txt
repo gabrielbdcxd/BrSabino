@@ -78,49 +78,49 @@ set @vendtalks$,"itens para ninjas"; callfunc "npctalk"; end;
 }
 -	shop	ninvips	-1,7524:-1,7521:-1,7522:-1,7523:-1,13250:-1,13251:-1,13252:-1,13255:-1,13258:-1;13257:-1;13256:-1,13259:-1,13303:-1,13301:-1
 -	shop	ninvipn	-1,13250:-1,13251:-1,13252:-1,13255:-1,13258:-1;13257:-1;13256:-1,13259:-1,13303:-1,13301:-1
-sec_in02,36,140,6	script	Alexa Weth#Machados1	726,9,9,{
+sec_in02,143,148,6	script	Alexa Weth#Machados1	726,9,9,{
 set @vendspeaks$,"machados leves"; set @dname$,"[^0000FFAlexa Weth - Machados Leves^000000]"; callfunc "npcspeak";
 if(getgroupid() >= 0) {callshop "mac1vipn",1; end;}
 OnTouch:
 set @vendtalks$,"machados de uma mão"; callfunc "npctalk"; end;
 }
 -	shop	mac1vipn	-1,1301:800,1304:80000,1305:120000,1306:300000
-sec_in02,46,164,6	script	Oliver#Machados2	813,9,9,{
+sec_in02,141,148,6	script	Oliver#Machados2	813,9,9,{
 set @vendspeaks$,"machados pesados"; set @dname$,"[^0000FFOliver - Machados^000000]"; callfunc "npcspeak";
 if(getgroupid() >= 0) {callshop "mac2vipn",1; end;}
 OnTouch:
 set @vendtalks$,"machados de duas mãos"; callfunc "npctalk"; end;
 }
 -	shop	mac2vipn	-1,1351:60000,1355:75000,1358:55000,1361:80000,1363:300000,1364:300000,1368:500000,1369:300000
-sec_in02,267,272,6	script	Frâncis#Instrumentos	51,9,9,{
+sec_in02,139,148,6	script	Frâncis#Instrumentos	51,9,9,{
 set @vendspeaks$,"instrumentais"; set @dname$,"[^0000FFFrâncis - Instrumentos^000000]"; callfunc "npcspeak";
 if(getgroupid() >= 0) {callshop "instvipn",1; end;}
 OnTouch:
 set @vendtalks$,"instrumentos de som"; callfunc "npctalk"; end;
 }
 -	shop	instvipn	-1,1901:10000,1904:15000,1906:30000,1908:-1,1910:65000,1912:70000,1913:100000
-sec_in02,195,275,6	script	Cristine#Chicotes	815,9,9,{
+sec_in02,137,148,6	script	Cristine#Chicotes	815,9,9,{
 set @vendspeaks$,"chicotes"; set @dname$,"[^0000FFCristine - Chicotes^000000]"; callfunc "npcspeak";
 if(getgroupid() >= 0) {callshop "chivipn",1; end;}
 OnTouch:
 set @vendtalks$,"chicotes"; callfunc "npctalk"; end;
 }
 -	shop	chivipn	-1,1950:15000,1953:18000,1955:25000,1957:-1,1962:100000,1963:100000,1964:100000
-sec_in02,25,167,5	script	Kembridh#Lanças1	448,9,9,{
+sec_in02,135,148,6	script	Kembridh#Lanças1	448,9,9,{
 set @vendspeaks$,"lanças simples"; set @dname$,"[^0000FFKembridh - Lanças Leves^000000]"; callfunc "npcspeak";
 if(getgroupid() >= 0) {callshop "lan1vipn",1; end;}
 OnTouch:
 set @vendtalks$,"lanças de uma mão"; callfunc "npctalk"; end;
 }
 -	shop	lan1vipn	-1,1401:800,1404:11000,1407:26000,1411:50000,1413:300000,1414:300000
-sec_in02,66,171,2	script	Don Mike#Lanças2	119,9,9,{
+sec_in02,133,148,6	script	Don Mike#Lanças2	119,9,9,{
 set @vendspeaks$,"lanças pesadas"; set @dname$,"[^0000FFDon Mike - Lanças^000000]"; callfunc "npcspeak";
 if(getgroupid() >= 0) {callshop "lan2vipn",1; end;}
 OnTouch:
 set @vendtalks$,"lanças de duas mãos"; callfunc "npctalk"; end;
 }
 -	shop	lan2vipn	-1,1452:26000,1455:30000,1458:35000,1461:-1,1464:65000,1466:300000
-sec_in02,162,155,2	script	Felip#Maça	54,9,9,{
+sec_in02,131,148,6	script	Felip#Maça	54,9,9,{
 set @vendspeaks$,"maças"; set @dname$,"[^0000FFFelip - Maça^000000]"; callfunc "npcspeak";
 if(getgroupid() >= 0) {callshop "macevipn",1; end;}
 OnTouch:
