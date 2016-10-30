@@ -127,42 +127,42 @@ OnTouch:
 set @vendtalks$,"maças"; callfunc "npctalk"; end;
 }
 -	shop	macevipn	-1,1501:-1,1504:-1,1508:-1,1511:-1,1514:-1,1517:-1,1520:30000,1522:50000
-sec_in02,176,260,2	script	Emerico#LivrosGemas	64,9,9,{
+sec_in02,129,148,6	script	Emerico#LivrosGemas	64,9,9,{
 set @vendspeaks$,"livros e gemas"; set @dname$,"[^0000FFEmerico - Livros e Gemas^000000]"; callfunc "npcspeak";
 if(getgroupid() >= 0) {callshop "gemvipn",1; end;}
 OnTouch:
 set @vendtalks$,"livros e gemas"; callfunc "npctalk"; end;
 }
 -	shop	gemvipn	-1,1550:-1,1551:-1,1552:-1,1553:-1,1554:30000,1555:30000,1556:30000,1558:35000,715:-1,716:-1,717:-1
-sec_in02,134,251,2	script	Dona Anna#Cajados	846,9,9,{
+sec_in02,149,154,2	script	Dona Anna#Cajados	846,9,9,{
 set @vendspeaks$,"cajados"; set @dname$,"[^0000FFDona Anna - Cajados^000000]"; callfunc "npcspeak";
 if(getgroupid() >= 0) {callshop "cajvipn",1; end;}
 OnTouch:
 set @vendtalks$,"cajados"; callfunc "npctalk"; end;
 }
 -	shop	cajvipn	-1,1601:100,1605:2500,1608:10000,1611:-1,1613:50000,1614:55000,1615:100000
-sec_in02,297,128,2	script	Mery Linna#Arcos	66,9,9,{
+sec_in02,149,156,2	script	Mery Linna#Arcos	66,9,9,{
 set @vendspeaks$,"arcos e bestas"; set @dname$,"[^0000FFMery Linna - Arcos^000000]"; callfunc "npcspeak";
 if(getgroupid() >= 0) {callshop "arcsvipn",1; end;}
 OnTouch:
 set @vendtalks$,"arcos"; callfunc "npctalk"; end;
 }
 -	shop	arcsvipn	-1,1701:-1,1704:15000,1708:30000,1711:50000,1716:60000,1715:45000,1718:65000,1719:75000,1722:-1
-sec_in02,83,244,6	script	Gladius#Soqueiras	808,9,9,{
+sec_in02,149,158,2	script	Gladius#Soqueiras	808,9,9,{
 set @vendspeaks$,"soqueiras e punhos"; set @dname$,"[^0000FFGladius - Soqueiras^000000]"; callfunc "npcspeak";
 if(getgroupid() >= 0) {callshop "soqvipn",1; end;}
 OnTouch:
 set @vendtalks$,"soqueiras"; callfunc "npctalk"; end;
 }
 -	shop	soqvipn	-1,1801:-1,1804:-1,1806:-1,1808:65000,1810:-1,1812:-1,1814:500000
-sec_in02,148,123,2	script	Lord Spinna#Escudos	63,9,9,{
+sec_in02,149,160,2	script	Lord Spinna#Escudos	63,9,9,{
 set @vendspeaks$,"escudos"; set @dname$,"[^0000FFLord Spinna - Escudos^000000]"; callfunc "npcspeak";
 if(getgroupid() >= 0) {callshop "escdvipn",1; end;}
 OnTouch:
 set @vendtalks$,"escudos"; callfunc "npctalk"; end;
 }
 -	shop	escdvipn	-1,2101:500,2103:-1,2105:-1,2107:65000,2109:65000,2110:100000,2111:-1
-sec_in02,158,112,2	script	Sir. Pool#Armadura	52,9,9,{
+sec_in02,149,162,2	script	Sir. Pool#Armadura	52,9,9,{
 set @vendspeaks$,"armaduras e vestes"; set @dname$,"[^0000FFSir. Pool - Armaduras^000000]"; callfunc "npcspeak";
 if(getgroupid() >= 2) {callshop "armdvip2",1; end;}
 if(getgroupid() == 1) {callshop "armdvip1",1; end;}
@@ -173,21 +173,21 @@ set @vendtalks$,"armaduras"; callfunc "npctalk"; end;
 -	shop	armdvip2	-1,2340:120000,2367:120000,2336:120000,2318:120000,2372:120000,2302:50,2303:-1,2305:1000,2307:20000,2309:-1,2311:-1,2312:60000,2314:65000,2316:70000,2321:20000,2323:30000,2325:-1,2328:300000,2332:35000,2337:200000,2339:100000,2341:-1,2343:-1
 -	shop	armdvip1	-1,2302:50,2303:-1,2305:1000,2307:20000,2309:-1,2311:-1,2312:60000,2314:65000,2316:70000,2321:20000,2323:30000,2325:-1,2328:300000,2332:35000,2337:200000,2339:100000,2341:-1,2343:-1
 -	shop	armdvipn	-1,2302:50,2303:-1,2305:1000,2307:20000,2309:-1,2312:60000,2314:65000
-sec_in02,172,122,2	script	Sabrina#Sapatos	62,9,9,{
+sec_in02,149,164,2	script	Sabrina#Sapatos	62,9,9,{
 set @vendspeaks$,"sapatos e botas"; set @dname$,"[^0000FFSabrina - Sapatos^000000]"; callfunc "npcspeak";
 if(getgroupid() >= 0) {callshop "sapavipn",1; end;}
 OnTouch:
 set @vendtalks$,"sapatos"; callfunc "npctalk"; end;
 }
 -	shop	sapavipn	-1,2402:500,2404:-1,2405:18000,2411:50000,2413:100000
-sec_in02,186,152,2	script	Jofrey#Capas	50,9,9,{
+sec_in02,149,166,2	script	Jofrey#Capas	50,9,9,{
 set @vendspeaks$,"capas"; set @dname$,"[^0000FFJofrey - Capas^000000]"; callfunc "npcspeak";
 if(getgroupid() >= 0) {callshop "capavipn",1; end;}
 OnTouch:
 set @vendtalks$,"capas"; callfunc "npctalk"; end;
 }
 -	shop	capavipn	-1,2502:1000,2503:15000,2505:30000,2509:35000
-sec_in02,225,109,2	script	Carlota#Acessórios	70,9,9,{
+sec_in02,149,168,2	script	Carlota#Acessórios	70,9,9,{
 set @vendspeaks$,"acessórios"; set @dname$,"[^0000FFCarlota - Acessórios^000000]"; callfunc "npcspeak";
 if(getgroupid() >= 0) {callshop "acesvipn",1; end;}
 OnTouch:
