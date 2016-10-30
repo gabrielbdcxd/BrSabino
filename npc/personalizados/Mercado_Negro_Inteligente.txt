@@ -18,8 +18,8 @@
 //Escrito por slotGM
 amatsu,128,191,6	script	Sir Smith#Alquimia	46,9,9,{
 set @vendspeaks$,"alquimias"; set @dname$,"[^0000FFSir Smith - Alquimia^000000]"; callfunc "npcspeak";
-if(getgmlevel() <= 2) {callshop "alqvip2",1; end;}
-if(getgmlevel() >= 3) {callshop "alqvip3",1; end;}
+if(getgroupid() <= 0) {callshop "alqvip2",1; end;}
+if(getgroupid() >= 1) {callshop "alqvip3",1; end;}
 OnTouch:
 set @vendtalks$,"alquimia"; callfunc "npctalk"; end;
 }
@@ -27,22 +27,22 @@ set @vendtalks$,"alquimia"; callfunc "npctalk"; end;
 -	shop	alqvip3	-1,7128:-1,7127:-1,7129:-1,7130:-1,7131:-1,7132:-1,7133:-1,7134:-1,1092:-1,1093:-1,713:-1,7419:-1,7141:-1,7140:-1,547:10000
 amatsu,122,204,6	script	Allana#Pocoes	68,9,9,{
 set @vendspeaks$,"poções"; set @dname$,"[^0000FFAllana - Poções^000000]"; callfunc "npcspeak";
-if(getgmlevel() >= 0) {callshop "potvipn",1; end;}
+if(getgroupid() >= 0) {callshop "potvipn",1; end;}
 OnTouch:
 set @vendtalks$,"itens de cura"; callfunc "npctalk"; end;
 }
 -	shop	potvipn	-1,937:150,939:150,952:150,7033:150,501:200,502:300,503:500,504:-1,505:-1,506:100
 amatsu,54,233,2	script	Lillian#Especiarias	744,9,9,{
 set @vendspeaks$,"suplementos"; set @dname$,"[^0000FFLillian - Especiarias^000000]"; callfunc "npcspeak";
-if(getgmlevel() >= 0) {callshop "especvipn",1; end;}
+if(getgroupid() >= 0) {callshop "especvipn",1; end;}
 OnTouch:
 set @vendtalks$,"especiarias diversas"; callfunc "npctalk"; end;
 }
 -	shop	especvipn	-1,645:800,656:-1,657:-1,601:60,602:-1,605:-1,606:-1,12019:5000
 amatsu,283,142,6	script	John#Flechas	732,9,9,{
 set @vendspeaks$,"flechas"; set @dname$,"[^0000FFJohn - Flechas^000000]"; callfunc "npcspeak";
-if(getgmlevel() >= 3) {callshop "flevips",1; end;}
-if(getgmlevel() <= 2) {callshop "flevipn",1; end;}
+if(getgroupid() >= 3) {callshop "flevips",1; end;}
+if(getgroupid() <= 2) {callshop "flevipn",1; end;}
 OnTouch:
 set @vendtalks$,"flechas"; callfunc "npctalk"; end;
 }
@@ -50,29 +50,29 @@ set @vendtalks$,"flechas"; callfunc "npctalk"; end;
 -	shop	flevips	-1,1065:250,1750:-1,1770:-1,1751:-1,1752:-1,1753:-1,1754:-1,1755:-1,1756:-1,1757:-1,1758:-1,1759:-1,1760:-1,1761:-1,1762:-1,1763:-1,1764:-1,1765:-1,1766:-1,1767:-1,1768:-1,1769:-1,12004:-1,12005:1000,12006:1500,12007:15000,12008:1000,12009:1000,12010:1000,12011:1000,12012:1000,12013:1000,12014:1000,12015:1000
 amatsu,85,159,6	script	Carl#Espadas1	52,9,9,{
 set @vendspeaks$,"espadas leves"; set @dname$,"[^0000FFCarl - Espadas Leves^000000]"; callfunc "npcspeak";
-if(getgmlevel() >= 0) {callshop "esp1vipn",1; end;}
+if(getgroupid() >= 0) {callshop "esp1vipn",1; end;}
 OnTouch:
 set @vendtalks$,"espadas de uma mão"; callfunc "npctalk"; end;
 }
 -	shop	esp1vipn	-1,1103:120,1106:20000,1109:30000,1111:60000,1114:65000,1118:25000,1120:-1,1125:34000,1124:100000,1127:59000,1128:65000
 amatsu,72,140,6	script	Frederik#Espadas2	826,9,9,{
 set @vendspeaks$,"espadas pesadas"; set @dname$,"[^0000FFFrederik - Espadas Pesadas^000000]"; callfunc "npcspeak";
-if(getgmlevel() >= 0) {callshop "esp2vipn",1; end;}
+if(getgroupid() >= 0) {callshop "esp2vipn",1; end;}
 OnTouch:
 set @vendtalks$,"espadas de duas mãos"; callfunc "npctalk"; end;
 }
 -	shop	esp2vipn	-1,1152:20000,1155:45000,1158:80000,1162:68000,1163:84000,1164:200000,1165:200000
 amatsu,81,117,6	script	Cris Godrik#Adagas	87,9,9,{
 set @vendspeaks$,"adagas e facas"; set @dname$,"[^0000FFCris Godrik - Adagas^000000]"; callfunc "npcspeak";
-if(getgmlevel() >= 0) {callshop "adagvipn",1; end;}
+if(getgroupid() >= 0) {callshop "adagvipn",1; end;}
 OnTouch:
 set @vendtalks$,"adagas diversas"; callfunc "npctalk"; end;
 }
 -	shop	adagvipn	-1,1201:50,1204:1250,1207:2400,1211:-1,1214:-1,1217:-1,1220:43000,1226:49000,1251:-1,1253:-1,1255:40000
 amatsu,152,204,6	script	Innus#Ninjas	730,9,9,{
 set @vendspeaks$,"segredos ninja"; set @dname$,"[^0000FFInnus - Ninja^000000]"; callfunc "npcspeak";
-if(getgmlevel() <= 1) {callshop "ninvipn",1; end;}
-if(getgmlevel() >= 2) {callshop "ninvips",1; end;}
+if(getgroupid() <= 1) {callshop "ninvipn",1; end;}
+if(getgroupid() >= 2) {callshop "ninvips",1; end;}
 OnTouch:
 set @vendtalks$,"itens para ninjas"; callfunc "npctalk"; end;
 }
@@ -80,93 +80,93 @@ set @vendtalks$,"itens para ninjas"; callfunc "npctalk"; end;
 -	shop	ninvipn	-1,13250:-1,13251:-1,13252:-1,13255:-1,13258:-1;13257:-1;13256:-1,13259:-1,13303:-1,13301:-1
 amatsu,36,140,6	script	Alexa Weth#Machados1	726,9,9,{
 set @vendspeaks$,"machados leves"; set @dname$,"[^0000FFAlexa Weth - Machados Leves^000000]"; callfunc "npcspeak";
-if(getgmlevel() >= 0) {callshop "mac1vipn",1; end;}
+if(getgroupid() >= 0) {callshop "mac1vipn",1; end;}
 OnTouch:
 set @vendtalks$,"machados de uma mão"; callfunc "npctalk"; end;
 }
 -	shop	mac1vipn	-1,1301:800,1304:80000,1305:120000,1306:300000
 amatsu,46,164,6	script	Oliver#Machados2	813,9,9,{
 set @vendspeaks$,"machados pesados"; set @dname$,"[^0000FFOliver - Machados^000000]"; callfunc "npcspeak";
-if(getgmlevel() >= 0) {callshop "mac2vipn",1; end;}
+if(getgroupid() >= 0) {callshop "mac2vipn",1; end;}
 OnTouch:
 set @vendtalks$,"machados de duas mãos"; callfunc "npctalk"; end;
 }
 -	shop	mac2vipn	-1,1351:60000,1355:75000,1358:55000,1361:80000,1363:300000,1364:300000,1368:500000,1369:300000
 amatsu,267,272,6	script	Frâncis#Instrumentos	51,9,9,{
 set @vendspeaks$,"instrumentais"; set @dname$,"[^0000FFFrâncis - Instrumentos^000000]"; callfunc "npcspeak";
-if(getgmlevel() >= 0) {callshop "instvipn",1; end;}
+if(getgroupid() >= 0) {callshop "instvipn",1; end;}
 OnTouch:
 set @vendtalks$,"instrumentos de som"; callfunc "npctalk"; end;
 }
 -	shop	instvipn	-1,1901:10000,1904:15000,1906:30000,1908:-1,1910:65000,1912:70000,1913:100000
 amatsu,195,275,6	script	Cristine#Chicotes	815,9,9,{
 set @vendspeaks$,"chicotes"; set @dname$,"[^0000FFCristine - Chicotes^000000]"; callfunc "npcspeak";
-if(getgmlevel() >= 0) {callshop "chivipn",1; end;}
+if(getgroupid() >= 0) {callshop "chivipn",1; end;}
 OnTouch:
 set @vendtalks$,"chicotes"; callfunc "npctalk"; end;
 }
 -	shop	chivipn	-1,1950:15000,1953:18000,1955:25000,1957:-1,1962:100000,1963:100000,1964:100000
 amatsu,25,167,5	script	Kembridh#Lanças1	448,9,9,{
 set @vendspeaks$,"lanças simples"; set @dname$,"[^0000FFKembridh - Lanças Leves^000000]"; callfunc "npcspeak";
-if(getgmlevel() >= 0) {callshop "lan1vipn",1; end;}
+if(getgroupid() >= 0) {callshop "lan1vipn",1; end;}
 OnTouch:
 set @vendtalks$,"lanças de uma mão"; callfunc "npctalk"; end;
 }
 -	shop	lan1vipn	-1,1401:800,1404:11000,1407:26000,1411:50000,1413:300000,1414:300000
 amatsu,66,171,2	script	Don Mike#Lanças2	119,9,9,{
 set @vendspeaks$,"lanças pesadas"; set @dname$,"[^0000FFDon Mike - Lanças^000000]"; callfunc "npcspeak";
-if(getgmlevel() >= 0) {callshop "lan2vipn",1; end;}
+if(getgroupid() >= 0) {callshop "lan2vipn",1; end;}
 OnTouch:
 set @vendtalks$,"lanças de duas mãos"; callfunc "npctalk"; end;
 }
 -	shop	lan2vipn	-1,1452:26000,1455:30000,1458:35000,1461:-1,1464:65000,1466:300000
 amatsu,162,155,2	script	Felip#Maça	54,9,9,{
 set @vendspeaks$,"maças"; set @dname$,"[^0000FFFelip - Maça^000000]"; callfunc "npcspeak";
-if(getgmlevel() >= 0) {callshop "macevipn",1; end;}
+if(getgroupid() >= 0) {callshop "macevipn",1; end;}
 OnTouch:
 set @vendtalks$,"maças"; callfunc "npctalk"; end;
 }
 -	shop	macevipn	-1,1501:-1,1504:-1,1508:-1,1511:-1,1514:-1,1517:-1,1520:30000,1522:50000
 amatsu,176,260,2	script	Emerico#LivrosGemas	64,9,9,{
 set @vendspeaks$,"livros e gemas"; set @dname$,"[^0000FFEmerico - Livros e Gemas^000000]"; callfunc "npcspeak";
-if(getgmlevel() >= 0) {callshop "gemvipn",1; end;}
+if(getgroupid() >= 0) {callshop "gemvipn",1; end;}
 OnTouch:
 set @vendtalks$,"livros e gemas"; callfunc "npctalk"; end;
 }
 -	shop	gemvipn	-1,1550:-1,1551:-1,1552:-1,1553:-1,1554:30000,1555:30000,1556:30000,1558:35000,715:-1,716:-1,717:-1
 amatsu,134,251,2	script	Dona Anna#Cajados	846,9,9,{
 set @vendspeaks$,"cajados"; set @dname$,"[^0000FFDona Anna - Cajados^000000]"; callfunc "npcspeak";
-if(getgmlevel() >= 0) {callshop "cajvipn",1; end;}
+if(getgroupid() >= 0) {callshop "cajvipn",1; end;}
 OnTouch:
 set @vendtalks$,"cajados"; callfunc "npctalk"; end;
 }
 -	shop	cajvipn	-1,1601:100,1605:2500,1608:10000,1611:-1,1613:50000,1614:55000,1615:100000
 amatsu,297,128,2	script	Mery Linna#Arcos	66,9,9,{
 set @vendspeaks$,"arcos e bestas"; set @dname$,"[^0000FFMery Linna - Arcos^000000]"; callfunc "npcspeak";
-if(getgmlevel() >= 0) {callshop "arcsvipn",1; end;}
+if(getgroupid() >= 0) {callshop "arcsvipn",1; end;}
 OnTouch:
 set @vendtalks$,"arcos"; callfunc "npctalk"; end;
 }
 -	shop	arcsvipn	-1,1701:-1,1704:15000,1708:30000,1711:50000,1716:60000,1715:45000,1718:65000,1719:75000,1722:-1
 amatsu,83,244,6	script	Gladius#Soqueiras	808,9,9,{
 set @vendspeaks$,"soqueiras e punhos"; set @dname$,"[^0000FFGladius - Soqueiras^000000]"; callfunc "npcspeak";
-if(getgmlevel() >= 0) {callshop "soqvipn",1; end;}
+if(getgroupid() >= 0) {callshop "soqvipn",1; end;}
 OnTouch:
 set @vendtalks$,"soqueiras"; callfunc "npctalk"; end;
 }
 -	shop	soqvipn	-1,1801:-1,1804:-1,1806:-1,1808:65000,1810:-1,1812:-1,1814:500000
 amatsu,148,123,2	script	Lord Spinna#Escudos	63,9,9,{
 set @vendspeaks$,"escudos"; set @dname$,"[^0000FFLord Spinna - Escudos^000000]"; callfunc "npcspeak";
-if(getgmlevel() >= 0) {callshop "escdvipn",1; end;}
+if(getgroupid() >= 0) {callshop "escdvipn",1; end;}
 OnTouch:
 set @vendtalks$,"escudos"; callfunc "npctalk"; end;
 }
 -	shop	escdvipn	-1,2101:500,2103:-1,2105:-1,2107:65000,2109:65000,2110:100000,2111:-1
 amatsu,158,112,2	script	Sir. Pool#Armadura	52,9,9,{
 set @vendspeaks$,"armaduras e vestes"; set @dname$,"[^0000FFSir. Pool - Armaduras^000000]"; callfunc "npcspeak";
-if(getgmlevel() >= 2) {callshop "armdvip2",1; end;}
-if(getgmlevel() == 1) {callshop "armdvip1",1; end;}
-if(getgmlevel() == 0) {callshop "armdvipn",1; end;}
+if(getgroupid() >= 2) {callshop "armdvip2",1; end;}
+if(getgroupid() == 1) {callshop "armdvip1",1; end;}
+if(getgroupid() == 0) {callshop "armdvipn",1; end;}
 OnTouch:
 set @vendtalks$,"armaduras"; callfunc "npctalk"; end;
 }
@@ -175,29 +175,29 @@ set @vendtalks$,"armaduras"; callfunc "npctalk"; end;
 -	shop	armdvipn	-1,2302:50,2303:-1,2305:1000,2307:20000,2309:-1,2312:60000,2314:65000
 amatsu,172,122,2	script	Sabrina#Sapatos	62,9,9,{
 set @vendspeaks$,"sapatos e botas"; set @dname$,"[^0000FFSabrina - Sapatos^000000]"; callfunc "npcspeak";
-if(getgmlevel() >= 0) {callshop "sapavipn",1; end;}
+if(getgroupid() >= 0) {callshop "sapavipn",1; end;}
 OnTouch:
 set @vendtalks$,"sapatos"; callfunc "npctalk"; end;
 }
 -	shop	sapavipn	-1,2402:500,2404:-1,2405:18000,2411:50000,2413:100000
 amatsu,186,152,2	script	Jofrey#Capas	50,9,9,{
 set @vendspeaks$,"capas"; set @dname$,"[^0000FFJofrey - Capas^000000]"; callfunc "npcspeak";
-if(getgmlevel() >= 0) {callshop "capavipn",1; end;}
+if(getgroupid() >= 0) {callshop "capavipn",1; end;}
 OnTouch:
 set @vendtalks$,"capas"; callfunc "npctalk"; end;
 }
 -	shop	capavipn	-1,2502:1000,2503:15000,2505:30000,2509:35000
 amatsu,225,109,2	script	Carlota#Acessórios	70,9,9,{
 set @vendspeaks$,"acessórios"; set @dname$,"[^0000FFCarlota - Acessórios^000000]"; callfunc "npcspeak";
-if(getgmlevel() >= 0) {callshop "acesvipn",1; end;}
+if(getgroupid() >= 0) {callshop "acesvipn",1; end;}
 OnTouch:
 set @vendtalks$,"anéis"; callfunc "npctalk"; end;
 }
 -	shop	acesvipn	-1,2609:-1,2610:30000,2611:25000,2612:15000,2615:100000,2616:100000,2621:30000
 amatsu,174,92,2	script	Fernando#Justiceiro	806,9,9,{
 set @vendspeaks$,"armas de fogo e projéteis"; set @dname$,"[^0000FFFernando - Justiceiro^000000]"; callfunc "npcspeak";
-if(getgmlevel() >= 1) {callshop "justvips",1; end;}
-if(getgmlevel() == 0) {callshop "justvipn",1; end;}
+if(getgroupid() >= 1) {callshop "justvips",1; end;}
+if(getgroupid() == 0) {callshop "justvipn",1; end;}
 OnTouch:
 set @vendtalks$,"armas e balas"; callfunc "npctalk"; end;
 }
@@ -205,7 +205,7 @@ set @vendtalks$,"armas e balas"; callfunc "npctalk"; end;
 -	shop	justvipn	-1,13200:-1,13201:-1,13202:-1,13102:20000,13104:48000,13106:100000,13100:4500,13150:3000,13151:17500,13153:23500,13155:32000,13156:56000,13154:12000,13158:130000,13157:80000,13160:110000
 amatsu,184,112,2	script	Juliana#Pet	882,9,9,{
 set @vendspeaks$,"comidas para Pets"; set @dname$,"[^0000FFJuliana - PetShop^000000]"; callfunc "npcspeak";
-if(getgmlevel() >= 0) {callshop "petvipn",1; end;}
+if(getgroupid() >= 0) {callshop "petvipn",1; end;}
 OnTouch:
 set @vendtalks$,"alimentos para Pets"; callfunc "npctalk"; end;
 }
