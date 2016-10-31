@@ -1,4 +1,4 @@
-prontera,143,179,3	script	Recorde	2_F_MAGICMASTER,{
+prontera,143,179,3	script	Sabrina	667,{
 query_sql "SELECT COUNT(*) FROM `char` WHERE `online` = 1",.atl;
  
 mes "[^00BCBCRecorde^000000]";
