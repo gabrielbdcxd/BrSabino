@@ -31,4 +31,4 @@
 //guild_vs5,0,0,0	warp	warp4	0,0,hoge,0,0
 //guild_vs5,0,0,0	warp	warp4	0,0,hoge,0,0
 //guild_vs5,0,0,0	warp	warp4	0,0,hoge,0,0
-sec_in02,127,162,0	warp	warp4	1,1,prt_ini,160,52
+sec_in02,127,162,0	warp	warp4	1,1,prt_in,160,52
