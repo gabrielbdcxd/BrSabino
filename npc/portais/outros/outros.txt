@@ -10,14 +10,22 @@
 //= Split off npc_warp.txt
 //============================================================
 sec_in02,127,162,0	warp	warp4	1,1,prt_in,160,52
-guild_room,334,86,0	warp	warp4	0,0,prontera,0,0
-guild_room,334,88,0	warp	warp4	0,0,prontera,0,0
-guild_room,334,90,0	warp	warp4	0,0,prontera,0,0
-guild_room,334,92,0	warp	warp4	0,0,prontera,0,0
-guild_room,336,86,0	warp	warp4	0,0,prontera,0,0
-guild_room,336,88,0	warp	warp4	0,0,prontera,0,0
-guild_room,336,90,0	warp	warp4	0,0,prontera,0,0
-guild_room,336,92,0	warp	warp4	0,0,prontera,0,0
+guild_room,334,86,0	warp	warp4	0,0,guild_room,332,86
+guild_room,334,87,0	warp	warp4	0,0,guild_room,332,87
+guild_room,334,88,0	warp	warp4	0,0,guild_room,332,88
+guild_room,334,89,0	warp	warp4	0,0,guild_room,332,89
+guild_room,334,90,0	warp	warp4	0,0,guild_room,332,90
+guild_room,334,91,0	warp	warp4	0,0,guild_room,332,91
+guild_room,334,92,0	warp	warp4	0,0,guild_room,332,92
+
+guild_room,336,86,0	warp	warp4	0,0,guild_room,338,86
+guild_room,336,87,0	warp	warp4	0,0,guild_room,338,87
+guild_room,336,88,0	warp	warp4	0,0,guild_room,338,88
+guild_room,336,89,0	warp	warp4	0,0,guild_room,338,89
+guild_room,336,90,0	warp	warp4	0,0,guild_room,338,90
+guild_room,336,91,0	warp	warp4	0,0,guild_room,338,91
+guild_room,336,92,0	warp	warp4	0,0,guild_room,338,92
+
 //guild_vs1,0,0,0	warp	warp4	0,0,prontera,0,0
 //guild_vs1,0,0,0	warp	warp4	0,0,prontera,0,0
 //guild_vs1,0,0,0	warp	warp4	0,0,prontera,0,0
