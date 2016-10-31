@@ -1,4 +1,4 @@
-prontera, 149, 193, 4	script	Yasmin#script	2_F_MAGICMASTER,{
+sec_in02, 166, 169, 4	script	Yasmin#script	2_F_MAGICMASTER,{
  
 //====== Configurações =======================================
 set @npc$,"[^FF7F24Sistema Vip^000000]"; // Nome do npc

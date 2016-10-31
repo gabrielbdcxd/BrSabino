@@ -123,7 +123,7 @@ PRIMARY KEY ( `account_hourly` )
 }
 
 // --> OBS.: CUIDADO COM A HABILIDADE DESCONTO
-prontera,154,196,5	script	Fidelidade	2_F_MAGICMASTER,{
+sec_in02,161,162,5	script	Fidelidade	2_F_MAGICMASTER,{
 
 	function	showtimeonline	{ set .@r$, ( getarg(0) < 1? "" : "^db4b1e"+getarg(0)+"^000000 hora"+( getarg(0) > 1? "s" : "")+" e " )+"^db4b1e"+(getarg(1)%60)+"^000000 minuto"+(getarg(1)%60 < 2? "" : "s");
 		return .@r$;

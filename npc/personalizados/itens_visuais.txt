@@ -23,7 +23,7 @@
 //	or has card[Mhalicot]
 //	Note: You must apply the patch in order to use this script
 //============================================================
-prontera,128,200,6	script	Arlequim_dos_Visuais	-1,{
+sec_in02,166,157,6	script	Arlequim_dos_Visuais	-1,{
 	mes "[Arlequim]";
 	if(countitem(7180) < 1){
 	mes"você precisa do ticket de evento,";
@@ -159,4 +159,4 @@ prontera,128,200,6	script	Arlequim_dos_Visuais	-1,{
 // --------------------------------------------------------------------------
 // Use duplicates to put your npc on different cities
 // --------------------------------------------------------------------------
-prontera,139,183,6	duplicate(Arlequim_dos_Visuais)	Arlequim dos Visuais#1	4_M_PIERROT
+sec_in02,166,157,1	duplicate(Arlequim_dos_Visuais)	Arlequim dos Visuais#1	4_M_PIERROT

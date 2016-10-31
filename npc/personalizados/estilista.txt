@@ -22,7 +22,7 @@
 // | 2.0 - Adicionado sistema de Ticket e VIP               |
 // \_______________________________________________________/
 
-prontera,170,180,1	script	Estilista	2_M_DYEINGER,{
+sec_in02,166,154,1	script	Estilista	2_M_DYEINGER,{
 
 //==============================================================
 //= Configurações do NPC

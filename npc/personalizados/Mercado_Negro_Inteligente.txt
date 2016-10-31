@@ -224,3 +224,24 @@ mes .@speaksn$[.@msgn];
 if(select("- Sim. Mostre.:- Não. Obrigad"+(Sex? "o":"a")+".") == 2) {close; end;}
 return;
 }
+
+prontera,164,173,0	script	Mercado Negro	57,{
+
+mes ""+$mercadoname$+"";
+mes "Olá, Gostaria de ir a";
+mes "central das lojas de prontera?";
+next;
+switch( select("Sim, me leve até lá.","Não, talvez outra hora")){
+	case 1:
+		mes ""+$mercadoname$+"";
+		mes "Ok, Vamos lá";
+		next;
+		close2;
+		warp "sec_in02",131,162;
+		end;
+	case 2:
+		mes ""+$mercadoname$+"";
+		mes "Volte quando precisar.";
+		close;
+}
+}

@@ -801,6 +801,7 @@ louyang,226,106,4	duplicate(PM_source)	[PvP] Arena#10	4_F_JOB_BLACKSMITH
 ayothaya,155,121,4	duplicate(PM_source)	[PvP] Arena#11	4_F_JOB_BLACKSMITH
 hugel,87,164,4	duplicate(PM_source)	[PvP] Arena#12	4_F_JOB_BLACKSMITH
 moscovia,209,190,5	duplicate(PM_source)	[PvP] Arena#13	4_F_JOB_BLACKSMITH
+sec_in02,144,155,4	duplicate(PM_source)	[PvP] Arena#14	4_F_JOB_BLACKSMITH
 //================== WOE =====================
 
 //Necessário para ativar o sistema de contagem dos pontos na woe.
