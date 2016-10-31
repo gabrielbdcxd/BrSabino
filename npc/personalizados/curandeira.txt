@@ -1,14 +1,13 @@
 prontera,162,193,4	script	Curandeira		936,{
  
-set .@Price, 5000; // PreÃ§o a ser cobrado, 0 para desabilitar esta funÃ§Ã£o.
-set .@Delay, 60; // Tempo em segundos de restriÃ§Ã£o de uso apÃ³s uso.
-set .@Buffs, 1; // Habilitar Buffs? 0: NÃ£o / 1: Sim
+set .@Price, 5000; // Preço a ser cobrado, 0 para desabilitar esta função.
+set .@Delay, 60; // Tempo em segundos de restrição de uso após uso.
+set .@Buffs, 1; // Habilitar Buffs? 0: Não / 1: Sim
  
 if( healer_delay > gettimetick(2) )
-dispbottom "VocÃª deve aguardar " + .@Delay + " segundos para utilizar a cura novamente!";
+dispbottom "Você deve aguardar " + .@Delay + " segundos para utilizar a cura novamente!";
 else if( .@Price && Zeny < .@Price ){
-dispbottom "Você não tem " + .@Price + " Zenys para pagar minhas bençãos!";
-        percentheal 70, 60;
+dispbottom "Voc??tem " + .@Price + " Zenys para pagar minhas bençoes!";
 		}
 
 else {
