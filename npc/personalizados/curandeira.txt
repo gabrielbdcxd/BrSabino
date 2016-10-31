@@ -15,12 +15,16 @@ if( .@Buffs )
         {
 	sc_start 32,240000,10;
 	sc_start 30,240000,10;
-	sc_start SC_FOOD_STR,240000,10;
-	sc_start SC_FOOD_AGI,240000,10;
-	sc_start SC_FOOD_VIT,240000,10;
-	sc_start SC_FOOD_INT,240000,10;
-	sc_start SC_FOOD_DEX,240000,10;
-	sc_start SC_FOOD_LUK,240000,10;
+//	sc_start SC_FOOD_STR,240000,10;
+//	sc_start SC_FOOD_AGI,240000,10;
+//	sc_start SC_FOOD_VIT,240000,10;
+//	sc_start SC_FOOD_INT,240000,10;
+//	sc_start SC_FOOD_DEX,240000,10;
+//	sc_start SC_FOOD_LUK,240000,10;
+	sc_start SC_MAGNIFICAT,240000,10;
+	sc_start SC_IMPOSITIO,140000,10;
+	sc_start SC_GLORIA,30000,5;
+	sc_start SC_ANGELUS,240000,10;
         }
         specialeffect2 313;
         percentheal 100, 100; 
