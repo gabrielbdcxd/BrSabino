@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: 29-Out-2016 às 11:07
+-- Generation Time: 09-Nov-2016 às 14:06
 -- Versão do servidor: 5.7.12
 -- PHP Version: 5.6.21
 
@@ -52,7 +52,7 @@ CREATE TABLE `acc_reg_num_db` (
 --
 
 INSERT INTO `acc_reg_num_db` (`account_id`, `key`, `index`, `value`) VALUES
-(2000000, '#Check', 0, 1);
+(2000000, '#Check', 0, 2);
 
 -- --------------------------------------------------------
 
@@ -220,7 +220,7 @@ CREATE TABLE `char` (
 --
 
 INSERT INTO `char` (`char_id`, `account_id`, `char_num`, `name`, `class`, `base_level`, `job_level`, `base_exp`, `job_exp`, `zeny`, `str`, `agi`, `vit`, `int`, `dex`, `luk`, `max_hp`, `hp`, `max_sp`, `sp`, `status_point`, `skill_point`, `option`, `karma`, `manner`, `party_id`, `guild_id`, `pet_id`, `homun_id`, `elemental_id`, `hair`, `hair_color`, `clothes_color`, `body`, `weapon`, `shield`, `head_top`, `head_mid`, `head_bottom`, `robe`, `last_map`, `last_x`, `last_y`, `save_map`, `save_x`, `save_y`, `partner_id`, `online`, `father`, `mother`, `child`, `fame`, `rename`, `delete_date`, `slotchange`, `char_opt`, `font`, `unban_time`, `uniqueitem_counter`, `sex`, `hotkey_rowshift`) VALUES
-(150000, 2000000, 0, 'Sabino', 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 40, 40, 11, 11, 48, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'prontera', 151, 182, 'new_1-1', 53, 111, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'U', 0);
+(150000, 2000000, 0, 'Sabino', 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 40, 40, 11, 11, 48, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'prontera', 155, 177, 'new_1-1', 53, 111, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'U', 0);
 
 -- --------------------------------------------------------
 
@@ -251,7 +251,8 @@ CREATE TABLE `charlog` (
 
 INSERT INTO `charlog` (`time`, `char_msg`, `account_id`, `char_id`, `char_num`, `name`, `str`, `agi`, `vit`, `INT`, `dex`, `luk`, `hair`, `hair_color`) VALUES
 ('2016-10-29 09:02:16', 'make new char', 2000000, 150000, 0, 'Sabino', 1, 1, 1, 1, 1, 1, 1, 0),
-('2016-10-29 09:02:17', 'char select', 2000000, 150000, 0, 'Sabino', 0, 0, 0, 0, 0, 0, 0, 0);
+('2016-10-29 09:02:17', 'char select', 2000000, 150000, 0, 'Sabino', 0, 0, 0, 0, 0, 0, 0, 0),
+('2016-11-09 11:31:23', 'char select', 2000000, 150000, 0, 'Sabino', 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -570,7 +571,7 @@ CREATE TABLE `hourly_points` (
 --
 
 INSERT INTO `hourly_points` (`account_hourly`, `online`, `points`, `minute`) VALUES
-(2000000, 0, 0, 1);
+(2000000, 0, 0, 2);
 
 -- --------------------------------------------------------
 
@@ -653,16 +654,41 @@ CREATE TABLE `login` (
   `character_slots` tinyint(3) UNSIGNED NOT NULL DEFAULT '0',
   `pincode` varchar(4) NOT NULL DEFAULT '',
   `pincode_change` int(11) UNSIGNED NOT NULL DEFAULT '0',
-  `diasvip` int(11) NOT NULL DEFAULT '0'
+  `diasvip` int(11) NOT NULL DEFAULT '0',
+  `last_password_change` int(11) UNSIGNED NOT NULL DEFAULT '0'
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `login`
 --
 
-INSERT INTO `login` (`account_id`, `userid`, `user_pass`, `sex`, `email`, `group_id`, `state`, `unban_time`, `expiration_time`, `logincount`, `lastlogin`, `last_ip`, `mac_address`, `birthdate`, `character_slots`, `pincode`, `pincode_change`, `diasvip`) VALUES
-(1, 'onlineragnarok', 'ragnarokonline', 'S', 'brathena@brathena.org', 0, 0, 0, 0, 6, '2016-10-29 08:59:22', '127.0.0.1', '', '1970-01-01', 0, '', 0, 0),
-(2000000, 'sabino', 'sabino', 'M', 'brathena@brathena.org', 99, 0, 0, 0, 1, '2016-10-29 09:02:08', '127.0.0.1', '', '1970-01-01', 0, '', 0, 0);
+INSERT INTO `login` (`account_id`, `userid`, `user_pass`, `sex`, `email`, `group_id`, `state`, `unban_time`, `expiration_time`, `logincount`, `lastlogin`, `last_ip`, `mac_address`, `birthdate`, `character_slots`, `pincode`, `pincode_change`, `diasvip`, `last_password_change`) VALUES
+(1, 'onlineragnarok', 'ragnarokonline', 'S', 'brathena@brathena.org', 0, 0, 0, 0, 7, '2016-11-09 11:29:41', '127.0.0.1', '', '1970-01-01', 0, '', 0, 0, 1478697905),
+(2000000, 'sabino', 'sabino', 'M', 'brathena@brathena.org', 99, 0, 0, 0, 2, '2016-11-09 11:31:22', '127.0.0.1', '', '1970-01-01', 0, '', 0, 0, 1478697905);
+
+--
+-- Acionadores `login`
+--
+DELIMITER $$
+CREATE TRIGGER `login_insert` BEFORE INSERT ON `login` FOR EACH ROW BEGIN
+
+  IF NEW.sex <> 'S' AND NEW.last_password_change = 0 THEN
+    SET NEW.last_password_change = UNIX_TIMESTAMP();
+  END IF;
+
+END
+$$
+DELIMITER ;
+DELIMITER $$
+CREATE TRIGGER `login_update` BEFORE UPDATE ON `login` FOR EACH ROW BEGIN
+
+  IF OLD.sex <> 'S' AND MD5(OLD.user_pass) <> MD5(NEW.user_pass) THEN
+    SET NEW.last_password_change = UNIX_TIMESTAMP();
+  END IF;
+
+END
+$$
+DELIMITER ;
 
 -- --------------------------------------------------------
 
@@ -770,7 +796,8 @@ INSERT INTO `mapreg` (`varname`, `index`, `value`) VALUES
 ('$top_60min', 0, '6'),
 ('$top_50min', 0, '5'),
 ('$top_ptmin', 0, '10'),
-('$DTS_Time', 0, '5');
+('$DTS_Time', 0, '5'),
+('$Onlinefld', 0, '1');
 
 -- --------------------------------------------------------
 
@@ -1044,6 +1071,7 @@ CREATE TABLE `ragsrvinfo` (
 --
 
 INSERT INTO `ragsrvinfo` (`index`, `name`, `exp`, `jexp`, `drop`) VALUES
+(3, 'thorn', 100, 100, 100),
 (3, 'thorn', 100, 100, 100),
 (3, 'thorn', 100, 100, 100),
 (3, 'thorn', 100, 100, 100);
