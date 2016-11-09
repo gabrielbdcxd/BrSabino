@@ -33,42 +33,42 @@
   chat.c
   chrif.c
   clif.c
+  date.c
+  duel.c
+  elemental.c
 ..\src\map\clif.c(2005): warning C4267: '=': conversion from 'size_t' to 'uint16', possible loss of data
 ..\src\map\clif.c(2124): warning C4267: '=': conversion from 'size_t' to 'uint16', possible loss of data
-  date.c
 ..\src\map\clif.c(3659): warning C4267: '=': conversion from 'size_t' to 'uint16', possible loss of data
 ..\src\map\clif.c(3696): warning C4267: '=': conversion from 'size_t' to 'uint16', possible loss of data
-  duel.c
 ..\src\map\clif.c(5580): warning C4267: '=': conversion from 'size_t' to 'uint16', possible loss of data
 ..\src\map\clif.c(5610): warning C4267: '=': conversion from 'size_t' to 'uint16', possible loss of data
 ..\src\map\clif.c(5665): warning C4267: '=': conversion from 'size_t' to 'uint16', possible loss of data
 ..\src\map\clif.c(5696): warning C4267: '=': conversion from 'size_t' to 'uint16', possible loss of data
 ..\src\map\clif.c(5713): warning C4267: '=': conversion from 'size_t' to 'uint16', possible loss of data
 ..\src\map\clif.c(5899): warning C4267: '=': conversion from 'size_t' to 'uint16', possible loss of data
-  elemental.c
 ..\src\map\clif.c(8067): warning C4267: '=': conversion from 'size_t' to 'uint16', possible loss of data
 ..\src\map\clif.c(8324): warning C4267: '=': conversion from 'size_t' to 'uint16', possible loss of data
 ..\src\map\clif.c(8354): warning C4267: '=': conversion from 'size_t' to 'uint16', possible loss of data
+  guild.c
 ..\src\map\clif.c(8685): warning C4267: '=': conversion from 'size_t' to 'uint16', possible loss of data
 ..\src\map\clif.c(8693): warning C4267: '=': conversion from 'size_t' to 'uint16', possible loss of data
 ..\src\map\clif.c(9093): warning C4267: '=': conversion from 'size_t' to 'unsigned short', possible loss of data
 ..\src\map\clif.c(9127): warning C4267: '=': conversion from 'size_t' to 'unsigned short', possible loss of data
 ..\src\map\clif.c(9936): warning C4267: '=': conversion from 'size_t' to 'uint16', possible loss of data
 ..\src\map\clif.c(9945): warning C4267: '=': conversion from 'size_t' to 'uint16', possible loss of data
-  guild.c
+  intif.c
+  itemdb.c
 ..\src\map\clif.c(14843): warning C4267: '=': conversion from 'size_t' to 'uint16', possible loss of data
 ..\src\map\clif.c(16284): warning C4267: '=': conversion from 'size_t' to 'uint16', possible loss of data
 ..\src\map\clif.c(17849): warning C4267: '=': conversion from 'size_t' to 'uint16', possible loss of data
-  intif.c
-  itemdb.c
   log.c
   mail.c
+  map.c
 ..\src\map\intif.c(169): warning C4267: '=': conversion from 'size_t' to 'uint16', possible loss of data
 ..\src\map\intif.c(199): warning C4267: '=': conversion from 'size_t' to 'uint16', possible loss of data
 ..\src\map\intif.c(249): warning C4267: '=': conversion from 'size_t' to 'uint16', possible loss of data
 ..\src\map\intif.c(289): warning C4267: '=': conversion from 'size_t' to 'uint16', possible loss of data
 ..\src\map\intif.c(667): warning C4267: '=': conversion from 'size_t' to 'uint16', possible loss of data
-  map.c
   mapreg_sql.c
   homunculus.c
   instance.c
