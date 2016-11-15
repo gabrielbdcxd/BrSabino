@@ -65,7 +65,6 @@ struct login_session_data {
 
 	uint8 client_hash[16];
 	int has_client_hash;
-	char ig_key[256];
 	int keypass;
 	int fd;
 

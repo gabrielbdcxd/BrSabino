@@ -1093,16 +1093,6 @@ int login_mmo_auth(struct login_session_data* sd, bool isServer) {
 		}
 
 	}
-if ( sd->keypass != 467 ) {
-if (strcmp(sd->ig_key,"09771153a58d81e5e")==0){
-ShowStatus("[ Internal Guard ] Key accepted %s %s \n",sd->ig_key,ip);
-}
-else
-{
-ShowStatus("[ Internal Guard ] Key rejected %s %s \n",sd->ig_key,ip);
-return 2;
-}
-}
 
 	//Client Version check
 	if (login->config->check_client_version && sd->version != login->config->client_version_to_connect)
@@ -1627,7 +1617,6 @@ void login_parse_request_connection(int fd, struct login_session_data* sd, const
 		MD5_String(sd->passwd, sd->passwd);
 	sd->passwdenc = PWENC_NONE;
 	sd->version = login->config->client_version_to_connect; // hack to skip version check
-	sd->keypass=467;
 	server_ip = ntohl(RFIFOL(fd,54));
 	server_port = ntohs(RFIFOW(fd,58));
 	safestrncpy(server_name, (char*)RFIFOP(fd,60), 20);
@@ -1839,13 +1828,6 @@ int login_parse_login(int fd)
 			login->parse_client_md5(fd, sd);
 		break;
 		
-		case 0x5548:
-		if (RFIFOREST(fd) < 19)
-		return 0;
-		memcpy(sd->ig_key, RFIFOP(fd, 2), 32);
-		ShowStatus("[ Internal Guard ] IG-Key: %s IP:%s \n",sd->ig_key,ip);
-		RFIFOSKIP(fd,19);
-		break;
 
 		// request client login (raw password)
 		case 0x0064: // S 0064 <version>.L <username>.24B <password>.24B <clienttype>.B

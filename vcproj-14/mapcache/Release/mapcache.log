@@ -1,16 +1,4 @@
-﻿  core.c
-  console.c
-  des.c
-  grfio.c
-  memmgr.c
-  showmsg.c
-  strlib.c
-  sysinfo.c
-  utils.c
-  nullpo.c
-  mapindex.c
-  mapcache.c
-  Generating code
+﻿  Generating code
   Finished generating code
-  mapcache.vcxproj -> C:\Users\sabino\Desktop\Emulador\bRSabino\trunk\vcproj-14\..\mapcache.exe
+  mapcache.vcxproj -> C:\Users\Sabino\Desktop\Emulador\brSabino\trunk\vcproj-14\..\mapcache.exe
   mapcache.vcxproj -> ..\mapcache.pdb (Full PDB)
