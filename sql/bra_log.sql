@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.1
--- http://www.phpmyadmin.net
+-- version 4.6.4
+-- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: 29-Out-2016 às 11:08
--- Versão do servidor: 5.7.12
--- PHP Version: 5.6.21
+-- Generation Time: 16-Nov-2016 às 23:25
+-- Versão do servidor: 5.7.16
+-- PHP Version: 5.6.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -35,13 +35,6 @@ CREATE TABLE `atcommandlog` (
   `map` varchar(11) NOT NULL DEFAULT '',
   `command` varchar(255) NOT NULL DEFAULT ''
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Extraindo dados da tabela `atcommandlog`
---
-
-INSERT INTO `atcommandlog` (`atcommand_id`, `atcommand_date`, `account_id`, `char_id`, `char_name`, `map`, `command`) VALUES
-(1, '2016-10-29 09:02:25', 2000000, 150000, 'Sabino', 'prontera', '@go 0');
 
 -- --------------------------------------------------------
 
@@ -295,19 +288,9 @@ CREATE TABLE `loginlog` (
 --
 
 INSERT INTO `loginlog` (`time`, `ip`, `user`, `rcode`, `log`, `mac_address`) VALUES
-('2016-10-28 15:27:39', '0.0.0.0', 'Servidor de login', 100, 'Iniciou', ''),
-('2016-10-28 15:27:40', '127.0.0.1', 'onlineragnarok', 100, 'charserver - thorn@127.0.0.1:6121', ''),
-('2016-10-28 15:32:27', '0.0.0.0', 'Servidor de login', 100, 'Iniciou', ''),
-('2016-10-28 15:32:28', '127.0.0.1', 'onlineragnarok', 100, 'charserver - thorn@127.0.0.1:6121', ''),
-('2016-10-28 15:40:38', '0.0.0.0', 'Servidor de login', 100, 'Iniciou', ''),
-('2016-10-28 15:40:39', '127.0.0.1', 'onlineragnarok', 100, 'charserver - thorn@127.0.0.1:6121', ''),
-('2016-10-29 08:04:42', '0.0.0.0', 'Servidor de login', 100, 'Iniciou', ''),
-('2016-10-29 08:04:44', '127.0.0.1', 'onlineragnarok', 100, 'charserver - thorn@127.0.0.1:6121', ''),
-('2016-10-29 08:23:36', '0.0.0.0', 'Servidor de login', 100, 'Iniciou', ''),
-('2016-10-29 08:23:37', '127.0.0.1', 'onlineragnarok', 100, 'charserver - thorn@127.0.0.1:6121', ''),
-('2016-10-29 08:59:21', '0.0.0.0', 'Servidor de login', 100, 'Iniciou', ''),
-('2016-10-29 08:59:22', '127.0.0.1', 'onlineragnarok', 100, 'charserver - thorn@127.0.0.1:6121', ''),
-('2016-10-29 09:02:08', '127.0.0.1', 'sabino', 100, 'Conectado com sucesso', '');
+('2016-11-16 21:24:52', '52.67.213.74', 'onlineragnarok', 100, 'charserver - Unity@52.67.213.74:6121', ''),
+('2016-11-16 21:25:20', '0.0.0.0', 'Servidor de login', 100, 'Iniciou', ''),
+('2016-11-16 21:25:21', '52.67.213.74', 'onlineragnarok', 100, 'charserver - Unity@52.67.213.74:6121', '');
 
 -- --------------------------------------------------------
 
@@ -651,7 +634,7 @@ ALTER TABLE `zenylog`
 -- AUTO_INCREMENT for table `atcommandlog`
 --
 ALTER TABLE `atcommandlog`
-  MODIFY `atcommand_id` mediumint(9) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `atcommand_id` mediumint(9) UNSIGNED NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `branchlog`
 --
