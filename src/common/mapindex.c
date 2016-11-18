@@ -1077,7 +1077,39 @@ const char *map_list[MAX_MAPINDEX] = {
 	//"test",
 
 	/** Mapas Personalizados **/
-	"custom_map"
+	"aev_fild",
+	"aev_fild01",
+	"Altzibar",
+	"asgard",
+	"bat_g01",
+	"bat_g02",
+	"bat_s01",
+	"bat_s02",
+	"bat_t01",
+	"bat_v01",
+	"chry_fld",
+	"Crystilia",
+	"Flaris",
+	"Jazeera",
+	"lun_in01",
+	"lunar01",
+	"lunna",
+	"mys_boss",
+	"mys_fild01",
+	"mys_fild02",
+	"mys_fild03",
+	"myscenia",
+	"nafani",
+	"novice",
+	"novice2",
+	"novice3",
+	"novice4",
+	"poblacion",
+	"startcity",
+	"strike",
+	"vip_lounge",
+	"Welgaia",	
+	
 };
 
 /// Retrieves the map name from 'string' (removing .gat extension if present).

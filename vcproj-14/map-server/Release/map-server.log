@@ -1,4 +1,96 @@
-﻿  Generating code
+﻿  grammar.c
+  libconfig.c
+  scanctx.c
+  scanner.c
+  strbuf.c
+  mt19937ar.c
+  conf.c
+  core.c
+  console.c
+  db.c
+  des.c
+  ers.c
+  grfio.c
+  memmgr.c
+  mapindex.c
+  md5calc.c
+  mutex.c
+  nullpo.c
+  random.c
+  showmsg.c
+  socket.c
+  sql.c
+  strlib.c
+  sysinfo.c
+  thread.c
+  timer.c
+  utils.c
+  atcommand.c
+  battle.c
+  battleground.c
+  buyingstore.c
+  channel.c
+  chat.c
+  chrif.c
+  clif.c
+  date.c
+..\src\map\clif.c(2005): warning C4267: '=': conversion from 'size_t' to 'uint16', possible loss of data
+..\src\map\clif.c(2124): warning C4267: '=': conversion from 'size_t' to 'uint16', possible loss of data
+  duel.c
+..\src\map\clif.c(3659): warning C4267: '=': conversion from 'size_t' to 'uint16', possible loss of data
+..\src\map\clif.c(3696): warning C4267: '=': conversion from 'size_t' to 'uint16', possible loss of data
+..\src\map\clif.c(5580): warning C4267: '=': conversion from 'size_t' to 'uint16', possible loss of data
+..\src\map\clif.c(5610): warning C4267: '=': conversion from 'size_t' to 'uint16', possible loss of data
+..\src\map\clif.c(5665): warning C4267: '=': conversion from 'size_t' to 'uint16', possible loss of data
+..\src\map\clif.c(5696): warning C4267: '=': conversion from 'size_t' to 'uint16', possible loss of data
+..\src\map\clif.c(5713): warning C4267: '=': conversion from 'size_t' to 'uint16', possible loss of data
+..\src\map\clif.c(5899): warning C4267: '=': conversion from 'size_t' to 'uint16', possible loss of data
+..\src\map\clif.c(8067): warning C4267: '=': conversion from 'size_t' to 'uint16', possible loss of data
+..\src\map\clif.c(8324): warning C4267: '=': conversion from 'size_t' to 'uint16', possible loss of data
+..\src\map\clif.c(8354): warning C4267: '=': conversion from 'size_t' to 'uint16', possible loss of data
+..\src\map\clif.c(8685): warning C4267: '=': conversion from 'size_t' to 'uint16', possible loss of data
+..\src\map\clif.c(8693): warning C4267: '=': conversion from 'size_t' to 'uint16', possible loss of data
+..\src\map\clif.c(9093): warning C4267: '=': conversion from 'size_t' to 'unsigned short', possible loss of data
+..\src\map\clif.c(9127): warning C4267: '=': conversion from 'size_t' to 'unsigned short', possible loss of data
+  elemental.c
+..\src\map\clif.c(9936): warning C4267: '=': conversion from 'size_t' to 'uint16', possible loss of data
+..\src\map\clif.c(9945): warning C4267: '=': conversion from 'size_t' to 'uint16', possible loss of data
+..\src\map\clif.c(14843): warning C4267: '=': conversion from 'size_t' to 'uint16', possible loss of data
+..\src\map\clif.c(16284): warning C4267: '=': conversion from 'size_t' to 'uint16', possible loss of data
+..\src\map\clif.c(17849): warning C4267: '=': conversion from 'size_t' to 'uint16', possible loss of data
+  guild.c
+  intif.c
+  itemdb.c
+  log.c
+  mail.c
+..\src\map\intif.c(169): warning C4267: '=': conversion from 'size_t' to 'uint16', possible loss of data
+..\src\map\intif.c(199): warning C4267: '=': conversion from 'size_t' to 'uint16', possible loss of data
+..\src\map\intif.c(249): warning C4267: '=': conversion from 'size_t' to 'uint16', possible loss of data
+..\src\map\intif.c(289): warning C4267: '=': conversion from 'size_t' to 'uint16', possible loss of data
+..\src\map\intif.c(667): warning C4267: '=': conversion from 'size_t' to 'uint16', possible loss of data
+  map.c
+  mapreg_sql.c
+  homunculus.c
+  instance.c
+  mercenary.c
+  mob.c
+  npc.c
+  npc_chat.c
+  party.c
+  path.c
+  pc.c
+  pc_groups.c
+  pet.c
+  quest.c
+  script.c
+  searchstore.c
+  skill.c
+  status.c
+  storage.c
+  trade.c
+  unit.c
+  vending.c
+  Generating code
   Finished generating code
   map-server.vcxproj -> C:\Users\Sabino\Desktop\Emulador\brSabino\trunk\vcproj-14\..\map-server.exe
   map-server.vcxproj -> ..\map-server.pdb (Full PDB)
