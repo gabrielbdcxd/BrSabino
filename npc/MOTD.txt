@@ -1,4 +1,4 @@
 -	script	brAthenaMOTD	-1,{
-	message strcharinfo(0),"Bem-vindo ao Ragnarok! Favor reportar problemas do servidor na central de desenvolvimento! Bem vindo ao BETA II";
+	message strcharinfo(0),"Bem-vindo ao UnityRO! Favor reportar problemas do servidor na central de desenvolvimento!";
 	end;
 }
