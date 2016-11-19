@@ -7,7 +7,7 @@ set .@Buffs, 1; // Habilitar Buffs? 0: Não / 1: Sim
 if( healer_delay > gettimetick(2) )
 dispbottom "Você deve aguardar " + .@Delay + " segundos para utilizar a cura novamente!";
 else if( .@Price && Zeny < .@Price ){
-dispbottom "Voc??tem " + .@Price + " Zenys para pagar minhas bençoes!";
+dispbottom "Voce não tem " + .@Price + " Zenys para pagar minhas bençoes!";
 		}
 
 else {

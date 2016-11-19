@@ -91,7 +91,7 @@ PRIMARY KEY ( `account_hourly` )
 		if(#Check >= 60){
 			set #Check, 0;
 			query_sql "UPDATE `hourly_points` SET `points`=`points`+'"+(getgroupid() >= $@LevelVIP ? $@PointVIP:$@PointN)+"' WHERE `account_hourly`='"+getcharid(3)+"'";
-				if ( .Message ){ message strcharinfo(0), "[ Pontos de fidelidade adicionado ]"; }
+				if ( .Message ){ message strcharinfo(0), "[Pontos de fidelidade adicionado]"; }
 		}
 		
 		ReStart:
