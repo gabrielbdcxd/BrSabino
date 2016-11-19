@@ -1096,7 +1096,8 @@ const char *map_list[MAX_MAPINDEX] = {
 	"nafani",
 	"poblacion",
 	"startcity",
-	"Welgaia",	
+	"Welgaia",
+	"market",
 	
 };
 
