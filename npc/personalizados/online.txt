@@ -1,4 +1,4 @@
-prontera,143,179,0	script	Sabrina	871,{
+prontera,141,179,3	script	Recorde	69,{
 query_sql "SELECT COUNT(*) FROM `char` WHERE `online` = 1",.atl;
  
 mes "[^00BCBCRecorde^000000]";
