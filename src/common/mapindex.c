@@ -1098,6 +1098,7 @@ const char *map_list[MAX_MAPINDEX] = {
 	"startcity",
 	"Welgaia",
 	"market",
+	"royal_room3",
 	
 };
 
