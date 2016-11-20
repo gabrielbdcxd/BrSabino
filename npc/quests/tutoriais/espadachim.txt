@@ -1928,7 +1928,7 @@ if (tu_swordman == 15){
 	mes "de todos os suspeitos? Primeiro,";
 	mes "diga-me o código que Hans tinha.";
 	next;
-	set @inputstr$, NULL;
+	set @inputstr$, null;
 	input @inputstr$;
 	if (@inputstr$ == @hans$){
 		mes "[Dequ'ee]";
@@ -1937,7 +1937,7 @@ if (tu_swordman == 15){
 		mes "soa estranho.";
 		mes "Agora, diga-me o de Bankley.";
 		next;
-		set @inputstr$, NULL;
+		set @inputstr$, null;
 		input @inputstr$;
 		if (@inputstr$ == @bang$){
 			mes "[Dequ'ee]";
@@ -1946,7 +1946,7 @@ if (tu_swordman == 15){
 			mes "É certamente enigmatico.";
 			mes "Qual era o de Muetro?";
 			next;
-			set @inputstr$, NULL;
+			set @inputstr$, null;
 			input @inputstr$;
 			if (@inputstr$ == @mutr$){
 				mes "[Dequ'ee]";
@@ -1956,7 +1956,7 @@ if (tu_swordman == 15){
 				mes "entender. Tudo bem, agora";
 				mes "diga-me o de Geil.";
 				next;
-				set @inputstr$, NULL;
+				set @inputstr$, null;
 				input @inputstr$;
 				if (@inputstr$ == @geil$){
 					mes "[Dequ'ee]";
