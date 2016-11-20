@@ -1,39 +1,80 @@
-prontera,162,193,4	script	Curandeira		936,{
- 
-set .@Price, 5000; // Preço a ser cobrado, 0 para desabilitar esta função.
-set .@Delay, 60; // Tempo em segundos de restrição de uso após uso.
-set .@Buffs, 1; // Habilitar Buffs? 0: Não / 1: Sim
- 
-if( healer_delay > gettimetick(2) )
-dispbottom "Você deve aguardar " + .@Delay + " segundos para utilizar a cura novamente!";
-else if( .@Price && Zeny < .@Price ){
-dispbottom "Voce não tem " + .@Price + " Zenys para pagar minhas bençoes!";
-		}
+//===== Hercules Script ======================================
+//= Healer
+//===== By: ==================================================
+//= Euphy
+//===== CompatÃ­vel Com: ======================================
+//= BRathena -- TraduÃ§Ã£o por: Julinhobrow
+//===== Current Version: =====================================
+//= 1.2
+//===== Description: =========================================
+//= Basic Curandeira script.
+//===== Additional Comments: =================================
+//= 1.0 Initial script.
+//= 1.1 Aligned coordinates with @go.
+//= 1.2 Fix variables and character stuck at healing
+//============================================================
 
-else {
-if( .@Buffs )
-        {
-	sc_start 32,240000,10;
-	sc_start 30,240000,10;
-//	sc_start SC_FOOD_STR,240000,10;
-//	sc_start SC_FOOD_AGI,240000,10;
-//	sc_start SC_FOOD_VIT,240000,10;
-//	sc_start SC_FOOD_INT,240000,10;
-//	sc_start SC_FOOD_DEX,240000,10;
-//	sc_start SC_FOOD_LUK,240000,10;
-	sc_start SC_MAGNIFICAT,240000,10;
-	sc_start SC_IMPOSITIO,140000,10;
-	sc_start SC_GLORIA,30000,5;
-	sc_start SC_ANGELUS,240000,10;
-        }
-        specialeffect2 313;
-        percentheal 100, 100; 
-if( .@Price ) set Zeny, Zeny - .@Price;
- 
-set healer_delay, gettimetick(2)+.@Delay;
+-	script	Curandeira	-1,{
 
+	.@price = 0;	// Zeny required for heal
+	.@Buffs = 0;	// Also buff players? (1: yes / 0: no)
+	.@Delay = 0;	// Heal delay, in seconds
+
+	if (@HD > gettimetick(2)) end;
+	if (.@price) {
+		message strcharinfo(0),"Ti curo por "+.@price+" Zeny.";
+		if (Zeny < .@price) end;
+		if(select("^0055FFCurar^000000:^777777Cancel^000000") == 2) close;
+		Zeny -= .@price;
+	}
+	specialeffect2 EF_HEAL2; percentheal 100,100;
+	if (.@Buffs) {
+		specialeffect2 EF_INCAGILITY; sc_start SC_INC_AGI,240000,10;
+		specialeffect2 EF_BLESSING; sc_start SC_BLESSING,240000,10;
+	}
+	if (.@Delay) @HD = gettimetick(2)+.@Delay;
+	end;
 }
-end;
-}
-sec_in02,144,168,4	duplicate(Curandeira)	Curandeira#1.1	936
 
+
+// Duplicates
+//============================================================
+alberta,25,240,6	duplicate(Curandeira)	Curandeira#alb	4_F_NURSE
+aldebaran,135,118,6	duplicate(Curandeira)	Curandeira#alde	4_F_NURSE
+amatsu,200,79,4	duplicate(Curandeira)	Curandeira#ama	4_F_NURSE
+ayothaya,207,169,6	duplicate(Curandeira)	Curandeira#ayo	4_F_NURSE
+comodo,184,158,6	duplicate(Curandeira)	Curandeira#com	4_F_NURSE
+einbech,57,36,6	duplicate(Curandeira)	Curandeira#einbe	4_F_NURSE
+einbroch,57,202,6	duplicate(Curandeira)	Curandeira#einbr	4_F_NURSE
+geffen,115,72,6	duplicate(Curandeira)	Curandeira#gef	4_F_NURSE
+gonryun,156,122,6	duplicate(Curandeira)	Curandeira#gon	4_F_NURSE
+hugel,89,150,6	duplicate(Curandeira)	Curandeira#hug	4_F_NURSE
+izlude,125,118,5	duplicate(Curandeira)	Curandeira#izl	4_F_NURSE
+jawaii,250,139,4	duplicate(Curandeira)	Curandeira#jaw	4_F_NURSE
+lighthalzen,152,100,6	duplicate(Curandeira)	Curandeira#lhz	4_F_NURSE
+louyang,226,103,4	duplicate(Curandeira)	Curandeira#lou	4_F_NURSE
+manuk,272,144,6	duplicate(Curandeira)	Curandeira#man	4_F_NURSE
+mid_camp,203,289,6	duplicate(Curandeira)	Curandeira#mid	4_F_NURSE
+moc_ruins,72,164,4	duplicate(Curandeira)	Curandeira#moc	4_F_NURSE
+morocc,153,97,6	duplicate(Curandeira)	Curandeira#mor	4_F_NURSE
+moscovia,220,191,4	duplicate(Curandeira)	Curandeira#mos	4_F_NURSE
+niflheim,212,182,5	duplicate(Curandeira)	Curandeira#nif	4_F_NURSE
+payon,179,106,4	duplicate(Curandeira)	Curandeira#pay	4_F_NURSE
+prontera,162,193,4	duplicate(Curandeira)	Curandeira#prt	4_F_NURSE
+rachel,125,116,6	duplicate(Curandeira)	Curandeira#rac	4_F_NURSE
+splendide,201,153,4	duplicate(Curandeira)	Curandeira#spl	4_F_NURSE
+thor_camp,249,74,4	duplicate(Curandeira)	Curandeira#thor	4_F_NURSE
+umbala,105,148,3	duplicate(Curandeira)	Curandeira#umb	4_F_NURSE
+veins,217,121,4	duplicate(Curandeira)	Curandeira#ve	4_F_NURSE
+xmas,143,136,4	duplicate(Curandeira)	Curandeira#xmas	4_F_NURSE
+yuno,164,45,4	duplicate(Curandeira)	Curandeira#yuno	4_F_NURSE
+
+// Duplicates (Renewal)
+//============================================================
+brasilis,194,221,6	duplicate(Curandeira)	Curandeira#bra	4_F_NURSE
+dewata,195,187,4	duplicate(Curandeira)	Curandeira#dew	4_F_NURSE
+dicastes01,201,194,4	duplicate(Curandeira)	Curandeira#dic	4_F_NURSE
+ecl_in01,45,60,4	duplicate(Curandeira)	Curandeira#ecl	4_F_NURSE
+malangdo,132,114,6	duplicate(Curandeira)	Curandeira#mal	4_F_NURSE
+malaya,205,205,6	duplicate(Curandeira)	Curandeira#ma	4_F_NURSE
+mora,55,152,4	duplicate(Curandeira)	Curandeira#mora	4_F_NURSE

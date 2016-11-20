@@ -23,20 +23,8 @@
 //	or has card[Mhalicot]
 //	Note: You must apply the patch in order to use this script
 //============================================================
-sec_in02,166,157,6	script	Arlequim_dos_Visuais	-1,{
+-	script	Arlequim_dos_Visuais	-1,{
 	mes "[Arlequim]";
-	if(countitem(7180) < 1){
-	mes"você precisa do ticket de evento,";
-	mes"para acessar esse npc!";
-	mes"o ticket de evento pode transformar seu item em visual ou vice-versa!";
-	next;
-	mes "[Arlequim]";
-	mes"você pode adquirir esse ticket na loja de moedas vip ou dropando do bau da Wot.";
-	next;
-	mes "[Arlequim]";
-	mes"volte quanto tiver o ticket";
-	close;
-	}
 	mes "Olá! Eu posso converter seus chapéus em itens visuais, ou restaurá-los para forma original.";
 	switch(select("Converter para visual.:Restaurar ao chapéu.:Não, obrigado.")) {
 	case 1:
@@ -107,7 +95,6 @@ sec_in02,166,157,6	script	Arlequim_dos_Visuais	-1,{
 			costume .@Part; // Convertendo o chapéu
 			mes "[Arlequim]";
 			mes "Pronto! Aproveite seu chapéu.";
-			delitem 7180,1;
 			close;
 	case 2:
 			next;
@@ -147,7 +134,6 @@ sec_in02,166,157,6	script	Arlequim_dos_Visuais	-1,{
 			
 			mes "[Arlequim]";
 			mes "Pronto, seu chapéu foi restaurado.";
-			delitem 7180,1;
 			close;
 	case 3:
 		next;
@@ -159,4 +145,4 @@ sec_in02,166,157,6	script	Arlequim_dos_Visuais	-1,{
 // --------------------------------------------------------------------------
 // Use duplicates to put your npc on different cities
 // --------------------------------------------------------------------------
-sec_in02,166,157,1	duplicate(Arlequim_dos_Visuais)	Arlequim dos Visuais#1	4_M_PIERROT
+prontera,155,181,4	duplicate(Arlequim_dos_Visuais)	Arlequim dos Visuais#1	4_M_PIERROT

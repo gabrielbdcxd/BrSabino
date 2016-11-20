@@ -1,67 +1,65 @@
-//===== Hercules Script ======================================
-//= Archer Class Tutorial and Job Specific Quest
-//===== By: ==================================================
-//= Fix up by Jukka
-//===== Current Version: =====================================
-//= 2.0
-//===== Description: =========================================
-//= [Official Conversion]
-//= Archer training quest.
-//===== Additional Comments: =================================
-//= 1.0 Fully working
-//= 1.1 optimized [Lupus]
-//= 1.2 fixed Weight check
-//= 1.3 Moved Master Kavaruk (overlapped Phantasmic Arrow
-//=     Skill quest NPC) [Lupus]
-//= 1.4 Fixed experience gains to match upcoming rate adjustments. [SinSloth]
-//= 1.5 Fixed bad NPC header data to comply with rev. 11603. [L0ne_W0lf]
-//= 1.6 Fixed infinate loop. (bugreport:2393) [L0ne_W0lf]
-//= 1.7 Added 10.3 dialog and moved Arpesto to hunter skill quest. [Kisuka]
-//= 1.8 Updated slightly, removed additional emotions from Reiden. [L0ne_W0lf]
-//= 1.9 Misc. updates. [L0ne_W0lf]
-//= 1.9a Added 'npcskill' command. [Euphy]
-//= 2.0 Updated to match the official script. [Euphy]
-//=     Added Pre-Renewal support.
-//============================================================
+//    ________________________________________________________
+//   /                                                        \
+//   |       _           _   _   _                            |
+//   |      | |__  _ __ / \ | |_| |__   ___ _ __   __ _       |
+//   |      | '_ \| '__/ _ \| __| '_ \ / _ \ '_ \ / _` |      |
+//   |      | |_) | | / ___ \ |_| | | |  __/ | | | (_| |      |
+//   |      |_.__/|_|/_/   \_\__|_| |_|\___|_| |_|\__,_|      |
+//   |                                                        |
+//   |                    brAthena Script                     |
+//   |--------------------------------------------------------|
+//   | Nome do Script: arqueiro.txt                           |
+//   |--------------------------------------------------------|
+//   | Criado por: eA/rA/brA Dev. Team                        |
+//   |--------------------------------------------------------|
+//   | Versões eA/rA/brA: ??/2.0/1.0                          |
+//   |--------------------------------------------------------|
+//   | Descrição: Tutorial da classe arqueiro.                |
+//   |--------------------------------------------------------|
+//   | Changelog:                                             |
+//   | 1.0 Criado Cabeçalho [Megasantos]                      |
+//   |--------------------------------------------------------|
+//   | - Anotações                                            |
+//   \________________________________________________________/
 
 // Bard Jet
 //============================================================
 payon_in02,67,65,3	script	Bard Jet#tu	1_M_BARD,{
 	mes "[Jet]";
-	mes "Every god never grows old";
-	mes "Because of beautiful";
-	mes "Goddess, Idun.";
-	mes "Keeper of the apples of youth";
-	mes "Goddess of immortality.";
+	mes "Todos os Deuses nunca envelhecem";
+	mes "Por causa da bela";
+	mes "Deusa, Idun.";
+	mes "Guardião das maçãs da juventude";
+	mes "Deusa da imortalidade.";
 	next;
 	mes "[Jet]";
-	if(Class == Job_Archer || Class == Job_Baby_Archer || Class == Job_Archer_High){
-		mes "Ooh, you're an Archer?";
-		mes "There was a time when I too";
-		mes "was an Archer. But I've changed jobs, so now I entertain the masses with my songs and humor.";
+	if(Classe == Job_Archer || Class == Job_Baby_Archer || Class == Job_Archer_High){
+		mes "Ooh, você é um Arqueiro?";
+		mes "Houve um tempo em que eu também";
+		mes "fui um Arqueiro. Mas eu mudei de profissão, então agora estou divertindo as pessoas com as minhas canções e com humor.";
 		next;
 		mes "[Jet]";
-		mes "Speaking of which...";
-		mes "Let me tell you a joke!";
-		mes "Trust me, it's hilarious~";
+		mes "Falando nisso ...";
+		mes "Deixe-me contar uma piada!";
+		mes "Confie em mim, é hilária~";
 		mes "^333333*Ahem*^000000";
 		emotion e_gasp;
 		next;
 		mes "[Jet]";
-		mes "A termite walks";
-		mes "into a bar and says,";
-		mes "'Is the bar tender here?'";
+		mes "Um cupim passeia";
+		mes "em um bar e diz,";
+		mes "'É o concurso de bar aqui?'";
 		mes "Hahahahaha!";
 		mes "Bwehehehehe!";
 		emotion e_lv;
 		next;
 		mes "[Jet]";
 		mes "Hahaha~!";
-		mes "Goodness,";
-		mes "I'm funny!";
-		mes "Now, you try!";
-		mes "Come on, make";
-		mes "up a joke~!";
+		mes "Meu Deus,";
+		mes "Eu sou engraçado!";
+		mes "Agora tente você!";
+		mes "Vamos lá, faça";
+		mes "uma piada~!";
 		emotion e_gg;
 		next;
 		if (Sex == 1) {
@@ -69,93 +67,93 @@ payon_in02,67,65,3	script	Bard Jet#tu	1_M_BARD,{
 			specialeffect2 EF_TALK_FROSTJOKE;
 			mes "[Jet]";
 			mes "Oh...";
-			mes "My...";
-			mes "God...";
+			mes "Meu...";
+			mes "Deus...";
 			next;
 			mes "[Jet]";
-			mes "That was the greatest";
-			mes "joke I've ever heard in my";
-			mes "life! You really have a natural";
-			mes "talent for showmanship! You";
-			mes "just have to become a Bard!";
+			mes "Essa foi a maior";
+			mes "piada que eu já ouvi na minha";
+			mes "vida! Você tem um talento";
+			mes "natural para exibicionismo! Você";
+			mes "só tem que se tornar um Bardo!";
 		} else {
-			select("Scream!");
+			select("Grito!");
 			specialeffect2 EF_TALK_SCREAM;
 			mes "[Jet]";
 			mes "W-Wow...";
-			mes "I don't know why, but that was truly amazing. You must have";
-			mes "what it takes to become a Dancer...";
+			mes "Eu não sei por que, mas foi realmente incrível. Você deve ter";
+			mes "o que é preciso para se tornar uma dançarina...";
 		}
 		emotion e_no1;
 		next;
 		mes "[Jet]";
-		mes "But before any of that, you've got to get rid of the Archer look, no?";
+		mes "Mas antes de tudo isso, você tem que se livrar da aparência de Arqueiro, não?";
 		next;
 		mes "[Jet]";
-		mes "Actually I'm a member of";
-		mes "the ^3131FFArcher's Guild^000000 'Icarus' which is to the ^3131FFleft of the job change office^000000. You should be able to";
-		mes "learn a lot from there.";
+		mes "Na verdade, eu sou um membro";
+		mes "da ^3131FFAliança dos Arqueiros^000000 'Icarus' que fica à ^3131FFesquerda do escritório mudança de classe^000000. Você deve ser capaz de";
+		mes "aprender muito a partir daí.";
 		next;
 		mes "[Jet]";
-		mes "Now now, go learn";
-		mes "everything and change";
-		mes "jobs so that you can";
-		mes "come play with me!";
+		mes "Agora, vá e aprender";
+		mes "tudo, sobre a mudança";
+		mes "de classe da melhor forme possível. ";
+		mes "e depois venha jogar comigo!";
 		close;
 	} else if(Class == Job_Bard || Class == Job_Clown || Class == Job_Baby_Bard){	//CHECK
 		mes "Ooh...!";
-		mes "You're...!";
+		mes "Você é...!";
 		next;
 		specialeffect2 EF_TALK_FROSTJOKE;
 		//specialeffect EF_TALK_FROSTJOKE,"Bard Jet#tu";
 		emotion e_no1;
 		mes "[Jet]";
-		mes "Let's see...";
-		mes "I've been working";
-		mes "on a new joke here,";
-		mes "but I could use some";
-		mes "feedback. You ready?";
+		mes "Vamos ver...";
+		mes "Eu tenho trabalhado";
+		mes "em uma nova piada aqui,";
+		mes "mas eu poderia usar algum";
+		mes "comentário. Você está pronto?";
 		next;
 		mes "[Jet]";
-		mes "What did the male";
-		mes "Merchant say to the";
-		mes "dancing Isis? Give up?";
+		mes "O que um homem";
+		mes "comerciante diz para a";
+		mes "Isis dançarina? Desiste?";
 		next;
 		mes "[Jet]";
 		mes "'Mammonite!'";
-		mes "Get it? 'Cuz he";
-		mes "throws money at her";
-		mes "and the word Mammonite";
-		mes "sounds-- wait. It's not funny";
-		mes "if I have to explain it, huh?";
+		mes "Entenderam? Porque ele";
+		mes "joga dinheiro para ela";
+		mes "ea palavra Mammonite";
+		mes "sons-- espere. Não é engraçado";
+		mes "se eu tiver que explicar isso, né?";
 		close;
 	} else if(Class == Job_Dancer || Class == Job_Gypsy || Class == Job_Baby_Dancer){
 		mes "Ooh...!";
-		mes "Hello, hello!";
-		mes "Wouldn't it be";
-		mes "nice if we could";
-		mes "perform together";
-		mes "one of these days?";
+		mes "Olá, olá!";
+		mes "Não seria";
+		mes "bom se pudéssemos";
+		mes "desempenhar juntos";
+		mes "um destes dias?";
 		close;
 	} else {
-		mes "You look bored...";
-		mes "Is life really that";
-		mes "mundane and tiresome?";
-		mes "Then... I shall make";
-		mes "you laugh...";
+		mes "Você está entediado...";
+		mes "É a vida que realmente";
+		mes "mundana e cansativa?";
+		mes "Então ... eu vou fazer";
+		mes "você rir...";
 		next;
 		mes "[Jet]";
 		mes "^333333*Ahem*^000000";
-		mes "These are the";
-		mes "famous last words";
-		mes "of a mafia hit man...";
+		mes "Estas são as ";
+		mes "famosas últimas palavras";
+		mes "de um assassino da máfia...";
 		next;
 		mes "[Jet]";
-		mes "'Who put the";
-		mes "violin in this";
-		mes "violin case?!'";
+		mes "'Quem colocou o";
+		mes "violino na";
+		mes "caixa do violino?!'";
 		mes "Bwahahahahahahah!";
-		mes "Get the joke?";
+		mes "Conseguiu a piada?";
 	}
 	close;
 }
@@ -174,137 +172,137 @@ pay_arche,127,154,4	script	Sign#arc	2_BOARD1,{
 //============================================================
 payon_in02,54,13,3	script	Master Kavaruk	1_M_JOBTESTER,{
 	mes "[Master Kavaruk]";
-	mes "Hello, young one.";
-	mes "I am Master Kavaruk";
-	mes "of the Icarus Archer Guild.";
-	mes "I bid you welcome.";
+	mes "Olá, meu jóvem.";
+	mes "Eu sou o Mestre Kavaruk";
+	mes "da Aliança de Arqueiros Ícarus.";
+	mes "Desejo-lhe boas-vindas.";
 	next;
-	switch(select("Ask about 'Icarus.':Ask about recent news.:Talk about Archers.")) {
+	switch(select("Pergunte sobre 'Icarus.':Pergunte sobre notícias recentes.:Fale sobre os Arqueiros.")) {
 	case 1:
-		mes "[Master Kavaruk]";
-		mes "Have you ever";
-		mes "heard the story";
-		mes "of Icarus before?";
+		mes "[Mestre Kavaruk]";
+		mes "Alguma vez você já";
+		mes "ouviu a história";
+		mes "de Icarus antes?";
 		next;
-		mes "[Master Kavaruk]";
-		mes "Icarus was a brave young man who flew through the sky using wings held together by beeswax. Out of curiosity, he flew too close to the sun, his wings melted, and he fell to his death.";
+		mes "[Mestre Kavaruk]";
+		mes "Icarus era um jovem corajoso que voava pelo céu com asas unidas por cera de abelha. Por curiosidade, ele voou muito perto do sol, suas asas derreteram e ele caiu para a morte.";
 		next;
-		mes "[Master Kavaruk]";
-		mes "Although his is a tragic story, Icarus had a courageous heart";
-		mes "that we should look up to as";
-		mes "our standard.";
+		mes "[Mestre Kavaruk]";
+		mes "Embora sua história seja trágica, Icarus tinha um coração corajoso";
+		mes "que devemos olhar para cima como";
+		mes "nosso padrão.";
 		next;
-		mes "[Master Kavaruk]";
-		mes "The members of our guild are those who not only wish to be brave, but to reach out for our dreams like Icarus did. Our members are aspiring Archers, former Archers and current Archers.";
+		mes "[Mestre Kavaruk]";
+		mes "Os membros do nosso clã são aqueles que não só desejam serem corajosos, mas para chegar aos nossos sonhos como Icarus fez. Nossos membros são aspirantes a Arqueiros, ex-arqueiros e Arqueiros atuais.";
 		next;
-		mes "[Master Kavaruk]";
+		mes "[Mestre Kavaruk]";
 		if(Class == Job_Novice || Class == Job_Baby){
-			mes "If you'd like to become an Archer, why don't you go around and learn";
-			mes "a few things about the profession? I'm sure you'll be able to hear plenty of stories around here.";
+			mes "Se você gostaria de se tornar um Arqueiro, por que não sai por aí e aprende?";
+			mes "algumas coisas sobre a profissão? Tenho certeza que você será capaz de ouvir muitas histórias por aí.";
 			close;
 
 		} else if(Class == Job_Archer){
-			mes "Since you're an Archer, you might";
-			mes "benefit from going around and listening to everyone else's battle experiences. Becoming familiar with different fight scenarios will help you in the future.";
+			mes "Já que você é um Archer, poderia ";
+			mes "se beneficiar andando e ouvindo todas experiências de batalha. Familiarizar-se com diferentes cenários de luta, irá ajudá-lo no futuro.";
 			close;
 
 		} else if(Class == Job_Hunter || Class == Job_Sniper || Class == Job_Baby_Hunter){	//CHECK
-			mes "[Master Kavaruk]";
-			mes "Arpesto is waiting";
-			mes "outside. Since he's a";
-			mes "veteran hunter, he can";
-			mes "be of great help to you.";
+			mes "[Mestre Kavaruk]";
+			mes "Arpesto está esperando";
+			mes "lá fora. Desde que ele se tornou um";
+			mes "caçador veterano, ele poderá";
+			mes "ser de grande ajuda para você.";
 			close;
 
 		} else if(Class == Job_Dancer || Class == Job_Gypsy || Class == Job_Baby_Dancer){	//CHECK
-			mes "In fact, a few of our";
-			mes "members specialize in";
-			mes "capturing the fascination";
-			mes "of those watching with their";
-			mes "graceful dances, just like you.";
+			mes "Na verdade, alguns de nossos";
+			mes "membros se especializam em";
+			mes "capturar a fascinação";
+			mes "de quem os assiste com suas";
+			mes "graciosas danças, assim como você.";
 			next;
-			mes "[Master Kavaruk]";
-			mes "...But I don't seem to see";
-			mes "any of them around here right now. They never seem to remain in one";
-			mes "place for very long. Still, I'm sure of them will turn up here";
-			mes "one of these days.";
+			mes "[Mestre Kavaruk]";
+			mes "...Mas parece que não vejo";
+			mes "qualquer um deles por aqui agora. Eles parecem nunca manter-se em um";
+			mes "lugar por muito tempo. Ainda assim, eu tenho certeza que eles vão aparecer";
+			mes "num destes dias.";
 			close;
 
 		} else if(Class == Job_Bard || Class == Job_Clown || Class == Job_Baby_Bard){	//CHECK
-			mes "In fact, a few of our members";
-			mes "are highly skilled in singing and entertaining their allies, much in the same way you do.";
+			mes "De fato, alguns dos nossos membros";
+			mes "são altamente qualificados em cantar e entreter seus aliados, da mesma maneira que você faz.";
 			next;
 			mes "[Master Kavaruk]";
-			mes "...But I don't seem to see any of them around here right now. They always wander wherever the wind takes them, but I'm sure one of them will wander back here one";
-			mes "of these days.";
+			mes "...Mas parece que não vejo qualquer um deles por aqui agora. Eles sempre vagam por onde o vento leva-los, mas tenho certeza que um deles vai passar por aqui.";
+			mes "algum dia desses.";
 			close;
 		}
-		mes "They happen to know a lot of information about jobs related to Archers. Why don't you speak to them and learn more about";
-		mes "these other jobs?";
+		mes "Eles conhecem muitas informações sobre trabalhos relacionados aos Arqueiros. Por que você não fala com eles para aprender mais sobre";
+		mes "estes outros trabalhos?";
 		close;
 		break;
 	case 2:
-		mes "[Master Kavaruk]";
+		mes "[Mestre Kavaruk]";
 		if(Class == Job_Archer || Class == Job_Baby_Archer || Class == Job_Archer_High){
 			if(tu_archer02 == 0){
-				mes "Oh, it's a good thing";
-				mes "you're here, "+strcharinfo(0)+".";
-				mes "I've just received request for support from the Alchemist";
-				mes "Guild in Al De Baran.";
+				mes "Oh, é uma coisa boa";
+				mes "você está aqui, "+strcharinfo(0)+".";
+				mes "Acabei de receber pedido de apoio de um Alquimista ";
+				mes "da Aliança em Al De Baran.";
 				next;
-				mes "[Master Kavaruk]";
-				mes "They've been taking care";
-				mes "of a Flora field as a way of supplying their funds, but recently some stray cats seem to have been destroying the plants there.";
+				mes "[Mestre Kavaruk]";
+				mes "Eles foram tomando conta";
+				mes "de um campo de Flora, como forma de suprir os seus fundos, mas recentemente alguns gatos de rua parecem ter destruido as plantas por lá.";
 				next;
-				mes "[Master Kavaruk]";
-				mes "Although the Alchemists have been using Alchemy to summon the Flora again to keep the field running, it's causing a strain on their resources.";
+				mes "[Mestre Kavaruk]";
+				mes "Embora os alquimistas utilizem a alquimia para sumonar a Flora novamente, para manter o campo funcionando, ele está causando uma pressão sobre seus recursos.";
 				next;
-				mes "[Master Kavaruk]";
-				mes "They are willing to give rewards for bringing materials such as ^3131FFManeater Blossoms^000000 and ^3131FFStems^000000 which will help them restore";
-				mes "their Flora.";
+				mes "[Mestre Kavaruk]";
+				mes "Eles estão dispostos a dar recompensas por trazer materiais como ^3131FFFlor de Planta Carnívora^000000 e ^3131FFCaule^000000 que irão ajudá-los a restaurar";
+				mes "sua Flora.";
 				next;
-				mes "[Master Kavaruk]";
-				mes "If you're interested, it would probably be best to speak to the Alchemist Guild member who is waiting to hear from us at the ^3131FFshop next to the road south of Icarus^000000.";
-				tu_archer02 = 1;
+				mes "[Mestre Kavaruk]";
+				mes "Se você estiver interessado, provavelmente seria melhor falar com o membro da Guilda dos Alquimistas que está à nossa espera para ouvir na ^3131FFloja ao lado da estrada ao sul de Icarus^000000.";
+				set tu_archer02,1;
 				close;
 
 			} else if(tu_archer02 == 1){
 				mes "Hmmm...";
 				mes "..........";
 				next;
-				select("Is something the matter?");
-				mes "[Master Kavaruk]";
-				mes "Actually, we have a problem.";
-				mes "The position of master seems to have a lot of power, but I always need to remain here. I don't have the luxury of being able to leave my post.";
+				select("Aconteceu alguma coisa?");
+				mes "[Mestre Kavaruk]";
+				mes "Na verdade, nós temos um problema.";
+				mes "A posição de mestre parece ter muito poder, mas eu sempre precisei permanecer aqui. Não tenho o luxo de ser capaz de deixar o meu posto.";
 				next;
-				mes "[Master Kavaruk]";
-				mes "I asked a member of Icarus to";
-				mes "wander about the Rune-Midgarts Kingdom and gather news and information about what has been going on recently.";
+				mes "[Mestre Kavaruk]";
+				mes "Pedi a um membro de Icarus para";
+				mes "vagar em Rune-Midgard e reunir notícias e informações sobre o que vem acontecendo nos últimos tempos.";
 				next;
-				mes "[Master Kavaruk]";
-				mes "He has been sending me letters containing detailed information, but all of a sudden, I've lost contact with him. I'm concerned over what may have happened.";
+				mes "[Mestre Kavaruk]";
+				mes "Ele foi me enviando cartas contendo informações detalhadas, mas de repente, perdi o contato com ele. Estou preocupado com o que possa ter acontecido.";
 				next;
-				mes "[Master Kavaruk]";
-				mes "Would you please go find";
-				mes "^3131FFArthail of the Wind^000000 for me? Although he doesn't like people, I've ordered for him to wander within the crowds to gather information.";
+				mes "[Mestre Kavaruk]";
+				mes "Poderia por favor encontrar";
+				mes "^3131FFArthail do Vento^000000 para mim? Embora ele não goste de pessoas, eu pedi que ele andasse entre as multidões para reunir informações.";
 				next;
-				mes "[Master Kavaruk]";
-				mes "Please find out if he is all right and help him with whatever he";
-				mes "may need. In the meantime, I will be waiting to hear from you. Thank you very much.";
-				tu_archer02 = 2;
+				mes "[Mestre Kavaruk]";
+				mes "Por favor, descubra se ele está bem e ajude-o com qualquer coisa que ele";
+				mes "possa precisar. Nesse meio tempo, estarei esperando notícias suas. Muito obrigado.";
+				set tu_archer02, 2;
 				close;
 
 			} else if(tu_archer02 == 2){
-				mes "Find Arthail";
-				mes "of the Wind for me.";
-				mes "He must be somewhere";
-				mes "in Prontera...";
+				mes "Encontre Arthail";
+				mes "do Vento para mim.";
+				mes "Ele deve estar em algum lugar";
+				mes "em Prontera...";
 				close;
 
 			} else if(tu_archer02 == 9){
-				mes "Hmmm, I see. Thank you";
-				mes "for bringing me the news. As Arthail has said, I shall wait until he has more news for me.";
-				mes "You should also train and prepare for the future as well.";
+				mes "Hmmm, entendo. Obrigado";
+				mes "por me trazer a notícia. Como Arthail disse, vou esperar até que ele traga novidades para mim.";
+				mes "Você também deve treinar e se preparar para o futuro.";
 				tu_archer02 = 10;
 				if (RENEWAL_EXP)
 					getexp 1000,1000;
@@ -313,106 +311,106 @@ payon_in02,54,13,3	script	Master Kavaruk	1_M_JOBTESTER,{
 				close;
 			}
 		}
-		mes "I don't know...";
-		mes "Recently, I haven't heard any noteworthy news. For now, the warmth of the sun seems to be protecting the peace here.";
+		mes "Eu não sei...";
+		mes "Recentemente, não ouvi nenhuma notícia notável. Por enquanto, o calor do sol parece estar protegendo a paz.";
 		next;
-		mes "[Master Kavaruk]";
-		mes "But if I hear of";
-		mes "any interesting rumors,";
-		mes "I will let you know.";
+		mes "[Mestre Kavaruk]";
+		mes "Mas se eu ouvir";
+		mes "quaisquer rumores interessantes,";
+		mes "Vou deixar você informado.";
 		close;
 		break;
 
 	case 3:
-		mes "[Master Kavaruk]";
+		mes "[Mestre Kavaruk]";
 		if(tu_archer01 < 1){
 			if(Class == Job_Novice || Class == Job_Baby){
 				mes "Ah...";
-				mes "So are you";
-				mes "interested in";
-				mes "becoming an Archer?";
+				mes "Então você está";
+				mes "interessado em";
+				mes "se tornar um arqueiro?";
 
 			} else if(BaseClass == Job_Archer){
-				mes "Although I can't deny that you're an expert, I suppose it is a good idea to review the basics of archery from time to time. Would you like to try some refresher training?";
+				mes "Embora eu não possa negar que você seja um especialista, suponho que seja uma boa idéia rever as noções básicas de tiro com arco ao longo do tempo. Você gostaria de experimentar alguma atualização no treinamento?";
 			} else if(Class == Job_Hunter || Class == Job_Sniper){	//CHECK
-				mes "[Master Kavaruk]";
-				mes "Arpesto is waiting";
-				mes "outside. Since he's a";
-				mes "veteran hunter, he can";
-				mes "be of great help to you.";
+				mes "[Mestre Kavaruk]";
+				mes "Arpesto está esperando";
+				mes "lá fora. Desde que se tornou um";
+				mes "caçador veterano, ele poderá "; 
+				mes "ser de grande ajuda para você.";
 				close;
 
 			} else if(Class == Job_Archer || Class == Job_Baby_Archer){
-				mes "As an Archer, I can see that you'd want to make sure that you have a strong grasp on the fundamentals";
-				mes "of our job. Would you like some specialized instruction?";
+				mes "Como Arqueiro, posso ver que você quer ter a certeza de que tem pleno domínio sobre os fundamentos";
+				mes "da nossa classe. Gostaria de ter instrução especializada?";
 
 			} else {
-				mes "Although you may not be able";
-				mes "to directly apply archery related knowledge, it's a good idea to understand the capabilities of";
-				mes "your Archer allies.";
+				mes "Embora você possa não ser capaz";
+				mes "de aplicar diretamente o conhecimento relacionado à tiro com arco, é uma boa idéia tentar compreender os recursos de";
+				mes "seus Arqueiros aliados.";
 				next;
-				mes "[Master Kavaruk]";
-				mes "How would you like";
-				mes "some specialized instruction to learn more about the Archer job?";
+				mes "[Mestre Kavaruk]";
+				mes "Como você gostaria";
+				mes "de aprender instruções especializadas sobre a classe dos Arqueiros?";
 			}
 			next;
-			switch(select("Yes:No")){
+			switch(select("Sim:Não")){
 			case 1:
-				tu_archer01 = 1;
-				mes "[Master Kavaruk]";
-				mes "Ah yes. Well then, please";
-				mes "take this message over to ^3131FFSeisner^000000 who is in the Training Grounds west of Icarus.";
+				set tu_archer01, 1;
+				mes "[Mestre Kavaruk]";
+				mes "Ah sim. Bem, então, por favor";
+				mes "levar esta mensagem até ^3131FFSeisner^000000 que está na zona oeste do Campo de Treinamento de Icarus.";
 				next;
-				mes "^3355FFYou've received";
-				mes "Kavaruk's message";
-				mes "for Seisner.^000000";
+				mes "^3355FFVocê recebeu";
+				mes "a menságem de Kavaruk";
+				mes "para Seisner.^000000";
 				next;
-				mes "[Master Kavaruk]";
-				mes "Seisner is very diligent,";
-				mes "composed, intelligent and";
-				mes "extremely capable. I believe";
-				mes "that you can learn much from her.";
+				mes "[Mestre Kavaruk]";
+				mes "Seisner é muito zeloso,";
+				mes "dedicado, inteligente e";
+				mes "extremamente capaz. Acredito";
+				mes "que vá aprender muito com ela.";
 				close;
 			case 2:
-				mes "[Master Kavaruk]";
-				mes "Ah, I see. Well,";
-				mes "Icarus will always welcome";
-				mes "you with open arms. If you";
-				mes "ever change your mind, feel";
-				mes "free to come back.";
+				mes "[Mestre Kavaruk]";
+				mes "Ah, entendo. Bem,";
+				mes "Icarus sempre receberá";
+				mes "você de braços abertos. Se";
+				mes "você mudar de idéia, sinta-se";
+				mes "livre para voltar.";
 				close;
 			}
 		} else if(tu_archer01 == 1 || tu_archer01 == 2){
 			mes "Hmm...?";
-			mes "What are you still";
-			mes "doing here? Go to the";
-			mes "hills west of Icarus and";
-			mes "talk to ^3131FFSeisner^000000 to begin your special training.";
+			mes "O que você ainda está";
+			mes "fazendo aqui? Vá para as";
+			mes "colinas a oeste de Icarus e";
+			mes "fale com ^3131FFSeisner^000000 para começar seu treinamento especial.";
 			close;
 
 		} else if(tu_archer01 == 3){
 			mes "So "+strcharinfo(0)+",";
-			mes "Did you have a good experience? Learning theory alone is never too enjoyable, but it is necessary.";
+			mes "Será que você tem uma boa experiência? Aprender teorias sozinho não é muito agradável, mas é necessário.";
 			next;
-			mes "[Master Kavaruk]";
+			mes "[Mestre Kavaruk]";
 			if(Class == Job_Archer || Class == Job_Archer_High || Class == Job_Baby_Archer){
-				mes "Now it is time to experience the principles you've just learned firsthand. Go speak to ^3131FFReidin Corse^000000, who is just outside of this building, and he'll tell you about the different skills.";
-				tu_archer01 = 4;
+				mes "Agora, é hora de experimentar os princípios que você acabou de aprender em primeira mão. Vá falar com ^3131FFReidin Corse^000000, ele está do lado de fora do prédio e vai falar-lhe sobre as diferentes habilidades.";
+				set tu_archer01, 4;
 			} else {
-				mes "Still, there's no need for you to do any field training since only Archers can actually participate";
-				mes "in that.";
+				mes "Mesmo assim, não é necessário que você faça qualquer treinamento de campo, uma vez que apenas Aqueiros podem realmente participar";
+				mes "disto.";
 			}
 			close;
 
 		} else if(tu_archer01 == 4){
-			mes "Reidin Corse is just outside of this building. Didn't you see him on your way in?";
+			mes "Reidin Corse está fora do edifício. Será que não o está vendo em seu caminho?";
 			close;
 
 		}
 	}
-	mes "You're great";
-	mes "just as you are now.";
-	mes "Still, if you feel like you need something, speak to any of the guild members and listen to their life experiences.";
+	mes "Você é ótimo";
+	mes "exatamente como está agora.";
+	mes "Ainda assim, caso sinta que precisa de algo, fale com qualquer um dos membros da guilda e ouça suas experiências de vida.";
 	close;
 }
 
@@ -421,180 +419,180 @@ payon_in02,54,13,3	script	Master Kavaruk	1_M_JOBTESTER,{
 pay_arche,103,165,5	script	Reidin Corse#tu	4_M_REIDIN_KURS,{
 	mes "[Reidin Corse]";
 	if(MaxWeight - Weight < 2000){
-		mes "Hey, you're carrying an";
-		mes "awful lot of stuff. You ought";
-		mes "to put some of your things";
-		mes "into Kafra Storage...";
+		mes "Ei, você está com";
+		mes "excesso de peso. Você deve";
+		mes "guardar algumas coisas no";
+		mes "armazem da Kafra...";
 		close;
 	}
 	if(tu_archer01 > 0){
 		if(tu_archer01 == 4){
-			mes "Ah, what is it?";
-			mes "Can I help you";
-			mes "with something?";
+			mes "Ah, que é isso?";
+			mes "Posso ajudá-lo";
+			mes "em alguma coisa?";
 			next;
-			switch(select("Tell me about skills.:Er, not really...")) {
+			switch(select("Conte-me sobre habilidades.:Er, não na verdade...")) {
 			case 1:
 				mes "[Reidin Corse]";
-				mes "Huh. So Master";
-				mes "Kavaruk told you";
-				mes "to come to me, eh?";
-				mes "Alright. Okay.";
+				mes "Huh. Então, Mestre";
+				mes "Kavaruk lhe disse";
+				mes "para vir a mim, hein?";
+				mes "Tudo bem. Okay.";
 				emotion e_gg;
 				next;
 				break;
 			case 2:
 				mes "[Reidin Corse]";
 				mes "Huh...?";
-				mes "Alright. You sure";
-				mes "you've got nothing";
-				mes "to ask me? You had";
-				mes "that look, you know?";
+				mes "Tudo bem. Tem certeza";
+				mes "que não tem nada";
+				mes "para me perguntar? Você tem";
+				mes "essa aparência, você sabe?";
 				close;
 			}
 			mes "[Reidin Corse]";
-			mes "Fine. I'm an incredibly";
-			mes "busy guy, but I'll make time for you. I'll teach you what I know about Archer skills... On one condition!";
+			mes "Certo. Sou incrivelmente";
+			mes "ocupado, mas eu vou tirar um tempo para você. Vou te ensinar o que eu sei sobre as habilidades de arqueiros... Com uma condição!";
 			next;
 			mes "[Reidin Corse]";
-			mes "From here on out, you gotta";
-			mes "call me ^3131FFChief^000000, got it? Stick with me and you'll become the second best archer in the world! How";
-			mes "about it, kid?";
+			mes "De agora em diante, você tem que";
+			mes "me chamar ^3131FFChefe^000000, Entendedido? Fique comigo e vai se tornar o segundo melhor arqueiro do mundo! Como";
+			mes "sobre isso, garoto?";
 			next;
-			switch(select("You got it, Chief!:Ugh, no thanks~!")) {
+			switch(select("É isso aí, Chefe!:Ugh, não obrigado~!")) {
 			case 1:
 				mes "[Reidin Corse]";
 				mes "Ho ho!";
-				mes "That's the way to go!";
-				mes "Good good~ Call me Chief";
-				mes "from now on, you hear?";
+				mes "Esse é o caminho a seguir!";
+				mes "Muito bom~ Chame-me de Chefe";
+				mes "a partir de agora, entendeu?";
 				next;
 				break;
 			case 2:
 				mes "[Reidin Corse]";
-				mes "Huh? What kind of attitude";
-				mes "is that? Ah, I get it. You're not mature enough to recognize greatness when it's right";
-				mes "before you.";
+				mes "Huh? Que tipo de atitude";
+				mes "é essa? Ah, entendi. Você não está maduro o suficiente para reconhecer a grandeza quando está bem";
+				mes "diante de você.";
 				next;
 				mes "[Reidin Corse]";
-				mes "Don't worry...";
-				mes "When you come crawlin'";
-				mes "back, I'll reconsider";
-				mes "teaching you.";
+				mes "Não se preocupe...";
+				mes "Quando você vier rastejando'";
+				mes "de volta, vou reconsiderar";
+				mes "ensinar-lhe.";
 				close;
 			}
 			mes "[Reidin Corse]";
-			mes "Let's see...";
-			mes "How much do you know?";
-			mes "Mmmmmmmmmm...";
+			mes "Vamos ver...";
+			mes "O quanto você sabe?";
+			mes "Hummmmmmmmm...";
 			next;
-			mes "^3355FFReidin Corse narrows his experienced eyes and sizes you up.^000000";
+			mes "^3355FFReidin Corse estreitando seus olhos experientes e atentos.^000000";
 			next;
 			mes "[Reidin Corse]";
 			if(JobLevel > 39){
-				mes "Hey! You're ready to change jobs, aren't you? Don't waste time here and just get a new job already! Eh, or you can ask Master Kavaruk for something to do.";
+				mes "Hey! Você está pronto para mudar de classe, não é? Não perca tempo aqui e é só mudar de classe já! Eh, ou você pode pedir ao Mestre Kavaruk algo para fazer.";
 				close;
 			} else if(JobLevel < 5){
-				mes "Alright! We got a fresh Archer here! You're lucky you came to me, I'm the best teacher you can find! But let me warn you, I teach at a really fast pace, so try to keep";
-				mes "up. Okay? Good.";
+				mes "Tudo bem! Temos um novo Arqueiro aqui! Você tem sorte de ter vindo a mim, sou o melhor professor que você pode encontrar! Mas deixe-me avisá-lo, eu ensino a um ritmo muito rápido, por isso tente";
+				mes "ficar atento. Okay? Bom.";
 				next;
-				tu_archer01 = 5;
+				set tu_archer01, 5;
 				mes "[Reidin Corse]";
-				mes "Okay, I'm ready to begin the lessons! Come back over here once you've got your bow and arrows and everything else ready, got it?";
+				mes "Ok, estou pronto para começar as aulas! Volte aqui, quando tiver o seu arco e flechas e tudo o mais pronto, entendeu?";
 				close;
 			} else {
-				mes "Okay. It looks like you know";
-				mes "some stuff. But even if you're";
-				mes "a little experienced, there's still room for you to learn. So try and keep up, got it?";
+				mes "Ok. Parece que você sabe";
+				mes "algumas coisas. Mas mesmo se você tenha";
+				mes "um pouco de experiência, sempre existe algo novo para aprender. Portanto, fique atento, entendeu?";
 				next;
-				tu_archer01 = 5;
+				set tu_archer01, 5;
 				mes "[Reidin Corse]";
-				mes "Well, I'm ready to teach whenever you're ready to learn. Come back once your bow and arrows and everything else is ready, alright?";
+				mes "Bem, estou pronto para ensinar, sempre que você estiver disposto a aprender. Volte aqui, quando tiver o seu arco e flechas e tudo o mais pronto, certo?";
 				close;
 			}
 		} else if(tu_archer01 == 5){
-			mes "You ready? I think it's fair to remind you that I won't tolerate any complaining! Just do what";
-			mes "I say and you'll be the second best Archer in the world! After me, of course~";
+			mes "Você está pronto? Acho justo lembrá-lo de que não tolerarei qualquer queixa! Basta fazer o que";
+			mes "eu digo e você vai ser o segundo melhor arqueiro do mundo! Depois de mim, é claro~";
 			next;
 			mes "[Reidin Corse]";
-			mes "If you don't like it, you can just quit! No reason to stick around";
-			mes "if you can't keep up with the Chief, anyway.";
+			mes "Se não gostar, você pode simplesmente desistir! Não há razão para ficar por aqui";
+			mes "se você não puder acompanhar o chefe, de qualquer maneira.";
 			next;
-			switch(select("Please teach me... Chief!:I want to quit.")) {
+			switch(select("Por favor, me ensine... Chefe!:Eu quero parar.")) {
 			case 1:
 				mes "[Reidin Corse]";
-				mes "That's what I'm talkin' about! Yeah! Just trust me and you'll learn almost everything about Archer skills! Let's get started!";
+				mes "É disso que eu estou falando! Yeah! Confie em mim e você aprenderá quase tudo sobre as habilidades de arqueiro! Vamos começar!";
 				next;
-				select("Yes, Chief!");
+				select("Sim, Chefe!");
 				emotion e_ok;
 				mes "[Reidin Corse]";
-				mes "Great...!";
-				mes "I like your style!";
+				mes "Excelente...!";
+				mes "Gosto do seu estilo!";
 				next;
 				mes "[Reidin Corse]";
-				mes "Now, open your Skill Window (Alt+S). You oughta be able to see two skills: ^FF0000Owl's Eye^000000 and ^FF0000Double Strafe^000000. First, I'll talk about Owl's Eye.";
+				mes "Agora, abra sua Janela de Habilidades (Alt+S). Você será capaz de ver duas habilidades: ^FF0000Precisão^000000 e ^FF0000Rajada Dupla^000000. Em primeiro lugar, vou falar sobre Precisão.";
 				next;
 				mes "[Reidin Corse]";
-				mes "We Archers need to be able to preceive the movements of our targets from far away. Now, even during the night, nothing can escape the eyes of an owl.";
+				mes "Nós Arqueiros precisamos ser capaz de prever os movimentos de nosso alvo de longe. Agora, mesmo durante a noite, nada pode escapar dos olhos de uma águia.";
 				next;
 				mes "[Reidin Corse]";
-				mes "So we gotta train our vision so that we see the way owls do. Now";
-				mes "if you can't aim at your targets, you'd be horrible at archery, right? You gotta have Accuracy!";
+				mes "Então, temos que treinar nossa visão para que possamos ver o caminho como as águias fazem. Agora";
+				mes "se você não puder mirar em seus alvos, você seria horrível no tiro com arco, certo? Você tem que ter Precisão!";
 				next;
 				mes "[Reidin Corse]";
-				.@skill_owl = getskilllv("AC_OWL");
+				set .@skill_owl, getskilllv("AC_OWL");
 				if(.@skill_owl < 3){
-					tu_archer01 = 6;
-					mes "Now, your first assignment";
-					mes "is to learn ^3131FFLevel 3 Owl's Eye^000000!";
+					set tu_archer01, 6;
+					mes "Agora, sua primeira missão";
+					mes "será aprender ^3131FFNivel 3 Precisão^000000!";
 					if (RENEWAL)
-						mes "From Morroc, if you travel south, you can fight Condors for your training.";
+						mes "De Morroc, se você viajar para o sul, poderá lutar Condors para seu treiamento.";
 					else
-						mes "From Prontera, if you travel south, south and then west, you can fight Condors for your training.";
+						mes "De Prontera, se você viajar para o sul, e depois para o oeste, poderá lutar com Condors para seu treiamento.";
 					next;
 					mes "[Reidin Corse]";
-					mes "You can head somewhere";
-					mes "else if you want, but if you don't know any training areas, then";
-					mes "just follow my great advice.";
+					mes "Você pode ir em algum lugar";
+					mes "se quiser, mas se você não conhece as áreas de treinamento, então";
+					mes "basta seguir o meu grande conselho.";
 					next;
-					switch(select("I'll follow your advice, Chief!:I'll hunt somewhere else...")) {
+					switch(select("Eu vou seguir o seu conselho, Chefe!:Eu vou caçar em outro lugar...")) {
 					case 1:
 						mes "[Reidin Corse]";
 						if (RENEWAL) {
-							mes "I'll send you to";
-							mes "Morroc for now,";
-							mes "so don't forget the";
-							mes "directions I gave you.";
-							mes "Travel ^3131FFsouth^000000.";
+							mes "Vou mandar você";
+							mes "para Morroc por agora,";
+							mes "então não esqueça";
+							mes "das indicações que lhe dei.";
+							mes "Viajar ^3131FFsul^000000.";
 						} else {
-							mes "I'll send you to";
-							mes "Prontera for now,";
-							mes "so don't forget the";
-							mes "directions I gave you.";
-							mes "Travel ^3131FFsouth^000000, ^3131FFsouth^000000,";
-							mes "and then ^3131FFwest^000000.";
+							mes "Vou mandar você";
+							mes "para Morroc por agora,";
+							mes "então não esqueça";
+							mes "das indicações que lhe dei.";
+							mes "Viajar ^3131FFsul^000000, ^3131FFsul^000000,";
+							mes "e, em seguida ^3131FFoeste^000000.";
 						}
 						next;
-						switch(select("Leave right away~:W-wait, let me get ready!")) {
+						switch(select("Sair imediatamente~:Espere, deixe eu me preparar!")) {
 						case 1:
 							mes "[Reidin Corse]";
-							mes "When you struggle";
-							mes "through the hardships";
-							mes "of training, just think";
-							mes "about trying to become as";
-							mes "good as the greatest Archer";
-							mes "ever: me.";
+							mes "Quando você luta";
+							mes "através das dificuldades";
+							mes "do treinamento, basta pensar";
+							mes "sobre tentar de se tornar tão";
+							mes "bom como o maior Arqueiro";
+							mes "de todos: eu.";
 							emotion e_dots;
 							next;
 							mes "[Reidin Corse]";
-							mes "Okay...!";
-							mes "Off you go!";
+							mes "Ok...!";
+							mes "Pode ir!";
 							if (RENEWAL) {
-								mes "To Morroc!";
+								mes "Para Morroc!";
 								close2;
 								warp "morocc",156,46;
 							} else {
-								mes "To Prontera!";
+								mes "Para Prontera!";
 								close2;
 								warp "prontera",116,72;
 							}
@@ -602,166 +600,166 @@ pay_arche,103,165,5	script	Reidin Corse#tu	4_M_REIDIN_KURS,{
 						case 2:
 							mes "[Reidin Corse]";
 							mes "Hm...?";
-							mes "What do you possibly";
-							mes "need to prepare? Alright,";
-							mes "do whatever it is you";
-							mes "need to do...";
+							mes "Por que você possivelmente";
+							mes "precisa se preparar? Tudo bem,";
+							mes "faça tudo o que você";
+							mes "precisa fazer...";
 							close;
 						}
 					case 2:
 						emotion e_an;
 						mes "[Reidin Corse]";
-						mes "Say what...?";
-						mes "Alright, then.";
-						mes "But the next time";
-						mes "you come here, you better";
-						mes "know Level 3 Owl's Eye!";
+						mes "Diga o que...?";
+						mes "Certo, então.";
+						mes "Mas a próxima vez";
+						mes "que vier aqui, é melhor você";
+						mes "seja Nível 3 Precisão!";
 						close;
 					}
 
 				} else {
 					emotion e_ag;
-					mes "Huh. So you already know a little about Owl's Eye already, huh? Well then, I guess I oughta talk about something you don't know about!";
-					tu_archer01 = 7;
+					mes "Huh. Então você já sabe um pouco sobre Precisão, hein? Bem, então, acho que eu devia falar sobre algo que você não saiba!";
+					set tu_archer01, 7;
 					getexp 500,0;
 					close;
 				}
 				break;
 			case 2:
 				mes "[Reidin Corse]";
-				mes "Huh. Okay.";
-				mes "And here I was";
-				mes "getting ready to";
-				mes "teach you all my";
-				mes "archery secrets!";
+				mes "Huh. Ok.";
+				mes "E lá estava eu";
+				mes "me preparando para";
+				mes "ensinar-lhe todos os meus";
+				mes "segredos de arco e flecha!";
 				close;
 			}
 		} else if(tu_archer01 == 6){
-			.@owl = getskilllv(43);
+			set .@owl, getskilllv(43);
 			if(.@owl > 2){
-				mes "Ah, you're";
-				mes "finally back.";
-				mes "You've kept me";
-				mes "waiting for a while!";
+				mes "Ah, aí está você";
+				mes "que bom que regressou.";
+				mes "Você me deoixou";
+				mes "esperando por um bom tempo!";
 				next;
 				emotion e_gasp;
 				mes "[Reidin Corse]";
-				mes "Ah, but your eyes look a lot sharper than they used to be.";
-				mes "Here, this is a small, special reward for you.";
+				mes "Ah, mas os seus olhos parecem muito mais atentos do que costumavam ser.";
+				mes "Aqui, esta é uma pequena recompensa, especial para você.";
 				specialeffect2 EF_WIND;
-				tu_archer01 = 7;
+				set tu_archer01, 7;
 				getexp 500,0;
 				next;
 				emotion e_pif;
 				mes "[Reidin Corse]";
-				mes "Not bad, but you really should master Owl's Eye. That means";
-				mes "you need to learn it all the way";
-				mes "up to Level 10!";
+				mes "Não é ruim, mas você realmente deve dominar Precisão. Isso significa";
+				mes "que você precisa aprender todo o processo";
+				mes "até o nível 10!";
 				next;
 				mes "[Reidin Corse]";
-				mes "Now, I guess I'll";
-				mes "talk about a different";
-				mes "skill in my next lecture, kay?";
-				mes "Come back when you're ready";
-				mes "to learn something new~";
+				mes "Agora, acho que vou";
+				mes "falar de uma diferente";
+				mes "habilidade na minha próxima palestra, ok?";
+				mes "Volte quando estiver pronto";
+				mes "para aprender algo novo~";
 				close;
 			} else {
-				mes "Hey! I told";
-				mes "you to learn";
-				mes "Level 3 Owl's Eye!";
-				mes "Try not to learn something";
-				mes "else by accident, okay?";
+				mes "Hey! Eu falei";
+				mes "para você aprender sobre";
+				mes "Nível 3 de Precisão!";
+				mes "Tente não aprender mais nada";
+				mes "acidentalmente, ok?";
 				close;
 			}
 		} else if(tu_archer01 == 7){
-			mes "Alright, open";
-			mes "your Skill Window.";
-			mes "Since you have Level 3";
-			mes "Owl's Eye, now you oughta be";
-			mes "able to see the Vulture's Eye";
-			mes "skill in the list too.";
+			mes "Tudo bem, abra";
+			mes "sua Janela de Habilidades.";
+			mes "Desde que você já tenha Nível 3";
+			mes "Precisão, você poderá ser";
+			mes "capaz de ver  Olhos de Águia";
+			mes "na lista de habilidades.";
 			next;
 			mes "[Reidin Corse]";
-			mes "Now when you think";
-			mes "about vultures, what";
-			mes "exactly comes to mind?";
+			mes "Agora, quando você pensa";
+			mes "sobre as Águias, o que";
+			mes "exatamente lhe vem à mente?";
 			next;
-			switch(select("Sharp, precise eyes.:You, Chief.")) {
+			switch(select("Força, olhos precisos.:Você, Chefe.")) {
 			case 1:
 				mes "[Reidin Corse]";
-				mes "Exactly!";
+				mes "Exato!";
 				break;
 			case 2:
 				emotion e_lv2;
 				mes "[Reidin Corse]";
 				mes "Hahahaha!";
-				mes "Well, I am famous";
-				mes "for my incredible";
-				mes "vision and precision!";
-				mes "^333333*Ahem*^000000 Anyway...";
+				mes "Bem, eu sou famoso";
+				mes "por minha inacreditável";
+				mes "visão e precisão!";
+				mes "^333333*Aham*^000000 Enfim...";
 				break;
 			}
 			next;
 			mes "[Reidin Corse]";
-			mes "Vultures circle the sky, find a target on the ground, and then very swiftly swoop down and ensnare their prey in their claws.";
+			mes "Águias circulam o céu, para encontrar um alvo no chão, em seguida, muito rapidamente mergulham para baixo e enredam suas presas em suas garras.";
 			next;
 			emotion e_lv;
 			mes "[Reidin Corse]";
-			mes "No doubt about it.";
-			mes "Vultures are awesome!";
+			mes "Nenhuma dúvida sobre isso.";
+			mes "Águias são impressionantes!";
 			next;
 			mes "[Reidin Corse]";
-			mes "The ^3131FFVulture's Eye^000000 skill allows";
-			mes "you to train your vision to be like a vulture's. You'll increase your Attack Accuracy and can target enemies from further away.";
+			mes "A ^3131FFOlhos de Águia^000000 é a habilidade que permite";
+			mes "você treinar sua visão de ser como uma Águia. Você vai aumentar sua Precisão de Ataque e pode atingir os inimigos de mais longe.";
 			next;
 			emotion e_no;
 			mes "[Reidin Corse]";
-			mes "I know that you can attack";
-			mes "from a distance now, but don't";
-			mes "be satisfied with just your current attack range. Learn Vulture's Eye so you can attack from even further distances.";
+			mes "Eu sei que você pode atacar";
+			mes "a partir de uma distância agora, mas não";
+			mes "fique satisfeito com apenas o seu alcance de ataque atual. Aprenda Olhos do Águia, assim você pode atacar até mesmo em distâncias maiores.";
 			next;
 			mes "[Reidin Corse]";
-			mes "Now for your";
-			mes "second assignment!";
-			mes "Go hunt Mandagora!";
-			mes "Mandagora don't move,";
-			mes "so they're perfect for target";
-			mes "practice from a distance!";
+			mes "Agora a sua";
+			mes "segunda tarefa!";
+			mes "Vá caçar Mandagora!";
+			mes "Mandagora não se movem,";
+			mes "por isso elas são perfeitas para o alvo";
+			mes "e praticar à distância!";
 			next;
 
-			.@eagle = getskilllv("AC_VULTURE");
+			set .@eagle, getskilllv("AC_VULTURE");
 			if(.@eagle < 3){
 				if (RENEWAL)
-					mes "Alright, Mandagora usually live around Geffen. I can send you to Geffen, so just travel north from there to find";
+					mes "Tudo bem, Mandagoras geralmente vivem em torno de Geffen. Eu posso enviar-lhe para Geffen, basta viajar para o norte e de lá encontrar";
 				else
-					mes "Alright, Mandagora usually live around Mt. Mjolnir. I can send you to Prontera, so just travel north, then east from there to find";
-				mes "some of them.";
+					mes "Tudo bem, Mandagoras geralmente vivem em torno de Mt. Mjolnir. Eu posso lhe enviar para Prontera, então basta viajar para o norte, então para o leste e de lá encontrar";
+				mes "algumas delas.";
 				next;
 				mes "[Reidin Corse]";
-				mes "Remember, the most";
-				mes "important thing is to level the Vulture's Eye skill and test the distance of your attack range.";
+				mes "Lembre-se, o mais";
+				mes "importante é o nível de habilidade dos Olhos do Águia e testar a distância de seu alcance de ataque.";
 				if(MaxWeight - Weight < 1000){
-					mes "You've got plenty of arrows";
-					mes "for that, so go for it!";
-					tu_archer01 = 8;
+					mes "Você tem flechas mais do que suficiente";
+					mes "para isso, então vá em frente!";
+					set tu_archer01, 8;
 					next;
 				} else {
 					next;
 					mes "[Reidin Corse]";
-					mes "Here's a little something to encourage you. Since Mandagora are Earth property monsters, these Fire Arrows will work really well.";
-					tu_archer01 = 8;
+					mes "Aqui está algo para incentivá-lo. Como as Mandagoras são monstros da propriedade Terra, estas Flechas de Fogo irão funcionar muito bem.";
+					set tu_archer01,8;
 					getitem 1752,300; //Fire_Arrow
 					next;
 				}
 				mes "[Reidin Corse]";
-				mes "Alright~";
-				mes "Ready to go?";
+				mes "Certo~";
+				mes "Pronto pra ir?";
 				next;
-				switch(select("Let's go!:W-wait a minute!")) {
+				switch(select("Vamos lá!:Espere um minuto!")) {
 				case 1:
 					mes "[Reidin Corse]";
-					mes "Alright...!";
-					mes "Get a move on!";
+					mes "Certo então...!";
+					mes "Apresse-se!";
 					close2;
 					if (RENEWAL)
 						warp "geffen",120,39;
@@ -770,42 +768,42 @@ pay_arche,103,165,5	script	Reidin Corse#tu	4_M_REIDIN_KURS,{
 					end;
 				case 2:
 					mes "[Reidin Corse]";
-					mes "You still need";
-					mes "to get ready?";
-					mes "Hurry it up!";
+					mes "Você ainda precisa";
+					mes "se preparar?";
+					mes "Apresse-se!";
 					close;
 				}
 			} else {
 				mes "Eh?";
-				mes "Wait a minute...";
+				mes "Espere um minuto...";
 				emotion e_what;
 				next;
 				mes "[Reidin Corse]";
-				mes "You already";
-				mes "learned Vulture's Eye!";
-				mes "Why did I spend so much time explaining about it? Well, I guess we're ready to move on to the next lesson...";
-				tu_archer01 = 9;
+				mes "Você já";
+				mes "aprendeu Olhos de Águia!";
+				mes "Por que eu gasto meu tempo explicando sobre isso? Bem, acho que estamos prontos para passar para a próxima lição...";
+				set tu_archer01,9;
 				getitem 1752,500; //Fire_Arrow
 				close;
 			}
-		} else if(tu_archer01 == 8){
-			.@eagle = getskilllv("AC_VULTURE");
-			if(.@eagle < 3){
+		} else if (tu_archer01 == 8){
+			set .@eagle, getskilllv("AC_VULTURE");
+			if (.@eagle < 3){
 				if (RENEWAL)
-					mes "Mandagora lives in the area north of Geffen. Learn up to Level 3 Vulture's Eye and get acquainted with your attack range.";
+					mes "Mandagoras vivem na região norte de Geffen. Aprenda até o nível 3 de Olhos de Águia e familiarize-se com o seu alcance de ataque.";
 				else
-					mes "Mandagora lives in the area north and east of Prontera. Learn up to Level 3 Vulture's Eye and get acquainted with your attack range.";
+					mes "Mandagoras vivem na região norte e leste da área de Prontera. Aprenda até o nível 3 de Olhos de Águia e familiarize-se com o seu alcance de ataque.";
 				next;
 				mes "[Reidin Corse]";
-				mes "Okay...";
-				mes "Are you";
-				mes "ready to go?";
+				mes "Ok...";
+				mes "Você está";
+				mes "pronto para ir?";
 				next;
-				switch(select("Go.:Wait a moment.")) {
+				switch(select("Vamos.:Espere um momento.")) {
 				case 1:
 					mes "[Reidin Corse]";
-					mes "Alright...!";
-					mes "Get a move on!";
+					mes "Certo então...!";
+					mes "Apresse-se!";
 					close2;
 					if (RENEWAL)
 						warp "geffen",120,39;
@@ -814,42 +812,42 @@ pay_arche,103,165,5	script	Reidin Corse#tu	4_M_REIDIN_KURS,{
 					end;
 				case 2:
 					mes "[Reidin Corse]";
-					mes "You still need";
-					mes "to get ready?";
-					mes "Hurry it up!";
+					mes "Você ainda precisa";
+					mes "se preparar?";
+					mes "Apresse-se!";
 					close;
 				}
 			} else {
-				mes "Ah, so you've learned";
-				mes "a little something about Vulture's Eye! What do you think about it now? Ah, and here's a little reward for you before I start the next lesson~";
-				tu_archer01 = 9;
+				mes "Ah, então você aprendeu";
+				mes "mais algumas coisas sobre Olhos de Águia! O que você pensa sobre isso? Ah, aqui está uma pequena recompensa para você antes de iniciarmos a próxima lição~";
+				set tu_archer01,9;
 				getitem 1752,500; //Fire_Arrow
 				close;
 			}
-		} else if(tu_archer01 == 9){
-			mes "Okay...";
-			mes "Up till now we've";
-			mes "studied Passive Skills.";
-			mes "You know, Owl's Eye";
-			mes "and Vulture's Eye.";
+		} else if (tu_archer01 == 9){
+			mes "Ok...";
+			mes "Até agora nós temos";
+			mes "Estudado as Habilidades Passivas.";
+			mes "Você já conhece Precisão";
+			mes "e Olhos de Coruja.";
 			next;
 			mes "[Reidin Corse]";
-			mes "Even though you may not be doing anything, Passive Skills are always in effect. Now, it's time for me to teach you about an Active Skill";
-			mes "for Archers. Ready?";
+			mes "Mesmo que você não esteja fazendo nada, Habilidades Passivas estão sempre em vigor. Agora, é hora de eu ensiná-lo sobre uma habilidade ativa";
+			mes "para Arqueiros. pronto?";
 			next;
 			mes "[Reidin Corse]";
-			mes "Today I'll tell";
-			mes "you all about";
-			mes "^3131FFDouble Strafe^000000!";
-			mes "Whaddya think?";
-			mes "Exciting, yes?";
+			mes "Hoje eu vou contar";
+			mes "tudo sobre";
+			mes "^3131FFRajada de Flechas^000000!";
+			mes "O que você acha?";
+			mes "Emocionante não?";
 			next;
-			.@eagle = getskilllv("AC_DOUBLE");
-			if(.@eagle > 2){
+			set .@eagle, getskilllv("AC_DOUBLE");
+			if (.@eagle > 2){
 				mes "["+strcharinfo(0)+"]";
-				mes "I...";
-				mes "I already know";
-				mes "about Double Strafe.";
+				mes "Eu...";
+				mes "já conheço";
+				mes "sobre Rajada de Flechas.";
 				next;
 				mes "[Reidin Corse]";
 				mes "...";
@@ -857,235 +855,235 @@ pay_arche,103,165,5	script	Reidin Corse#tu	4_M_REIDIN_KURS,{
 				next;
 				mes "[Reidin Corse]";
 				mes "^333333*Sigh*^000000";
-				mes "Next lesson...";
-				tu_archer01 = 10;
+				mes "Próxima lição...";
+				set tu_archer01, 10;
 				close;
 			} else {
 				mes "[Reidin Corse]";
-				mes "Just like its name, Double Strafe allows you to attack enemies with your arrows twice in a row! Booyah~";
+				mes "Tal como o seu nome diz, Rajada de Flechas permite atacar os inimigos com suas flechas duas vezes seguidas~";
 				next;
 				mes "[Reidin Corse]";
-				mes "As Double Strafe's level rises, its attack strength also increases. If you master this skill, you can do a great amount of damage to your enemies!";
+				mes "Como o nível da Rajada de Flechas sobe, sua força de ataque também aumenta. Se você dominar essa habilidade, poderá dar uma grande quantidade de dano nos seus inimigos!";
 				next;
 				mes "[Reidin Corse]";
-				mes "Hold your bow and arrow";
-				mes "like this, concentrate, aim,";
-				mes "then fire twice with all your";
-				mes "might! Practice Double Strafe";
-				mes "enough and you'll get used to it!";
+				mes "Segure o seu arco e a flecha";
+				mes "assim, concentrar-se mirando o alvo,";
+				mes "em seguida, dispare duas vezes, com toda";
+				mes "força! Pratique Rajada de Flechas";
+				mes "suficiente e você vai se habituar com ela!";
 				next;
-				if(.@eagle == 0){
+				if (.@eagle == 0){
 					specialeffect2 EF_WIND;
-					tu_archer01 = 10;
+					set tu_archer01, 10;
 					getexp 0,500;
 				}
 				emotion e_no1;
 				next;
 				mes "[Reidin Corse]";
-				mes "Now, there's another skill known as ^FF0000Arrow Shower^000000. Where Double Strafe uses 2 Arrows, Arrow Shower fires a bunch of arrows at once.";
+				mes "Agora, há uma outra habilidade conhecida como ^FF0000Chuva de Flechas^000000. Enquanto Rajada de Flechas usa 2 flechas, Chuva de Flechas dispara um monte de flechas de uma só vez.";
 				next;
 				mes "[Reidin Corse]";
-				mes "Not even I can handle";
-				mes "Arrow Shower all that well since it's really hard. Still, maybe if you trained more at it, you'd manage to pull it off?";
+				mes "Nem mesmo eu posso lidar com";
+				mes "Chuva de Flechas tão bem, já que é muito difícil. Ainda assim, se você treinar mais, conseguirá usar?";
 				emotion e_heh;
 				close;
 			}
-		} else if(tu_archer01 == 10){
+		} else if (tu_archer01 == 10){
 			if (RENEWAL) {
-				mes "Now, I've taught you a lot of stuff and I wanna make sure you retain all of it. That's why I want you to take this midterm. Your mission: ^FF0000Attack the Rockers^000000!";
+				mes "Agora, que te ensinei um monte de coisas, quero ter certeza de que aprendeu tudo isso. É por isso que eu quero que você não perca tempo. Sua missão: ^FF0000Atacar os Rockers^000000!";
 				emotion e_no1;
 				next;
 				mes "[Reidin Corse]";
-				mes "Rockers live just southwest of Prontera.";
+				mes "Rockers viver a sudoeste de Prontera.";
 				next;
 				mes "[Reidin Corse]";
-				mes "Be aware that Rockers are earth element monsters!! ^3131FFSo they should be weak against fire^000000.";
+				mes "Esteja ciente de que Rockers são monstros elemento terra!! ^3131FFAssim, eles devem ser fraco contra fogo^000000.";
 				next;
 				mes "[Reidin Corse]";
-				mes "Now go and bring ^3131FF10 Grasshopper's Leg^000000 from hunting Rockers.";
-				mes "Bring all of that and you pass~";
+				mes "Agora vá e traga ^3131FF10 Pernas de Gafanhoto^000000 da caça aos Rockers.";
+				mes "Traga tudo isso e você será aprovado~";
 				next;
 				mes "[Reidin Corse]";
-				mes "It's easier to find them if you pass by the southern gate of Prontera and then head west. Alright, off you go, " + strcharinfo(0) + "~";
+				mes "É mais fácil encontrá-los se você passar pelo portão sul de Prontera e depois for para o oeste. Tudo bem, temos que ir, " + strcharinfo(0) + "~";
 			} else {
-				mes "Now, I've taught you a lot of stuff and I wanna make sure you retain all of it. That's why I want you to take this midterm. Your mission: ^FF0000Attack the Rockers^000000!";
+				mes "Agora, que te ensinei um monte de coisas, quero ter certeza de que aprendeu tudo isso. É por isso que eu quero que você não perca tempo. Sua missão: ^FF0000Atacar os Rockers^000000!";
 				emotion e_no1;
 				next;
 				mes "[Reidin Corse]";
-				mes "There's a ship that";
-				mes "leads to Byalan Island in Izlude, Prontera's satellite city. Ride that ship to Byalan Island.";
+				mes "Há um navio que";
+				mes "vai para Byalan Island em Izlude, cidade satélite de Prontera. Navegue para Byalan Island.";
 				next;
 				mes "[Reidin Corse]";
-				mes "In the center of that island is the entrance to a dungeon where a lot of Hydras live. Remember that it's a water dungeon, and that ^3131FFWater resists Fire^000000, ^3131FFbut is weak against Wind^000000.";
+				mes "No centro da ilha, há uma entrada para um calabouço onde vivem um monte de Hydras. Lembre-se que é um calabouço de água, e que ^3131FFÁgua resiste a fogo^000000, ^3131FFmas é fraca contra vento ^000000.";
 				next;
 				mes "[Reidin Corse]";
-				mes "Now go and bring ^3131FF10 Tentacles^000000";
-				mes "from hunting Hydra and ^3131FF1 Crystal Blue^000000, which you can get from hunting the Mushrooms there.";
-				mes "Bring all of that and you pass~";
+				mes "Agora vá e me traga ^3131FF10 Tentáculos^000000";
+				mes "da caça à Hydra e ^3131FF1 Cristal azul^000000, que você pode obter caçando Cogumelos Negros lá.";
+				mes "Traga tudo isso e você será aprovado~";
 				next;
 				mes "[Reidin Corse]";
-				mes "It's easier to find Izlude if you pass by Prontera, so head towards the fields near Prontera. Alright, off you go, " + strcharinfo(0) + "~";
+				mes "É mais fácil encontrar Izlude se você passar por Prontera, então siga para os campos perto de lá. Tudo bem, temos que ir, " + strcharinfo(0) + "~";
 			}
-			tu_archer01 = 11;
+			set tu_archer01,11;
 			close;
-		} else if(tu_archer01 == 11){
+		} else if (tu_archer01 == 11){
 			if (RENEWAL && countitem(940) < 10) {
-				mes "Hey...";
-				mes "You gotta bring";
-				mes "^3131FF10 Grasshopper's Leg^000000 to pass my midterm! Go back to the southwest area of Prontera and get them!";
+				mes "Hei...";
+				mes "Você tem que me trazer";
+				mes "^3131FF10 Perna de Gafanhoto^000000 para poder ser aprovado! Volte para a área a sudoeste de Prontera e traga-os!";
 				close;
 			} else if (!RENEWAL && (countitem(962) < 10 || countitem(991) == 0)) {
-				mes "Hey...";
-				mes "You gotta bring";
-				mes "^3131FF10 Tentacles^000000 and";
-				mes "^3131FF1 Crystal Blue^000000 to pass my midterm! Go back to the dungeon on Byalan Island and get them!";
+				mes "Hei...";
+				mes "Você tem que me trazer";
+				mes "^3131FF10 Tentaculos^000000 and";
+				mes "^3131FF1 Cristal azul^000000 para poder ser aprovado! Volte para o calabouço em Byalan Island e me traga tudo!";
 				close;
 			}
-			if(MaxWeight - Weight < 1000){
-				mes "Why are you carrying";
-				mes "so much stuff? You better put everything you don't need into Kafra Storage.";
+			if (MaxWeight - Weight < 1000){
+				mes "Por que você está carregando";
+				mes "tanto peso? É melhor colocar tudo que você não precisa no armazem Kafra.";
 				close;
 			} else {
-				mes "Hey, you're back!";
-				mes "Let's see now...";
+				mes "Ei, você está de volta!";
+				mes "Vamos ver agora...";
 				next;
 				emotion e_no1;
 				mes "[Reidin Corse]";
-				mes "Good! You pass.";
-				mes "Don't forget that you gotta keep training and improve your skills. Before you know it, you'll be an expert almost as good as me!";
+				mes "Ótimo! Você passou.";
+				mes "Não se esqueça que você tem que continuar treinando para melhorar suas habilidades. Antes que perceba, vai ser um especialista quase tão bom quanto eu!";
 				specialeffect2 EF_WIND;
-				tu_archer01 = 12;
+				set tu_archer01, 12;
 				if (RENEWAL)
 					delitem 940,10; //Grasshopper's_Leg
 				getexp 1000,1000;
 				getitem 1707,1; //Great_Bow
 				close;
 			}
-		} else if(tu_archer01 == 12){
-			mes "Alright, now there's only";
-			mes "one more skill you need to know about. Personally, I think this one is crucial for every Archer...";
+		} else if (tu_archer01 == 12){
+			mes "Muito bom, agora só há";
+			mes "mais uma habilidade que você precisa saber. Pessoalmente, eu acho que este é fundamental para todos os Arqueiros...";
 			next;
 			mes "[Reidin Corse]";
-			mes "Open your Skill Window.";
-			mes "Make sure that you learn";
-			mes "^FF0000Increase Concentration^000000.";
-			mes "Now, how can I describe";
-			mes "how to do it?";
+			mes "Abra sua Janela de Habilidades.";
+			mes "Certifique-se de que aprendeu";
+			mes "^FF0000Aumentar Concentração^000000.";
+			mes "Agora, como eu posso descrever";
+			mes "como fazê-lo?";
 			next;
 			mes "[Reidin Corse]";
-			mes "I guess that first, you gotta quiet your mind and enter a state of complete concentration. Steadily draw your bowstring back. If there's even a millisecond of imbalance, you'll miss.";
+			mes "Eu acho que, primeiro, você tem que acalmar sua mente e entrar em um estado de total concentração. Firmemente puxe a corda do arco de volta. Até mesmo um milésimo de segundo de desequilíbrio, você poderá perder.";
 			next;
 			mes "[Reidin Corse]";
-			mes "We use Increase Concentration";
-			mes "to keep ourselves calm and focused to ^3131FFmaximize certain abilities and stats^000000. This skill enhances our performance as Archers immensely!";
+			mes "Usamos Aumentar Concentração";
+			mes "para nos mantermos calmos e concentrados para  ^3131FFmaximizar certas habilidades e estatísticas^000000. Esta habilidade aumenta a nossa atuação imensamente como Arqueiros!";
 			next;
 			mes "[Reidin Corse]";
-			mes "You might not be able";
-			mes "to see it now, but as you become more skilled, you'll eventually recognize all the benefits of this skill.";
-			tu_archer01 = 13;
+			mes "Você pode não ser capaz";
+			mes "de entender agora, mas quando se tornar mais hábil, vai finalmente reconhecer todos os benefícios dessa habilidade.";
+			set tu_archer01, 13;
 			close;
-		} else if(tu_archer01 == 13){
+		} else if (tu_archer01 == 13){
 			mes "^333333*Sigh*^000000";
-			mes "It was a pain in the";
-			mes "ass, but we're finally";
-			mes "done with all of your lessons.";
+			mes "Isto foi um pé no";
+			mes "traseito, mas finalmente";
+			mes "concluimos todas as suas lições.";
 			emotion e_pif;
 			next;
 			mes "[Reidin Corse]";
-			mes "Ah, but it's not time for";
-			mes "you to relax yet! Since I've given you a midterm, it's only fitting that I also give you a final!";
+			mes "Ah, mas ainda não temos tempo para";
+			mes "relaxar! Desde que eu te dei prazo, nada mais justo que eu também finalize!";
 			next;
 			mes "[Reidin Corse]";
-			mes "Surprised, huh?";
-			mes "Well, this test is a little harder, but I'll help you out so there's";
-			mes "no need for you to fret.";
+			mes "Surpreendido, hein?";
+			mes "Bem, este teste é um pouco mais difícil, mas eu vou te ajudar então não há";
+			mes "nenhuma necessidade para você se preocupar.";
 			next;
 			mes "[Reidin Corse]";
 			if (RENEWAL) {
-				mes "Now, go into the forest east of Payon and hunt Spores and Wormtails. Your test will be to bring back ^3131FF10 Mushroom Spores^000000 and";
-				mes "^3131FF10 Pointed Scales^000000.";
+				mes "Agora, vá para o leste da floresta de Payon para caçar Esporos e Rabo de Verme. Seu teste será trazer para mim ^3131FF10 Esporos de Cogumelos^000000 e";
+				mes "^3131FF10 Escamas Afiadas^000000.";
 			} else {
-				mes "Now, go to Mt. Mjolnir and hunt Floras. Your test will be to bring back ^3131FF5 Maneater Blossoms^000000 and";
-				mes "^3131FF20 Stems^000000.";
+				mes "Agora, vá para o Mt. Mjolnir para caçar Floras. Seu teste será me trazer ^3131FF5 Flor de Planta Carnívora^000000 e";
+				mes "^3131FF20 Hastes^000000.";
 			}
 			next;
 			mes "[Reidin Corse]";
-			mes "I know it's a little dangerous,";
-			mes "but I've got a pal who'll be there to help you. Of course, she's still in training, but...";
+			mes "Eu sei que é um pouco perigoso,";
+			mes "mas tenho um amigo que estará lá para ajudá-lo. Claro, ainda está em formação, mas...";
 			next;
 			mes "[Reidin Corse]";
 			mes "Oh...";
-			mes "And one last thing.";
-			mes "Take some of these.";
+			mes "E uma última coisa.";
+			mes "Leve alguns destes.";
 			next;
 			mes "[Reidin Corse]";
-			if(MaxWeight - Weight < 2100){
-				mes "H-hey!";
-				mes "Why are you carrying";
-				mes "so much stuff? You better put everything you don't need into Kafra Storage.";
+			if (MaxWeight - Weight < 2100){
+				mes "H-hei!";
+				mes "Por que você está carregando";
+				mes "tanto peso? É melhor colocar tudo que você não precisa no armazem Kafra.";
 				close;
 			} else {
-				mes "This stuff is just a little something to encourage you, so don't take it the wrong way! Now hurry up, get what I asked for,";
-				mes "and come back!";
-				tu_archer01 = 14;
+				mes "Este material é apenas algo para encorajá-lo, por isso não tome o caminho errado! Agora apresse-se, traga o que pedi,";
+				mes "e volte logo!";
+				set tu_archer01,14;
 				getitem 601,10; //Wing_Of_Fly
 				getitem 501,10; //Red_Potion
 				getitem 602,1; //Wing_Of_Butterfly
 				close;
 			}
-		} else if((tu_archer01 == 14) || (tu_archer01 == 15)){
+		} else if ((tu_archer01 == 14) || (tu_archer01 == 15)){
 			if (RENEWAL && (countitem(906) < 10 || countitem(921) < 10)) {
-				mes "Remember, you";
-				mes "need to head into";
-				mes "the forest east of Payon and get me";
-				mes "^3131FF10 Mushroom Spores^000000";
-				mes "and ^3131FF10 Pointed Scales^000000.";
+				mes "Lembre-se, você";
+				mes "precisa ir para";
+				mes "o leste da floresta de Payon e me trazer";
+				mes "^3131FF10 Esporos de Cogumelos^000000";
+				mes "and ^3131FF10 Escamas Afiadas^000000.";
 				close;
 			} else if (!RENEWAL && (countitem(1032) < 5 || countitem(905) < 20)) {
-				mes "Remember, you";
-				mes "need to head over to";
-				mes "Mt. Mjolnir and get me";
-				mes "^3131FF5 Maneater Blossoms^000000";
-				mes "and ^3131FF20 Stems^000000.";
+				mes "Lembre-se, você";
+				mes "precisa ir para";
+				mes "Mt. Mjolnir e me trazer";
+				mes "^3131FF5 Flor de Planta Carnívora^000000";
+				mes "e ^3131FF20 Hastes^000000.";
 				next;
 				mes "[Reidin Corse]";
-				mes "From Prontera, you'd get to Mt. Mjolnir by traveling ^3131FFnorth^000000, ^3131FFnorth^000000 and then ^3131FFeast^000000. But if you want,";
-				mes "I can just send you there.";
+				mes "De Prontera, você pretende chegar ao Mt. Mjolnir viajando para o ^3131FFnorte^000000, ^3131FFnorte^000000 e, em seguida ^3131FFleste^000000. Mas se você quiser,";
+				mes "posso enviar-lhe lá.";
 				next;
-				switch(select("Go!:W-Wait!")) {
+				switch(select("Vamos!:Espere!")) {
 				case 1:
 					mes "[Reidin Corse]";
-					mes "Alright!";
-					mes "Oh, and if you get";
-					mes "the chance, give a hello to my Acolyte pal over there for me~";
+					mes "Tudo bem!";
+					mes "Oh, e se você tiver";
+					mes "a chance, dê um olá para meu amigo Noviço por mim~";
 					emotion e_heh;
 					close2;
 					warp "mjolnir_11",25,221;
 					end;
 				case 2:
 					mes "[Reidin Corse]";
-					mes "Huh?";
-					mes "Um, sure. But";
-					mes "there's no reason to";
-					mes "get so nervous, even if";
-					mes "this my final exam for you.";
+					mes "Hun?";
+					mes "Hum, é claro. Mas";
+					mes "não há nenhuma razão para";
+					mes "ficar tão nervoso, pois";
+					mes "este será meu exame final para você.";
 					close;
 				}
 			}
 			mes "Ha-ha~!";
-			mes "You look more like";
-			mes "a veteran than a rookie";
-			mes "now! Yeap, I can see it";
-			mes "in your eyes.";
+			mes "Você parece mais";
+			mes "um veterano do que um novato";
+			mes "agora! Pois é, eu posso ver isso";
+			mes "nos seus olhos.";
 			next;
 			mes "[Reidin Corse]";
-			mes "Right, did you get a chance to meet my Acolyte pal, Mafra? She's pretty shy, but I hope you two got along.";
+			mes "Certo, você poderá ter a chance de conhecer o meu amigo Noviço, de Mafra? Ele é muito tímido, mas espero que vocês dois se dêem bem.";
 			next;
 			mes "[Reidin Corse]";
-			mes "I'm happy to tell";
-			mes "you that you've passed";
-			mes "my final exam! Here, take";
-			mes "this little reward!";
+			mes "Estou feliz em dizer";
+			mes "que você foi aprovado";
+			mes "no meu exame final! Aqui, pegue";
+			mes "esta pequena recompensa!";
 			specialeffect2 EF_WIND;
 			tu_archer01 = 16;
 			if (RENEWAL_EXP)
@@ -1095,93 +1093,93 @@ pay_arche,103,165,5	script	Reidin Corse#tu	4_M_REIDIN_KURS,{
 			getitem 1770,500; //Iron_Arrow
 			next;
 			mes "[Reidin Corse]";
-			mes "Well, it's like you're a full fledged Archer now. Honestly,";
-			mes "I've got nothing more to teach you. Well, about archery, anyway.";
+			mes "Bem, agora você se tornou um plenamente um Arqueiro. Honestamente,";
+			mes "não tenho mais nada a lhe ensinar, acerca de tiro com arco, de qualquer maneira.";
 			emotion e_heh;
 			next;
 			mes "[Reidin Corse]";
-			mes "Well, if you talk to him, Master Kavaruk might have something for you to do. He happens to have me running around to doing errands";
-			mes "for him too. That creep!";
+			mes "Bom, se você falar com Mestre Kavaruk, ele pode ter algo para você fazer, ele está sempre precisando de ajuda com pequenos favores";
+			mes "dos outros. Aquele idiota!";
 			emotion e_pif;
 			next;
 			mes "[Reidin Corse]";
-			mes "Well, "+ strcharinfo(0) +",";
-			mes "It'd make me really happy if you get to the point where you develop a true love for the art of archery. I'll see you sometime, okay?";
+			mes "Bem, "+ strcharinfo(0) +",";
+			mes "Ele me faria muito feliz por você chegar ao ponto onde poderá desenvolver um amor verdadeiro pela arte do arco e flecha. Vejo você algum dia, ok?";
 			emotion e_no1;
 			close;
-		} else if(tu_archer01 == 16){
-			mes "I really like this town.";
-			mes "There's so much lush greenery";
-			mes "and the birds are always singing. Payon really is peaceful.";
+		} else if (tu_archer01 == 16){
+			mes "Eu realmente gosto desta cidade.";
+			mes "Há muita vegetação luxuriante";
+			mes "e os pássaros estão sempre cantando. Payon é realmente tranquila.";
 			next;
 			mes "[Reidin Corse]";
-			mes "Of course, I've got friends here that I can trust with my life. We always argue, but we all want what's best for each other.";
+			mes "Claro, tenho amigos aqui nos quais posso confiar a minha vida. Nós as vezes argumentamos, mas sempre queremos o melhor para todos.";
 			emotion e_pif;
 			next;
 			mes "[Reidin Corse]";
-			mes "Wouldn't you";
-			mes "agree that it's";
-			mes "wonderful to have";
-			mes "great friends?";
+			mes "Você não iria";
+			mes "concordar que é";
+			mes "maravilhoso ter";
+			mes "grandes amigos?";
 			close;
 		} else {
-			mes "I really like this town.";
-			mes "Everything is green and birds singing all around.. such a peaceful place Payon is.";
+			mes "Eu realmente gosto desta cidade.";
+			mes "Tudo é verde e os pássaros estão sempre cantando.. Payon é realmente tranquila.";
 			next;
 			mes "[Reidin Corse]";
-			mes "I feel so happy laying in the grass and looking up at the sky.";
+			mes "Sinto-me tão feliz deitando na grama e olhando para o céu.";
 			next;
 			mes "[Reidin Corse]";
-			mes "It might also be because I have my trustable friends here with me. Haha.";
-			mes "We always argue, but we care for each other deep down inside.";
+			mes "Também pode ser porque eu tenho amigos confiáveis ??aqui comigo. Haha.";
+			mes "Nós as vezes argumentamos, mas sempre nos preocupamos com todos.";
 			emotion e_pif;
 			next;
 			mes "[Reidin Corse]";
-			mes "..'friend' is a wonderful word. Don't you agree?";
+			mes "..'Amizade é uma palavra maravilhosa. Você não concorda?";
 			close;
 		}
 	}
-	mes "Allow me to introduce myself. I'm the Archer of all Archers, ^3131FFReidin Corse^000000, Master of the Icarus Guild!";
+	mes "Permitam-me que me apresente. Eu sou o Arqueiro de todos os Arqueiros, ^3131FFReidin Corse^000000, Mestre da Guilda Icarus!";
 	next;
 	emotion e_no1;
 	mes "[Reidin Corse]";
-	mes "Right now, we're having a special event! The application fee for the Icarus Guild has been slashed by 50%! Join now and there'll be no annual fees!";
+	mes "Agora, estamos tendo um evento especial! A taxa de inscrição para a Aliança Icarus foi reduzido em 50%! Cadastre-se agora e não haverá taxas anuais!";
 	next;
 	emotion e_lv;
 	mes "[Reidin Corse]";
-	mes "During our special event, we'll have no job class restrictions!";
-	mes "As an added bonus, all new male members will be introduced to beautiful Dancer girls!";
+	mes "Durante o nosso evento especial, não haverá restrições de classe!";
+	mes "Como um bônus adicional, todos os novos rapazes serão apresentados para as lindas meninas dançarinas!";
 	next;
 	emotion e_heh;
 	mes "[Reidin Corse]";
-	mes "And new female members will have the special opportunity to go out on a date with me! Don't miss out!";
+	mes "E os novos membros que forem garotas, terão a oportunidade especial de ter um encontro comigo! Não perca!";
 	next;
 	emotion e_cash;
 	mes "[Reidin Corse]";
-	mes "Join right now";
-	mes "for a one time fee of only ^3131FF1,000,000, zeny^000000! Hurry and join the Icarus Guild while";
-	mes "this offer still lasts!";
+	mes "Junte-se à nós agora";
+	mes "por uma taxa única de apenas ^3131FF1,000,000, zeny^000000! Apresse-se e junte-se à Aliança Icarus enquanto";
+	mes "esta oferta estiver de pé!";
 	next;
 	emotion e_pif,"Arpesto";
 	mes "[Arpesto]";
 	mes "Reiden...";
-	mes "Stop messing around.";
-	mes "Hey there, kid. The real";
-	mes "master of the Icarus Guild";
-	mes "is in that building.";
+	mes "Pare de brincar.";
+	mes "Ei você aí, garoto. O verdadeiro";
+	mes "mestre da Guilda Icarus";
+	mes "está nesse edifício.";
 	next;
 	emotion e_omg;
 	mes "[Reidin Corse]";
 	mes "Arpesto...!";
-	mes "Why'd you...?!";
+	mes "Por que...?!";
 	next;
 	emotion e_ag;
 	mes "[Reidin Corse]";
 	mes "^333333*Sigh*^000000";
-	mes "You got me, you got me.";
-	mes "There's no application fee.";
-	mes "But I'll still date all of";
-	mes "those cute girls...";
+	mes "Você me pegou, você me pegou.";
+	mes "Não há taxa de inscrição.";
+	mes "Mas eu ainda vou namorar todas";
+	mes "essas meninas lindas...";
 	close;
 }
 
@@ -1191,165 +1189,165 @@ pay_arche,84,139,3	script	Seisner	4_F_JOB_HUNTER,{
 	specialeffect EF_HIT2,"#Target";
 	mes "[Seisner]";
 	mes "Aaaah!";
-	mes "Double Strafe!";
+	mes "Rajada Dupla!";
 	specialeffect EF_HIT2,"#Target";
 	next;
 	mes "[Seisner]";
-	mes "I did it!";
-	mes "Only an Archer";
-	mes "could make that shot!";
+	mes "Eu fiz isso!";
+	mes "Apenas um Arqueiro";
+	mes "poderia dar esse tiro!";
 	next;
 	mes "[Seisner]";
-	mes "Now, there are some";
-	mes "Thief class people who also use arrows, but they're better suited to using Knives. We Archers are";
-	mes "the arrow specialists!";
-	if(tu_archer01 == 1 || tu_archer01 > 2){
+	mes "Agora, existem algumas";
+	mes "pessoas da classe Gatuno que também usam flechas, mas eles são mais habilidosos no uso de facas. Nós, Arqueiros somos";
+	mes "especialistas em flechas!";
+	if (tu_archer01 == 1 || tu_archer01 > 2){
 		next;
-		mes "^3355FFYou show Seisner";
-		mes "the letter that Master";
-		mes "Kavaruk has written";
-		mes "to her for you.^000000";
+		mes "^3355FFVocê mostra para Seisner";
+		mes "a carta que o Mestre";
+		mes "Kavaruk escreveu";
+		mes "para ser entregue.^000000";
 		next;
 		mes "[Seisner]";
-		mes "So Master Kavaruk";
-		mes "wants me to teach you";
-		mes "about Archers and Archery? Alright, what would you like to know more about?";
+		mes "Então Mestre Kavaruk";
+		mes "quer que eu te ensine";
+		mes "sobre Arqueiros, arco e flecha? Tudo bem, o que você gostaria de saber mais?";
 		next;
 		while(1){
-			switch(select("About Archers.:Stats for Archers:End Conversation.")){
+			switch(select("Sobre Arqueiros.:Status de Arqueiros:Fim da conversa.")){
 			case 1:
 				mes "[Seisner]";
-				mes "Archers specialize";
-				mes "in shooting ^3131FFarrows^000000. We usually attack from a distance, but before we increase our Dodge Rate, we're pretty weak when it comes to one on one battles.";
+				mes "Arqueiros se especializam";
+				mes "no disparo de ^3131FFflechas^000000. Costumamos atacar à distância, mas antes de aumentar a nossa taxa de evasiva, somos muito fracos, quando se trata de uma em uma batalha.";
 				next;
 				mes "[Seisner]";
-				mes "Therefore, Archers tend to attack before the enemy gets too close.";
-				mes "We also like to party with other people who can offer close";
-				mes "range protection.";
+				mes "Portanto, Arqueiros tendem a atacar antes que o inimigo chegue muito perto.";
+				mes "Nós também gostamos de festa com outras pessoas que podem oferecer";
+				mes "proteção variada.";
 				next;
 				mes "[Seisner]";
-				mes "Now, only Novices can";
-				mes "become Archers after reaching";
-				mes "Job Level 10 and learning all of the Basic Skills.";
+				mes "Agora, somente os iniciantes";
+				mes "podem se tornar Arqueiros depois de atingir";
+				mes "Nível de Classe 10 e aprender todas as habilidades básicas.";
 				next;
 				mes "[Seisner]";
-				mes "Well experienced Archers can move on and change to the Second Job Class, becoming ^3131FFHunters^000000, ^3131FFBards^000000 if they are male, or ^3131FFDancers^000000 if they are female.";
+				mes "Arqueiros experientes podem seguir em frente e mudar para a segunda classe, tornando-se ^3131FFCaçador^000000, ^3131FFBardo^000000 se forem do sexo masculino, ou ^3131FFOdalisca^000000 se for do sexo feminino.";
 				next;
 				mes "[Seisner]";
-				mes "If you reach Level 99";
-				mes "as a Second Job Class character, you can change to a Transcendent Class with Valkyrie's help.";
+				mes "Se você atingir o nível 99";
+				mes "como um personagem Segunda, você pode mudar para uma Transclasse om a ajuda da Valkyria.";
 				next;
 				mes "[Seisner]";
-				mes "Hunters can ultimately transcend into ^3131FFSnipers^000000, Bards into ^3131FFMinstrels^000000, and Dancers into ^3131FFGypsies^000000. I know that's pretty complex.";
-				if(tu_archer01 == 1) tu_archer01 = 2;
-				next;
+				mes "Caçadores podem finalmente evoluir em ^3131FFAtirador De Elite^000000, Bardo para ^3131FFMenestrel^000000, e Odalisca para ^3131FFCigana^000000. Eu sei que é bastante complexo.";
+				if (tu_archer01 == 1) set tu_archer01, 2;
+				next;  
 				break;
 			case 2:
 				mes "[Seisner]";
-				mes "So you want to";
-				mes "know more about Stats";
-				mes "and how they affect Archer abilities? I'll do my best to explain.";
+				mes "Então você quer";
+				mes "saber sobre os status";
+				mes "e como afetam as habilidades dos Arqueiros? Vou fazer o meu melhor para explicar.";
 				next;
 				while(1) {
 					switch(select("STR:^3131FFAGI^000000:VIT:^FF9900INT^000000:^FF3131DEX^000000:LUK:End Conversation.")) {
 					case 1:
 						mes "[Seisner]";
-						mes "STR typically increases the damage of attacks. However, Archer class characters use weapons that rely on ^FF3131DEX^000000 to increase their damage.";
+						mes "STR normalmente aumenta o dano de ataques. No entanto, os personagens de classe arqueiro usar armas que dependem de ^FF3131DEX^000000 para aumentar seu dano.";
 						next;
 						mes "[Seisner]";
-						mes "In a sense, STR might not be necessary for Archers, although I'm sure there are skills or situations where STR will come in handy.";
+						mes "De certo modo, STR pode não ser necessário para os Arqueiros, embora eu tenha certeza que existem habilidades ou situações onde STR ??viria a calhar.";
 						next;
 						mes "[Seisner]";
-						mes "For instance, if you run out of arrows (which is every Archer's nightmare) and need to equip a Knife, having some STR might";
+						mes "Por exemplo, se você ficar sem flechas (que é o pesadelo de todo Arqueiro) precisará equipar uma faca, tendo alguns pontos em STR";
 						mes "be helpful.";
 						next;
 						mes "[Seisner]";
-						mes "Increasing STR will also";
-						mes "increase the amount of weight";
-						mes "that any character can carry. So if you have more STR, you can carry around more arrows.";
+						mes "O aumento da STR irá também";
+						mes "aumentar a sua capacidade de carga";
+						mes "que qualquer personagem pode carregar. Então, se você tiver mais STR, poderá carregar mais flechas.";
 						next;
-						if(tu_archer01 == 1) tu_archer01 = 2;
+						if (tu_archer01 == 1) set tu_archer01, 2;
 						break;
 					case 2:
 						mes "[Seisner]";
-						mes "^FF3131AGI^000000 as you know, ";
-						mes "^3131Ffincreases Attack Speed";
-						mes "(ASPD)^000000 and affects ^3131FF Dodge Rate^000000.";
+						mes "^FF3131AGI^000000 Como você sabe, ";
+						mes "^3131FfAumenta Velocidade de Ataque";
+						mes "(ASPD)^000000 afeta ^3131FF Esquiva^000000.";
 						next;
 						mes "[Seisner]";
-						mes "One of the drawbacks of being an Archer is having weaker strength and lower Dodge Rate. However, the Dodge Rate disadvantage is lessened by increasing your ^FF3131AGI^000000.";
+						mes "Uma desvantagens de ser um Arqueiro está em ter resistência fraca e menor Esquiva. No entanto, a desvantagem em Esquiva diminui, aumentando sua ^FF3131AGI^000000.";
 						next;
-						if(tu_archer01 == 1) tu_archer01 = 2;
+						if (tu_archer01 == 1) set tu_archer01, 2;
 						break;
 					case 3:
 						mes "[Seisner]";
-						mes "^3131FFVIT^000000 will increase";
-						mes "your Maximum HP and";
-						mes "resistance to damage.";
+						mes "^3131FFVIT^000000 aumentará";
+						mes "seu máximo de HP e";
+						mes "resistência a danos.";
 						next;
 						mes "[Seisner]";
-						mes "Although Archers don't";
-						mes "specialize in having any special kind of defense, having VIT will help alleviate the defensive weakness of the Archer class.";
+						mes "Embora os Arqueiros não";
+						mes "especializem-se em ter qualquer tipo especial de defesa, tendo VIT irá ajudar a aliviar a fraqueza defensiva da classe dos Arqueiros.";
 						next;
 						mes "[Seisner]";
-						mes "VIT might be helpful";
-						mes "depending on how you use it. Still, I wouldn't recommend focusing too much on increasing your VIT if you're an Archer.";
+						mes "VIT pode ser útil";
+						mes "dependendo de como irá usá-la. Ainda assim, não recomendaria focar muito em aumentar sua VIT se você é um Arqueiro.";
 						next;
-						if(tu_archer01 == 1) tu_archer01 = 2;
+						if (tu_archer01 == 1) set tu_archer01, 2;
 						break;
 					case 4:
 						mes "[Seisner]";
-						mes "^FF0000INT^000000 is more";
-						mes "important to the";
-						mes "Archer class than";
-						mes "you would think~";
+						mes "^FF0000INT^000000 é muito mais";
+						mes "importante para a";
+						mes "classe dos Arqueiros do que";
+						mes "você possa imaginar~";
 						next;
 						mes "[Seisner]";
-						mes "As you increase ^FF0000INT^000000, you'll raise your Maximum SP, meaning you";
-						mes "can use special skills more often.";
+						mes "À medida que aumenta ^FF0000INT^000000, você aumentará o seu SP, ou seja";
+						mes "poderá usar habilidades especiais com mais freqüência.";
 						next;
 						mes "[Seisner]";
-						mes "For Hunters, one of the Second Job Classes for Archers, having higher INT will increase the damage inflicted by ^3131FFFalcons^000000.";
+						mes "para os Caçadores, uma das Classes para Arqueiros, tendo maior INT vai aumentar o dano infligido pelo ^3131FFFalcão^000000.";
 						next;
-						if(tu_archer01 == 1) tu_archer01 = 2;
+						if (tu_archer01 == 1) set tu_archer01, 2;
 						break;
 					case 5:
 						mes "[Seisner]";
-						mes "Now DEX is almost";
-						mes "without a doubt the";
-						mes "most important stat";
-						mes "for any Archer.";
+						mes "Agora DEX é quase";
+						mes "sem dúvida, o";
+						mes "status mais importante";
+						mes "para qualquer Arqueiro.";
 						next;
 						mes "[Seisner]";
-						mes "^FF3131DEX^000000 ^3131Ffincreases the damage^000000";
-						mes "of Archer class weapons that fire arrows. These include ^3131FFBows^000000, ^3131FFInstruments^000000 and ^3131FFWhips^000000.";
+						mes "^FF3131DEX^000000 ^3131Ffaumenta o dano^000000";
+						mes "de armas da classe dos arqueiro que disparam flechas. Estes incluem ^3131FFArcos^000000, ^3131FFInstrumentos^000000 e ^3131FFChicotes^000000.";
 						next;
 						mes "[Seisner]";
-						mes "Dexterity enhances an Archer's ability to hit weak points and do more damage, which is why weapons that use arrows don't rely on STR like weapons used by other classes.";
+						mes "Destreza aumenta a capacidade de um arqueiro em acertar os pontos fracos e tirar mais dano, razão pela qual as armas que usam flechas não contam com STR como armas usadas por outras classes.";
 						next;
 						mes "[Seisner]";
-						mes "Just like any other class, ^FF3131DEX^000000 increases ^3131FFAccuracy (HIT)^000000 and slightly enhances Attack Speed (ASPD).";
+						mes "Assim como qualquer outra classe, ^FF3131DEX^000000 aumenta a ^3131FFPrecisão (HIT)^000000 e ligeiramente aumenta a velocidade de ataque (ASPD).";
 						next;
-						if(tu_archer01 == 1) tu_archer01 = 2;
+						if (tu_archer01 == 1) set tu_archer01, 2;
 						break;
 					case 6:
 						mes "[Seisner]";
-						mes "^FF0000LUK^000000 affects your";
-						mes "Perfect Dodge rate";
-						mes "and Critical rate.";
+						mes "^FF0000LUK^000000 afeta sua";
+						mes "Esquiva perfeita";
+						mes "e Precisão.";
 						next;
 						mes "[Seisner]";
-						mes "For Hunters, one of the Second Classes for the Archer, LUK increases the chance of ^3131FFBlitz Beat^000000 occurring automatically. So Hunters who rely on their Falcons might want to invest in LUK.";
+						mes "Para Caçadores, uma das Classes para Arqueiros, LUK aumenta a chance de ^3131FFAtaque Aéreo^000000 ocorrendo automaticamente. Então Caçadores que dependem de seus Falcões podem querer investir em LUK.";
 						next;
-						if(tu_archer01 == 1) tu_archer01 = 2;
+						if (tu_archer01 == 1) set tu_archer01, 2;
 						break;
 					case 7:
 						mes "[Seisner]";
-						mes "So is there";
-						mes "anything else that";
-						mes "you want to ask me?";
+						mes "Então, existe";
+						mes "mais alguma coisa que";
+						mes "você queira me perguntar?";
 						next;
-						.@exitwhile = 1;
+						set .@exitwhile,1;
 						break;
 					}
 					if (.@exitwhile) break;
@@ -1357,31 +1355,31 @@ pay_arche,84,139,3	script	Seisner	4_F_JOB_HUNTER,{
 				break;
 			case 3:
 				mes "[Seisner]";
-				mes "Once an Archer shoots an arrow,";
-				mes "he can't stop its flight or change his target. That's why Archers need to be level headed and really careful in battle.";
+				mes "Uma vez que um arqueiro atira uma flecha,";
+				mes "ele não pode parar seu vôo ou mudar de alvo. É por isso que os Arqueiros precisam estar um alto nível intelectual e ter muito cuidado no campo de batalha.";
 				next;
 				mes "[Seisner]";
-				mes "Someday, I'd like to become a great Archer and use my skills for the good of Rune-Midgard.";
+				mes "Algum dia, quem sabe, irei me tornar um grande arqueiro e usar minhas habilidades para o bem de Rune-Midgard.";
 				close;
 			}
 		}
-	} else if(tu_archer01 == 2){
+	} else if (tu_archer01 == 2){
 		next;
 		mes "[Seisner]";
-		mes "Thanks for listening.";
-		mes "I know I gave you a lot of information, but I think it's important that everyone";
-		mes "understands archery.";
+		mes "Obrigado por escutar.";
+		mes "Eu sei que te dei um muitas informações, mas eu penso que é importante que todos";
+		mes "entendam tudo sobre tiro com arco.";
 		next;
 		mes "[Seisner]";
-		mes "If you feel comfortable enough with the knowledge I've taught you, you should go back to Master Kavaruk. But if you still have questions, you can always come and ask me.";
+		mes "Se você se sentir confortável o suficiente com o conhecimento que lhe ensinei, poderia voltar para o Mestre Kavaruk. Mas se ainda tiver dúvidas, poderá sempre voltar e me perguntar.";
 		close2;
 		specialeffect2 EF_WIND;
-		tu_archer01 = 3;
-		if(JobLevel == 1){
+		set tu_archer01, 3;
+		if (JobLevel == 1){
 			getexp 0,30;
-		} else if((JobLevel > 1) && (JobLevel < 11)){
+		} else if ((JobLevel > 1) && (JobLevel < 11)){
 			getexp 0,80;
-		} else if((JobLevel > 10) && (JobLevel < 21)){
+		} else if ((JobLevel > 10) && (JobLevel < 21)){
 			getexp 0,100;
 		} else {
 			getexp 0,120;
@@ -1400,87 +1398,87 @@ pay_arche,76,135,3	script	#Target	HIDDEN_NPC,{ end; }
 -	script	::Acolyte_Tu	-1,{
 	mes "[Acolyte]";
 	if(tu_archer01 == 14){
-		if(gettime(HOUR) >= 18 && gettime(HOUR) < 22){
-			mes "H-hello!";
+		if(gettime(3) >= 18 && gettime(3) < 22){
+			mes "Olá!";
 			mes "Umm, umm...";
-			mes "Are you R-Reidin Corse's";
-			mes "friend t-too?";
+			mes "Você é amigo de R-Reidin Corse's";
+			mes "também?";
 			next;
-			mes "[Acolyte]";
-			mes "M-my name is Mafra.";
-			mes "Ever since he saved my life, Reidin has a-always been a good f-friend to me. He's such a great Archer";
-			mes "and a really nice person!";
+			mes "[Noviço]";
+			mes "M-meu nome é Mafra.";
+			mes "Desde que ele salvou a minha vida, Reidin tem sido sempre um bom a-amigo para mim. Ele é um grande arqueiro";
+			mes "e uma pessoa muito legal!";
 			next;
-			mes "[Acolyte]";
+			mes "[Noviço]";
 			mes "Um, and...";
-			mes "Uh... Oh no~";
-			mes "What am I supposed";
-			mes "t-to tell you...?";
+			mes "Uh... Oh não~";
+			mes "O que eu deveria";
+			mes "lhe dizer...?";
 			emotion e_swt2;
 			next;
-			mes "[Acolyte]";
-			mes "Oh, since I'm training to be an Acolyte, I'm supposed to help out the people he's teaching. So...";
-			mes "Let's h-help each other train!";
-			mes "Um, is that okay?";
+			mes "[Noviço]";
+			mes "Oh, já que eu estou treinando para ser um Noviço, costumo ajudar as pessoas que ele está ensinando. Então...";
+			mes "Vamos nos ajudar uns aos outros!";
+			mes "Hum, tudo bem?";
 			next;
-			switch(select("Sure.:No thanks.:Reidin Corse is mine!")) {
+			switch(select("Claro.:Não obrigado.:Reidin Corse é meu amigo!")) {
 			case 1:
-				mes "[Acolyte]";
+				mes "[Noviço]";
 				mes "Wow!";
-				mes "Thank you, thank you!";
-				mes "I''ll try my very best!";
-				tu_archer01 = 15;
+				mes "Muito obrigado mesmo!";
+				mes "Vou tentar dar o melhor de mim!";
+				set tu_archer01, 15;
 				close;
 			case 2:
-				mes "[Acolyte]";
+				mes "[Noviço]";
 				mes "Oh... Oh.";
-				mes "I'm so sorry.";
-				mes "If you don't need";
-				mes "my help, I guess";
-				mes "that's alright...";
+				mes "Sinto muito.";
+				mes "Se você não precisa";
+				mes "da minha ajuda, acredito";
+				mes "que esteja tudo bem...";
 				emotion e_sob;
 				close;
 			case 3:
-				mes "[Acolyte]";
+				mes "[Noviço]";
 				mes "Eh?!";
-				mes "R-really?";
-				mes "I guess he doesn't";
-				mes "need to tell me if";
-				mes "he already has a girlfriend...";
+				mes "R-realmente?";
+				mes "Acho que ele não está";
+				mes "precisando dizer se";
+				mes "ele já tem uma namorada...";
 				next;
-				mes "[Acolyte]";
+				mes "[Noviço]";
 				if(Sex){
-					mes "W-wait!";
-					mes "Y-you're a man!";
-					mes "D-d-d-don't tease me";
-					mes "like that! I'm serious!";
-					tu_archer01 = 15;
+					mes "E-espere!";
+					mes "Você é um homem!";
+					mes "N-n-n-não me provoque";
+					mes "pois estou falando sério!";
+					set tu_archer01, 15;
 					close;
 				} else {
-					mes "And he's so brave";
-					mes "and funny and smart.";
-					mes "Y-you're lucky to have him.";
-					mes "^333333*Sniff*^000000 I... I...";
+					mes "E ele é tão corajoso,";
+					mes "engraçado e inteligente.";
+					mes "V-você tem sorte de tê-lo.";
+					mes "^333333*Sniff*^000000 Eu... Eu...";
 					next;
-					mes "[Acolyte]";
+					mes "[Noviço]";
 					mes "^333333*Sniffle*^000000";
-					mes "I'll d-do my best to help you!";
-					mes "I wish you both happiness! (Waaaaaah~!)";
-					tu_archer01 = 15;
+					mes "Vou d-dar o melhor de mim para ajudá-lo!";
+					mes "Desejo-lhe muita felicidade! (Waaaaaah~!)";
+					set tu_archer01, 15;
 					close;
 				}
 			}
 			end;
 		} else {
 			mes "^666666Zzzzz...^000000";
-			mes "Wh-wha...?";
-			mes "Who are you?";
+			mes "Q-que...?";
+			mes "Quem é você?";
 			specialeffect EF_SLEEPATTACK;
 			next;
-			mes "[Acolyte]";
-			mes "Wait, I know...";
-			mes "Y-you're... ^666666*Yawn*^000000";
-			mes "So sleepy. Take this for now...";
+			mes "[Noviço]";
+			mes "Espere, eu sei...";
+			mes "Você é... ^666666*bocejo*^000000";
+			mes "Que sono. Leve isto por enquanto...";
 			switch(rand(4)) {
 				case 0: npcskill "AL_HEAL",3,90,62; break;
 				case 1: npcskill "AL_HEAL",9,90,62; break;
@@ -1500,27 +1498,27 @@ pay_arche,76,135,3	script	#Target	HIDDEN_NPC,{ end; }
 			close;
 		}
 	} else if(tu_archer01 == 15){
-		if((gettime(HOUR) >= 18) && (gettime(HOUR) < 22)){
+		if((gettime(3) >= 18) && (gettime(3) < 22)){
 			mes "^666666Zzzzz...^000000";
-			mes "Wh-wha...?";
-			mes "Who are you?";
+			mes "Q-que...?";
+			mes "Quem é você?";
 			specialeffect EF_SLEEPATTACK;
 			next;
-			mes "[Acolyte]";
+			mes "[Noviço]";
 			mes "Reidin Corse?";
-			mes "I can't believe";
-			mes "I feel asleep fo--";
+			mes "Eu não posso acreditar";
+			mes "que esteja sentindo tanto sono--";
 			mes "^666666Zzzzzzz...^000000";
 			next;
-			mes "[Acolyte]";
+			mes "[Noviço]";
 			mes "^666666Zzzz^000000--Oooh!";
-			mes "J-just take this before";
-			mes "I fall asleep again~! ^666666*Yawn*^000000";
+			mes "Apenas fique com isso antes";
+			mes "que eu adormeça novamente~! ^666666*Yawn*^000000";
 		} else {
-			mes "Okay~!";
-			mes "Let me try";
-			mes "casting a spell";
-			mes "to help you! Yaa~p!";
+			mes "Ok~!";
+			mes "Deixe-me tentar";
+			mes "lançar um feitiço";
+			mes "para ajudá-lo! Yaa~p!";
 		}
 		switch(rand(4)) {
 			case 0: npcskill "AL_HEAL",3,90,62; break;
@@ -1541,9 +1539,9 @@ pay_arche,76,135,3	script	#Target	HIDDEN_NPC,{ end; }
 		close;
 	}
 	mes "...";
-	mes "W-why does";
-	mes "traveling make";
-	mes "me sooo sleepy...?";
+	mes "Por que quando";
+	mes "viajo, me sinto";
+	mes "tãao sonolento...?";
 	mes "^666666Zzzzzzzz...^000000";
 	specialeffect EF_SLEEPATTACK;
 	close;
@@ -1552,37 +1550,37 @@ pay_arche,76,135,3	script	#Target	HIDDEN_NPC,{ end; }
 // Alchemist Guildmember
 //============================================================
 pay_arche,130,113,3	script	Alchemist Guildmember#tu	2_M_ALCHE,{
-	mes "[Alchemist Guildmember]";
+	mes "[Alquimista Guildmember]";
 	if(tu_archer02 > 0){
 		if((countitem(1032) > 0) || (countitem(905) > 0 )){	// Blossom_Of_Maneater & Stem
-			mes "Great...!";
-			mes "I've been waiting";
-			mes "for the Icarus Guild";
-			mes "to send somebody";
-			mes "to help us! Finally!";
+			mes "Excelente...!";
+			mes "Eu estive esperando";
+			mes "pela Guilda Icarus";
+			mes "nos enviarem alguém";
+			mes "para nos ajudar! Finalmente!";
 			emotion e_sob;
 			next;
-			mes "[Alchemist Guildmember]";
-			mes "Would you like to sell ^3131FFStems^000000";
-			mes "and ^3131FFManeater Blossoms^000000 to";
-			mes "the Alchemist Guild? We'll buy";
-			mes "each Stem for ^3131FF30 Zeny^000000 and each";
-			mes "Maneater Blossom for ^3131FF130 Zeny^000000.";
+			mes "[Alquimista Guildmember]";
+			mes "Você gostaria de vender ^3131FFHastes^000000";
+			mes "e ^3131FFFlor de Planta Carnívora^000000 para";
+			mes "a Guilda dos Alquimistas? Nós vamos comprar";
+			mes "cada Haste por ^3131FF30 Zeny^000000 e cada";
+			mes "Planta Carnívora por ^3131FF130 Zeny^000000.";
 			next;
-			switch(select("Sell all Stems and Maneater Blossoms:Don't sell anything.")) {
+			switch(select("Vender todas as Hastes e Flores:Não vender nada.")) {
 			case 1:
-				mes "[Alchemist Guildmember]";
-				mes "Thank you very much!";
-				mes "This will really help";
-				mes "us in maintaining our";
-				mes "Flora field! I really";
-				mes "appreciate your help~";
+				mes "[Alquimista Guildmember]";
+				mes "Muito obrigado!";
+				mes "Isso vai realmente nos ajudar";
+				mes "na manutenção do nosso";
+				mes "Campo de Flora! Eu realmente";
+				mes "agradeço pela sua ajuda~";
 
-				.@alche_f = countitem(1032); // Blossom_Of_Maneater
-				.@alche_s = countitem(905); // Stem
-				.@f_zeny = .@alche_f * 130;
-				.@s_zeny = .@alche_s * 30;
-				.@total_zeny = .@f_zeny + .@s_zeny;
+				set .@alche_f,countitem(1032); // Blossom_Of_Maneater
+				set .@alche_s,countitem(905); // Stem
+				set .@f_zeny, .@alche_f * 130;
+				set .@s_zeny, .@alche_s * 30;
+				set .@total_zeny, .@f_zeny + .@s_zeny;
 				if(countitem(1032) == 0){
 					delitem 905, .@alche_s; //Stem
 				} else if(countitem(905) == 0){
@@ -1591,35 +1589,35 @@ pay_arche,130,113,3	script	Alchemist Guildmember#tu	2_M_ALCHE,{
 					delitem 1032, .@alche_f; //Blossom_Of_Maneater
 					delitem 905, .@alche_s; //Stem
 				}
-				Zeny += .@total_zeny;
+				set Zeny,Zeny+.@total_zeny;
 				close;
 			case 2:
-				mes "[Alchemist Guildmember]";
-				mes "Seriously...";
-				mes "I'm on the verge of begging!";
-				mes "The Alchemist Guild really needs lots of new supplies to keep our Flora field running!";
+				mes "[Alquimista Guildmember]";
+				mes "Sério...";
+				mes "Estou a ponto de implorar!";
+				mes "A Aliança dos Alquimista realmente precisa de muitos suprimentos novos para manter o Campo de Flora ativo!";
 				emotion e_sob;
 				close;
 			}
 		} else {
-			mes "I don't know if you've heard";
-			mes "from Kavaruk, but our Flora field is getting ruined by stray cats.";
+			mes "Não sei se você já ouviu";
+			mes "de Kavaruk, mas o nosso campo de Flora está sendo arruinado por gatos vadios.";
 			emotion e_sob;
 			next;
-			mes "[Alchemist Guildmember]";
-			mes "No matter how much we chase";
-			mes "them away, they always manage to come back. We really have no choice but to replace what they destroy.";
+			mes "[Alquimista Guildmember]";
+			mes "Não importa o quanto nós os persigamos";
+			mes "eles sempre conseguem voltar. Nós realmente não temos escolha a não ser substituir o que eles destroem.";
 			next;
-			mes "[Alchemist Guildmember]";
-			mes "We'll reward you if you can bring us ^3131FFStems^000000 and ^3131FFManeater Blossoms^000000";
-			mes "to help us in our field maintenance efforts. These Flora are crucial since they provide funds for our guild. Without them...";
+			mes "[Alquimista Guildmember]";
+			mes "vamos recompensá-lo se você puder nos trazer ^3131FFHastes^000000 and ^3131FFFlor de Planta Carnívora^000000";
+			mes "para nos ajudar em nossos esforços de manutenção no Campo de Flora são cruciais, pois fornecem fundos para nossa guilda... Sem eles...";
 			close;
 		}
 	}
 	mes "^666666*Sigh...*^000000";
-	mes "Isn't anyone coming";
-	mes "to help us? We're facing";
-	mes "a really huge crisis here!";
+	mes "Existe alguém que venha";
+	mes "nos ajudar? Estamos enfrentando";
+	mes "uma crise muito grande aqui!";
 	close;
 }
 
@@ -1628,113 +1626,113 @@ pay_arche,130,113,3	script	Alchemist Guildmember#tu	2_M_ALCHE,{
 prontera,126,335,5	script	Arthail	1_M_BARD,{
 	mes "[Arthail]";
 	if(tu_archer02 < 3){
-		mes "I am the Bard";
-		mes "who sings only for";
-		mes "himself. The gentle";
-		mes "breeze is the only";
-		mes "audience I have.";
+		mes "Eu sou um Bardo";
+		mes "que canta apenas por";
+		mes "sí mesmo. A gentil";
+		mes "brisa de vento é o único";
+		mes "público que eu tenho.";
 		next;
 		mes "[Arthail]";
-		mes "I am Arthail";
-		mes "of the Wind.";
-		mes "I sing for no man,";
-		mes "so you had best be on";
-		mes "your way. I'm sorry, but";
-		mes "I have no songs to share.";
+		mes "Eu sou Arthail";
+		mes "do vento.";
+		mes "Eu canto para ninguém,";
+		mes "então é melhor ficar";
+		mes "em seu caminho. Me desculpe, mas";
+		mes "não tenho músicas para compartilhar.";
 		if(tu_archer02 == 2) {
 			next;
-			select("Master Kavaruk told me to find you!");
+			select("Mestre Kavaruk disse-me para encontrá-lo!");
 			mes "[Arthail]";
-			mes "Really now?";
-			mes "I suppose it";
-			mes "can't be helped.";
-			mes "I really should";
-			mes "have contacted him.";
+			mes "Realmente agora?";
+			mes "Acredito que";
+			mes "não possa ser ajudado.";
+			mes "Eu realmente deveria";
+			mes "tê-lo contatado.";
 			next;
 			mes "[Arthail]";
-			mes "However, I'm very tired from the long trip. I'm exhausted from the crowding of this city and the hundreds of talking people.";
-			mes "I can't handle it all...";
+			mes "No entanto, estou muito cansado da longa viagem. Estou exausto da aglomeração desta cidade e das centenas de pessoas falando.";
+			mes "Não posso lidar com tudo isso...";
 			next;
 			mes "[Arthail]";
-			mes "Why can't I be like everyone else? It seems that as I approach people, my heart retreats further away from them. I wonder why that is?";
+			mes "Porque não posso ser como todo mundo? Parece que quando me aproximo de pessoas, meu coração recua ainda mais longe deles. Eu me pergunto por que isso?";
 			next;
 			mes "[Arthail]";
-			mes "I became a Bard to try to fix this social complex of mine, but to";
-			mes "no avail. Still, I feel much more at ease when I sing. Ah, but I've said too much already.";
+			mes "Eu me tornei um Bard para tentar corrigir este meu complexo social, mas";
+			mes "sem sucesso. Ainda assim, me sinto muito mais à vontade quando eu canto. Ah, mas já falei demais.";
 			next;
 			mes "[Arthail]";
-			mes "Master Kavaruk";
-			mes "asked you to help";
-			mes "me? Well then, I have";
-			mes "a favor to ask of you.";
+			mes "Mestre Kavaruk";
+			mes "lhe pediu que me";
+			mes "ajudasse? Bem, então eu tenho";
+			mes "um favor a lhe pedir.";
 			next;
 			mes "[Arthail]";
-			mes "Here in the capital of the";
-			mes "Rune-Midgarts Kingdom, there's supposed to be a fountain in the central plaza. Everyone seems to stop and chat over there.";
+			mes "Aqui na capital de";
+			mes "Rune-Midgarts Kingdom, exixte o que deveria ser uma fonte na praça central. Parece que todo mundo para e conversa por lá.";
 			next;
 			mes "[Arthail]";
-			mes "However, I have a fear of other people and I can't bring myself to go near the crowds of people there. It's embarassing for me to admit this as a Bard...";
+			mes "No entanto, tenho medo das outras pessoas e não posso me obrigar a me aproximar das multidões de lá. É constrangedor para mim admitir isso como um Bardo...";
 			next;
 			mes "[Arthail]";
-			mes "Would you please go and see if there's any news being spread around in that area for me?";
-			tu_archer02 = 3;
+			mes "Você poderia ir lá verificar se há alguma novidade sendo espalhada nessa área para mim?";
+			set tu_archer02, 3;
 		}
 		close;
 	} else if(tu_archer02 == 3){
-		mes "I'm ashamed to ask,";
-		mes "but would you go the fountain in Prontera's central plaza and see";
-		mes "if there's any news?";
+		mes "Tenho vergonha de perguntar,";
+		mes "mas você poderia ir na fonte na praça central de Prontera e verificar";
+		mes "se há alguma novidade?";
 		close;
 
 	} else if(tu_archer02 == 4){
-		mes "I see...";
-		mes "Nothing much.";
-		mes "Another person";
-		mes "found an Emperium";
-		mes "and is starting a";
-		mes "brand new guild...";
+		mes "Eu vejo...";
+		mes "nada de mais.";
+		mes "Uma ou outra pessoa";
+		mes "encontrando algum Emperium";
+		mes "e estão começando uma";
+		mes "nova aliança...";
 		next;
 		mes "[Arthail]";
 		mes "^3131FFEmperium^000000...";
-		mes "There are a lot of ambitious people in Morroc that want one of those. Even in my hometown of Payon,";
-		mes "there are people clamoring to obtain one...";
+		mes "Há um monte de pessoas ambiciosas em Morroc que querem um desses. Mesmo na minha cidade de Payon,";
+		mes "Há pessoas clamando para obter um...";
 		next;
 		mes "[Arthail]";
-		mes "Supposedly, having an Emperium";
-		mes "will give you the power to change the world. People are bound to be attracted to it.";
+		mes "Supostamente, ter um Emperium";
+		mes "lhe dará o poder de mudar o mundo, as pessoas são obrigadas a ser atraídos para isso.";
 		next;
 		mes "[Arthail]";
 		mes "Hmm...?";
-		mes "I sense something";
-		mes "dark and ominous...";
-		mes "I wonder what it could be?";
+		mes "Eu sinto algo";
+		mes "escuro e sinistro...";
+		mes "Eu me pergunto o que poderia ser?";
 		emotion e_hmm;
 		next;
 		mes "[Arthail]";
-		mes "I'm probably just stressed and exhausted. I'll feel better once";
-		mes "I get some rest. Would you like to join me and listen to the flowing water?";
+		mes "Provavelmente estou estressada e exausta. Vou me sentir melhor depois";
+		mes "que descansar um pouco. Gostaria de se juntar a mim e ouvir a água corrente?";
 		next;
 		mes "[Arthail]";
-		mes "It's not the greatest feeling if you stay here for too long, but the sound of this water reminds me of home. Did you see the lake by the Icarus Guild? These waters remind me of that place.";
+		mes "Não é a melhor sensação, ficar aqui algum tempo? Mas o som desta água me faz lembrar de casa, você já viu o lago da Aliança Icarus? Estas águas me lembrar daquele lugar.";
 		next;
 		mes "[Arthail]";
 		mes "^333333*Yawn...*^000000";
-		mes "I haven't talked";
-		mes "like this in so long.";
-		mes "I'm so tired, I think";
-		mes "I'll rest just a little...";
+		mes "Não falei";
+		mes "disso há muito tempo.";
+		mes "Estou tão cansado, eu acho";
+		mes "que vou descansar um pouco...";
 		next;
 		mes "[Arthail]";
 		mes "..........";
 		next;
-		mes "^3355FFArthail of the Wind";
-		mes "has fallen fast asleep.^000000";
+		mes "^3355FFArthail do Vento";
+		mes "caiu profundamente adormecido.^000000";
 		next;
 		mes "["+strcharinfo(0)+"]";
 		mes "Ah...";
-		mes "So peaceful~";
+		mes "Tranquilamente~";
 		next;
-		mes "^3355FFThe rhythm of the lapping waters gently eases you into a state of perfect relaxation. The cold, crisp water would feel so refreshing if you dipped your feet into it...^000000";
+		mes "^3355FFO ritmo das águas batendo suavemente facilita você a entrar num estado de relaxamento perfeito. A água fria dá a sensação tão refrescante se você mergulhasse seus pés nela...^000000";
 		//sound "se_subterranean_waterwave.wav" 1 0 0
 		next;
 		mes "[???]";
@@ -1742,9 +1740,9 @@ prontera,126,335,5	script	Arthail	1_M_BARD,{
 		soundeffectall "se_littlewaves02.wav",0;
 		next;
 		mes "["+strcharinfo(0)+"]";
-		mes "Huh?";
-		mes "What was";
-		mes "that noise?";
+		mes "Hann?";
+		mes "O que foi";
+		mes "esse barulho?";
 		next;
 		mes "[????]";
 		mes "AAAAAAAAAAAAAAAHHHHHHHHHHH!!!!!";
@@ -1752,20 +1750,20 @@ prontera,126,335,5	script	Arthail	1_M_BARD,{
 		soundeffectall "se_scream_w01.wav",0;
 		next;
 		mes "["+strcharinfo(0)+"]";
-		mes "What the--?!";
-		mes "That sounds like";
-		mes "screams coming from";
-		mes "inside Prontera Castle!";
+		mes "O que--?!";
+		mes "Isso soa como";
+		mes "gritos vindo de";
+		mes "dentro do Castelo de Prontera!";
 		next;
-		mes "^3355FFYou try to wake Arthail";
-		mes "but he's deeply asleep";
-		mes "and won't budge at all.^000000";
+		mes "^3355FFVocê tenta acordar Arthail";
+		mes "mas ele está profundamente adormecido";
+		mes "e não irá se mover.^000000";
 		next;
 		mes "["+strcharinfo(0)+"]";
-		mes "I can't help it then.";
-		mes "I'd better go check";
-		mes "this out on my own.";
-		tu_archer02 = 5;
+		mes "Eu não posso ajudá-lo então.";
+		mes "É melhor eu ir ver";
+		mes "por conta própria.";
+		set tu_archer02, 5;
 		close;
 
 	} else if(tu_archer02 > 4 && tu_archer02 < 7){
@@ -1773,30 +1771,30 @@ prontera,126,335,5	script	Arthail	1_M_BARD,{
 		close;
 
 	} else if(tu_archer02 == 8){
-		mes "Where did you go?";
-		mes "I thought you might have been kidnapped since you weren't";
-		mes "here when I woke up.";
+		mes "Onde você foi?";
+		mes "Achei que você poderia ter sido sequestrado já que não estava";
+		mes "aqui quando acordei.";
 		next;
 		mes "[Arthail]";
-		mes "So everyone said nothing";
-		mes "happened when you asked";
-		mes "about the shrieks you heard?";
-		mes "That's really peculiar...";
+		mes "Então todos disseram que nada";
+		mes "aconteceu quando você perguntou.";
+		mes "Sobre os gritos que você ouviu?";
+		mes "Isso é muito peculiar...";
 		next;
 		mes "[Arthail]";
-		mes "Even the Emperium you mentioned earlier. I thought it was supposed to be a rare item, but why is it so easy for so many people to get";
-		mes "one? It's very strange...";
+		mes "Até mesmo o Emperium você mencionou anteriormente. Eu pensei se tratar de um item raro, mas por que é tão fácil para tantas pessoas obterem";
+		mes "um? É muito estranho...";
 		next;
 		mes "[Arthail]";
-		mes "Huh. I better investigate this";
-		mes "a little more, so I'll stay here to gather more information. For now, you should head back to Payon and let Master Kavaruk know that I'm doing alright.";
+		mes "Hunn. É melhor investigar isso";
+		mes "um pouco mais, então eu vou ficar aqui e reunir mais informações. Por enquanto, você deve voltar para Payon e para o Mestre Kavaruk, sei que eu estou fazendo tudo certo.";
 		next;
 		mes "[Arthail]";
-		mes "And one day...";
-		mes "I guess I'll finally";
-		mes "have a song that";
-		mes "I can share with you.";
-		tu_archer02 = 9;
+		mes "E um dia...";
+		mes "acredito que finalmente terei";
+		mes "uma música que";
+		mes "eu possa compartilhar com você.";
+		set tu_archer02, 9;
 		close;
 	}
 	mes "...";
@@ -1807,111 +1805,111 @@ prontera,126,335,5	script	Arthail	1_M_BARD,{
 // New Guild Master
 //============================================================
 prontera,167,281,3	script	New Guild Master#tu	4_M_MONK,{
-	mes "[New Guild Master]";
-	mes "Hearken, all";
-	mes "of you who seek";
-	mes "fame and glory!";
+	mes "[Novo Mestre da Guilda]";
+	mes "Ouçam, todos";
+	mes "aqueles que procuram";
+	mes "fama e glória!";
 	next;
-	mes "[New Guild Master]";
-	mes "I hold in my hand this ^3131FFEmperium^000000, sign that I am favored by destiny! Brave ones, I bid you, lend me";
-	mes "your power!";
+	mes "[Novo Mestre da Guilda]";
+	mes "Eu tenho em minhas mãos este ^3131FFEmperium^000000, sinal de que sou favorecido pelo destino! Os corajosos, dou-lhes emprestado";
+	mes "o seu poder!";
 	next;
-	mes "[New Guild Master]";
-	mes "Nothing can stop us!";
-	mes "So long as this jewel";
-	mes "is in my possession,";
-	mes "those who call themselves";
-	mes "my comrades will never";
-	mes "know the taste of defeat!";
-	if(tu_archer02 == 3) tu_archer02 = 4;
+	mes "[Novo Mestre da Guilda]";
+	mes "Nada pode nos parar!";
+	mes "Enquanto esta jóia";
+	mes "estiver em minha posse,";
+	mes "e aqueles que se dizem";
+	mes "meus companheiros nunca irão";
+	mes "conhecer o sabor da derrota!";
+	if(tu_archer02 == 3) set tu_archer02, 4;
 	close;
 }
 
 // Mage
 //============================================================
 prontera,144,301,5	script	Mage#tu	2_F_MAGICMASTER,{
-	mes "[Mage]";
-	mes "Did you see that";
-	mes "new guild master?";
-	mes "Talk about getting";
-	mes "on your soapbox!";
+	mes "[Mago]";
+	mes "Você viu isso";
+	mes "novo mestre da guilda?";
+	mes "Fale sobre a obtenção de";
+	mes "sua caixa de sabão!";
 	next;
 	emotion e_pif;
-	mes "[Mage]";
-	mes "Doesn't he know that there";
-	mes "are a lot of famous guilds around nowadays? Why would anyone want";
-	mes "to join his small no-name guild?";
+	mes "[Mago]";
+	mes "Será que ele não sabe que há";
+	mes "uma série de alianças famosas por aí hoje em dia? Por que alguém iria querer";
+	mes "se juntar à sua pequena guilda sem nome?";
 	next;
-	mes "[Mage]";
-	mes "Now, if I become a Wizard,";
-	mes "I'm going to join the best guild around. Casting spells to help the strongest Knights and the most powerful Priests would make me";
-	mes "look really cool!";
+	mes "[Mago]";
+	mes "Agora, se eu me tornar um Mago,";
+	mes "Vou juntar o melhor das alianças ao redor. Usar feitiços para ajudar os mais fortes cavaleiros e os mais poderosos sacerdotes, faria de mim";
+	mes "um cara super legal!";
 	next;
 	mes "[Mage]";
 	mes "Bwahahah!";
-	mes "Just thinking";
-	mes "about it makes";
-	mes "me so excited!";
+	mes "Só em pensar";
+	mes "nisso me sinto";
+	mes "muito animado!";
 	close;
 }
 
 // Minister
 //============================================================
 prt_castle,76,165,6	script	Minister#tu	1_M_JOBTESTER,{
-	mes "[Minister]";
-	mes "The royal family";
-	mes "is extremely busy";
-	mes "at the moment, handling";
-	mes "our nation's administration.";
+	mes "[Ministro]";
+	mes "A família real";
+	mes "é extremamente ocupada";
+	mes "neste momento, com a manipulação";
+	mes "administrativa da nossa nação.";
 	if(tu_archer02 == 5){
 		next;
 		mes "["+strcharinfo(0)+"]";
-		mes "I heard screams";
-		mes "from outside! Did";
-		mes "something happen?";
+		mes "Ouvi gritos";
+		mes "vindo de lá fora! Aconteceu";
+		mes "alguma coisa?";
 		next;
-		mes "[Minister]";
+		mes "[Ministro]";
 		mes "...";
 		mes "......";
 		next;
-		mes "[Minister]";
-		mes "Ah, there are a few stray cats running around, those Wild Roses, so those noises you heard must have been them. Everything is fine here in the palace.";
-		tu_archer02 = 6;
+		mes "[Ministro]";
+		mes "Ah, existem alguns gatos de rua correndo, esses rosas selvagens, esses ruídos que você ouviu devem ter sido eles. Está tudo bem aqui no palácio.";
+		set tu_archer02, 6;
 		close;
 	} else if(tu_archer02 == 7){
 		next;
-		mes "^3355FFThe urgency that the Minister expressed earlier has been";
-		mes "replaced with a stone cold feeling of sternness. He probably won't tell you much more information,";
-		mes "no matter how much you ask him.";
+		mes "^3355FFA urgência que o ministro expressou anteriormente tem sido";
+		mes "substituída por uma sensação de fria e austera. Ele provavelmente não irá dar-lhe muitas informação,";
+		mes "não importa o quanto você perguntar a ele.";
 		close;
 	} else if(tu_acolyte01 == 25){
 		next;
 		mes "["+strcharinfo(0)+"]";
 		mes "Um...";
-		mes "I hear that";
-		mes "the royal family";
-		mes "might be in sort of";
-		mes "trouble. Is there any";
-		mes "way I could help?";
+		mes "Ouvi dizer que";
+		mes "a família real";
+		mes "pode estar tendo alguns";
+		mes "problemas. Existe algo que";
+		mes "eu possa fazer para ajudar?";
 		next;
-		mes "[Minister]";
+		mes "[Ministro]";
 		mes "...";
 		mes "......";
 		next;
-		mes "[Minister]";
-		mes "You must be mistaken.";
-		mes "The royal family is fine,";
-		mes "especially since our";
-		mes "kingdom is at peace.";
+		mes "[Ministro]";
+		mes "Você deve estar enganado.";
+		mes "A família real está bem,";
+		mes "especialmente por que";
+		mes "nosso reino está em paz.";
 		next;
-		mes "[Minister]";
-		mes "Perhaps you've gotten that idea because it's very difficult to meet any member of the royal family. Please understand that they're";
-		mes "all very busy trying to serve";
-		mes "the people.";
+		mes "[Ministro]";
+		mes "Talvez você tenha tido essa impressão por ser muito difícil atender a qualquer membro da família real. Por favor, entenda que eles são";
+		mes "todos muito ocupados tentando servir";
+		mes "ao seu povo.";
 		next;
-		mes "[Minister]";
-		mes "As a holy servant, I'm sure that you'll find plenty of other people who have need of your help and abilities outside of the palace.";
-	}
+		mes "[Ministro]";
+		mes "Como servo sagrado, tenho certeza que irá encontrar muitas outras pessoas que precisam de sua ajuda e habilidades fora do palácio.";
+	} 
 	close;
 }
 
@@ -1920,11 +1918,11 @@ prt_castle,76,165,6	script	Minister#tu	1_M_JOBTESTER,{
 prt_castle,94,150,4	script	#sound_tu	HIDDEN_WARP_NPC,6,6,{
 OnTouch_:
 	if(tu_archer02 == 6) {
-		mes "[Minister]";
-		mes "Contact the";
-		mes "Prontera Church.";
-		mes "Hurry, this is urgent!";
-		tu_archer02 = 7;
+		mes "[Ministro]";
+		mes "Entre em contato na";
+		mes "Igreja de Prontera.";
+		mes "Depressa, isto é urgente!";
+		set tu_archer02, 7;
 		close;
 	}
 	end;
@@ -1933,46 +1931,47 @@ OnTouch_:
 // Bishop Maugins
 //============================================================
 monk_in,19,43,1	script	Bishop Maugins	1_M_PASTOR,{
-	mes "[Bishop Maugins]";
+	mes "[Bispo Maugins]";
 	if(tu_archer02 == 7){
-		mes "Greetings.";
-		mes "I doubt that you're here to change to the Monk job, but may I help you with something? Perhaps you're";
-		mes "here for a confession?";
+		mes "Saudações.";
+		mes "Duvido que você esteja aqui para mudar de classe para Monge, mas posso te ajudar com alguma coisa? Talvez você esteja";
+		mes "aqui para uma confissão?";
 		next;
-		mes "[Bishop Maugins]";
-		mes "Hm? Work related to";
-		mes "the Palace? Yes, I'm in";
-		mes "charge of that area. So";
-		mes "how may I help you?";
+		mes "[Bispo Maugins]";
+		mes "Hum? Trabalho relacionado com o";
+		mes "Palacio? Sim, eu sou o";
+		mes "responsável por esta área. Então";
+		mes "como posso ajudá-lo?";
 		next;
-		switch(select("Has something happened to the Kingdom?:Nothing.")) {
+		switch(select("Aconteceu alguma coisa com o Reino?:Nada.")) {
 		case 1:
-			mes "[Bishop Maugins]";
+			mes "[Bispo Maugins]";
 			mes "...!!";
 			next;
-			mes "[Bishop Maugins]";
+			mes "[Bispo Maugins]";
 			mes "...";
 			mes "......";
 			next;
-			mes "[Bishop Maugins]";
+			mes "[Bispo Maugins]";
 			mes "Ho ho~";
-			mes "Of course not!";
-			mes "The king and I regularly write to each other, but I haven't heard of anything in particular. Please don't worry yourself.";
+			mes "É claro que não!";
+			mes "O rei e eu nos correspodemos regularmente, mas não ouvi falar nada em particular. Por favor não se preocupe.";
 			next;
-			tu_archer02 = 8;
+			set tu_archer02, 8;
 			break;
 		}
-		mes "[Bishop Maugins]";
-		mes "Good luck on";
-		mes "your journeys,";
-		mes "brave adventurer.";
+		mes "[Bispo Maugins]";
+		mes "Boa sorte em";
+		mes "suas viágens,";
+		mes "bravo aventureiro.";
 		npcskill "AL_INCAGI",10,0,0;
 		npcskill "AL_BLESSING",10,0,0;
 		close;
 	}
-	mes "I'm sorry, but I have";
-	mes "some pressing matter";
-	mes "to think about right now.";
-	mes "Would you come back later?";
+	mes "Sinto muito mas tenho";
+	mes "outros assuntos urgentes";
+	mes "para pensar no momento.";
+	mes "Você poderia voltar mais tarde?";
 	close;
 }
+mjolnir_11,27,223,3	duplicate(Acolyte_Tu)	Acolyte#tup	4_F_SISTER,{}
