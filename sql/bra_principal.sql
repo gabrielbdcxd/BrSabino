@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: 21-Nov-2016 às 00:08
+-- Generation Time: 21-Nov-2016 às 00:11
 -- Versão do servidor: 5.7.16
 -- PHP Version: 5.6.26
 
@@ -255,6 +255,19 @@ CREATE TABLE `char_reg_str_db` (
   `key` varchar(32) CHARACTER SET latin1 COLLATE latin1_bin NOT NULL DEFAULT '',
   `index` int(11) UNSIGNED NOT NULL DEFAULT '0',
   `value` varchar(254) NOT NULL DEFAULT '0'
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `devilsquare`
+--
+
+CREATE TABLE `devilsquare` (
+  `id_usuario` int(11) NOT NULL,
+  `nome` varchar(255) NOT NULL,
+  `id_acc` int(11) NOT NULL,
+  `pontos` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -611,7 +624,7 @@ CREATE TABLE `login` (
 --
 
 INSERT INTO `login` (`account_id`, `userid`, `user_pass`, `sex`, `email`, `group_id`, `state`, `unban_time`, `expiration_time`, `logincount`, `lastlogin`, `last_ip`, `mac_address`, `birthdate`, `character_slots`, `pincode`, `pincode_change`, `last_password_change`) VALUES
-(1, 'onlineragnarok', 'RagnarokOnline1', 'S', 'brathena@brathena.org', 0, 0, 0, 0, 1, '2016-11-20 22:07:40', '52.67.213.74', '', '1970-01-01', 0, '', 0, 0);
+(1, 'onlineragnarok', 'RagnarokOnline1', 'S', 'brathena@brathena.org', 0, 0, 0, 0, 2, '2016-11-20 22:10:23', '52.67.213.74', '', '1970-01-01', 0, '', 0, 0);
 
 --
 -- Acionadores `login`
@@ -742,7 +755,9 @@ INSERT INTO `mapreg` (`varname`, `index`, `value`) VALUES
 ('$top_70min', 0, '7'),
 ('$top_60min', 0, '6'),
 ('$top_50min', 0, '5'),
-('$top_ptmin', 0, '10');
+('$top_ptmin', 0, '10'),
+('$aberto', 0, '1'),
+('$status', 0, '1');
 
 -- --------------------------------------------------------
 
@@ -1201,6 +1216,12 @@ ALTER TABLE `char_reg_num_db`
 ALTER TABLE `char_reg_str_db`
   ADD PRIMARY KEY (`char_id`,`key`,`index`),
   ADD KEY `char_id` (`char_id`);
+
+--
+-- Indexes for table `devilsquare`
+--
+ALTER TABLE `devilsquare`
+  ADD PRIMARY KEY (`id_usuario`);
 
 --
 -- Indexes for table `elemental`
