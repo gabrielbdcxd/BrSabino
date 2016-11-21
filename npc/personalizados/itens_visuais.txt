@@ -145,4 +145,4 @@
 // --------------------------------------------------------------------------
 // Use duplicates to put your npc on different cities
 // --------------------------------------------------------------------------
-prontera,155,181,4	duplicate(Arlequim_dos_Visuais)	Arlequim dos Visuais#1	4_M_PIERROT
+sec_in02,167,154,4	duplicate(Arlequim_dos_Visuais)	Arlequim dos Visuais#1	4_M_PIERROT

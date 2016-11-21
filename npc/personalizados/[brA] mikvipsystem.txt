@@ -377,3 +377,8 @@ prontera,160,215,3	script	[ Premium Account ]	712,{
 	}
 	detachrid;
 }
+sec_in02,166,170,5	duplicate([ Premium Account ])	[ Premium Account ]#GM	712
+morocc,166,103,5	duplicate([ Premium Account ])	[ Premium Account ]#mr	712
+alberta,109,67,5	duplicate([ Premium Account ])	[ Premium Account ]#Alb	712
+yuno,169,187,5	duplicate([ Premium Account ])	[ Premium Account ]#yun	712
+aldebaran,144,129,5	duplicate([ Premium Account ])	[ Premium Account ]#ald	712

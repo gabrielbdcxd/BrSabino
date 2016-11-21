@@ -1,38 +1,40 @@
-//===== Hercules Script ======================================
+//===== Cronus Script ========================================
 //= Estilista
-//===== Por: ==================================================
-//= Euphy
-//===== Compatível Com: ======================================
-//= BRathena -- Tradução por: Julinhobrow
-//===== Versão Atual: ===========================================
-//= 1.1
-//===== Compatível Com: =========================================
-//= Cronus
-//===== Descrição: ==============================================
-//= Muda seu Estilo e Cor do cabelo e as cores de suas roupas.
-//===== Comentários Adicionais: =================================
-//= 1.1 Switched to 'getbattleflag', credits to Saithis. [Euphy]
+//===== Por: =================================================
+//= Rafael
+//===== Vers?o Atual: ========================================
+//= 1.1a CR
+//===== Descri??o: ===========================================
+//= Tinge e troca o estilo do cabelo e muda a cor da roupa.
+//===== Changelog: ===========================================
+//= 1.0 Script inicial.
+//= 1.1 Reestruturado. [RoM]
+//= 1.1a Removido strsex, show, digit [Keoy]
+//= 1.1b Corrigida sintaxe na frase de boas-vindas do NPC [mkbu95]
 //============================================================
 
-prontera,170,180,1	script	Estilista#custom_stylist	2_M_DYEINGER,{
-
-	setarray .@styles[1],getbattleflag("max_cloth_color"),getbattleflag("max_hair_style"),getbattleflag("max_hair_color");
-	setarray .@Look[1],7,1,6;
-	set .@s, select(" ~ Cor da Roupa: ~ Estilo de Cabelo: ~ Cor de Cabelo");
-	set .@Revert, getlook(.@Look[.@s]);
-	set .@style,1;
+sec_in02,170,180,1	script	Estilista	122,{
+	mes "[^FF0000Estilista^000000]";
+	mes "Bem-vind"+ (Sex?"o":"a") +" "+strcharinfo(0)+",";
+	mes "o que voce gostaria de alterar?";
+	next;
+	if(select("Estilo do Cabelo","Cor do Cabelo","Cor da Roupa","Cancelar") == 4) close;
+	if(@menu == 1) setarray .@cor[0],1,getbattleflag ("min_hair_style"),getbattleflag ("max_hair_style");
+	if(@menu == 2) setarray .@cor[0],6,getbattleflag ("min_hair_color"),getbattleflag ("max_hair_color");
+	if(@menu == 3) setarray .@cor[0],7,getbattleflag ("min_cloth_color"),getbattleflag ("max_cloth_color");
 	while(1) {
-		setlook .@Look[.@s], .@style;
-		message strcharinfo(0),"Este é o estilo #"+.@style+".";
-		set .@menu$, " ~ Próximo (^0055FF"+((.@style!=.@styles[.@s])?.@style+1:1)+"^000000): ~ Anterior (^0055FF"+((.@style!=1)?.@style-1:.@styles[.@s])+"^000000): ~ Pule Para...: ~ Volte ao Original (^0055FF"+.@Revert+"^000000)";
-		switch(select(.@menu$)) {
-			case 1: set .@style, ((.@style!=.@styles[.@s])?.@style+1:1); break;
-			case 2: set .@style, ((.@style!=1)?.@style-1:.@styles[.@s]); break;
-			case 3: message strcharinfo(0),"Escolha um estilo entre 1 e "+.@styles[.@s]+".";
-				input .@style,0,.@styles[.@s];
-				if (!.@style) set .@style, rand(1,.@styles[.@s]);
-				break;
-			case 4: set .@style, .@Revert; setlook .@Look[.@s], .@Revert; break;
+		if(select("Próximo","Anterior","Digitar","Cancelar") == 4) close;
+		if(@menu == 1)
+			if(getlook(.@cor[0]) >= .@cor[2]) setlook .@cor[0],.@cor[1];
+			else setlook .@cor[0],getlook(.@cor[0])+1;
+		if(@menu == 2)
+			if(getlook(.@cor[0]) <= .@cor[1]) setlook .@cor[0],.@cor[2];
+			else setlook .@cor[0],getlook(.@cor[0])-1;
+		if(@menu == 3) {
+			input .@num,.@cor[1],.@cor[2];
+			setlook .@cor[0],.@num;
 		}
+		mes "Número ^FF0000"+getlook(.@cor[0])+"^000000/"+.@cor[2];
+		specialeffect2 339;		
 	}
 }

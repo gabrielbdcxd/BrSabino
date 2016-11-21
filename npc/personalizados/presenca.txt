@@ -123,7 +123,7 @@ PRIMARY KEY ( `account_hourly` )
 }
 
 // --> OBS.: CUIDADO COM A HABILIDADE DESCONTO
-sec_in02,161,162,5	script	Fidelidade	2_F_MAGICMASTER,{
+sec_in02,161,162,5	script	Fidelidade	408,{
 
 	function	showtimeonline	{ set .@r$, ( getarg(0) < 1? "" : "^db4b1e"+getarg(0)+"^000000 hora"+( getarg(0) > 1? "s" : "")+" e " )+"^db4b1e"+(getarg(1)%60)+"^000000 minuto"+(getarg(1)%60 < 2? "" : "s");
 		return .@r$;
@@ -212,3 +212,9 @@ OnInit:
 }
 
 -	shop	shop_hourly	-1,512:-1	// Não altere
+
+prontera,184,218,4	duplicate(Fidelidade)	Fidelidade#prt	408
+izlude,100,124,4	duplicate(Fidelidade)	Fidelidade#izl	408
+payon,153,97,4	duplicate(Fidelidade)	Fidelidade#pay	408
+lighthalzen,201,317,4	duplicate(Fidelidade)	Fidelidade#lhz	408
+hugel,103,148,4	duplicate(Fidelidade)	Fidelidade#hug	408
