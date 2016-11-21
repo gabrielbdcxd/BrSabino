@@ -12973,6 +12973,7 @@ int skill_unit_onleft(uint16 skill_id, struct block_list *bl, int64 tick) {
 		case PF_FOGWALL:
 			if (sce) {
 				status_change_end(bl, type, INVALID_TIMER);
+				nullpo_retb(sc);
 				if ((sce=sc->data[SC_BLIND])) {
 					if (bl->type == BL_PC) //Players get blind ended immediately, others have it still for 30 secs. [Skotlex]
 						status_change_end(bl, SC_BLIND, INVALID_TIMER);

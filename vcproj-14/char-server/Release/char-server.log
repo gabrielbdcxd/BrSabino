@@ -1,44 +1,4 @@
-﻿  grammar.c
-  libconfig.c
-  scanctx.c
-  scanner.c
-  strbuf.c
-  mt19937ar.c
-  conf.c
-  core.c
-  console.c
-  db.c
-  ers.c
-  memmgr.c
-  mapindex.c
-  mutex.c
-  nullpo.c
-  random.c
-  showmsg.c
-  socket.c
-  sql.c
-  strlib.c
-  sysinfo.c
-  thread.c
-  timer.c
-  utils.c
-  char.c
-  geoip.c
-  int_auction.c
-  int_elemental.c
-  int_guild.c
-  int_homun.c
-  int_mail.c
-  int_mercenary.c
-  int_party.c
-  int_pet.c
-  int_quest.c
-  int_storage.c
-  inter.c
-  loginif.c
-  mapif.c
-  pincode.c
-  Generating code
+﻿  Generating code
   Finished generating code
   char-server.vcxproj -> C:\Users\Sabino\Desktop\Emulador\brSabino\trunk\vcproj-14\..\char-server.exe
   char-server.vcxproj -> ..\char-server.pdb (Full PDB)
