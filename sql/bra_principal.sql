@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: 21-Nov-2016 às 00:05
+-- Generation Time: 21-Nov-2016 às 00:08
 -- Versão do servidor: 5.7.16
 -- PHP Version: 5.6.26
 
@@ -611,7 +611,7 @@ CREATE TABLE `login` (
 --
 
 INSERT INTO `login` (`account_id`, `userid`, `user_pass`, `sex`, `email`, `group_id`, `state`, `unban_time`, `expiration_time`, `logincount`, `lastlogin`, `last_ip`, `mac_address`, `birthdate`, `character_slots`, `pincode`, `pincode_change`, `last_password_change`) VALUES
-(1, 'onlineragnarok', 'RagnarokOnline1', 'S', 'brathena@brathena.org', 0, 0, 0, 0, 0, '1970-01-01 00:00:00', '', '', '1970-01-01', 0, '', 0, 0);
+(1, 'onlineragnarok', 'RagnarokOnline1', 'S', 'brathena@brathena.org', 0, 0, 0, 0, 1, '2016-11-20 22:07:40', '52.67.213.74', '', '1970-01-01', 0, '', 0, 0);
 
 --
 -- Acionadores `login`
@@ -706,6 +706,43 @@ CREATE TABLE `mapreg` (
   `index` int(11) UNSIGNED NOT NULL DEFAULT '0',
   `value` varchar(255) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `mapreg`
+--
+
+INSERT INTO `mapreg` (`varname`, `index`, `value`) VALUES
+('$timezonestring$', 0, '^FF0000GMT^000000'),
+('$ttnames$', 0, 'Breezy Havana'),
+('$ttnames$', 1, 'RS125'),
+('$ttnames$', 2, 'Hollgrehenn'),
+('$ttnames$', 3, 'Antonio'),
+('$ttnames$', 4, 'Aragham'),
+('$ttnames$', 5, 'Kafra Jasmine'),
+('$ttnames$', 6, 'Chris'),
+('$ttnames$', 7, 'Breezy Havana'),
+('$ttnames$', 8, 'RS125'),
+('$ttnames$', 9, 'Breezy Havana'),
+('$ttnames$', 10, 'Nari'),
+('$ttnames$', 11, 'Senorita Sylvia'),
+('$ttnames$', 12, 'Joo Jahk'),
+('$ttnames$', 13, 'RS125'),
+('$ttranks', 0, '999999'),
+('$arn_pritop60', 0, '480'),
+('$arn_pritop70', 0, '480'),
+('$arn_pritop80', 0, '480'),
+('$arn_pritop90', 0, '480'),
+('$arn_acotop', 0, '480'),
+('$arn_pritopn60$', 0, 'Default'),
+('$arn_pritopn70$', 0, 'Default'),
+('$arn_pritopn80$', 0, 'Default'),
+('$arn_pritopn90$', 0, 'Default'),
+('$arn_acotopn$', 0, 'Default'),
+('$top_80min', 0, '8'),
+('$top_70min', 0, '7'),
+('$top_60min', 0, '6'),
+('$top_50min', 0, '5'),
+('$top_ptmin', 0, '10');
 
 -- --------------------------------------------------------
 
@@ -831,6 +868,94 @@ CREATE TABLE `pvpm_lang` (
   `lang` int(11) UNSIGNED NOT NULL DEFAULT '0',
   `str` varchar(255) NOT NULL DEFAULT ''
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `pvpm_lang`
+--
+
+INSERT INTO `pvpm_lang` (`id`, `lang`, `str`) VALUES
+(0, 0, 'Português'),
+(1, 0, 'Bem vindo as Arenas de luta!'),
+(2, 0, 'Nestas Arenas você pode duelar com outros jogadores!'),
+(3, 0, 'Os atuais Líderes das Arena são:'),
+(4, 0, 'Líder'),
+(5, 0, 'Entrar na Arena'),
+(6, 0, 'Comandos'),
+(7, 0, 'Sair'),
+(8, 0, '(Mortes)'),
+(9, 0, 'Minha Colocação'),
+(10, 0, 'O sistema de comandos remotos funciona da seguinte mandeira:'),
+(11, 0, '- Envie uma PM(Player Message) para  ^008B8Bnpc:cmd.'),
+(12, 0, '- Esse é o nome do npc. Ele automaticamente retornará uma lista de comandos para você.'),
+(13, 0, '<!!!> Você deve informar o número da Arena.'),
+(14, 0, '<!!!> Você será retirado da Arena em 5 Segundos . . .'),
+(15, 0, '<!!!> Está função só pode ser usada dentro da Arena.'),
+(16, 0, '<!!!> Ranking do foi limpo.'),
+(17, 0, '<!!!> Você deve especificar qual arena deseja resetar o Ranking.'),
+(18, 0, 'É necessário que o Nome seja informado.'),
+(19, 0, 'É necessário que o Tempo seja informado.'),
+(20, 0, 'É necessário que o Tipo de banimento seja informado.'),
+(21, 0, '<!!!> Tempo de(o): '),
+(22, 0, '<!!!> O banimento foi retirado de(o) '),
+(23, 0, '[GM Mensagem] Você foi desbanido da Arena PvP.'),
+(25, 0, '<!!!> Ninguém foi encontrado com este nome.'),
+(26, 0, '<!!!> Tempo de banimento alterado.'),
+(27, 0, 'Minutos'),
+(28, 0, '[GM Mensagem] Você está banido da Arena PvP por'),
+(24, 0, 'O valor do Tempo não é válido, por favor utilize caracteres de 0 à 9.'),
+(29, 0, '<!!!> O sistema de arenas não suporta mais de 10 mapas.'),
+(30, 0, '<!!!> Se quiser alterar o valor máximo, entre em contado com Mooka. (mooka.support@hotmail.com)'),
+(31, 0, '<!!!> 1. Por favor, defina o tipo de arena.'),
+(32, 0, '<!!!> 2. Só é permitido o uso dos caracteres de 0 à 2.'),
+(33, 0, '<!!!> - 0 = Arena PvP; 1 = Arena PvP Baby; 2 Arena GvG;'),
+(34, 0, '<!!!> Esse mapa já está sendo usado pelo [PvP Master].'),
+(35, 0, '<!!!> O mapa foi adicionado. '),
+(36, 0, '<!!!> Opa! Você não pode retirar mais mapas do PvP Master, isto causará problemas!'),
+(37, 0, '<!!!> Nenhum mapa com este nome está sendo usado.'),
+(38, 0, '<!!!> O mapa foi retirado.'),
+(39, 0, '<!!!>'),
+(40, 0, 'O comando \'!pvp\' serve para teleportá-lo à arena desejada, para usá-lo você deve enviar a mensagem:'),
+(41, 0, 'Após o \'#\' é o número da arena.'),
+(42, 0, '!ranking serve para mostrar o Ranking. Para isso, você deve enviar uma das mensagens abaixo:'),
+(43, 0, 'Você deve especificar qual ranking você deseja visualizar (#pvp ou #gvg), caso deseje o ranking de mortes adicione #die no final.'),
+(44, 0, '!pvplider ou !gvglider serve para mostrar o player ou guild com mais pontos.'),
+(45, 0, 'Serve para retirá-lo da arena, teleportando-o para seu savepoint.'),
+(46, 0, 'Este comando irá banir determinado player/guild pelo nome, o tempo é em minutos.'),
+(47, 0, 'Exemplo: !ban#nome#tempo(em minutos)#0(Player)/2(Guild) -> !ban#Player1#60#1 / !ban#EmpBreak#60#2'),
+(48, 0, 'Você deve definir se está banindo um player ou guild, colocando ao final 1 para Player e 2 para Guild.'),
+(49, 0, 'Para diminuir o tempo, utilize o sinal de menos(-) antes do valor. Para desbanir o mesmo, envie no campo de Tempo \'unban\'.'),
+(50, 0, 'Caso deseje ver o tempo restante, envie no campo do Tempo \'showtime\'.'),
+(51, 0, 'Comando para adicionar ou retirar mapas.'),
+(52, 0, '-> !map#add#mapname#type para adicionar um mapa.'),
+(53, 0, '-> !map#del#mapname para deletar um mapa.'),
+(54, 0, 'Comando para limpar a tabela do ranking.'),
+(55, 0, '-> !truncate#pvp para limpar o ranking do PvP.'),
+(56, 0, '-> !truncate#gvg para limpar o ranking do GvG.'),
+(57, 0, '<!!!> Nenhum comando foi encontrado.'),
+(58, 0, '- Lista De Comandos -'),
+(59, 0, '--- Use !help#!COMANDO para mais informações. ---'),
+(60, 0, '- !warp#número (Teleporta-o para Arena)'),
+(61, 0, '- !ranking (Ranking normal)'),
+(62, 0, '- !ranking2 (Mostra sua posição no Ranking)'),
+(63, 0, '- !pvplider (Mostra o lider do PvP)'),
+(64, 0, '- !gvglider (Mostra o lider do GvG)'),
+(65, 0, '- !exit (Sai da arena)'),
+(66, 0, '--- GM\'s Comandos ---'),
+(67, 0, '- !truncate (Limpa o Ranking)'),
+(68, 0, '- !ban (Bani o player da arena)'),
+(69, 0, '- !map (Add ou Del um mapa do PvP Master)'),
+(70, 0, '<!!!> Você não está entre os 125 colocados do Ranking.'),
+(71, 0, 'Desculpe, mas você precisa estar em uma Guild para entrar nesta Arena.'),
+(72, 0, 'Olhe o seu tamanho! Esta arena é restrita a Baby\'s!'),
+(73, 0, 'Você não pode usar está função dentro da Arena.'),
+(74, 0, 'Você está banido da Arena por'),
+(75, 0, 'É o Novo Lider'),
+(76, 0, 'Pontos'),
+(77, 0, 'Você Ganhou:'),
+(78, 0, 'Você Perdeu:'),
+(79, 0, 'Linguagem'),
+(80, 0, 'Selecione sua linguagem:'),
+(81, 0, 'Valor inválido.');
 
 -- --------------------------------------------------------
 
@@ -986,6 +1111,21 @@ CREATE TABLE `updatecharlog` (
   `gdid` int(11) UNSIGNED NOT NULL DEFAULT '0',
   `position` tinyint(4) NOT NULL DEFAULT '0',
   `regdate` datetime NOT NULL DEFAULT '1970-01-01 00:00:00'
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `viptable`
+--
+
+CREATE TABLE `viptable` (
+  `id_account` int(11) UNSIGNED NOT NULL DEFAULT '0',
+  `login` varchar(255) NOT NULL DEFAULT '',
+  `char_name` varchar(100) NOT NULL DEFAULT '',
+  `minutos_vip` int(11) UNSIGNED NOT NULL DEFAULT '0',
+  `online` tinyint(2) NOT NULL DEFAULT '0',
+  `vipinsert` tinyint(2) NOT NULL DEFAULT '0'
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
@@ -1301,6 +1441,12 @@ ALTER TABLE `sql_updates`
 ALTER TABLE `storage`
   ADD PRIMARY KEY (`id`),
   ADD KEY `account_id` (`account_id`);
+
+--
+-- Indexes for table `viptable`
+--
+ALTER TABLE `viptable`
+  ADD PRIMARY KEY (`id_account`);
 
 --
 -- AUTO_INCREMENT for dumped tables
