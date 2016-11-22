@@ -25,131 +25,131 @@
 gef_tower,111,37,4	script	Wizard Guildsman	1_F_GYPSY,{
 	if (Upper == 1) {
 		mes "[Catherine]";
-		mes "? Excuse me, I am wondering if we have met before...?";
-		mes "Hey~ you have changed a lot! So, what happened?";
+		mes "Me desculpe, eu estava aqui me perguntando, se já não te encontrei antes...?";
+		mes "Nossa, você mudou bastante! E então, o que aconteceu?";
 		next;
 		mes "[Catherine]";
-		mes "I feel you have become so much powerful, eh?";
-		mes "Congratulations and good luck with your life!";
+		mes "Percebo que você ficou bem forte não é mesmo?";
+		mes "Meus parabéns, e boa sorte em suas aventuras!";
 		close;
 	}
 	if (BaseJob != Job_Mage) {
 		if (BaseJob == Job_Wizard) {
 			mes "[Catherine]";
-			mes "Since you're already a Wizard, you don't have any more business with me...?";
-			mes "Now, excuse me.";
+			mes "Você ja é um Bruxo, qual assunto você tem a tratar comigo...?";
+			mes "Agora, se me dá licensa.";
 			next;
 			mes "[Catherine]";
 			if (Sex)
-				mes "Well, If you intended to ask me on a date... I appreciate it...hohoho.";
+				mes "Bem, se você planeja me convidar para um encontro... Eu adoraria...hohoho.";
 			else
-				mes "Well, if you fix me up with a cute guy... I'd appreciate it...hohoho!.";
+				mes "Bem, se você me apresentasse a algum gatinho... Eu adoraria...hohoho!.";
 			close;
 		}
 		else if (BaseClass == Job_Novice) {
 			mes "[Wizard Guildsman]";
-			mes "Oh my goodness, it's a novice~ ain't you the cutest little thing.";
-			mes "By the way honey, this place is for Wizards.";
+			mes "Nossa, um aprendiz, mas que coisinha mais fofa que você é.";
+			mes "Entretanto, este é um local para bruxos.";
 			next;
 			mes "[Wizard Guildsman]";
-			mes "If you are interested in magic,";
-			mes "Go visit the ^0000FFMage^000000 guild.";
+			mes "Se você tem interesse pela magia,";
+			mes "Vá visitar a guilda dos ^0000FFMagos^000000 .";
 		}
 		else {
 			mes "[Wizard Guildsman]";
-			mes "Huh? what brings you to such a high place...?";
-			mes "If you don't have any specific business, please leave immediately.";
-			mes "This place is for Wizards, you know?";
+			mes "Huh? o que te traz a este local tão alto...?";
+			mes "Se você não tem nenhum assunto específico a tratar, por favor, saia imediatamente.";
+			mes "Este é um local para Bruxos, você sabia?";
 		}
 		next;
 		mes "[Wizard Guildsman]";
-		mes "Ok, then. Farewell.";
+		mes "Ok, então. Até mais.";
 		close;
 	}
 	if (WIZ_Q == 0) {
 		mes "[Wizard Guildsman]";
-		mes "Huh? What are you doing way up here...?";
-		mes "So what brings you here?";
+		mes "Hã? O que você faz aqui em cima...?";
+		mes "Então, o que te traz aqui?";
 		next;
-		if (select("I want to become a Wizard.:...nothing.") == 1) {
+		if (select("Quero me tornar um Bruxo..") == 1) {
 			mes "[Wizard Guildsman]";
-			mes "I see... Well, of course you want to become a Wizard, otherwise you wouldn't have walked up all those stairs right?";
-			mes "Anyways, I would like to welcome you. I will assist you in becoming a Wizard.";
+			mes "Entendo... é claro que você quer se tornar um bruxo, caso contrario você não teria todas as escadas até aqui não é mesmo?";
+			mes "De qualquer modo, eu lhe dou boas vindas. Eu irei lhe supervisionar até se tornar um bruxo.";
 			next;
 			mes "[Wizard Guildsman]";
-			mes "My name is Catherine Medici. Just between me and you, I just became a Wizard too!";
-			mes "You can call me Cathy if you want. Hehehehehe~";
+			mes "Meu nome é Catherine Medici. Só entre eu e você, eu acabei de me tornar uma bruxa também!";
+			mes "você pode me chamar de Cathy se quiser. Hehehehehe~";
 			next;
 			mes "[Catherine]";
-			mes "Many people want to become Wizards, but only the patient and strong ones will eventually accomplish their goals.";
-			mes "In order to become a Wizard, one must undergo difficult quests.";
+			mes "Muitas pessoas querem se tornar Bruxos, mas somente os mais poderosos e pacientes irão alcançar o objetivo.";
+			mes "Para se tornar um Bruxo, você deve se submeter a testes extremamente difíceis.";
 			next;
 			mes "[Catherine]";
-			mes "Also only mages who have reached a job level of 40 or higher are qualified for these quests.";
-			mes "Lower level mages aren't experienced enough with magic to become Wizards...";
+			mes "Além disso, somente magos que conseguiram alcançar o nível de classe 40 ou acima são aptos para realizar estes testes.";
+			mes "Magos com nível abaixo do requerido, não possuem expericência o suficiente para se tornar um bruxo...";
 			next;
 			mes "[Catherine]";
-			mes "Well, I will give you more information when you apply for the job.";
-			mes "So! Do you want to apply now?";
+			mes "Bem, eu só posso te dar mais informações caso você se candidate para o teste.";
+			mes "O que me diz? Quer tentar?";
 			next;
-			if (select("Yes, I do.:On second thought, Let me think about it.") == 1) {
+			if (select("Sim, Vamos nessa.:On second thought, Me dê um tempo para pensar.") == 1) {
 				if (JobLevel < 40) {
 					mes "[Catherine]";
-					mes "Hey hey, weren't you listening to me?";
-					mes "I told you that you need to be at least job level 40 to sign up for the quest...";
+					mes "Alôôu, Você não escutou o que eu acabei de dizer?";
+					mes "Eu disse que o SEU nível de classe precisa ser no mínimo 40 para a realização do exame...";
 					next;
 					mes "[Catherine]";
-					mes "No need to hurry, go experience and ponder more about the world of magic.";
-					mes "When I deem you're qualified, I will accept your application.";
+					mes "Sem pressa, o que tiver que ser será, Vá e explore um pouco mais o mundo da magia, ainda há o que aprender antes do teste.";
+					mes "Quando eu notar que você está em condições de realizar o teste, eu aceitarei sua inscrição.";
 					close;
 				}
 				if (SkillPoint) {
 					mes "[Catherine]";
-					mes "Umm... You're well qualified, but you have some unused skill points left.";
-					mes "You'd better learn more skills before applying again.";
+					mes "Hmm... Você está qualificado para realizar os testes, porém, você deve gastar todos os seus pontos de habilidades antes de prosseguir..";
+					mes "Você precisa aprender mais habilidades antes de começar os testes.";
 					close;
 				}
 				mes "[Catherine]";
-				mes "Very well then, I accept your application.";
-				mes "Your name is..." + strcharinfo(0) + ", isn't it? I am not sure if I pronounced it correctly?";
+				mes "Muito bem, eu aceito sua inscrição.";
+				mes "Seu nome é..." + strcharinfo(0) + ", é isso? Por acaso eu pronunciei corretamente?";
 				next;
 				mes "[Catherine]";
-				mes "The Wizard job change quest is divided into 3 parts.";
-				mes "1st part, gathering magic items.";
-				mes "2nd part, a written test.";
-				mes "The last part is a practical magic test.";
+				mes "Pois bem, o teste de bruxo é dividido em três partes.";
+				mes "A primeira parte, é coleta de materiais.";
+				mes "A segunda parte, é um teste escrito.";
+				mes "A última parte é um teste prático.";
 				next;
 				mes "[Catherine]";
-				mes "Among one of these tests, we exempt those who are at job level 50.";
-				mes "It is enough to prove to us the effort it will take to become a Wizard if a mage has learned that much already.";
+				mes "Aos magos que atingiram o nível 50 de classe, como prova de reconhecimento pelo seu esforço, não exigimos que faça o primeiro teste.";
+				mes "O esforço necessário para alcançar o máximo potencial como mago, já é o suficiente para nos provar sua competencia.";
 				next;
 				if (JobLevel == 50) {
 					mes "[Catherine]";
-					mes "Hmm, come to think of it, you're at job level 50!?";
-					mes "You must have worked very hard. Your going to become a very powerful Wizard, I can feel it in you.";
+					mes "Hmm, parando pra pensar,você ja está com nível de classe 50!?";
+					mes "Você deve ter treinado bastante, E apósto que será um bruxo extremamente poderoso, Eu meio que posso sentir isso só pelo seu olhar!";
 					next;
 					mes "[Catherine]";
-					mes "Ok. You already passed the 1st test then.";
-					mes "Don't get too laid back though, there are still 2 more tests left.";
+					mes "Ok. Você passou do primeiro teste, meus parabéns.";
+					mes "Mas não relaxe ainda, afinal de contas este é só o início, ainda faltam 2 testes para serem feitos se lembra? Vamos lá.";
 					next;
 					mes "[Catherine]";
-					mes "Go talk to the man in the corner and he will give you the remaining exams.";
-					mes "Be careful. We have lost many Mages due to the difficulty of the exams.";
+					mes "Agora vá falar com aquele homem ali naquele canto, ele está encarregado de lhe aplicar os próximos testes.";
+					mes "Por favor seja cauteloso. Nós ja perdemos diversos magos devido à dificuldade dos exames, estarei torcendo por você!.";
 					WIZ_Q = 3;
-					setquest 9015;
+					setquest 9015;	
 					close;
 				}
 				mes "[Catherine]";
-				mes "Then, since I have your application and everything else I need, I'll give you some info about the first test.";
-				mes "You can memorize this or write it down, doesn't matter. But remember it for sure.";
+				mes "Pois bem, agora que tenho sua inscrição e os dados de que preciso, vou lhe dar as informaçõe sobre o primeiro teste.";
+				mes "Você pode decorar ou então anotar em algum local, só não se dê ao luxo de esquecer ok?.";
 				next;
 				mes "[Catherine]";
-				mes "The first test is collecting magic items.";
-				mes "The important part is that you must gather these items on your own.";
+				mes "O primeiro teste é a Coleta de itens mágicos.";
+				mes "A parte mais importante é que você deve coletar os itens por conta própria.";
 				next;
 				wizard_m1 = rand(1,2);
 				mes "[Catherine]";
-				mes "The items you must collect are...";
+				mes "E os itens que você deverá coletar são...";
 				if (rand(2)) {
 					WIZ_Q = 1;
 					setquest 9013;
@@ -165,15 +165,15 @@ gef_tower,111,37,4	script	Wizard Guildsman	1_F_GYPSY,{
 					mes "^3355FFRed Blood^000000 5 each,";
 					mes "^3355FFWind of Verdure^000000 5 each,";
 				}
-				mes "...is it too hard? No, any would be Wizard should be able to at least get these items.";
+				mes "...É muito complicado? Sem chances, qualquer um que queira ser um bruxo deve ser capaz de obter estes itens.";
 				next;
 				mes "[Catherine]";
-				mes "Well, good luck.";
-				mes "I'll be happily waiting. ~Hehe.";
+				mes "Então, boa sorte.";
+				mes "Estarei alegremente aguardando o seu retorno. ~Hehe.";
 				close;
 			}
 			mes "[Catherine]";
-			mes "Oh, ok then, take your time.";
+			mes "Ah, ok then, take your time.";
 			mes "Since I'll always be here, accepting applications...*sigh*...anyways! ~Hehehehe.";
 			close;
 		}
