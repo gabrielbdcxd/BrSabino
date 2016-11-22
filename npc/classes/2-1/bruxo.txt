@@ -22,10 +22,10 @@
 //   | - Anotações                                            |
 //   \________________________________________________________/
 
-gef_tower,111,37,4	script	Wizard Guildsman	1_F_GYPSY,{
+gef_tower,111,37,4	script	Bruxa	1_F_GYPSY,{
 	if (Upper == 1) {
 		mes "[Catherine]";
-		mes "Me desculpe, eu estava aqui me perguntando, se já não te encontrei antes...?";
+		mes "? Me desculpe, eu estava aqui me perguntando, se já não te encontrei antes...?";
 		mes "Nossa, você mudou bastante! E então, o que aconteceu?";
 		next;
 		mes "[Catherine]";
@@ -47,36 +47,36 @@ gef_tower,111,37,4	script	Wizard Guildsman	1_F_GYPSY,{
 			close;
 		}
 		else if (BaseClass == Job_Novice) {
-			mes "[Wizard Guildsman]";
+			mes "[Bruxa]";
 			mes "Nossa, um aprendiz, mas que coisinha mais fofa que você é.";
 			mes "Entretanto, este é um local para bruxos.";
 			next;
-			mes "[Wizard Guildsman]";
+			mes "[Bruxa]";
 			mes "Se você tem interesse pela magia,";
 			mes "Vá visitar a guilda dos ^0000FFMagos^000000 .";
 		}
 		else {
-			mes "[Wizard Guildsman]";
+			mes "[Bruxa]";
 			mes "Huh? o que te traz a este local tão alto...?";
 			mes "Se você não tem nenhum assunto específico a tratar, por favor, saia imediatamente.";
 			mes "Este é um local para Bruxos, você sabia?";
 		}
 		next;
-		mes "[Wizard Guildsman]";
+		mes "[Bruxa]";
 		mes "Ok, então. Até mais.";
 		close;
 	}
 	if (WIZ_Q == 0) {
-		mes "[Wizard Guildsman]";
+		mes "[Bruxa]";
 		mes "Hã? O que você faz aqui em cima...?";
 		mes "Então, o que te traz aqui?";
 		next;
-		if (select("Quero me tornar um Bruxo..") == 1) {
-			mes "[Wizard Guildsman]";
-			mes "Entendo... é claro que você quer se tornar um bruxo, caso contrario você não teria todas as escadas até aqui não é mesmo?";
+		if (select("Eu quero me tornar um bruxo.:...nada.") == 1) {
+			mes "[Bruxa]";
+			mes "Entendo... é claro que você quer se tornar um bruxo, caso contrario você não teria subido todas as escadas até aqui não é mesmo?";
 			mes "De qualquer modo, eu lhe dou boas vindas. Eu irei lhe supervisionar até se tornar um bruxo.";
 			next;
-			mes "[Wizard Guildsman]";
+			mes "[Bruxa]";
 			mes "Meu nome é Catherine Medici. Só entre eu e você, eu acabei de me tornar uma bruxa também!";
 			mes "você pode me chamar de Cathy se quiser. Hehehehehe~";
 			next;
@@ -86,7 +86,7 @@ gef_tower,111,37,4	script	Wizard Guildsman	1_F_GYPSY,{
 			next;
 			mes "[Catherine]";
 			mes "Além disso, somente magos que conseguiram alcançar o nível de classe 40 ou acima são aptos para realizar estes testes.";
-			mes "Magos com nível abaixo do requerido, não possuem expericência o suficiente para se tornar um bruxo...";
+			mes "Magos com nível abaixo do requerido, não possuem experiência o suficiente para serem bruxos...";
 			next;
 			mes "[Catherine]";
 			mes "Bem, eu só posso te dar mais informações caso você se candidate para o teste.";
@@ -116,17 +116,17 @@ gef_tower,111,37,4	script	Wizard Guildsman	1_F_GYPSY,{
 				mes "[Catherine]";
 				mes "Pois bem, o teste de bruxo é dividido em três partes.";
 				mes "A primeira parte, é coleta de materiais.";
-				mes "A segunda parte, é um teste escrito.";
+				mes "A segunda parte,é um teste escrito.";
 				mes "A última parte é um teste prático.";
 				next;
 				mes "[Catherine]";
 				mes "Aos magos que atingiram o nível 50 de classe, como prova de reconhecimento pelo seu esforço, não exigimos que faça o primeiro teste.";
-				mes "O esforço necessário para alcançar o máximo potencial como mago, já é o suficiente para nos provar sua competencia.";
+				mes "O esforço necessário para alcançar o máximo potencial como mago, já é o suficiente para nos provar sua competência.";
 				next;
 				if (JobLevel == 50) {
 					mes "[Catherine]";
 					mes "Hmm, parando pra pensar,você ja está com nível de classe 50!?";
-					mes "Você deve ter treinado bastante, E apósto que será um bruxo extremamente poderoso, Eu meio que posso sentir isso só pelo seu olhar!";
+					mes "Você deve ter Treinado pesado, E apósto que será um bruxo extremamente poderoso, Eu meio que posso sentir isso só de olhar para você.";
 					next;
 					mes "[Catherine]";
 					mes "Ok. Você passou do primeiro teste, meus parabéns.";
@@ -134,18 +134,18 @@ gef_tower,111,37,4	script	Wizard Guildsman	1_F_GYPSY,{
 					next;
 					mes "[Catherine]";
 					mes "Agora vá falar com aquele homem ali naquele canto, ele está encarregado de lhe aplicar os próximos testes.";
-					mes "Por favor seja cauteloso. Nós ja perdemos diversos magos devido à dificuldade dos exames, estarei torcendo por você!.";
+					mes "Mas por favor, seja cauteloso. Nós ja perdemos diversos magos devido à dificuldade dos exames, estarei torcendo por você!.";
 					WIZ_Q = 3;
-					setquest 9015;	
+					setquest 9015;
 					close;
 				}
 				mes "[Catherine]";
 				mes "Pois bem, agora que tenho sua inscrição e os dados de que preciso, vou lhe dar as informaçõe sobre o primeiro teste.";
-				mes "Você pode decorar ou então anotar em algum local, só não se dê ao luxo de esquecer ok?.";
+				mes "Você pode decorar ou então anotar em algum pergaminho, só não se dê ao luxo de esquecer ok?.";
 				next;
 				mes "[Catherine]";
 				mes "O primeiro teste é a Coleta de itens mágicos.";
-				mes "A parte mais importante é que você deve coletar os itens por conta própria.";
+				mes "A parte mais importante, é que você deve coletar os itens por conta própria.";
 				next;
 				wizard_m1 = rand(1,2);
 				mes "[Catherine]";
@@ -153,17 +153,17 @@ gef_tower,111,37,4	script	Wizard Guildsman	1_F_GYPSY,{
 				if (rand(2)) {
 					WIZ_Q = 1;
 					setquest 9013;
-					mes "^3355FFRed Gemstone^000000 10 each,";
-					mes "^3355FFBlue Gemstone^000000 10 each,";
-					mes "^3355FFYellow Gemstone^000000 10 each,";
+					mes "^3355FFGema Vermelha^000000 10 each,";
+					mes "^3355FFGema Azul^000000 10 each,";
+					mes "^3355FFGema Amarela^000000 10 each,";
 				}
 				else {
 					WIZ_Q = 2;
 					setquest 9014;
-					mes "^3355FFCrystal Blue^000000 5 each,";
-					mes "^3355FFGreen Live^000000 5 each,";
-					mes "^3355FFRed Blood^000000 5 each,";
-					mes "^3355FFWind of Verdure^000000 5 each,";
+					mes "^3355FFCristal Azul^000000 5 each,";
+					mes "^3355FFVida Verdejante^000000 5 each,";
+					mes "^3355FFSangue Escarlate^000000 5 each,";
+					mes "^3355FFFrescor do Vento^000000 5 each,";
 				}
 				mes "...É muito complicado? Sem chances, qualquer um que queira ser um bruxo deve ser capaz de obter estes itens.";
 				next;
@@ -173,24 +173,24 @@ gef_tower,111,37,4	script	Wizard Guildsman	1_F_GYPSY,{
 				close;
 			}
 			mes "[Catherine]";
-			mes "Ah, ok then, take your time.";
-			mes "Since I'll always be here, accepting applications...*sigh*...anyways! ~Hehehehe.";
+			mes "Ah, tudo bem, não precisa se apressar.";
+			mes "Ja que eu vou estar sempre aqui, recebendo as inscrições...*sigh*...de qualquer modo! ~Hehehehe.";
 			close;
 		}
-		mes "[Wizard Guildsman]";
-		mes "Geez, what a lame person.";
-		mes "You have no business here, hope you don't mind, now off you go!";
+		mes "[Bruxa]";
+		mes "Aaaa, Que pessoa mais chata.";
+		mes "Você não tem assuntos a tratar aqui caso não tenha percebido, vá embora!";
 		close;
 	}
 	else if (WIZ_Q == 1) {
 		mes "[Catherine]";
-		mes "Let me see, did you get all the items?";
-		mes "Then let's check...";
+		mes "Deixa eu ver, Você conseguiu todos os itens?";
+		mes "Então vamos conferir...";
 		next;
 		if (countitem(716) > 9 && countitem(717) > 9 && countitem(715) > 9) {
 			mes "[Catherine]";
-			mes "Perfect! You got all the items. I like!~";
-			mes "These items will be put to great use in our guild. ~Hehehee.";
+			mes "Perfeito! Você trouxe tudinho. É assim que se faz!~";
+			mes "Estes itens serão de grande utilidade para a nossa guilda. ~Hehehee.";
 			next;
 			delitem 716,10; //Red_Gemstone
 			delitem 717,10; //Blue_Gemstone
@@ -198,37 +198,37 @@ gef_tower,111,37,4	script	Wizard Guildsman	1_F_GYPSY,{
 			WIZ_Q = 3;
 			changequest 9013,9015;
 			mes "[Catherine]";
-			mes "Good for you! You passed the first test.";
-			mes "But there are still two more left, so don't get too relaxed.";
+			mes "Boas notícias! Você passou no primeiro teste.";
+			mes "Mas não se esqueça de que ainda há 2 testes a serem realizados, nada de relaxar ainda.";
 			next;
 			mes "[Catherine]";
-			mes "Go talk to the guy in the corner for the rest of the tests.";
-			mes "It might be a bit hard, so be careful, I wouldn't want you ending up like most of the Mages that come for these exams...poor souls indeed, may they rest in peace. ~Hehehe.";
+			mes "Agora vá falar com aquele homem ali naquele canto, ele está encarregado de lhe aplicar os próximos testes.";
+			mes "Pode ser um pouco perigoso então tome cuidado, Eu não quero que você termine como a maioria dos magos que vieram realizar os exames...pobres almas indefesas, que eles descansem em paz. ~Hehehe.";
 			close;
 		}
 		mes "[Catherine]";
-		mes "Hey, what's this? Umm...I don't think you have everything yet!";
+		mes "Hey, o que é isso? Hmm...Eu não acho que você tenha pego tudo ainda!";
 		next;
 		mes "[Catherine]";
-		mes "It might've been tough coming all the way up here, what with this altitude and all, but go back and collect the items.";
-		mes "Life's short enough as it is, so stop wasting your time and gather the items I told you before.";
+		mes "Sei que deve ter sido cansativo vir e subir tudo de novo até aqui, mas junte mais coragem e força de vontade e vá coletar os itens que restam.";
+		mes "A vida é curta do jeito que é, então pare de perder o seu tempo e me traga logo os itens que eu lhe pedi anteriormente.";
 		next;
 		mes "[Catherine]";
-		mes "^3355FFRed Gemstone^000000 10 each,";
-		mes "^3355FFBlue Gemstone^000000 10 each,";
-		mes "^3355FFYellow Gemstone^000000 10 each,";
-		mes "Don't forget this time, and bring all the items, ok?...";
+		mes "^3355FFGema Vermelha^000000 10 each,";
+		mes "^3355FFGema Azul^000000 10 each,";
+		mes "^3355FFGema Amarela^000000 10 each,";
+		mes "Não esqueça desta vez, e traga TODOS os itens ok?...";
 		close;
 	}
 	else if (WIZ_Q == 2) {
 		mes "[Catherine]";
-		mes "Did you get all the items?";
-		mes "Let's see... Do you have the right ones?...";
+		mes "Você pegou todos os itens?";
+		mes "Vejamos... Você pegou os itens certos?...";
 		next;
 		if (countitem(991) > 4 && countitem(993) > 4 && countitem(990) > 4 && countitem(992) > 4) {
 			mes "[Catherine]";
-			mes "Perfect! Good job...I'm satisfied! ~Hehe";
-			mes "Our guild greatly appreciates these items and will use them wisely.";
+			mes "Perfeito! Bom trabalho...Estou satisfeita! ~Hehe";
+			mes "Estes itens serão de grande utilidade para a nossa guilda.";
 			next;
 			delitem 991,5; //Crystal_Blue
 			delitem 993,5; //Yellow_Live
@@ -237,46 +237,46 @@ gef_tower,111,37,4	script	Wizard Guildsman	1_F_GYPSY,{
 			WIZ_Q = 3;
 			changequest 9014,9015;
 			mes "[Catherine]";
-			mes "Good. You've passed the first test now.";
-			mes "But you still have two more tests to go, so don't get too laid back, because it only gets harder from here. ~Hehehe";
+			mes "Ótimo. Mas não se esqueça de que ainda há 2 testes a serem realizados, nada de relaxar ainda, a dificuldade só vai aumentar a partir de agora. ~Hehehe";
 			next;
 			mes "[Catherine]";
-			mes "Go talk to that guy in the corner to take the rest of the tests.";
-			mes "It might be a bit hard, so be careful, I wouldn't want you ending up like most of the Mages that come for these exams...poor souls indeed, may they rest in peace. ~Hehehe.";
+			mes "Agora vá falar com aquele homem ali naquele canto, ele está encarregado de lhe aplicar os próximos testes.";
+			mes "Pode ser um pouco perigoso então tome cuidado, Eu não quero que você termine como a maioria dos magos que vieram realizar os exames...pobres almas indefesas, que eles descansem em paz. ~Hehehe.";
 			close;
 		}
 		mes "[Catherine]";
-		mes "Eh, what's this? I don't think you have everything?";
+		mes "Hey, o que é isso? Hmm...Eu não acho que você tenha pego tudo corretamente!";
 		next;
 		mes "[Catherine]";
-		mes "I regret that you had to go through the trouble of coming all the way up here, but go get the right items again.";
-		mes "Stop wasting your time and get the items I initially requested. For goodness sakes...This is the easiest part of the exam.";
+		mes "Sei que deve ter sido cansativo vir e subir tudo de novo até aqui, mas junte mais coragem e força de vontade e vá coletar os itens certos.";
+		mes "A vida é curta do jeito que é, então pare de perder o seu tempo e me traga logo os itens que eu lhe pedi. Pelos deuses, essa é a parte mais fácil do exame!";
+		
 		next;
 		mes "[Catherine]";
 		mes "^3355FFCrystsal Blue^000000 5 each,";
 		mes "^3355FFGreen Live^000000 5 each,";
 		mes "^3355FFRed Blood^000000 5 each,";
 		mes "^3355FFWind of Verdure^000000 5 each,";
-		mes "Don't forget them this time and gather the correct ones, ok? See you soon...";
+		mes "Desta vez veja se traz os itens certos tudo bem? Estarei te esperando...";
 		close;
 	}
 	else if (WIZ_Q == 3) {
 		mes "[Catherine]";
-		mes "What is it? You didn't go talk to the guy in the corner?";
-		mes "You can't become a Wizard by just brining the items I requested, no no, that just wont do...";
+		mes "O que foi? Você ainda não foi conversar com o homem ali no canto?";
+		mes "Você não pode se tornar um bruxo apenas trazendo os itens que eu havia lhe pedido, não não, isso não é o suficiente...";
 		next;
 		mes "[Catherine]";
-		mes "You can only prove yourself Wizard material after you take the two remaining tests.";
-		mes "I'll be waiting, so go now.";
+		mes "Você só conseguirá provar que está apto a se tornar um bruxo após completar os dois exames restantes.";
+		mes "Eu estarei esperando bem aqui, agora vá!.";
 		close;
 	}
 	else if (WIZ_Q == 4) {
 		mes "[Catherine]";
-		mes "*sigh*...Poor thing, what a pity.";
-		mes "How can you think of trying to become a Wizard when you can't even answer those simple questions?";
+		mes "*sigh*...Pobrezinho, mas que pena.";
+		mes "Como você pretende se tornar um bruxo se não consegue sequer responder a estas simples questões?";
 		next;
 		mes "[Catherine]";
-		mes "Let's see... Should I give you some hints as your senior?";
+		mes "Vejamos... será que eu deveria te dar algumas dicas por ser sua Veterana?";
 		mes "But I'm a bit thirsty, so give me 1 Apple Juice, and we got a deal. ~Hehehe";
 		next;
 		switch(select("Give me some hints, please.:I want to try again on my own!")) {
@@ -441,304 +441,304 @@ gef_tower,111,37,4	script	Wizard Guildsman	1_F_GYPSY,{
 	}
 }
 
-gef_tower,102,24,2	script	Gloomy Wizard	4_M_JOB_WIZARD,{
+gef_tower,102,24,2	script	Lauro	4_M_JOB_WIZARD,{
 	if (BaseJob != Job_Mage) {
 		if (BaseJob == Job_Wizard) {
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "*Cough* *cough* what do you want?";
 			mes "If you are a person that uses magic, then you need to make sure you are well informed about it.";
 			next;
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "Don't live dishonestly, or impolitely, or else one day you'll be caught in a spell you can't control, and BOOM, your dead!";
 			if (Sex) {
 				mes "If you don't want that to happen, then learn how to use spells properly!";
 				next;
-				mes "[Raulel]";
+				mes "[Lauro]";
 				mes "You may live life crippled if you get obsessed with the love of Greater Magic. ~haha";
 			}
 			else {
 				mes "So learn how to use magic properly, or you would just be better off giving up on using magic.";
 				next;
-				mes "[Raulel]";
+				mes "[Lauro]";
 				mes "If you don't want that, go hit on a guy or something! ~Hahahaha";
 				mes "If you don't pay attention to yourself, you'll be engulfed by magic one day...";
 			}
 			close;
 		}
 		else if (BaseJob == Job_Priest) {
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "Go away, one who works for the Church!";
 			mes "Magic repels Holy power, jeez...your messing up my aura.";
 			next;
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "And plus, *cough* *cough* my health isn't all that good right now either...";
 			mes "Don't come any closer, just leave!";
 			close;
 		}
 		else if (BaseClass == Job_Novice) {
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "Why did a little one like you come here?!";
 			mes "Get lost! ~Hahahahaha";
 			close2;
 			warp "geffen",120,110;
 			end;
 		}
-		mes "[Raulel]";
+		mes "[Lauro]";
 		mes "*sneeze* *cough* Oooowww...my entire body is in pain. I feel like I'm trapped in a tub of ice water!";
 		next;
-		mes "[Raulel]";
+		mes "[Lauro]";
 		mes "What do you want? Jeez...just get lost, won't you?";
 		close;
 	}
 	if (WIZ_Q == 0) {
-		mes "[Raulel]";
+		mes "[Lauro]";
 		mes "*cough* *cough* *sneeze* I don't know who you are and what you do, but I don't have any business with you.";
 		next;
-		mes "[Raulel]";
+		mes "[Lauro]";
 		mes "Go away! Get lost!";
 		close;
 	}
 	else if (WIZ_Q == 1 || WIZ_Q  == 2) {
-		mes "[Raulel]";
+		mes "[Lauro]";
 		mes "Hahahaha~ You're the one that wants to become a Wizard?!";
 		next;
-		mes "[Raulel]";
+		mes "[Lauro]";
 		mes "*sneeze* If you just lived as you were, all you'd have to do was hunt a little and live the easy life...";
 		next;
-		mes "[Raulel]";
+		mes "[Lauro]";
 		mes "*Cough* *cough* Let's see how well you live as a Wizard. ~Hahahahhaha";
 		close;
 	}
 	else if ((WIZ_Q == 3) || (WIZ_Q == 4)) {
 		if (WIZ_Q == 3) {
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "*Cough* *cough*...You must've passed the first test.";
-			mes "Ok, I'm the Wizard in charge of your testing from now on. My name is 'Raulel Asparagus'.";
+			mes "Ok, I'm the Wizard in charge of your testing from now on. My name is 'Lauro Asparagus'.";
 			next;
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "*sneeze* It's not too late yet, wouldn't you rather just go back to town and enjoy the peaceful life?";
 			next;
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "Hahahaha~ You don't know how dangerous it is...to deal with Greater Magic.";
 			next;
 			if (select("I want to live as a normal Mage.:I would like to continue with the tests.") == 1) {
-				mes "[Raulel]";
+				mes "[Lauro]";
 				mes "Hahaha~ *sneeze* Good choice...*cough* *cough*~";
 				mes "Best not to even dream about life as a Wizard. Graa...Greaa...*sneeze* Greater Magic wasn't meant for humans to use!";
 				next;
-				mes "[Raulel]";
+				mes "[Lauro]";
 				mes "Leave the top of this tower quietly and don't ever look back.";
 				mes "Just live peacefully with the powers that you have right now.";
 				close;
 			}
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "*sneeze* Hahahaha~ Now there's a foolish one here!";
 			mes "Well then, let's see how good you are. *cough* I want to see this with my own two eyes!";
 			next;
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "*sneeze* Then let's begin the test!";
 			mes "If you don't answer them all correctly, you fail. Hahahahahahahahaha~";
 			next;
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "I'll give you 10 questions so give me the right answers.";
 			mes "If you get something wrong, I won't tell you what it is!";
 			if (!questprogress(9016)) {
 				changequest 9015,9016;
 			}
 			next;
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "*Cough* *cough* Then here go the questions!";
 		}
 		else if (WIZ_Q == 4) {
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "Hahahaha~ Are you that desperate? *sneeze* What a pain in the arse...";
 			next;
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "Since you don't want to settle for a stable and peaceful life, I'll give you another chance...";
 			next;
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "If you miss one single question, then just give up. You wouldn't have any talent in being a Wizard! ~Hahahahaha";
 			next;
 			if (select("Because of you, I want to live as a normal Mage now.:I would like to continue with the tests.") == 1) {
-				mes "[Raulel]";
+				mes "[Lauro]";
 				mes "Hahahaha~ Surprising, comming from you, that's a very wise choice...*cough* *cough*";
 				mes "If i were you, i would never, ever dream of becoming a Wizard again. Gre...Greaa...*sneeze* Greater Magic wasn't meant for humans to use.";
 				next;
-				mes "[Raulel]";
+				mes "[Lauro]";
 				mes "Just leave the top of this tower quietly and never look back.";
 				mes "Live peacefully with the powers that you have right now.";
 				close;
 			}
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "Hahahahahahaha~ Now there's a foolish one right here!";
 			mes "Well then, let's see just how good you can be! *sneeze* I want to see this with my own two eyes.";
 			next;
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "Then let's begin the test!";
 		}
 		next;
 		switch(rand(1,3)) {
 		case 1:
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "1. Which of the following is not necessary to learn Fire Wall?";
 			next;
 			if (select("Fire Bolt Lv 4:Fire Ball Lv 5:Sight Lv 1:Napalm Beat Lv 4") == 4)
 				.@wizard_t += 10;
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "2. Regaurdless of it's previous attribute, What does the monster's attribute change to when you cast Frost Diver on it?";
 			next;
 			if (select("Water:Earth:Fire:Wind") == 1)
 				.@wizard_t += 10;
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "3. When you completely master Napalm Beat, what is the ratio of the increased MATK using that spell?";
 			next;
 			if (select("1.6 times:1.7 times:2 times:20 times") == 2)
 				.@wizard_t += 10;
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "4. What item do you need when casting Stone Curse?";
 			next;
 			if (select("Red Blood:Blue Gemstone:Yellow Gemstone:Red Gemstone") == 4)
 				.@wizard_t += 10;
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "5. Which of the following is not required to master Safety Wall?";
 			next;
 			if (select("Napalm Beat Lv 4:Soul Strike Lv 5:Increase SP Recovery Lv 6:Safety Wall Lv 7") == 3)
 				.@wizard_t += 10;
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "6. Without the INT bonus, what amount of SP is recovered every 10 seconds when you have learned Increase SP Recovery Lv 7?";
 			next;
 			if (select("14:21:28:35") == 2)
 				.@wizard_t += 10;
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "7. Using Energy Coat, when you have 50% of your SP remaining, how much SP is used when hit, and what percentage is damage reduced by?";
 			next;
 			if (select("Damage 18% SP1.5%:Damage 18% SP2%:Damage 24% SP1.5%:Damage 24% SP2%") == 2)
 				.@wizard_t += 10;
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "8. How much SP is consumed and how many times can you avoid attacks when using Safety Wall Lv 6?";
 			next;
 			if (select("SP 40, 6 times:SP 35, 6 times:SP 40, 7 times:SP 35, 7 times") == 3)
 				.@wizard_t += 10;
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "9. How much SP is needed when using Lv 10 Thunderstorm?";
 			next;
 			if (select("84:74:64:54") == 2)
 				.@wizard_t += 10;
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "10. Which skill is most useful training in the Byalan Dungeon?";
 			next;
 			if (select("Lightning Bolt:Fire Bolt:Cold Bolt:Sight") == 1)
 				.@wizard_t += 10;
 			break;
 		case 2:
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "1. Which monster can you obtain a slotted Guard from?";
 			next;
 			if (select("Thief Bug:PecoPeco:Pupa:Kobold (Hammer)") == 3)
 				.@wizard_t += 10;
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "2. Which of the following is the easiest monster for a low level Mage to hunt?";
 			next;
 			if (select("Flora:Giearth:Golem:Myst") == 1)
 				.@wizard_t += 10;
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "3. Which monster will not be affected by Stone Curse?";
 			next;
 			if (select("Elder Willow:Evil Druid:Magnolia:Marc") == 2)
 				.@wizard_t += 10;
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "4. When attacking a Lv 3 water attribute monster with a wind attribute weapon, what is the damage percentage?";
 			next;
 			if (select("125%:150%:175%:200%") == 4)
 				.@wizard_t += 10;
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "5. If a Baby Desert Wolf and a Familiar fought, which one would win?";
 			next;
 			if (select("Baby Desert Wolf:Familiar:Neither:I don't know") == 1)
 				.@wizard_t += 10;
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "6. Which of the following cannot be a Cute Pet?";
 			next;
 			if (select("Poporing:Roda Frog:Smokie:Poison Spore") == 2)
 				.@wizard_t += 10;
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "7. Choose the monster that is weak against a fire attribute attack.";
 			next;
 			if (select("Dagger Goblin:Mace Goblin:Morningstar Goblin:Hammer Goblin") == 4)
 				.@wizard_t += 10;
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "8. Which of the following has the highest defense?";
 			next;
 			if (select("Horn:Chonchon:Andre:Caramel") == 4)
 				.@wizard_t += 10;
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "9. Choose the monster that's of a different species.";
 			next;
 			if (select("Poring:Mastering:Ghostring:Spore") == 3)
 				.@wizard_t += 10;
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "10. Which of the following is not an Undead monster?";
 			next;
 			if (select("Drake:Megalodon:Deviace:Khalitzburg") == 3)
 				.@wizard_t += 10;
 			break;
 		case 3:
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "1. Which stat is the most important for a Mage?";
 			next;
 			if (select("INT:AGI:DEX:VIT") == 1)
 				.@wizard_t += 10;
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "2. Which attribute does not have a 'Bolt' type attack?";
 			next;
 			if (select("Water:Earth:Fire:Wind") == 2)
 				.@wizard_t += 10;
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "3. Choose the one that does not relate to a Mage.";
 			next;
 			if (select("Weak physical strength.:Attacks at a distance.:Good at selling stuff.:Magic Defense is high.") == 3)
 				.@wizard_t += 10;
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "4. Which town is the home of Mages?";
 			next;
 			if (select("Prontera:Morroc:Alberta:Geffen") == 4)
 				.@wizard_t += 10;
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "5. Which of the following cards has nothing to do with INT?";
 			next;
 			if (select("Andre Egg Card:Soldier Andre Card:Baby Desert Wolf Card:Elder Willow Card") == 2)
 				.@wizard_t += 10;
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "6. What is the Mage good at compared to other job classes?";
 			next;
 			if (select("Exceptional Vocal Ability:Exceptional Acting Ability:Exceptional Dance Skills:Exceptional Magic Skills") == 4)
 				.@wizard_t += 10;
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "7. What is the INT bonus at Job Lv 40 for a Mage?";
 			next;
 			if (select("8:7:6:5") == 4)
 				.@wizard_t += 10;
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "8. Which item can a Mage not equip?";
 			next;
 			if (select("Knife:Boys Cap:Sandle:Eye of Dullahan") == 2)
 				.@wizard_t += 10;
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "9. Which of the following is the catalyst when making the Mage test solution 3?";
 			next;
 			if (select("Blue Gemstone:Red Gemstone:Yellow Gemstone:Red Blood") == 1)
 				.@wizard_t += 10;
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "10. Which card is irrelevant to magic?";
 			next;
 			if (select("Marduk Card:Magnolia Card:Willow Card:Maya Card") == 2)
 				.@wizard_t += 10;
 		}
-		mes "[Raulel]";
+		mes "[Lauro]";
 		if (WIZ_Q == 4) {
 			mes "Good job, you finished answered all the questions... Go buy yourself some potions or something if you have the Zeny. Haha...";
 			next;
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "Your score is... " + .@wizard_t + "points.....";
 			if (.@wizard_t == 100) {
 				WIZ_Q = 5;
@@ -746,7 +746,7 @@ gef_tower,102,24,2	script	Gloomy Wizard	4_M_JOB_WIZARD,{
 				mes "Hahahahahahah~ Well done, you passed the second test.";
 				mes "It wasn't done in one try like mine was, but I'll let you slide...";
 				next;
-				mes "[Raulel]";
+				mes "[Lauro]";
 				mes "*sneeze* Don't relax just yet, there's still the matter of the third and final test.";
 				mes "I advise you to rest a bit while the final test is prepared. Your gonna need it. Hahahahaha~";
 				close;
@@ -757,7 +757,7 @@ gef_tower,102,24,2	script	Gloomy Wizard	4_M_JOB_WIZARD,{
 				mes "Hahaha~ Since you only missed one problem, you passed the second test.";
 				mes "It wasn't done in one try like mine was, but I'll let you slide...";
 				next;
-				mes "[Raulel]";
+				mes "[Lauro]";
 				mes "*sneeze* Don't relax just yet, there's still the matter of the third and final test.";
 				mes "I advise you to rest a bit while the final test is prepared. Your gonna need it. Hahahahaha~";
 				close;
@@ -768,7 +768,7 @@ gef_tower,102,24,2	script	Gloomy Wizard	4_M_JOB_WIZARD,{
 				mes "Sheez... You didn't do very well, but you passed the second test.";
 				mes "It wasn't done in one try like mine was, but I'll let you slide...";
 				next;
-				mes "[Raulel]";
+				mes "[Lauro]";
 				mes "*sneeze* Don't relax just yet, there's still the matter of the third and final test.";
 				mes "I advise you to rest a bit while the final test is prepared. Your gonna need it. Hahahahaha~";
 				close;
@@ -776,7 +776,7 @@ gef_tower,102,24,2	script	Gloomy Wizard	4_M_JOB_WIZARD,{
 			else {
 				mes "You failed. Go study some more!";
 				next;
-				mes "[Raulel]";
+				mes "[Lauro]";
 				mes "*cough* *cough* Did you really think you could become a Wizard with such a mediocre level like yours?";
 				mes "Get lost! If you were a Wizard right now, the monsters that I fight, would eat you up in no time!";
 				close;
@@ -784,14 +784,14 @@ gef_tower,102,24,2	script	Gloomy Wizard	4_M_JOB_WIZARD,{
 		}
 		mes "Hmmm...Good job, you finished answering all the questions, go buy yourself some potions or something, thats IF you have the Zeny. Hahahahahahahah~";
 		next;
-		mes "[Raulel]";
+		mes "[Lauro]";
 		mes "Your score is... " + .@wizard_t + " points!";
 		if (.@wizard_t == 100) {
 			WIZ_Q = 5;
 			changequest 9016,9017;
 			mes "*cough* *Cough* Well done, you passed the second test.";
 			next;
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "Hahahaha~ Don't relax just yet, there's still the third test.";
 			mes "*sneeze* I advise you to rest a bit while the final test is prepared...Hahahahah~";
 			close;
@@ -801,7 +801,7 @@ gef_tower,102,24,2	script	Gloomy Wizard	4_M_JOB_WIZARD,{
 			changequest 9016,9017;
 			mes "Hahahaha~ I'll let you slide by since you only missed one problem. You passed the second test.";
 			next;
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "Hahahaha~ Don't relax just yet, there's still the third test.";
 			mes "*sneeze* I advise you to rest a bit while the final test is prepared...Hahahahah~";
 			close;
@@ -810,62 +810,62 @@ gef_tower,102,24,2	script	Gloomy Wizard	4_M_JOB_WIZARD,{
 			WIZ_Q = 4;
 			mes "You failed. I will let you come back again...after you've learned more relating to the type of questions I've asked you.";
 			next;
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "Tisk...not enough, not enough! Did you really think you could become a Wizard with the little bit of knowledge you have?";
 			mes "Get lost! If you were a Wizard right now, the monsters I deal with would eat you up in no time!";
 			close;
 		}
 	}
 	else if (WIZ_Q == 5) {
-		mes "[Raulel]";
+		mes "[Lauro]";
 		mes "Ok, hope you got plenty of rest. Hahahahahah~";
 		mes "Then let's begin the last test.";
 		next;
-		mes "[Raulel]";
+		mes "[Lauro]";
 		mes "Should I explain a little about this final test? It is difficult, I will not hide that from you...";
 		next;
 		if (select("No, it's ok, I'm ready.:I would like to listen.") == 1) {
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "What a rash person. Your the type that rushes into battle without thinking, what in the world are you doing here instead of with the Prontera Chivalry? Heck, go for it! *cough* Not my fault if you end up dying.";
 			mes "Just consider yourself a glass cannon...because the monsters are going to break you into pieces. Hahahahahahahahaha~";
 			next;
 			WIZ_Q = 6;
 			savepoint "geffen",120,107;
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "Then, as you wish. I'll send you there right now.";
 			mes "Oh, if you see a white light at the end of a tunnel, that means your pathetic cause you failed! Hahahahahah~";
 			close2;
 			warp "job_wiz",57,154;
 			end;
 		}
-		mes "[Raulel]";
+		mes "[Lauro]";
 		mes "What a devoted person. Very well, I'll explain.";
 		mes "No matter how hard this last test may seem, if you do as I say, you can finish it quickly and easily.";
 		next;
-		mes "[Raulel]";
+		mes "[Lauro]";
 		mes "The final test has a total of 3 parts.";
 		mes "The order is Water Room, Earth Room, Fire Room. In each room, there are monsters of that particular attribute.";
 		next;
-		mes "[Raulel]";
+		mes "[Lauro]";
 		mes "You'll find out what monsters will be there once you go in. If you use attacks with the *sneeze*";
 		mes "right attribute, it shouldn't be too hard. Hahaha~";
 		next;
-		mes "[Raulel]";
+		mes "[Lauro]";
 		mes "Once you defeat all the monsters within the given time in any one room...";
 		mes "you'll be moved to the next room.";
 		next;
-		mes "[Raulel]";
+		mes "[Lauro]";
 		mes "After these three rooms are clear, the testing is over.";
 		mes "You will become a Wizard which is controlled by Greater Magic Powers! Know this...There is no returning to an easy life.";
 		next;
-		mes "[Raulel]";
+		mes "[Lauro]";
 		mes "Hahaha~ You look frightened. You know, it's not too late to turn back and live an easy life.";
 		mes "If you want, I can send you back to town right now... What do you want to do?";
 		next;
 		if (select("Continue testing.:I want to go back because I have butterflies in my stomach.") == 1) {
 			WIZ_Q = 6;
 			savepoint "geffen",120,107;
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "You are indeed, very determined. Ok! Hahahahahaha~";
 			mes "*Cough* *cough* As you wish, we shall begin the final test!";
 			close2;
@@ -873,7 +873,7 @@ gef_tower,102,24,2	script	Gloomy Wizard	4_M_JOB_WIZARD,{
 			end;
 		}
 		WIZ_Q = 6;
-		mes "[Raulel]";
+		mes "[Lauro]";
 		mes "Good thinking. This is a better choice for you. Hahahahah~";
 		mes "Go back and live a easy life, Greater Magic is a force that should not be wield by types like yourself.";
 		close2;
@@ -882,16 +882,16 @@ gef_tower,102,24,2	script	Gloomy Wizard	4_M_JOB_WIZARD,{
 	}
 	else if (WIZ_Q == 6) {
 		if (WIZ_Q2 == 6) {
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "Hahahahahaha~ I've never seen anyone so...sooo...*sneeze* tenacious as you.";
 			mes "So you want to try again eh? Even though I've ridiculed you for your failures before??";
 			next;
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "Ok then, here's a proposition. Since you're probably worn out as it is, and I can clearly see the lust for Greater Magic burning in your eyes...";
 			mes "Hahahahaha~ yeah! Go bring me a ^3355FFWorn Out Scroll^000000.";
 			next;
 			WIZ_Q2 = 7;
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "If not, you can take the test again...";
 			mes "Well, I'll send you to take the test for now. Hahahaha~";
 			close2;
@@ -899,13 +899,13 @@ gef_tower,102,24,2	script	Gloomy Wizard	4_M_JOB_WIZARD,{
 			end;
 		}
 		else if (WIZ_Q2 > 6) {
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "Oh! So you're back? Hahahahaha~";
 			mes "*Cough* Cough* Do you want to take the test again? Or did you bring the ^3355FFWorn Out Scroll^000000?";
 			next;
 			if (select("Continue the test.:Worn Out Scroll...") == 1) {
 				savepoint "geffen",120,107;
-				mes "[Raulel]";
+				mes "[Lauro]";
 				mes "Hahaha~ Ok, at least you have some spirit.";
 				mes "I'll send you in again, try dying once more will yah? Hahahahahahahahaha~";
 				close2;
@@ -914,58 +914,58 @@ gef_tower,102,24,2	script	Gloomy Wizard	4_M_JOB_WIZARD,{
 			}
 			if (countitem(618) > 0) {
 				delitem 618,1; //Worn_Out_Scroll
-				mes "[Raulel]";
+				mes "[Lauro]";
 				mes "Hahahahahahahaha~ *Cough* *cough* So you ended up bringing one of these eh? Good job...";
 				mes "I think I can continue my research with this...";
 				next;
 				WIZ_Q2 = 0;
 				WIZ_Q = 7;
-				mes "[Raulel]";
+				mes "[Lauro]";
 				mes "Even though your not Grade A Wizard material, I can tell your serious about wanting the Greater Magic. I'll tell Catherine that you passed. Hahahahahahahahah~";
 				mes "You went through a lot of trouble here, and that is the true purpose for us selecting Wizards. Only those who will devote themselves to the art will ever become Wizards. Good luck to you. Become much Stronger. Hahahahahaha~";
 				close;
 			}
 		}
-		mes "[Raulel]";
+		mes "[Lauro]";
 		mes "*sneeze* What? You want to take the test again?";
 		mes "Geez...you already failed the battle test! Hahahahahahahaha~ So you like magic that much, eh?";
 		next;
-		mes "[Raulel]";
+		mes "[Lauro]";
 		mes "Since your so weak that you can't finish this final test on your own...you need a separate test to help you out.";
 		mes "*Cough* If you can't pass the battle test, then do a good job with this one. Hahahahahahah~";
 		next;
-		mes "[Raulel]";
+		mes "[Lauro]";
 		mes "Well, you better answer these problems if you plan on becoming a Wizard. Hahahahahahaha~";
 		next;
-		mes "[Raulel]";
+		mes "[Lauro]";
 		mes "1. Choose the monster with a different attribute than the others.";
 		next;
 		if (select("Mantis:Cornutus:Giearth:Caramel") == 2)
 			.@wizard_t += 20;
-		mes "[Raulel]";
+		mes "[Lauro]";
 		mes "2. Choose the monster that is not a looting one.";
 		next;
 		if (select("Yoyo:Magnolia:Metaller:Zerom") == 4)
 			.@wizard_t += 20;
-		mes "[Raulel]";
+		mes "[Lauro]";
 		mes "3. Which of these monsters does not recognize casting?";
 		next;
 		if (select("Marina:Vitata:Scorpion:Giearth") == 1)
 			.@wizard_t += 20;
-		mes "[Raulel]";
+		mes "[Lauro]";
 		mes "4. Choose the spell that would be efficient against a Marine Sphere.";
 		next;
 		if (select("Cold Bolt:Fire Bolt:Lightning Bolt:Stone Curse") == 3)
 			.@wizard_t += 20;
-		mes "[Raulel]";
+		mes "[Lauro]";
 		mes "5. Choose the monster that can move.";
 		next;
 		if (select("Hydra:Madragora:Greatest General:Frilldora") == 4)
 			.@wizard_t += 20;
-		mes "[Raulel]";
+		mes "[Lauro]";
 		mes "*pfft* Do it right, so I don't have to ask again.";
 		next;
-		mes "[Raulel]";
+		mes "[Lauro]";
 		mes "You got " + .@wizard_t + " points.";
 		if (.@wizard_t == 100) {
 			mes "Hahahahahaha~ *Cough* *cough* If you can answer all these questions correctly, how is it you can't do well in battles??";
@@ -979,57 +979,57 @@ gef_tower,102,24,2	script	Gloomy Wizard	4_M_JOB_WIZARD,{
 		else {
 			mes "You failed! Go study some more!";
 			next;
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "You lack something...*sneez*...like intelligence. That's why you keep on failing. Hahahahahahahaha~";
 			close;
 		}
 		if (select("Begin the test please.:Can I get another explanation?") == 1) {
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "Nobody is going to help you become a Wizard. Hahahahahahahaha~";
 			mes "*Cough* *cough* No point in crying after dying...";
 			next;
 			percentheal 100,100;
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "Then, as you wish. I'll send you to fight.";
 			mes "Oh! If you see some tall pearly gates and hear a booming deep voice from behind it, that means that your a failure when it comes to Magic. Hahahahahahahahaha~";
 			close2;
 			warp "job_wiz",57,154;
 			end;
 		}
-		mes "[Raulel]";
+		mes "[Lauro]";
 		mes "*Cough* *cough* Then I shall explain.";
 		mes "The test may be hard, but just do as I tell you and it shouldn't be a problem.";
 		next;
-		mes "[Raulel]";
+		mes "[Lauro]";
 		mes "There are 3 parts to this final test.";
 		mes "The order is...*sneez*...the Water Room, Earth Room, and then the Fire Room. Each room has monsters of that attribute in it.";
 		next;
-		mes "[Raulel]";
+		mes "[Lauro]";
 		mes "You'll see what monsters they are when you enter.";
 		mes "If you use the appropriate spells against them, it shouldn't be that difficult. Hahahahahahaha~";
 		next;
-		mes "[Raulel]";
+		mes "[Lauro]";
 		mes "Within the given time, if you defeat all the monsters...";
 		mes "you will be sent to the next room.";
 		next;
-		mes "[Raulel]";
+		mes "[Lauro]";
 		mes "After that, the test is over.";
 		mes "You will then become a Wizard controlled by Greater Magic powers! There is no coming back to the easy life you have known thus far.";
 		next;
-		mes "[Raulel]";
+		mes "[Lauro]";
 		mes "Hahahahaha~ You look frightened. It's not too late you know.";
 		mes "*Cough* *cough* You can give up and go back to town! Just forget about the Greater Magic and live a normal life. What do yah say?";
 		next;
 		if (select("Continue with the test.:I'm too scared, I would like to quit.") == 1) {
 			percentheal 100,100;
-			mes "[Raulel]";
+			mes "[Lauro]";
 			mes "This time when you die, don't come back crying. Hahahahahahahahah~ *Cough *cough*";
 			mes "As you wish, let's begin the final test!";
 			close2;
 			warp "job_wiz",57,154;
 			end;
 		}
-		mes "[Raulel]";
+		mes "[Lauro]";
 		mes "Comming from you, thats some darn good thinking. That's more a fit for you anyways. Hahahahahahahahaha~";
 		mes "Go back and live a quiet and peaceful life!";
 		close2;
@@ -1037,11 +1037,11 @@ gef_tower,102,24,2	script	Gloomy Wizard	4_M_JOB_WIZARD,{
 		end;
 	}
 	else if (WIZ_Q == 7) {
-		mes "[Raulel]";
+		mes "[Lauro]";
 		mes "You shouldn't have any more business with me as far as I'm concerned.";
 		mes "But, since your so darned persistent, I'll let you take the test again. Hahahahaha~";
 		next;
-		mes "[Raulel]";
+		mes "[Lauro]";
 		mes "Go! Go and become the Wizard you really want to be.";
 		mes "And be careful! Greater Magic will always be after you...";
 		close;
