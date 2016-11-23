@@ -65,10 +65,10 @@ function	script	updateStatus	{
 	end;
 	
 	// DESLOGOU --
-	OnPCLogoutEvent:
-	query_sql "SELECT `minutos_vip` FROM `viptable` WHERE `id_account`='"+getcharid(3)+"'", @MIN;
-	if ( @MIN ){
-		callfunc ("updateStatus",0);
+	//OnPCLogoutEvent:
+	//query_sql "SELECT `minutos_vip` FROM `viptable` WHERE `id_account`='"+getcharid(3)+"'", @MIN;
+	//if ( @MIN ){
+	//	callfunc ("updateStatus",0);
 	}
 	end;
 
@@ -354,7 +354,7 @@ prontera,160,215,3	script	[ Premium Account ]	712,{
 	// COUNT, REMOVE & DELETE MINUTES VIP.
 	OnTimer60000:
 	stopnpctimer;
-	query_sql "UPDATE `viptable` SET `minutos_vip`=`minutos_vip`-1 WHERE `minutos_vip`";
+	query_sql "UPDATE `viptable` SET `minutos_vip`=`minutos_vip`-1 WHERE `minutos_vip`>'0' AND online ='1'";
 	sleep2 100;
 		set .@query, query_sql ("SELECT `id_account` FROM `viptable` WHERE `minutos_vip`<='0'",.@HERE_ACCOUNT_REMOVE_VIP);
 		if (getarraysize(.@query)){
