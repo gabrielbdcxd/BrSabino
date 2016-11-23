@@ -69,7 +69,7 @@ function	script	updateStatus	{
 	//query_sql "SELECT `minutos_vip` FROM `viptable` WHERE `id_account`='"+getcharid(3)+"'", @MIN;
 	//if ( @MIN ){
 	//	callfunc ("updateStatus",0);
-	}
+	//}
 	//end;
 
 }
