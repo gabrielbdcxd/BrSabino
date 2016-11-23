@@ -65,12 +65,12 @@ function	script	updateStatus	{
 	end;
 	
 	// DESLOGOU --
-	OnPCLogoutEvent:
-	query_sql "SELECT `minutos_vip` FROM `viptable` WHERE `id_account`='"+getcharid(3)+"'", @MIN;
-	if ( @MIN ){
-		callfunc ("updateStatus",0);
-	}
-	end;
+	//OnPCLogoutEvent:
+	//query_sql "SELECT `minutos_vip` FROM `viptable` WHERE `id_account`='"+getcharid(3)+"'", @MIN;
+	//if ( @MIN ){
+	//	callfunc ("updateStatus",0);
+	//}
+	//end;
 
 }
  
