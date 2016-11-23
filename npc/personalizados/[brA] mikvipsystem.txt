@@ -354,7 +354,7 @@ prontera,160,215,3	script	[ Premium Account ]	712,{
 	// COUNT, REMOVE & DELETE MINUTES VIP.
 	OnTimer60000:
 	stopnpctimer;
-	query_sql "UPDATE `viptable` SET `minutos_vip`=`minutos_vip`-1 WHERE `minutos_vip`>'0'";
+	query_sql "UPDATE `viptable` SET `minutos_vip`=`minutos_vip`-1 WHERE `minutos_vip`";
 	sleep2 100;
 		set .@query, query_sql ("SELECT `id_account` FROM `viptable` WHERE `minutos_vip`<='0'",.@HERE_ACCOUNT_REMOVE_VIP);
 		if (getarraysize(.@query)){
