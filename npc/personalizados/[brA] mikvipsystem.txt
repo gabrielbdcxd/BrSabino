@@ -84,7 +84,7 @@ prontera,160,215,3	script	[ Premium Account ]	712,{
 		if ( getgroupid() < .LevelGM && !.ActiveBuyDay ){
 			mes "Realize uma doação! Nos ajudará a manter o servidor!";
 			mes " ";
-			mes "Informações: www.seuwebsite.com/doacoes";
+			mes "Informações: unityro.ddns.net";
 			close;
 		}
 	mes "Oii. ~! Veio me procurar por que está interessado no Vip?";
@@ -343,7 +343,7 @@ prontera,160,215,3	script	[ Premium Account ]	712,{
 	set $@LevelAccountSimple, 0; // <- Level do Account Common
 	set .LevelGM, 99;	// <- Level mínimo de GM para acessar ao menu
 	set .ActiveBuyDay, 1;	// <- Permitir compra de dias vip? 0 = Não / 1 = Sim
-	set .Qpointscash, 1000;	// <- Quantidade de pontos necessários para comprar 1 dia vip.
+	set .Qpointscash, 100;	// <- Quantidade de pontos necessários para comprar 1 dia vip.
 	// ===================================== // =======================================
 	// -- Tabela VIP
 	query_sql ("CREATE TABLE IF NOT EXISTS `viptable` (`id_account` int( 11 ) unsigned NOT NULL default '0',`login` varchar( 255 ) NOT NULL default '',`char_name` varchar( 100 ) NOT NULL default '',`minutos_vip` int( 11 ) unsigned NOT NULL default '0',`online` tinyint(2) NOT NULL default '0',`vipinsert` tinyint(2) NOT NULL default '0',PRIMARY KEY ( `id_account` )) ENGINE=MyISAM;");
@@ -354,7 +354,7 @@ prontera,160,215,3	script	[ Premium Account ]	712,{
 	// COUNT, REMOVE & DELETE MINUTES VIP.
 	OnTimer60000:
 	stopnpctimer;
-	query_sql "UPDATE `viptable` SET `minutos_vip`=`minutos_vip`-1 WHERE `minutos_vip`>'0' AND online ='1'";
+	query_sql "UPDATE `viptable` SET `minutos_vip`=`minutos_vip`-1 WHERE `minutos_vip`>'0'";
 	sleep2 100;
 		set .@query, query_sql ("SELECT `id_account` FROM `viptable` WHERE `minutos_vip`<='0'",.@HERE_ACCOUNT_REMOVE_VIP);
 		if (getarraysize(.@query)){
