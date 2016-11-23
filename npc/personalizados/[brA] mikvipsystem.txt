@@ -65,12 +65,12 @@ function	script	updateStatus	{
 	end;
 	
 	// DESLOGOU --
-	//OnPCLogoutEvent:
-	//query_sql "SELECT `minutos_vip` FROM `viptable` WHERE `id_account`='"+getcharid(3)+"'", @MIN;
-	//if ( @MIN ){
-	//	callfunc ("updateStatus",0);
-	//}
-	//end;
+	OnPCLogoutEvent:
+	query_sql "SELECT `minutos_vip` FROM `viptable` WHERE `id_account`='"+getcharid(3)+"'", @MIN;
+	if ( @MIN ){
+		callfunc ("updateStatus",0);
+	}
+	end;
 
 }
  
@@ -84,7 +84,7 @@ prontera,160,215,3	script	[ Premium Account ]	712,{
 		if ( getgroupid() < .LevelGM && !.ActiveBuyDay ){
 			mes "Realize uma doação! Nos ajudará a manter o servidor!";
 			mes " ";
-			mes "Informações: unityro.ddns.net";
+			mes "Informações: www.seuwebsite.com/doacoes";
 			close;
 		}
 	mes "Oii. ~! Veio me procurar por que está interessado no Vip?";
@@ -122,7 +122,7 @@ prontera,160,215,3	script	[ Premium Account ]	712,{
 			query_sql "SELECT `account_id` FROM `login` WHERE `userid`='"+.@USUARIO_FOR_VIP$+"'",.@HERE_ACCOUNT_ID;
 			query_sql "SELECT `char_id` FROM `char` WHERE `account_id`='"+.@HERE_ACCOUNT_ID+"'",.@HERE_CHAR_ID;
 			query_sql "SELECT `name` FROM `char` WHERE `char_id`='"+.@HERE_CHAR_ID+"'",.@HERE_CHAR_NAME$;
-			set @ADC_VIP_IN_MINUTES, (8640*.@QUANTY_VIP_IN_DAYS);
+			set @ADC_VIP_IN_MINUTES, (1440*.@QUANTY_VIP_IN_DAYS);
 			query_sql "SELECT `id_account` FROM `viptable` WHERE `id_account`='"+.@HERE_ACCOUNT_ID+"'",@HERE_CONFERE_ID;
 	
 	if (@HERE_CONFERE_ID == 0) 
@@ -321,11 +321,11 @@ prontera,160,215,3	script	[ Premium Account ]	712,{
 		mes "Login: "+.@LOGIN_ch$;
 		mes "Status: "+(.@MINUTOS ? "^228B22VIP^000000":"^B00400Normal^000000");
 		mes "Account ID: "+getcharid(3);
-		if ( .@MINUTOS < 8640){ 
-			mes "Minutos restantes: "+.@MINUTOS/6;
+		if ( .@MINUTOS < 1440){ 
+			mes "Minutos restantes: "+.@MINUTOS;
 		} else {
-			if ( .@MINUTOS >= 8640){
-				mes "Dias restantes: "+(.@MINUTOS/6/24/60);
+			if ( .@MINUTOS >= 1440){
+				mes "Dias restantes: "+(.@MINUTOS/24/60);
 			}
 		}
 		close;
@@ -343,7 +343,7 @@ prontera,160,215,3	script	[ Premium Account ]	712,{
 	set $@LevelAccountSimple, 0; // <- Level do Account Common
 	set .LevelGM, 99;	// <- Level mínimo de GM para acessar ao menu
 	set .ActiveBuyDay, 1;	// <- Permitir compra de dias vip? 0 = Não / 1 = Sim
-	set .Qpointscash, 100;	// <- Quantidade de pontos necessários para comprar 1 dia vip.
+	set .Qpointscash, 1000;	// <- Quantidade de pontos necessários para comprar 1 dia vip.
 	// ===================================== // =======================================
 	// -- Tabela VIP
 	query_sql ("CREATE TABLE IF NOT EXISTS `viptable` (`id_account` int( 11 ) unsigned NOT NULL default '0',`login` varchar( 255 ) NOT NULL default '',`char_name` varchar( 100 ) NOT NULL default '',`minutos_vip` int( 11 ) unsigned NOT NULL default '0',`online` tinyint(2) NOT NULL default '0',`vipinsert` tinyint(2) NOT NULL default '0',PRIMARY KEY ( `id_account` )) ENGINE=MyISAM;");
@@ -377,8 +377,3 @@ prontera,160,215,3	script	[ Premium Account ]	712,{
 	}
 	detachrid;
 }
-sec_in02,166,170,5	duplicate([ Premium Account ])	[ Premium Account ]#GM	712
-morocc,166,103,5	duplicate([ Premium Account ])	[ Premium Account ]#mr	712
-alberta,109,67,5	duplicate([ Premium Account ])	[ Premium Account ]#Alb	712
-yuno,169,187,5	duplicate([ Premium Account ])	[ Premium Account ]#yun	712
-aldebaran,144,129,5	duplicate([ Premium Account ])	[ Premium Account ]#ald	712
