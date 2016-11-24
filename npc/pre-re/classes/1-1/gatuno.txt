@@ -1,42 +1,47 @@
-//===== Hercules Script ======================================
-//= Thief Job Quest
-//===== By: ==================================================
-//= rAthena Dev Team
-//===== Current Version: =====================================
-//= 1.8
-//===== Description: =========================================
-//= [Official Conversion]
-//= Job quest for Thief classes
-//===== Additional Comments: =================================
-//= 1.0 Fully working.
-//= 1.1 Added instant job change for High Novice [Lupus]
-//= 1.3 Added Baby Class support [Lupus]
-//= 1.4 Optimised and moved first checker to Jfunc1-1 [massdriller]
-//=     Fixed possible EXP abuse [Lupus]
-//= 1.5 Now saves/restores all quest skills [Lupus]
-//= 1.6 Merged back JFunc [Lupus] 1.6a typos
-//= 1.7 Rescripted to Aegis 10.3 stadards. [L0ne_W0lf]
-//=     No longer uses function "F_ToHigh"
-//= 1.8 Added Quest Log commands. [L0ne_W0lf]
-//============================================================
+//    ________________________________________________________
+//   /                                                        \
+//   |       _           _   _   _                            |
+//   |      | |__  _ __ / \ | |_| |__   ___ _ __   __ _       |
+//   |      | '_ \| '__/ _ \| __| '_ \ / _ \ '_ \ / _` |      |
+//   |      | |_) | | / ___ \ |_| | | |  __/ | | | (_| |      |
+//   |      |_.__/|_|/_/   \_\__|_| |_|\___|_| |_|\__,_|      |
+//   |                                                        |
+//   |                    brAthena Script                     |
+//   |--------------------------------------------------------|
+//   | Nome do Script: Quest do Gatuno                        |
+//   |--------------------------------------------------------|
+//   | Criado por: eA/rA/brA Dev. Team                        |
+//   |--------------------------------------------------------|
+//   | Versões eA/rA/brA: 1.8/1.2/1.3                         |
+//   |--------------------------------------------------------|
+//   | Descrição: Mudança de Classe para Gatuno.              |
+//   |--------------------------------------------------------|
+//   | Changelog:                                             |
+//   | 1.0 Criado Cabeçalho [Megasantos]                      |
+//   | 1.1 Tradução PT-BR [Holy e Protimus]                   |
+//   | 1.2 Otimização [Holy & Hold]                           |
+//   | 1.3 Formatação nos Diálogos [lututuiBR & Holy]         |
+//   |--------------------------------------------------------|
+//   | - Anotações                                            |
+//   \________________________________________________________/
 
-moc_prydb1,39,129,2	script	Thief Guide	1_F_04,{
+moc_prydb1,39,129,2	script	Gatuna Ajudante	1_F_04,{
 	if (Upper == 1) {
 		if (ADVJOB == Job_Assassin_Cross || ADVJOB == Job_Stalker) {
 			if (Class == Job_Novice_High) {
-				mes "[Thief Guide]";
-				mes "Huh? Do I know you? It's creepy that you seem so familiar. You don't have a twin, do you?";
+				mes "[Gatuna Ajudante]";
+				mes "Hã? Eu te conheço? É assustador que você parece tão familiar. Você não tem um irmão gêmeo, que pareça com você?";
 				next;
 				if (getskilllv("NV_BASIC") < 9) {
-					mes "[Thief Guide]";
-					mes "What, do you want to be a Thief? I'm sorry, but you look like you need more training.";
+					mes "[Gatuna Ajudante]";
+					mes "O que, você quer ser um gatuno? Sinto muito, mas parece que você precisa de mais treinamento.";
 					next;
-					mes "[Thief Guide]";
-					mes "Take your time and learn all the Basic Skills, will you? Well then, see you later~!";
+					mes "[Gatuna Ajudante]";
+					mes "Gaste seu tempo e aprenda todas as habilidades básicas, certo? Bem, então vejo você mais tarde~!";
 					close;
 				}
-				mes "[Thief Guide]";
-				mes "Well, I got this feeling like you've been through a lifetime of fighting, so I'm promoting you to a Thief right this minute. I better give you tough guys what you want...";
+				mes "[Gatuna Ajudante]";
+				mes "Bem, eu tenho essa sensação de que você já passou por uma vida inteira de lutas, então eu estou promovendo-o a um Gatuno neste minuto. É melhor eu deixar caras Durões cuidando de você...";
 				next;
 				skill 143,0,0;
 				jobchange Job_Thief_High;
@@ -44,302 +49,247 @@ moc_prydb1,39,129,2	script	Thief Guide	1_F_04,{
 				skill 150,1,0;
 				skill 151,1,0;
 				skill 152,1,0;
-				mes "[Thief Guide]";
-				mes "Since you've become a Thief, live as a Thief. Now, go for it! Next~";
+				mes "[Gatuna Ajudante]";
+				mes "Ao se tornar um gatuno, irá viver como um Gatuno. Agora, vá em frente! Próximo~";
 				close;
 			}
 			else {
-				mes "[Thief Guide]";
+				mes "[Gatuna Ajudante]";
 				if (Sex)
-					mes "Hey, dude.";
+					mes "Ei, cara.";
 				else
-					mes "Hey, baby~";
+					mes "Ei, moça";
 				close;
 			}
 		}
 		else {
-			mes "[Thief Guide]";
+			mes "[Gatuna Ajudante]";
 			if (Sex)
-				mes "Hey, dude.";
+				mes "Ei, cara.";
 			else
-				mes "Hey, baby.";
-			mes "...Hey! You look too goody-goody to want to be a Thief!! Now scram, I'm busy. Next!";
+				mes "Ei, moça";
+			mes "Você parece muito uma boa pessoa para querer ser um gatuno! Agora suma, estou ocupado. Próximo!";
 			close;
 		}
 	}
 	if (BaseJob == Job_Thief) {
-		mes "[Thief Guide]";
-		mes "If you have a problem, feel free to speak to me anytime, alright?";
+		mes "[Gatuna Ajudante]";
+		mes "Ei~ Se você tiver algum problema, fale quando quiser, tudo bem?";
 		close;
 	}
 	else if (BaseJob != Job_Novice && BaseJob != Job_Thief) {
-		mes "[Thief Guide]";
+		mes "[Gatuna Ajudante]";
 		mes "What the heck...?";
 		switch(Class) {
-		case 1:
-			mes "Huh.";
-			mes "Now, that's";
-			mes "a big sword.";
-			next;
-			mes "[Thief Guide]";
-			mes "So...";
-			mes "Trying to make";
-			mes "up for something";
-			mes "...Buddy?";
-			break;
-		case 2:
-			mes "What's a Mage doin' here? Shouldn't you be doing card tricks elsewhere? Oh well, it's a free country...";
-			next;
-			mes "[Thief Guide]";
-			mes "Oh wait,";
-			mes "it's not...";
-			mes "Get outta here!";
-			break;
-		case 3:
-			mes "Man, shouldn't you";
-			mes "Archers be playing";
-			mes "in the forest";
-			mes "or something?";
-			break;
-		case 4:
-			mes "You know we all steal for a living, right? What are you doing in this kinda place, Acolyte?";
-			break;
-		case 5:
-			mes "You're a Merchant,";
-			mes "right? Why are you";
-			mes "walking into a den";
-			mes "of Thieves?!";
-			next;
-			mes "[Thief Guide]";
-			mes "It's like you're begging";
-			mes "us to steal from you!";
-			mes "Come on, hurry and";
-			mes "get outta here~";
-			break;
-		case 8:
-			mes "Oh my God...";
-			mes "Am I dying?";
-			next;
-			mes "[Thief Guide]";
-			mes "Why else would a Priest come here? I guess I better start confessing all of my misdeeds.";
-			close;
-		case 12:
-			mes "Didn't you use to be one of us?! Man, you changed. You seem real dangerous now...";
-			close;
-		case 17:
-			mes "Man, you got real cool all of a sudden! You must have some skills I can only dream of!";
-			close;
+		case 1: mes "Mais um Espadachim metido..."; break;
+		case 2: mes "Não precisamos de fogos de artíficio aqui... Vai acender fogueira sem isqueiro, vai...."; break;
+		case 3: mes "Haha... apenas um arqueiro cegueta...."; break;
+		case 4: mes "Ei noviço, ajoelha aí e reza um terço..."; break;
+		case 5:	mes "Ahhh um mercador trambiqueiro!! Vou te denunciar pros GMs...";	break;
+		case 8: mes "Por que mais um sacerdote veio aqui? Eu acho que é melhor eu começar confessando todos os meus pecados."; break;
+		case 12: mes "Será que você não era um de nós?! Cara, você mudou. Você parece ser perigoso agora..."; break;
+		case 17: mes "Você deve ter algumas habilidades que só posso imaginá-las!";	break;
 		}
 		next;
-		mes "[Thief Guide]";
-		mes "*Sigh* Look, there's really no need for you to be in this kind of place. You oughta go where you ought to go.";
+		mes "[Gatuna Ajudante]";
+		mes "*Suspiro*";
+		mes "Bem, aqui não é lugar para você. Você deveria sair daqui.";
 		close;
 	}
 	if (job_thief_q == 3 && countitem(1069) > 0 || countitem(1070) > 0) {
-		mes "[Thief Guide]";
-		mes "Hmmm?";
-		mes "You gathered Mushrooms for";
-		mes "the Thief test, right?";
+		mes "Humm? Você coletou todos os Cogumelos do teste de Gatuno, certo?";
 		next;
-		mes "[Thief Guide]";
-		mes "Here, talk to the other guy right next to me. He's the one in charge of checking your Mushrooms.";
+		mes "[Gatuna Ajudante]";
+		mes "Fale com o outro homem ao meu lado. Ele é o encarregado de verificar seus Cogumelos.";
 		close;
 	}
 	else if (job_thief_q == 3) {
-		mes "[Thief Guide]";
-		mes "So how was the";
-		mes "Mushroom Farm?";
-		mes "Have any fun?";
+		mes "Então, como foi na fazenda de cogumelos? Se divertiu bastante?";
 		next;
 		if (select("Yeah, kinda Cool.:It was horrible.") == 1) {
-			mes "[Thief Guide]";
-			mes "Heh heh! That's a good attitude. In our line of work, you gotta enjoy getting your hands dirty, one way or another.";
+			mes "[Gatuna Ajudante]";
+			mes "Caramba! Você é O cara mesmo!";
+			mes "Todos os outros foram uns %#@%#%%@ comparados a você!";
+			mes "Humm... Você não vai tentar me substituir, não é? Por que se você sequer tentar, eu vou enfiar uma faca em você tão rápido que você nem vai perceber...";
 			close;
 		}
-		mes "[Thief Guide]";
-		mes "Yeah? I've been there too, so I can see why that place isn't everyone's cup of tea. Still, being a Thief isn't all glamour and trendy night life.";
+		mes "[Gatuna Ajudante]";
+		mes "É, eu sei como é, eu também tive que ir naquele lugar horroroso.";
 		close;
 	}
 	if (job_thief_q == 2) {
-		mes "[Thief Guide]";
-		mes "Hey, whaddya doin' here? Aren't you supposed to be gathering Mushrooms? Or did you need it explained to you again?";
+		mes "[Gatuna Ajudante]";
+		mes "Ei, o que você ainda está fazendo aqui? Você deveria estar procurando cogumelos?";
 		next;
-		if  (select("Yes.:No, that's okay.") == 1) {
-			mes "[Thief Guide]";
-			mes "*Sigh* Well, there's always one in the bunch. Alright, listen carefully.";
+		if  (select("Sim.:Não, está bem.") == 1) {
+			mes "[Gatuna Ajudante]";
+			mes "É, sempre tem aqueles mais lentinhos... Pode deixar que eu te explico, mas só essa vez hein!";
 			next;
-			mes "[Thief Guide]";
-			mes "Alright, for your test, you gotta steal Mushrooms from a farm. Don't worry, the guy who owns the farm deserves to be robbed.";
+			mes "[Gatuna Ajudante]";
+			mes "O teste pra se tornar um Gatuno é o seguinte: Você deve roubar cogumelos da fazenda do 'Shibu', um dos maiores mercadores de Morroc.";
+			mes "Você deve colher dois tipos de cogumelos: os ^0000FFCogumelos Venenosos^000000 e os  ^0000FFCogumelos Borrachentos^000000.";
 			next;
-			mes "[Thief Guide]";
-			mes "Anyway, you gotta gather two kinds of Mushrooms: ^0000FFOrange Net Mushrooms^000000 and ^0000FFOrange Gooey Mushrooms^000000.";
+			mes "[Gatuna Ajudante]";
+			mes "Sabia que existem monstros terríveis guardando a fazenda? É isso aí, é hora de você largar a mamadeira e se preparar, essa vai ser a experiência mais difícil da sua vida!";
 			next;
-			mes "[Thief Guide]";
-			mes "Be careful, since there are monsters are the farm that are there to protect the Mushrooms. So this will be no walk in the park.";
+			mes "[Gatuna Ajudante]";
+			mes "Quando você já tiver colhido os cogumelos, iremos contar os seus pontos... São 3 pontos para cada 1 Cogumelo Venenoso, e 1 ponto para cada Cogumelo Borrachento. Quando você tiver pelo menos 25 pontos, eu deixo você virar um Gatuno.";
 			next;
-			mes "[Thief Guide]";
-			mes "When you come back here after gathering Mushrooms, you'll be graded on the Mushrooms you've collected.";
+			mes "[Gatuna Ajudante]";
+			mes "Saia daqui e ande na direção leste. Procure pelo nosso camarada, ele vai estar entre duas colunas.";
+			mes "Fale com ele. Ele vai te colocar para dentro da fazenda usando uma passagem secreta";
 			next;
-			mes "[Thief Guide]";
-			mes "Each Orange Net Mushroom gets you 3 points, and you get 1 point for each Orange Gooey Mushroom. You need a total of 25 points to pass the test.";
-			next;
-			mes "[Thief Guide]";
-			mes "Go outside and keep going ahead toward the Eastern Field of the Pyramids. Then you will see one of our comrades between two columns.";
-			next;
-			mes "[Thief Guide]";
-			mes "Speak to that guy, and he'll take you to the farm through the backdoor.";
-			next;
-			mes "[Thief Guide]";
-			mes "On that field, I think his coordinates are '^FF0000141, 125^000000.' Just type ^3355FF/where^000000 in the right side of your chat box to check your present coordinates.";
-			close;
+			mes "[Gatuna Ajudante]";
+			mes "Hmmm... acho que eu me lembro das coordernadas dele, são  '^FF0000141, 125^000000'.";
+			mes "Você sabe o que são coordenadas? Elas te dizem qual a sua localização no momento, é só teclar '/where'";
+		close;
 		}
-		mes "[Thief Guide]";
-		mes "Huh. For a second there, I thought you had something really important to tell me.";
+		mes "[Gatuna Ajudante]";
+		mes "Huh. Por um segundo, eu pensei que você tinha algo realmente importante para me dizer.";
 		close;
 	}
-	mes "[Thief Guide]";
+	mes "[Gatuna Ajudante]";
 	if (job_thief_q == 0) {
-		mes "What brings you down";
-		mes "here to this rathole?";
+		mes "Heheheheh... você parece ser um menino limpinho, o que te trouxe para um lugar fedido e sujo como esse?" : "Ah... Então você voltou... Dessa vez é pra valer?";
 	}
 	else {
 		mes "Ah...";
-		mes "You came back.";
-		mes "Are you sure you're";
-		mes "ready to try again?";
+		mes "Você voltou.";
+		mes "Tem certeza de que está";
+		mes "pronto para tentar novamente?";
 	}
 	next;
-	if (select("Hey, I came here to be a Thief!:Nah, I'm just looking around.") == 1) {
+	if (select("Sim, estou pronto para ser um Gatuno!:Err... não, eu acho que não...") == 1) {
 		if (job_thief_q == 0) {
-			mes "[Thief Guide]";
-			mes "Heh, I like your confidence. Still, you know being a Thief isn't all what it's cracked up to be.";
+			mes "[Gatuna Ajudante]";
+			mes "Opa, calma aí... Ser um Gatuno não é algo para se orgulhar, e muito menos sair exibindo por aí...";
+			mes "Você tem que tomar cuidado para não ser pego! Por que você não vai e pinta uma placa escrito 'Eu Quero Roubar! Ser um Gatuno e Roubar as Coisas Dos Outros.' e pendura no pescoço?";
 			next;
-			mes "[Thief Guide]";
-			mes "Still...";
-			mes "Do you really";
-			mes "want to be";
-			mes "a Thief?";
+			mes "[Gatuna Ajudante]";
+			mes "Então você quer mesmo ser um Gatuno, hein?";
 			next;
-			switch(select("Yeah.:No, just wasting your time.:Why did you become a Thief?")) {
-			case 1:
-				mes "[Thief Guide]";
-				mes "Really...";
-				break;
-			case 2:
-				mes "[Thief Guide]";
-				mes "Yeah...";
-				mes "I can see that.";
-				break;
-			case 3:
-				mes "[Thief Guide]";
-				mes "Me...?";
-				mes "I had no choice at the time. It was either steal or starve. But it's not like I need to give you my life story.";
-				break;
+			switch(select("Sim, eu quero!:Falando serio.. Não.:E você, espertalhona?")) {
+		case 1:
+			mes "[Gatuna Ajudante]";
+			mes "Uau, verdade? Isso é meio estranho...";
+			break;
+		case 2:
+			mes "[Gatuna Ajudante]";
+			mes "Então o que você tá fazendo aqui? Tá namorando alguém aqui da Guilda ou resolveu imaginar como seria legal se você fosse uma Gatuna como eu?";
+			break;
+		case 3:
+			mes "[Gatuna Ajudante]";
+			mes "Eu? Eu sou a Espertalhona? Bem, fique sabendo que eu não tive escolha, era roubar ou morrer de fome...";
+			break;
 			}
 			next;
-			mes "[Thief Guide]";
-			mes "So do you want to";
-			mes "apply to become";
-			mes "a Thief or not?";
+			mes "[Gatuna Ajudante]";
+			mes "Afinal, você quer mesmo ser um Gatuno?";
 			next;
-			switch(select("Yes, I will.:I'm too scared to be a Thief!")) {
+			switch(select("Sim!:Não, meus pais não deixaram.")) {
 			case 1:
-				mes "[Thief Guide]";
+				mes "[Gatuna Ajudante]";
 				mes "Alright, tell";
 				mes "me your name.";
 				next;
-				mes "[Thief Guide]";
-				mes "" + strcharinfo(0) + "?";
-				mes "What kind of name is " + strcharinfo(0) + "? Anyway, give me a second.";
+				mes "[Gatuna Ajudante]";
+				mes "Qual é o seu nome";
+				next;
+				mes "[Gatuna Ajudante]";
+				mes strcharinfo(0)+", é isso mesmo?";
 				job_thief_q = 1;
 				next;
-				mes "[Thief Guide]";
-				mes "Alright, your registration has been processed. Okay, you can begin your test if you're ready.";
+				mes "[Gatuna Ajudante]";
+				mes "Ok, sua inscrição está pronta.";
+				mes "Nós já podemos fazer o teste se você se sentir preparado...";
+				mes "Tentar não custa nada! Quer fazer agora?";
 				next;
-				switch(select("Yeah, I'm ready.:No, I'm not ready yet.")) {
+				switch(select("Quero tentar.:Ainda não estou pronto.")) {
 				case 1:
 					break;
 				case 2:
-					mes "[Thief Guide]";
-					mes "Not ready?";
-					mes "How can you";
-					mes "not be ready?!";
+					mes "[Gatuna Ajudante]";
+					mes "Você que sabe... Volte quando estiver mais seguro de si!";
 					close;
 				}
 				break;
 			case 2:
-				mes "[Thief Guide]";
-				mes "Too scared?!?";
+				mes "[Gatuna Ajudante]";
+				mes "Demasiado assustado?!?";
 				mes "Hahahahahahah!";
-				mes "Oh, please...!";
-				mes "That's hilarious!";
+				mes "Oh, por favor ...!";
+				mes "Isso é hilário!";
 				close;
 			}
 		}
 		else {
-			mes "[Thief Guide]";
+			mes "[Gatuna Ajudante]";
 			mes "Okay...";
-			mes "Give me";
-			mes "one second.";
+			mes "Me dê";
+			mes "um segundo.";
 			next;
 		}
-		mes "[Thief Guide]";
-		mes "Your name is...";
-		mes strcharinfo(0) + "? Um, where is it? Ah, here it is. Let's see...";
+		mes "[Gatuna Ajudante]";
+		mes "O seu nome é "+strcharinfo(0)+"? Certo, vamos ver onde está a sua inscrição...";
+		mes "Ah! Aqui está! Nome "+strcharinfo(0)+" Vaaaaaaaaamos ver....";
 		next;
-		mes "[Thief Guide]";
+		mes "[Gatuna Ajudante]";
 		if (getskilllv("NV_BASIC") < 9) {
-			mes "Isn't that cute? I can see you're ambitious, but you gotta learn all of the Basic Skills before you can become a Thief.";
-			close;
+		mes "Humm... você é bem ambicioso hein?";
+		mes "Apressadinho hein?! Volte quando tiver o nível necessário.";
+		close;
 		}
-		mes "Alright. I looked at your Felony Record, and you seem to have a very interesting history. You might have what it takes to be a Thief.";
+		mes "Hum...";
+		mes "Eu vi a sua Ficha Policial e fiquei sabendo de sua fama nas ruas de Morroc, você deve ser capaz de roubar como um bom Gatuno...";
 		next;
-		mes "[Thief Guide]";
-		mes "Because I feel like it, I now decree that you have passed this interview. Good work!";
+		mes "[Gatuna Ajudante]";
+		mes "Ok, então você, passou na entrevista pessoal. Parabéns!";
 		job_thief_q = 2;
 		setquest 1013;
 		next;
-		mes "[Thief Guide]";
-		mes "Now, your actual abilities will need to be tested. Do you know anything about the test?";
+		mes "[Gatuna Ajudante]";
+		mes "Agora vamos testar se você é mesmo capaz de roubar...";
+		mes "Você sabe como é o teste?";
 		next;
-		switch(select("Yes, I do.:Sorry, I don't.")) {
+		switch(select("Sim, eu sei.:Não, eu não sei...")) {
 		case 1:
-			mes "[Thief Guide]";
-			mes "Oh yeah? Well, this makes things a lot easier.";
+			mes "[Gatuna Ajudante]";
+			mes "Sabe mesmo?";
+			mes "Ótimo, assim as coisas ficam mais rápidas.";
 			break;
 		case 2:
-			mes "[Thief Guide]";
+			mes "[Gatuna Ajudante]";
 			mes "Alright, let me inform you then. Listen carefully. This test decides if you are worthy of becoming a Thief.";
 			next;
-			mes "[Thief Guide]";
+			mes "[Gatuna Ajudante]";
 			mes "You will be sneaking to Shibu's Farm. He is the worst Merchant, in terms of character, in Morroc.";
 			next;
-			mes "[Thief Guide]";
+			mes "[Gatuna Ajudante]";
 			mes "Alright, for your test, you gotta steal Mushrooms from his farm. Don't worry, that guy deserves to be robbed.";
 			next;
-			mes "[Thief Guide]";
+			mes "[Gatuna Ajudante]";
 			mes "Anyway, you gotta gather two kinds of Mushrooms: ^0000FFOrange Net Mushrooms^000000 and ^0000FFOrange Gooey Mushrooms^000000.";
 			next;
-			mes "[Thief Guide]";
+			mes "[Gatuna Ajudante]";
 			mes "Be careful, since there are monsters are the farm that are there to protect the Mushrooms. So this will be no walk in the park.";
 			next;
-			mes "[Thief Guide]";
+			mes "[Gatuna Ajudante]";
 			mes "When you come back here after gathering Mushrooms, you'll be graded on the Mushrooms you've collected.";
 			next;
-			mes "[Thief Guide]";
+			mes "[Gatuna Ajudante]";
 			mes "Each Orange Net Mushroom gets you 3 points, and you get 1 point for each Orange Gooey Mushroom. You need a total of 25 points to pass the test.";
 			next;
-			mes "[Thief Guide]";
+			mes "[Gatuna Ajudante]";
 			mes "Go outside and keep going ahead toward the Eastern Field of the Pyramids. Then you will see one of our comrades between two columns.";
 			next;
-			mes "[Thief Guide]";
+			mes "[Gatuna Ajudante]";
 			mes "Speak to that guy, and he'll take you to the farm through the backdoor.";
 			next;
-			mes "[Thief Guide]";
+			mes "[Gatuna Ajudante]";
 			mes "On that field, I think his coordinates are '^FF0000141, 125^000000.' Just type ^3355FF/where^000000 in the right side of your chat box to check your present coordinates.";
 		}
 		next;
-		mes "[Thief Guide]";
+		mes "[Gatuna Ajudante]";
 		mes "Don't forget to make plans and prepare yourself before you go inside the Mushroom Farm. Move as quickly as you can and try not to get killed, alright?";
 		close;
 	}
