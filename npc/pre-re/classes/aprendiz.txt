@@ -307,6 +307,8 @@ new_1-1,53,114,4	script	Shion#nv1	4_F_JOB_HUNTER,{
 			mes "se preocupe em se perder.";
 			mes "Cuide-se agora~!";
 			set nov_1st_cos,1;
+		getitem 7059,50; //Vale-Armazém
+		getitem 7060,40; //Vale-Teletransporte
 			close;
 		case 2:
 			mes "[Shion]";
@@ -340,12 +342,16 @@ new_1-1,53,114,4	script	Shion#nv1	4_F_JOB_HUNTER,{
 			mes "se preocupe em se perder.";
 			mes "Cuide-se agora~!";
 			set nov_1st_cos,1;
+			getitem 7059,50; //Vale-Armazém
+			getitem 7060,40; //Vale-Teletransporte
 			close;
 		case 3:
 			mes "[Shion]";
 			mes "Eu? Eu sou Shion!";
 			mes "Mas que modo rude de se perguntar! Estou aqui dando meu tempo e esforço aqui como voluntária, então você deveria mostrar-me um pouco de respeito pelo menos!";
 			set nov_1st_cos,2;
+			getitem 7059,50; //Vale-Armazém
+			getitem 7060,40; //Vale-Teletransporte
 			close;
 		}
 	}
