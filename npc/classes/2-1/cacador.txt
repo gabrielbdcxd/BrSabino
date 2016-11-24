@@ -1620,7 +1620,7 @@ in_hunter,99,99,4	script	Hunter Info#hnt::HntNotice	4_F_JOB_HUNTER,{
 }
 
 payon_in03,131,7,3	script	Caçador#htnGM	1_M_ORIENT01,{
-	if (CACA_Q == 10) {
+	if (HNTR_Q == 10) {
 		mes "[Líder da Guilda de Caçadores]";
 		mes "Você deve estar aqui para o teste de Caçador. Posso dar informações sobre o processo do teste. O que você deseja saber?";
 		next;
@@ -1662,14 +1662,14 @@ payon_in03,131,7,3	script	Caçador#htnGM	1_M_ORIENT01,{
 		}
 		mes "[Líder da Guilda de Caçadores]";
 		mes "Bem. Suas flechas provavelmente ainda estão sendo feitas, para que você possa usar no teste.";
-		HNTR_Q == 12
+		HNTR_Q = 12
 		changequest 4009,4011;
 		getitem 1751,200; //  Flecha de Prata
 		close2;
 		warp "job_hunte",176,22;
 		end;
 	}
-	else if (CACA_Q > 1 && CACA_Q < 10) {
+	else if (HNTR_Q > 1 && HNTR_Q < 10) {
 		mes "[Líder da Guilda de Caçadores]";
 		mes "Hum...?";
 		mes "Por que um arqueiro";
@@ -1687,7 +1687,7 @@ payon_in03,131,7,3	script	Caçador#htnGM	1_M_ORIENT01,{
 		mes "Hum? Posso ajudá-lo? Se você deseja mudar de classe, você deve visitar a pessoa na Guilda de Caçadores, não eu.";
 		close;
 	}
-	else if (CACA_Q > 11 && CACA_Q < 16) {
+	else if (HNTR_Q > 11 && HNTR_Q < 16) {
 		mes "[Líder da Guilda de Caçadores]";
 		mes "Hmm. Você é o arqueiro que quase desistiu de mudar de classe. Você tem tudo pronto, certo? Então eu vou mandar você para fazer o teste imediatamente.";
 		next;
@@ -1734,7 +1734,7 @@ payon_in03,131,7,3	script	Caçador#htnGM	1_M_ORIENT01,{
 			mes "Ok!! Eu espero";
 			mes "você vai passar desta vez!";
 			close2;
-			set HNTR_Q == 12
+			set HNTR_Q = 12
 			warp "job_hunte",176,22;
 			end;
 		}
