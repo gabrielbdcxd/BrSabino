@@ -25,8 +25,8 @@
 // Thief Trainer
 //============================================================
 moc_ruins,66,164,4	script	Thief Trainer#T	4_M_02,{
-	mes "[Yierhan]";
 	if (Class == Job_Novice){
+		mes "[Yierhan]";
 		mes "Eh...?";
 		mes "Um noviço?";
 		mes "Ainda pensando";
@@ -42,6 +42,7 @@ moc_ruins,66,164,4	script	Thief Trainer#T	4_M_02,{
 	} else if (Class == Job_Thief || Class == Job_Thief_High || Class == Job_Assassin || Class ==Job_Assassin_Cross || Class == Job_Rogue || Class == Job_Stalker){
 		if (Class == Job_Thief_High || Class == Job_Assassin || Class == Job_Assassin_Cross || Class == Job_Rogue || Class == Job_Stalker){
 			if (tu_thief01 < 8){
+				mes "[Yierhan]";
 				mes "O queee você está";
 				mes "fazendo aqui? Não há";
 				mes "nada que eu possa ensinar-lhe!";
@@ -56,6 +57,7 @@ moc_ruins,66,164,4	script	Thief Trainer#T	4_M_02,{
 			}
 		}
 		if (tu_thief01 == 0){
+			mes "[Yierhan]";
 			mes "Heei Amigo.";
 			mes "Eu sou Yierhan.";
 			mes "Acontece que sou";
@@ -129,6 +131,7 @@ moc_ruins,66,164,4	script	Thief Trainer#T	4_M_02,{
 				close;
 			}
 		} else if (tu_thief01 == 1){
+			mes "[Yierhan]";
 			mes "Tudo bem, vamos falar sobre Status.";
 			mes "Você sabe o que é? Acho que eu só vou falar sobre as habilidades que nós Gatunos usamos.";
 			next;
@@ -138,6 +141,7 @@ moc_ruins,66,164,4	script	Thief Trainer#T	4_M_02,{
 			set tu_thief01, 2;
 			close;
 		} else if (tu_thief01 == 2){
+			mes "[Yierhan]";
 			mes "Ok, deixe-me ver suas habilidades. Você sabe que tem que mudar a sua estratégia de batalha dependendo das habilidades que você tem, certo? Habilidades são tão importantes como o Status!";
 			next;
 			set .@chk_th_skill1, getskilllv("TF_DOUBLE");
