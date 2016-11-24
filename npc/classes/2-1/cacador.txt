@@ -611,7 +611,7 @@ payon_in02,21,31,1	script	Caçador#htnGM2	1_M_ORIENT01,{
 		next;
 		mes "[Líder da Guilda de Caçadores]";
 		mes "Boa sorte.";
-		HNTR_Q == 12
+		HNTR_Q = 12;
 		changequest 4010,4011;
 		warp "job_hunte",176,22;
 		cutin "job_huntermaster",255;
@@ -1662,7 +1662,7 @@ payon_in03,131,7,3	script	Caçador#htnGM	1_M_ORIENT01,{
 		}
 		mes "[Líder da Guilda de Caçadores]";
 		mes "Bem. Suas flechas provavelmente ainda estão sendo feitas, para que você possa usar no teste.";
-		HNTR_Q = 12
+		HNTR_Q = 12;
 		changequest 4009,4011;
 		getitem 1751,200; //  Flecha de Prata
 		close2;
