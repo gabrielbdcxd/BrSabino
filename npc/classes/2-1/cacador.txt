@@ -106,7 +106,7 @@ hu_in01,386,373,4	script	Hunter Guildsman#hnt	4_F_JOB_HUNTER,{
 			mes "Você não pode mudar de classe se você ainda possui pontos de habilidade não utilizados. Use os seus pontos de habilidade restantes antes de falar comigo.";
 			close;
 		}
-		else if (CACA_Q == 17 && countitem(1007) == 0) {
+		else if (HNTR_Q == 17 && countitem(1007) == 0) {
 			mes "[Caçadora Sherin]";
 			mes "Hum... Fui informado de que você passou no teste. Mas você não tem o necessário 'Colar da Sabedoria (penetração)', que comprova a sua aprovação.";
 			next;
@@ -114,7 +114,7 @@ hu_in01,386,373,4	script	Hunter Guildsman#hnt	4_F_JOB_HUNTER,{
 			mes "Vou deixá-lo mudar de classe, mas você deve trazer de volta um 'Colar da Sabedoria (penetração),' não importa o que aconteça.";
 			close;
 		}
-		else if (CACA_Q == 17 && countitem(1007) > 0 && JobLevel > 39) {
+		else if (HNTR_Q == 17 && countitem(1007) > 0 && JobLevel > 39) {
 			mes "[Caçadora Sherin]";
 			mes "Nossa...?";
 			mes "Você passou";
@@ -146,8 +146,8 @@ hu_in01,386,373,4	script	Hunter Guildsman#hnt	4_F_JOB_HUNTER,{
 				getitem 1710,1; // Besta [2]
 			close;
 		}
-		else if ((JobLevel > 39) && ((CACA_Q == 0) || (CACA_Q == 1))) {
-			if (CACA_Q == 0) {
+		else if ((JobLevel > 39) && ((HNTR_Q == 0) || (HNTR_Q == 1))) {
+			if (HNTR_Q == 0) {
 				mes "[Caçadora Sherin]";
 				mes "Você é um Arqueiro! Parece que você está treinado o suficiente como um Arqueiro ... Você veio aqui para se tornar um Caçador, certo?";
 				next;
@@ -198,7 +198,7 @@ hu_in01,386,373,4	script	Hunter Guildsman#hnt	4_F_JOB_HUNTER,{
 					break;
 				}
 			}
-			else if (CACA_Q == 1) {
+			else if (HNTR_Q == 1) {
 				mes "[Caçadora Sherin]";
 				mes "Bem-vindo de volta...!";
 				mes "Certo, vamos começar com a entrevista. Desta vez, pense cuidadosamente sobre as respostas de cada pergunta.";
@@ -379,7 +379,7 @@ hu_in01,386,373,4	script	Hunter Guildsman#hnt	4_F_JOB_HUNTER,{
 				close;
 			}
 		}
-		else if (CACA_Q > 2 && CACA_Q < 10) {
+		else if (HNTR_Q > 2 && HNTR_Q < 10) {
 			mes "[Caçadora Sherin]";
 			mes "Basta dar o item para a Caçador de Demônio, ele está no caminho para a esquerda nesta área~";
 			next;
@@ -387,7 +387,7 @@ hu_in01,386,373,4	script	Hunter Guildsman#hnt	4_F_JOB_HUNTER,{
 			mes "Se você decidir se tornar um caçador,"+((Sex)?" prometa vir me visitar. Eu quero ver você como um Caçador. Você estará ótimo..! ":" Venha me visitar, ok? Você é bonita, mas... Você ficará ainda mais bonita como uma caçadora. Hehe ~")+"";
 			close;
 		}
-		else if (CACA_Q == 2) {
+		else if (HNTR_Q == 2) {
 			mes "[Caçadora Sherin]";
 			mes "????";
 			next;
@@ -414,7 +414,7 @@ hu_in01,386,373,4	script	Hunter Guildsman#hnt	4_F_JOB_HUNTER,{
 }
 
 hu_in01,382,382,4	script	Recepcionista da Guilda#hnt	4_M_JOB_HUNTER,{
-	if (CACA_Q == 2) {
+	if (HNTR_Q == 2) {
 		mes "[Recepcionista da Guilda]";
 		mes "Saudações. Eles me chamam... de ^660000O Caçador de Demônio^000000. Eu sou o encarregado pelas aplicações de classe. Seu nome é... "+strcharinfo(0)+", correto?";
 		next;
@@ -476,9 +476,9 @@ hu_in01,382,382,4	script	Recepcionista da Guilda#hnt	4_M_JOB_HUNTER,{
 		}
 		close;
 	}
-	else if (CACA_Q >= 3 && CACA_Q <= 9) {
+	else if (HNTR_Q >= 3 && HNTR_Q <= 9) {
 		if (RENEWAL) .@i = 1;
-		switch(CACA_Q) {
+		switch(HNTR_Q) {
     // Antenas de Inseto / Garra de Lobo do Deserto, Tronco, Erva Branca
 		case 3: setarray .@items[0], (.@i?928:7030),5, 1019,5, 509,3, 10; break;
 		// Bico de Ave, Osso, Erva Verde
@@ -540,12 +540,12 @@ hu_in01,382,382,4	script	Recepcionista da Guilda#hnt	4_M_JOB_HUNTER,{
 		mes "reunido todos os itens.";
 		close;
 	}
-	else if (CACA_Q > 9 && CACA_Q < 17) {
+	else if (HNTR_Q > 9 && HNTR_Q < 17) {
 		mes "[Recepcionista da Guilda]";
 		mes "Hum? Você não procurou pelo líder tanto no Palácio Central de Payon como na Guilda dos Arqueiros? Ele deve estar em um desses dois lugares, então vá até lá e procure por ele.";
 		close;
 	}
-	else if (CACA_Q == 17) {
+	else if (HNTR_Q == 17) {
 		mes "[Recepcionista da Guilda]";
 		mes "Ooh. Você passou no teste. Parabéns ~ Você deve falar com Sherin agora.";
 		close;
@@ -617,7 +617,7 @@ payon_in02,21,31,1	script	Caçador#htnGM2	1_M_ORIENT01,{
 		cutin "job_huntermaster",255;
 		end;
 	}
-	else if (CACA_Q > 1 && CACA_Q < 10) {
+	else if (HNTR_Q > 1 && HNTR_Q < 10) {
 		mes "[Líder da Guilda de Caçadores]";
 		mes "Hum...?";
 		mes "Por que um arqueiro";
@@ -632,7 +632,7 @@ payon_in02,21,31,1	script	Caçador#htnGM2	1_M_ORIENT01,{
 		cutin "job_huntermaster",255;
 		end;
 	}
-	else if (CACA_Q == 10) {
+	else if (HNTR_Q == 10) {
 		mes "[Líder da Guilda de Caçadores]";
 		mes "Hum?";
 		mes "Eu posso ajudá-lo";
@@ -646,7 +646,7 @@ payon_in02,21,31,1	script	Caçador#htnGM2	1_M_ORIENT01,{
 		cutin "job_huntermaster",255;
 		end;
 	}
-	else if (CACA_Q > 11 && CACA_Q < 16) {
+	else if (HNTR_Q > 11 && HNTR_Q < 16) {
 		mes "[Líder da Guilda de Caçadores]";
 		mes "Hum? Você não é o Arqueiro, que desistiu na última vez? Agora você está pronto, certo? Então eu vou mandar você para a área de mudança de classe agora.";
 		next;
@@ -737,7 +737,7 @@ payon_in02,21,31,1	script	Caçador#htnGM2	1_M_ORIENT01,{
 		cutin "job_huntermaster",255;
 		end;
 	}
-	else if (CACA_Q == 17) {
+	else if (HNTR_Q == 17) {
 		mes "[Líder da Guilda de Caçadores]";
 		mes "Vejo que você não está com pressa para se tornar um Caçador. Eu estava correndo com alegria, descontroladamente, brandindo o meu arco no primeiro mês eu me tornei um Caçador. Hehe~";
 		next;
@@ -761,7 +761,7 @@ payon_in02,21,31,1	script	Caçador#htnGM2	1_M_ORIENT01,{
 
 job_hunte,178,32,1	script	Guia#cac	1_M_PAY_ELDER,5,2,{
 OnTouch:
-	if (CACA_Q == 12) {
+	if (HNTR_Q == 12) {
 		mes "[Guia]";
 		mes "Bom dia. Bem-vindo ao local do teste de Caçador. O teste começa quando você entra na sala ao lado.";
 		next;
@@ -803,7 +803,7 @@ OnTouch:
 			HNTR_Q = 13;
 			savepoint "payon",104,99;
 			warp "payon_in02",21,27;
-	}	else if (CACA_Q > 15) {
+	}	else if (HNTR_Q > 15) {
 		mes "[Guia]";
 		mes "Você não deveria estar aqui. Como encontrou sem o item necessário para a mudança de classe?";
 		close2;
@@ -1756,7 +1756,7 @@ payon_in03,131,7,3	script	Caçador#htnGM	1_M_ORIENT01,{
 		mes "Ok, aqui está. Agora, volte para a Guilda de Caçadores. Eu tenho que fazer mais alguns negócios aqui, mas eu espero que você possa se tornar um Caçador em breve.";
 		close;
 	}
-	else if (CACA_Q == 17) {
+	else if (HNTR_Q == 17) {
 		mes "[Líder da Guilda de Caçadores]";
 		mes "Vejo que você não está com pressa para se tornar um Caçador? Quando me tornei um caçador, eu corri cerca de um mês descontroladamente empunhando o meu arco, porque eu estava tão feliz. Hehe ~";
 		next;
