@@ -1734,7 +1734,7 @@ payon_in03,131,7,3	script	Caçador#htnGM	1_M_ORIENT01,{
 			mes "Ok!! Eu espero";
 			mes "você vai passar desta vez!";
 			close2;
-			set HNTR_Q = 12
+			set HNTR_Q = 12;
 			warp "job_hunte",176,22;
 			end;
 		}
