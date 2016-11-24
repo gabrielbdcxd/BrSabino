@@ -720,11 +720,11 @@ payon_in02,21,31,1	script	Caçador#htnGM2	1_M_ORIENT01,{
 		cutin "job_huntermaster",255;
 		end;
 	}
-  else if (CACA_Q == 16) {
+  else if (HNTR_Q == 16) {
 		mes "[Líder da Guilda de Caçadores]";
 		mes "Uau. Você já voltou!";
 		mes "Quer dizer, bom trabalho. Vou te dar o item que prova que você passou no teste.";
-		set CACA_Q,17;
+		set HNTR_Q = 17;
 		savepoint "payon",104,99;
 		getitem 1007,1; //  Colar da Sabedoria
 		changequest 4012,4013;
@@ -1743,11 +1743,11 @@ payon_in03,131,7,3	script	Caçador#htnGM	1_M_ORIENT01,{
 		mes "todas as suas preparações.";
 		close;
 	}
-	else if (CACA_Q == 16) {
+	else if (HNTR_Q == 16) {
 		mes "[Líder da Guilda de Caçadores]";
 		mes "Uau, você voltou em um instante!";
 		mes "Quer dizer, bom trabalho. Vou te dar o item que prova que você passou no teste.";
-		set CACA_Q,17;
+		HNTR_Q = 17;
 		savepoint "payon",104,99;
 		getitem 1007,1; // Colar da Sabedoria
 		changequest 4012,4013;
