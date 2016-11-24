@@ -323,7 +323,7 @@ hu_in01,386,373,4	script	Hunter Guildsman#hnt	4_F_JOB_HUNTER,{
 				mes "Ok, esse é o fim do teste!";
 				next;
 				if (.@hunter_t == 100) {
-					set CACA_Q,2;
+					HNTR_Q = 2;
 					changequest 4000,4001;
 					mes "[Caçadora Sherin]";
 					mes "Bom trabalho! Suas respostas mostram que você tem a visão certa da vida. Você definitivamente tem as qualidades certas para se tornar um Caçador~";
@@ -333,7 +333,7 @@ hu_in01,386,373,4	script	Hunter Guildsman#hnt	4_F_JOB_HUNTER,{
 					close;
 				}
 				else if (.@hunter_t == 90) {
-					set CACA_Q,2;
+					HNTR_Q = 2;
 					changequest 4000,4001;
 					mes "[Caçadora Sherin]";
 					mes "Bem, eu estou olhando para as suas respostas e sua pontuação não é perfeita. Mas eu vou deixar você passar de qualquer maneira. Mas, eu não sei o que o nosso líder vai pensar a respeito.";
@@ -342,7 +342,7 @@ hu_in01,386,373,4	script	Hunter Guildsman#hnt	4_F_JOB_HUNTER,{
 					mes "Apenas lembre-se sempre de manter em mente as regras básicas de etiqueta. Tente seguir os testes difíceis e me deixe feliz, ok?";
 					close;
 				}
-				set CACA_Q,1;
+				HNTR_Q = 1;
 				mes "[Caçadora Sherin]";
 				mes "Hum... Eu acho que isso não irá funcionar. Você não pode se tornar um Caçador sem conhecer as regras básicas de etiqueta.";
 				next;
@@ -466,7 +466,7 @@ hu_in01,382,382,4	script	Recepcionista da Guilda#hnt	4_M_JOB_HUNTER,{
 		if (.@selection == 1) {
 			mes "[Caçador de Demônio]";
 			mes "Hum. ^660000"+.@items[1]+" "+getitemname(.@items[0])+"^000000 para usar na ponta das flechas. ^660000"+.@items[3]+" "+getitemname(.@items[2])+"^000000 para usar aqui e lá. E ^660000"+.@items[5]+" "+getitemname(.@items[4])+"^000000 por favor.";
-			set CACA_Q,.@items[6];
+			HNTR_Q = .@items[6];
 			next;
 			mes "[Caçador de Demônio]";
 			mes "Ah, certo. Nosso líder foi a uma viagem oficial à Palácio Central de Payon. Você tem que ir visitá-lo, porque é ele quem administra o teste.";
@@ -500,7 +500,7 @@ hu_in01,382,382,4	script	Recepcionista da Guilda#hnt	4_M_JOB_HUNTER,{
 		if (countitem(.@items[0]) >= .@items[1] && countitem(.@items[2]) >= .@items[3] && countitem(.@items[4]) >= .@items[5]) {
 			mes "[Caçador de Demônio]";
 			mes "Você trouxe todos os materiais necessários ... Você pode obter instruções para a área de testes do nosso líder que está atualmente no Palácio Central de Payon.";
-			set CACA_Q,.@items[6];
+			HNTR_Q = .@items[6];
 			if (questprogress(4002)) {
 				changequest 4002,4009;
 			}
@@ -559,7 +559,7 @@ hu_in01,382,382,4	script	Recepcionista da Guilda#hnt	4_M_JOB_HUNTER,{
 
 payon_in02,21,31,1	script	Caçador#htnGM2	1_M_ORIENT01,{
 	cutin "job_huntermaster",2;
-	if (CACA_Q == 11) {
+	if (HNTR_Q == 11) {
 		mes "[Líder da Guilda de Caçadores]";
 		mes "Hum. Eu vejo que você está aqui para o teste de mudança de classe para Caçador. Posso dar informações sobre o processo do teste. O que você deseja saber?";
 		next;
@@ -611,7 +611,7 @@ payon_in02,21,31,1	script	Caçador#htnGM2	1_M_ORIENT01,{
 		next;
 		mes "[Líder da Guilda de Caçadores]";
 		mes "Boa sorte.";
-		set CACA_Q,12;
+		HNTR_Q == 12
 		changequest 4010,4011;
 		warp "job_hunte",176,22;
 		cutin "job_huntermaster",255;
@@ -707,7 +707,7 @@ payon_in02,21,31,1	script	Caçador#htnGM2	1_M_ORIENT01,{
 			mes "vamos lá!";
 			close2;
 			cutin "job_huntermaster",255;
-			set CACA_Q,12;
+			set HNTR_Q == 12
 			warp "job_hunte",176,22;
 			end;
 		}
@@ -724,7 +724,7 @@ payon_in02,21,31,1	script	Caçador#htnGM2	1_M_ORIENT01,{
 		mes "[Líder da Guilda de Caçadores]";
 		mes "Uau. Você já voltou!";
 		mes "Quer dizer, bom trabalho. Vou te dar o item que prova que você passou no teste.";
-		set HNTR_Q = 17;
+		HNTR_Q = 17;
 		savepoint "payon",104,99;
 		getitem 1007,1; //  Colar da Sabedoria
 		changequest 4012,4013;
@@ -779,7 +779,7 @@ OnTouch:
 		savepoint "job_hunte",176,22;
 		close;
 	}
-	else if (CACA_Q > 12 && CACA_Q < 16) {
+	else if (HNTR_Q > 12 && HNTR_Q < 16) {
 		mes "[Guia]";
 		mes "Hum...";
 		mes "Você quer me atrapalhar?";
@@ -800,7 +800,7 @@ OnTouch:
       mes "Muito bem. Vou mandar você para Payon. Esperamos vê-lo na próxima vez. Não se esqueça de salvar quando sair.";
 			// donpcevent "Sala de Espera#cac::OnStart";
 			close2;
-			set CACA_Q,13;
+			HNTR_Q = 13;
 			savepoint "payon",104,99;
 			warp "payon_in02",21,27;
 	}	else if (CACA_Q > 15) {
@@ -840,7 +840,7 @@ OnInit:
 OnEnable:
 	donpcevent "Interruptor#cac::OnDisable";
 	enablenpc "Gerente#cac";
-	set .MeusMonstros,6;
+	.MyMobs = 6;
 	initnpctimer;
 	// Monstros Alvo
 	monster "job_hunte",67,80,"Monstro Alvo",1015,1,"Gerente#cac::OnMyMobDead";
@@ -883,10 +883,10 @@ OnEnable:
 	end;
 
 OnMyMobDead:
-	set .MeusMonstros,.MeusMonstros-1;
-	if (.MeusMonstros < 3) {
+	--.MyMobs;
+	if (.MyMobs < 3) {
 		mapannounce "job_hunte","Ok, bom trabalho ... Agora, encontre o interruptor no centro do mapa! Tenha cuidado com as armadilhas!",bc_map;
-		set CACA_Q,14;
+		HNTR_Q = 14;
 		donpcevent "Interruptor#cac::OnEnable";
 		donpcevent "Gerente#cac::OnDisable";
 	}
@@ -895,7 +895,7 @@ OnMyMobDead:
 
 OnMyMobDead2:
 	mapannounce "job_hunte",strcharinfo(0)+"!! Você cometeu um erro ... Por favor, tente novamente.",bc_map;
-	set CACA_Q,13;
+	HNTR_Q = 13;
 	warp "job_hunte",176,22;
 	donpcevent "Gerente#cac::OnReset";
 	donpcevent "Sala de Espera#cac::OnStart";
@@ -995,7 +995,7 @@ job_hunte,93,101,1	script	Interruptor#cac	1_SHADOW_NPC,1,1,{
 OnTouch:
 	mes "^3355FFExistem 3 botões";
 	mes "no interruptor de escape.^000000";
-	set CACA_Q,15;
+	HNTR_Q = 15;
 	next;
 	switch(select("Escapar:Cancelar:Refazer o teste")) {
 	case 1:
@@ -1017,7 +1017,7 @@ OnTouch:
 		mes "retornará para a";
 		mes "sala de espera.^000000";
 		close2;
-		set CACA_Q,13;
+		HNTR_Q = 13;
 		warp "job_hunte",176,22;
 		donpcevent "Gerente#cac::OnReset";
 		donpcevent "Sala de Espera#cac::OnStart";
@@ -1188,7 +1188,7 @@ OnTouch:
 	case 130: mapannounce "job_hunte",strcharinfo(0)+", não há problema em chorar. Apenas não muito alto.",bc_map; break;
 	case 131: mapannounce "job_hunte",strcharinfo(0)+"...ah. É cansativo a criação de todas estas armadilhas. Vocês tem que parar de cair nelas!",bc_map; break;
 	}
-	set CACA_Q,13;
+	HNTR_Q = 13;
 	warp "job_hunte",176,22;
 	donpcevent "Gerente#cac::OnReset";
 	donpcevent "Sala de Espera#cac::OnStart";
@@ -1425,7 +1425,7 @@ job_hunte,65,92,0	duplicate(ArmadilhaCaçador)	57-3	-1,0,0
 job_hunte,65,93,0	script	57-4::ArmadilhaCaçador2	-1,{
 OnTouch:
 	mapannounce "job_hunte",strcharinfo(0)+", falhou comigo! Volte para onde você começou!",bc_map;
-	set CACA_Q,13;
+	HNTR_Q = 13;
 	warp "job_hunte",176,22;
 	donpcevent "Gerente#cac::OnReset";
 	donpcevent "Sala de Espera#cac::OnStart";
@@ -1662,7 +1662,7 @@ payon_in03,131,7,3	script	Caçador#htnGM	1_M_ORIENT01,{
 		}
 		mes "[Líder da Guilda de Caçadores]";
 		mes "Bem. Suas flechas provavelmente ainda estão sendo feitas, para que você possa usar no teste.";
-		set CACA_Q,12;
+		HNTR_Q == 12
 		changequest 4009,4011;
 		getitem 1751,200; //  Flecha de Prata
 		close2;
@@ -1682,7 +1682,7 @@ payon_in03,131,7,3	script	Caçador#htnGM	1_M_ORIENT01,{
 		mes "Reuna os itens para o teste, e volte depois que você visitou a Guilda de Caçadores.";
 		close;
 	}
-	else if (CACA_Q == 11) {
+	else if (HNTR_Q == 11) {
 		mes "[Caçador]";
 		mes "Hum? Posso ajudá-lo? Se você deseja mudar de classe, você deve visitar a pessoa na Guilda de Caçadores, não eu.";
 		close;
@@ -1734,7 +1734,7 @@ payon_in03,131,7,3	script	Caçador#htnGM	1_M_ORIENT01,{
 			mes "Ok!! Eu espero";
 			mes "você vai passar desta vez!";
 			close2;
-			set CACA_Q,12;
+			set HNTR_Q == 12
 			warp "job_hunte",176,22;
 			end;
 		}
