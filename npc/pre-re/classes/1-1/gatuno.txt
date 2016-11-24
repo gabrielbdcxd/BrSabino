@@ -150,7 +150,7 @@ moc_prydb1,39,129,2	script	Gatuna Ajudante	1_F_04,{
 	}
 	mes "[Gatuna Ajudante]";
 	if (job_thief_q == 0) {
-		mes "Heheheheh... você parece ser um menino limpinho, o que te trouxe para um lugar fedido e sujo como esse?" : "Ah... Então você voltou... Dessa vez é pra valer?";
+		mes "Heheheheh... você parece ser um menino limpinho, o que te trouxe para um lugar fedido e sujo como esse? Ah... Então você voltou... Dessa vez é pra valer?";
 	}
 	else {
 		mes "Ah...";
