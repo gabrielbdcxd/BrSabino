@@ -12,17 +12,17 @@
 //   |--------------------------------------------------------|
 //   | Criado por: eA/rA/brA Dev. Team                        |
 //   |--------------------------------------------------------|
-//   | VersÃµes eA/rA/brA: 1.8/1.2/1.3                         |
+//   | Versões eA/rA/brA: 1.8/1.2/1.3                         |
 //   |--------------------------------------------------------|
-//   | DescriÃ§Ã£o: MudanÃ§a de Classe para Gatuno.              |
+//   | Descrição: Mudança de Classe para Gatuno.              |
 //   |--------------------------------------------------------|
 //   | Changelog:                                             |
-//   | 1.0 Criado CabeÃ§alho [Megasantos]                      |
-//   | 1.1 TraduÃ§Ã£o PT-BR [Holy e Protimus]                   |
-//   | 1.2 OtimizaÃ§Ã£o [Holy & Hold]                           |
-//   | 1.3 FormataÃ§Ã£o nos DiÃ¡logos [lututuiBR & Holy]         |
+//   | 1.0 Criado Cabeçalho [Megasantos]                      |
+//   | 1.1 Tradução PT-BR [Holy e Protimus]                   |
+//   | 1.2 Otimização [Holy & Hold]                           |
+//   | 1.3 Formatação nos Diálogos [lututuiBR & Holy]         |
 //   |--------------------------------------------------------|
-//   | - AnotaÃ§Ãµes                                            |
+//   | - Anotações                                            |
 //   \________________________________________________________/
 
 moc_prydb1,39,129,2	script	Gatuna Ajudante	1_F_04,{
@@ -30,18 +30,18 @@ moc_prydb1,39,129,2	script	Gatuna Ajudante	1_F_04,{
 		if (ADVJOB == Job_Assassin_Cross || ADVJOB == Job_Stalker) {
 			if (Class == Job_Novice_High) {
 				mes "[Gatuna Ajudante]";
-				mes "HÃ£? Eu te conheÃ§o? Ã‰ assustador que vocÃª parece tÃ£o familiar. VocÃª nÃ£o tem um irmÃ£o gÃªmeo, que pareÃ§a com vocÃª?";
+				mes "Hã? Eu te conheço? É assustador que você parece tão familiar. Você não tem um irmão gêmeo, que pareça com você?";
 				next;
 				if (getskilllv("NV_BASIC") < 9) {
 					mes "[Gatuna Ajudante]";
-					mes "O que, vocÃª quer ser um gatuno? Sinto muito, mas parece que vocÃª precisa de mais treinamento.";
+					mes "O que, você quer ser um gatuno? Sinto muito, mas parece que você precisa de mais treinamento.";
 					next;
 					mes "[Gatuna Ajudante]";
-					mes "Gaste seu tempo e aprenda todas as habilidades bÃ¡sicas, certo? Bem, entÃ£o vejo vocÃª mais tarde~!";
+					mes "Gaste seu tempo e aprenda todas as habilidades básicas, certo? Bem, então vejo você mais tarde~!";
 					close;
 				}
 				mes "[Gatuna Ajudante]";
-				mes "Bem, eu tenho essa sensaÃ§Ã£o de que vocÃª jÃ¡ passou por uma vida inteira de lutas, entÃ£o eu estou promovendo-o a um Gatuno neste minuto. Ã‰ melhor eu deixar caras DurÃµes cuidando de vocÃª...";
+				mes "Bem, eu tenho essa sensação de que você já passou por uma vida inteira de lutas, então eu estou promovendo-o a um Gatuno neste minuto. É melhor eu deixar caras Durões cuidando de você...";
 				next;
 				skill 143,0,0;
 				jobchange Job_Thief_High;
@@ -50,7 +50,7 @@ moc_prydb1,39,129,2	script	Gatuna Ajudante	1_F_04,{
 				skill 151,1,0;
 				skill 152,1,0;
 				mes "[Gatuna Ajudante]";
-				mes "Ao se tornar um gatuno, irÃ¡ viver como um Gatuno. Agora, vÃ¡ em frente! PrÃ³ximo~";
+				mes "Ao se tornar um gatuno, irá viver como um Gatuno. Agora, vá em frente! Próximo~";
 				close;
 			}
 			else {
@@ -58,7 +58,7 @@ moc_prydb1,39,129,2	script	Gatuna Ajudante	1_F_04,{
 				if (Sex)
 					mes "Ei, cara.";
 				else
-					mes "Ei, moÃ§a";
+					mes "Ei, moça";
 				close;
 			}
 		}
@@ -67,14 +67,14 @@ moc_prydb1,39,129,2	script	Gatuna Ajudante	1_F_04,{
 			if (Sex)
 				mes "Ei, cara.";
 			else
-				mes "Ei, moÃ§a";
-			mes "VocÃª parece muito uma boa pessoa para querer ser um gatuno! Agora suma, estou ocupado. PrÃ³ximo!";
+				mes "Ei, moça";
+			mes "Você parece muito uma boa pessoa para querer ser um gatuno! Agora suma, estou ocupado. Próximo!";
 			close;
 		}
 	}
 	if (BaseJob == Job_Thief) {
 		mes "[Gatuna Ajudante]";
-		mes "Ei~ Se vocÃª tiver algum problema, fale quando quiser, tudo bem?";
+		mes "Ei~ Se você tiver algum problema, fale quando quiser, tudo bem?";
 		close;
 	}
 	else if (BaseJob != Job_Novice && BaseJob != Job_Thief) {
@@ -82,134 +82,134 @@ moc_prydb1,39,129,2	script	Gatuna Ajudante	1_F_04,{
 		mes "What the heck...?";
 		switch(Class) {
 		case 1: mes "Mais um Espadachim metido..."; break;
-		case 2: mes "NÃ£o precisamos de fogos de artÃ­ficio aqui... Vai acender fogueira sem isqueiro, vai...."; break;
+		case 2: mes "Não precisamos de fogos de artíficio aqui... Vai acender fogueira sem isqueiro, vai...."; break;
 		case 3: mes "Haha... apenas um arqueiro cegueta...."; break;
-		case 4: mes "Ei noviÃ§o, ajoelha aÃ­ e reza um terÃ§o..."; break;
+		case 4: mes "Ei noviço, ajoelha aí e reza um terço..."; break;
 		case 5:	mes "Ahhh um mercador trambiqueiro!! Vou te denunciar pros GMs...";	break;
-		case 8: mes "Por que mais um sacerdote veio aqui? Eu acho que Ã© melhor eu comeÃ§ar confessando todos os meus pecados."; break;
-		case 12: mes "SerÃ¡ que vocÃª nÃ£o era um de nÃ³s?! Cara, vocÃª mudou. VocÃª parece ser perigoso agora..."; break;
-		case 17: mes "VocÃª deve ter algumas habilidades que sÃ³ posso imaginÃ¡-las!";	break;
+		case 8: mes "Por que mais um sacerdote veio aqui? Eu acho que é melhor eu começar confessando todos os meus pecados."; break;
+		case 12: mes "Será que você não era um de nós?! Cara, você mudou. Você parece ser perigoso agora..."; break;
+		case 17: mes "Você deve ter algumas habilidades que só posso imaginá-las!";	break;
 		}
 		next;
 		mes "[Gatuna Ajudante]";
 		mes "*Suspiro*";
-		mes "Bem, aqui nÃ£o Ã© lugar para vocÃª. VocÃª deveria sair daqui.";
+		mes "Bem, aqui não é lugar para você. Você deveria sair daqui.";
 		close;
 	}
 	if (job_thief_q == 3 && countitem(1069) > 0 || countitem(1070) > 0) {
-		mes "Humm? VocÃª coletou todos os Cogumelos do teste de Gatuno, certo?";
+		mes "Humm? Você coletou todos os Cogumelos do teste de Gatuno, certo?";
 		next;
 		mes "[Gatuna Ajudante]";
-		mes "Fale com o outro homem ao meu lado. Ele Ã© o encarregado de verificar seus Cogumelos.";
+		mes "Fale com o outro homem ao meu lado. Ele é o encarregado de verificar seus Cogumelos.";
 		close;
 	}
 	else if (job_thief_q == 3) {
-		mes "EntÃ£o, como foi na fazenda de cogumelos? Se divertiu bastante?";
+		mes "Então, como foi na fazenda de cogumelos? Se divertiu bastante?";
 		next;
 		if (select("Yeah, kinda Cool.:It was horrible.") == 1) {
 			mes "[Gatuna Ajudante]";
-			mes "Caramba! VocÃª Ã© O cara mesmo!";
-			mes "Todos os outros foram uns %#@%#%%@ comparados a vocÃª!";
-			mes "Humm... VocÃª nÃ£o vai tentar me substituir, nÃ£o Ã©? Por que se vocÃª sequer tentar, eu vou enfiar uma faca em vocÃª tÃ£o rÃ¡pido que vocÃª nem vai perceber...";
+			mes "Caramba! Você é O cara mesmo!";
+			mes "Todos os outros foram uns %#@%#%%@ comparados a você!";
+			mes "Humm... Você não vai tentar me substituir, não é? Por que se você sequer tentar, eu vou enfiar uma faca em você tão rápido que você nem vai perceber...";
 			close;
 		}
 		mes "[Gatuna Ajudante]";
-		mes "Ã‰, eu sei como Ã©, eu tambÃ©m tive que ir naquele lugar horroroso.";
+		mes "É, eu sei como é, eu também tive que ir naquele lugar horroroso.";
 		close;
 	}
 	if (job_thief_q == 2) {
 		mes "[Gatuna Ajudante]";
-		mes "Ei, o que vocÃª ainda estÃ¡ fazendo aqui? VocÃª deveria estar procurando cogumelos?";
+		mes "Ei, o que você ainda está fazendo aqui? Você deveria estar procurando cogumelos?";
 		next;
-		if  (select("Sim.:NÃ£o, estÃ¡ bem.") == 1) {
+		if  (select("Sim.:Não, está bem.") == 1) {
 			mes "[Gatuna Ajudante]";
-			mes "Ã‰, sempre tem aqueles mais lentinhos... Pode deixar que eu te explico, mas sÃ³ essa vez hein!";
+			mes "É, sempre tem aqueles mais lentinhos... Pode deixar que eu te explico, mas só essa vez hein!";
 			next;
 			mes "[Gatuna Ajudante]";
-			mes "O teste pra se tornar um Gatuno Ã© o seguinte: VocÃª deve roubar cogumelos da fazenda do 'Shibu', um dos maiores mercadores de Morroc.";
-			mes "VocÃª deve colher dois tipos de cogumelos: os ^0000FFCogumelos Venenosos^000000 e os  ^0000FFCogumelos Borrachentos^000000.";
+			mes "O teste pra se tornar um Gatuno é o seguinte: Você deve roubar cogumelos da fazenda do 'Shibu', um dos maiores mercadores de Morroc.";
+			mes "Você deve colher dois tipos de cogumelos: os ^0000FFCogumelos Venenosos^000000 e os  ^0000FFCogumelos Borrachentos^000000.";
 			next;
 			mes "[Gatuna Ajudante]";
-			mes "Sabia que existem monstros terrÃ­veis guardando a fazenda? Ã‰ isso aÃ­, Ã© hora de vocÃª largar a mamadeira e se preparar, essa vai ser a experiÃªncia mais difÃ­cil da sua vida!";
+			mes "Sabia que existem monstros terríveis guardando a fazenda? É isso aí, é hora de você largar a mamadeira e se preparar, essa vai ser a experiência mais difícil da sua vida!";
 			next;
 			mes "[Gatuna Ajudante]";
-			mes "Quando vocÃª jÃ¡ tiver colhido os cogumelos, iremos contar os seus pontos... SÃ£o 3 pontos para cada 1 Cogumelo Venenoso, e 1 ponto para cada Cogumelo Borrachento. Quando vocÃª tiver pelo menos 25 pontos, eu deixo vocÃª virar um Gatuno.";
+			mes "Quando você já tiver colhido os cogumelos, iremos contar os seus pontos... São 3 pontos para cada 1 Cogumelo Venenoso, e 1 ponto para cada Cogumelo Borrachento. Quando você tiver pelo menos 25 pontos, eu deixo você virar um Gatuno.";
 			next;
 			mes "[Gatuna Ajudante]";
-			mes "Saia daqui e ande na direÃ§Ã£o leste. Procure pelo nosso camarada, ele vai estar entre duas colunas.";
+			mes "Saia daqui e ande na direção leste. Procure pelo nosso camarada, ele vai estar entre duas colunas.";
 			mes "Fale com ele. Ele vai te colocar para dentro da fazenda usando uma passagem secreta";
 			next;
 			mes "[Gatuna Ajudante]";
-			mes "Hmmm... acho que eu me lembro das coordernadas dele, sÃ£o  '^FF0000141, 125^000000'.";
-			mes "VocÃª sabe o que sÃ£o coordenadas? Elas te dizem qual a sua localizaÃ§Ã£o no momento, Ã© sÃ³ teclar '/where'";
+			mes "Hmmm... acho que eu me lembro das coordernadas dele, são  '^FF0000141, 125^000000'.";
+			mes "Você sabe o que são coordenadas? Elas te dizem qual a sua localização no momento, é só teclar '/where'";
 		close;
 		}
 		mes "[Gatuna Ajudante]";
-		mes "Huh. Por um segundo, eu pensei que vocÃª tinha algo realmente importante para me dizer.";
+		mes "Huh. Por um segundo, eu pensei que você tinha algo realmente importante para me dizer.";
 		close;
 	}
 	mes "[Gatuna Ajudante]";
 	if (job_thief_q == 0) {
-		mes "Heheheheh... vocÃª parece ser um menino limpinho, o que te trouxe para um lugar fedido e sujo como esse? Ah... EntÃ£o vocÃª voltou... Dessa vez Ã© pra valer?";
+		mes "Heheheheh... você parece ser um menino limpinho, o que te trouxe para um lugar fedido e sujo como esse? Ah... Então você voltou... Dessa vez é pra valer?";
 	}
 	else {
 		mes "Ah...";
-		mes "VocÃª voltou.";
-		mes "Tem certeza de que estÃ¡";
+		mes "Você voltou.";
+		mes "Tem certeza de que está";
 		mes "pronto para tentar novamente?";
 	}
 	next;
-	if (select("Sim, estou pronto para ser um Gatuno!:Err... nÃ£o, eu acho que nÃ£o...") == 1) {
+	if (select("Sim, estou pronto para ser um Gatuno!:Err... não, eu acho que não...") == 1) {
 		if (job_thief_q == 0) {
 			mes "[Gatuna Ajudante]";
-			mes "Opa, calma aÃ­... Ser um Gatuno nÃ£o Ã© algo para se orgulhar, e muito menos sair exibindo por aÃ­...";
-			mes "VocÃª tem que tomar cuidado para nÃ£o ser pego! Por que vocÃª nÃ£o vai e pinta uma placa escrito 'Eu Quero Roubar! Ser um Gatuno e Roubar as Coisas Dos Outros.' e pendura no pescoÃ§o?";
+			mes "Opa, calma aí... Ser um Gatuno não é algo para se orgulhar, e muito menos sair exibindo por aí...";
+			mes "Você tem que tomar cuidado para não ser pego! Por que você não vai e pinta uma placa escrito 'Eu Quero Roubar! Ser um Gatuno e Roubar as Coisas Dos Outros.' e pendura no pescoço?";
 			next;
 			mes "[Gatuna Ajudante]";
-			mes "EntÃ£o vocÃª quer mesmo ser um Gatuno, hein?";
+			mes "Então você quer mesmo ser um Gatuno, hein?";
 			next;
-			switch(select("Sim, eu quero!:Falando serio.. NÃ£o.:E vocÃª, espertalhona?")) {
+			switch(select("Sim, eu quero!:Falando serio.. Não.:E você, espertalhona?")) {
 		case 1:
 			mes "[Gatuna Ajudante]";
-			mes "Uau, verdade? Isso Ã© meio estranho...";
+			mes "Uau, verdade? Isso é meio estranho...";
 			break;
 		case 2:
 			mes "[Gatuna Ajudante]";
-			mes "EntÃ£o o que vocÃª tÃ¡ fazendo aqui? TÃ¡ namorando alguÃ©m aqui da Guilda ou resolveu imaginar como seria legal se vocÃª fosse uma Gatuna como eu?";
+			mes "Então o que você tá fazendo aqui? Tá namorando alguém aqui da Guilda ou resolveu imaginar como seria legal se você fosse uma Gatuna como eu?";
 			break;
 		case 3:
 			mes "[Gatuna Ajudante]";
-			mes "Eu? Eu sou a Espertalhona? Bem, fique sabendo que eu nÃ£o tive escolha, era roubar ou morrer de fome...";
+			mes "Eu? Eu sou a Espertalhona? Bem, fique sabendo que eu não tive escolha, era roubar ou morrer de fome...";
 			break;
 			}
 			next;
 			mes "[Gatuna Ajudante]";
-			mes "Afinal, vocÃª quer mesmo ser um Gatuno?";
+			mes "Afinal, você quer mesmo ser um Gatuno?";
 			next;
-			switch(select("Sim!:NÃ£o, meus pais nÃ£o deixaram.")) {
+			switch(select("Sim!:Não, meus pais não deixaram.")) {
 			case 1:
 				mes "[Gatuna Ajudante]";
 				mes "Alright, tell";
 				mes "me your name.";
 				next;
 				mes "[Gatuna Ajudante]";
-				mes "Qual Ã© o seu nome";
+				mes "Qual é o seu nome";
 				next;
 				mes "[Gatuna Ajudante]";
-				mes strcharinfo(0)+", Ã© isso mesmo?";
+				mes strcharinfo(0)+", é isso mesmo?";
 				job_thief_q = 1;
 				next;
 				mes "[Gatuna Ajudante]";
-				mes "Ok, sua inscriÃ§Ã£o estÃ¡ pronta.";
-				mes "NÃ³s jÃ¡ podemos fazer o teste se vocÃª se sentir preparado...";
-				mes "Tentar nÃ£o custa nada! Quer fazer agora?";
+				mes "Ok, sua inscrição está pronta.";
+				mes "Nós já podemos fazer o teste se você se sentir preparado...";
+				mes "Tentar não custa nada! Quer fazer agora?";
 				next;
-				switch(select("Quero tentar.:Ainda nÃ£o estou pronto.")) {
+				switch(select("Quero tentar.:Ainda não estou pronto.")) {
 				case 1:
 					break;
 				case 2:
 					mes "[Gatuna Ajudante]";
-					mes "VocÃª que sabe... Volte quando estiver mais seguro de si!";
+					mes "Você que sabe... Volte quando estiver mais seguro de si!";
 					close;
 				}
 				break;
@@ -218,44 +218,44 @@ moc_prydb1,39,129,2	script	Gatuna Ajudante	1_F_04,{
 				mes "Demasiado assustado?!?";
 				mes "Hahahahahahah!";
 				mes "Oh, por favor ...!";
-				mes "Isso Ã© hilÃ¡rio!";
+				mes "Isso é hilário!";
 				close;
 			}
 		}
 		else {
 			mes "[Gatuna Ajudante]";
 			mes "Okay...";
-			mes "Me dÃª";
+			mes "Me dê";
 			mes "um segundo.";
 			next;
 		}
 		mes "[Gatuna Ajudante]";
-		mes "O seu nome Ã© "+strcharinfo(0)+"? Certo, vamos ver onde estÃ¡ a sua inscriÃ§Ã£o...";
-		mes "Ah! Aqui estÃ¡! Nome "+strcharinfo(0)+" Vaaaaaaaaamos ver....";
+		mes "O seu nome é "+strcharinfo(0)+"? Certo, vamos ver onde está a sua inscrição...";
+		mes "Ah! Aqui está! Nome "+strcharinfo(0)+" Vaaaaaaaaamos ver....";
 		next;
 		mes "[Gatuna Ajudante]";
 		if (getskilllv("NV_BASIC") < 9) {
-		mes "Humm... vocÃª Ã© bem ambicioso hein?";
-		mes "Apressadinho hein?! Volte quando tiver o nÃ­vel necessÃ¡rio.";
+		mes "Humm... você é bem ambicioso hein?";
+		mes "Apressadinho hein?! Volte quando tiver o nível necessário.";
 		close;
 		}
 		mes "Hum...";
-		mes "Eu vi a sua Ficha Policial e fiquei sabendo de sua fama nas ruas de Morroc, vocÃª deve ser capaz de roubar como um bom Gatuno...";
+		mes "Eu vi a sua Ficha Policial e fiquei sabendo de sua fama nas ruas de Morroc, você deve ser capaz de roubar como um bom Gatuno...";
 		next;
 		mes "[Gatuna Ajudante]";
-		mes "Ok, entÃ£o vocÃª, passou na entrevista pessoal. ParabÃ©ns!";
+		mes "Ok, então você, passou na entrevista pessoal. Parabéns!";
 		job_thief_q = 2;
 		setquest 1013;
 		next;
 		mes "[Gatuna Ajudante]";
-		mes "Agora vamos testar se vocÃª Ã© mesmo capaz de roubar...";
-		mes "VocÃª sabe como Ã© o teste?";
+		mes "Agora vamos testar se você é mesmo capaz de roubar...";
+		mes "Você sabe como é o teste?";
 		next;
-		switch(select("Sim, eu sei.:NÃ£o, eu nÃ£o sei...")) {
+		switch(select("Sim, eu sei.:Não, eu não sei...")) {
 		case 1:
 			mes "[Gatuna Ajudante]";
 			mes "Sabe mesmo?";
-			mes "Ã“timo, assim as coisas ficam mais rÃ¡pidas.";
+			mes "Ótimo, assim as coisas ficam mais rápidas.";
 			break;
 		case 2:
 			mes "[Gatuna Ajudante]";
