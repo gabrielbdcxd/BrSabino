@@ -707,7 +707,7 @@ payon_in02,21,31,1	script	Caçador#htnGM2	1_M_ORIENT01,{
 			mes "vamos lá!";
 			close2;
 			cutin "job_huntermaster",255;
-			set HNTR_Q == 12;
+			HNTR_Q == 12;
 			warp "job_hunte",176,22;
 			end;
 		}
