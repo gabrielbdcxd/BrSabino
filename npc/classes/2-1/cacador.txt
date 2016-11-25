@@ -1040,8 +1040,8 @@ OnInit:
 	end;
 
 OnTouch:
-	donpcevent "Manager#hnt::OnReset";
-	donpcevent "Waiting Room#hnt::OnStart";
+	donpcevent "Gerente#cac::OnReset";
+	donpcevent "Sala de Espera#cac::OnStart";
 	HNTR_Q = 16;
 	changequest 4011,4012;
 	savepoint "payon",104,99;
