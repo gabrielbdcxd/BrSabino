@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: 21-Nov-2016 às 00:11
+-- Generation Time: 27-Nov-2016 às 23:09
 -- Versão do servidor: 5.7.16
 -- PHP Version: 5.6.26
 
@@ -616,15 +616,17 @@ CREATE TABLE `login` (
   `character_slots` tinyint(3) UNSIGNED NOT NULL DEFAULT '0',
   `pincode` varchar(4) NOT NULL DEFAULT '',
   `pincode_change` int(11) UNSIGNED NOT NULL DEFAULT '0',
-  `last_password_change` int(11) UNSIGNED NOT NULL DEFAULT '0'
+  `last_password_change` int(11) UNSIGNED NOT NULL DEFAULT '0',
+  `mac` varchar(18) NOT NULL DEFAULT '0',
+  `hwid` varchar(34) NOT NULL DEFAULT '0'
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `login`
 --
 
-INSERT INTO `login` (`account_id`, `userid`, `user_pass`, `sex`, `email`, `group_id`, `state`, `unban_time`, `expiration_time`, `logincount`, `lastlogin`, `last_ip`, `mac_address`, `birthdate`, `character_slots`, `pincode`, `pincode_change`, `last_password_change`) VALUES
-(1, 'onlineragnarok', 'RagnarokOnline1', 'S', 'brathena@brathena.org', 0, 0, 0, 0, 2, '2016-11-20 22:10:23', '52.67.213.74', '', '1970-01-01', 0, '', 0, 0);
+INSERT INTO `login` (`account_id`, `userid`, `user_pass`, `sex`, `email`, `group_id`, `state`, `unban_time`, `expiration_time`, `logincount`, `lastlogin`, `last_ip`, `mac_address`, `birthdate`, `character_slots`, `pincode`, `pincode_change`, `last_password_change`, `mac`, `hwid`) VALUES
+(1, 'onlineragnarok', 'RagnarokOnline1', 'S', 'brathena@brathena.org', 0, 0, 0, 0, 2, '2016-11-20 22:10:23', '52.67.213.74', '', '1970-01-01', 0, '', 0, 0, '0', '0');
 
 --
 -- Acionadores `login`
@@ -1024,6 +1026,19 @@ CREATE TABLE `ragsrvinfo` (
   `exp` int(11) UNSIGNED NOT NULL DEFAULT '0',
   `jexp` int(11) UNSIGNED NOT NULL DEFAULT '0',
   `drop` int(11) UNSIGNED NOT NULL DEFAULT '0'
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `ring_ban`
+--
+
+CREATE TABLE `ring_ban` (
+  `list` varchar(255) NOT NULL DEFAULT '' COMMENT 'HWID',
+  `btime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT 'Start Ban Time',
+  `rtime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT 'End Ban Time',
+  `reason` varchar(255) NOT NULL DEFAULT '' COMMENT 'Reason'
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1429,6 +1444,12 @@ ALTER TABLE `pvpm_map`
 --
 ALTER TABLE `quest`
   ADD PRIMARY KEY (`char_id`,`quest_id`);
+
+--
+-- Indexes for table `ring_ban`
+--
+ALTER TABLE `ring_ban`
+  ADD KEY `list` (`list`);
 
 --
 -- Indexes for table `sc_data`
