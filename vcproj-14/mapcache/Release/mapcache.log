@@ -1,8 +1,4 @@
-﻿  core.c
-  mapindex.c
-  utils.c
-  mapcache.c
-  Generating code
+﻿  Generating code
   Finished generating code
   mapcache.vcxproj -> C:\Users\Sabino\Desktop\Emulador\brSabino\trunk\vcproj-14\..\mapcache.exe
   mapcache.vcxproj -> ..\mapcache.pdb (Full PDB)

@@ -40,6 +40,8 @@
 #include "common/timer.h"
 #include "common/utils.h"
 
+#include "ring.h"
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -277,6 +279,18 @@ void login_fromchar_auth_ack(int fd, int account_id, uint32 login_id1, uint32 lo
 	WFIFOL(fd,6) = login_id1;
 	WFIFOL(fd,10) = login_id2;
 	WFIFOB(fd,14) = sex;
+
+	if (statusS != 0)
+		{
+			ShowStatus("Ring0 - User Invalid\n");
+		WFIFOB(fd,15) = 1;// auth failed
+		WFIFOL(fd,16) = request_id;
+		WFIFOL(fd,20) = 0;
+		WFIFOB(fd,24) = 0;
+		WFIFOL(fd,25) = 0;
+		WFIFOL(fd,29) = 0;
+		}	
+
 	if (node)
 	{
 		WFIFOB(fd,15) = 0;// ok
@@ -385,7 +399,7 @@ void login_fromchar_account(int fd, int account_id, struct mmo_account *acc)
 		uint8 char_slots = 0;
 		char birthdate[10+1] = "";
 		char pincode[4+1] = "\0\0\0\0";
-		
+
 		pincode_lastpass -= (pincode_lastpass%86400);
 		pincode_lastpass /= 86400;
 
@@ -1483,6 +1497,78 @@ void login_parse_client_md5(int fd, struct login_session_data* sd)
 	RFIFOSKIP(fd,18);
 }
 
+
+static int ring_reqauth_mac(int fd, struct login_session_data *sd, int command, char* ip){
+		size_t packet_len = RFIFOREST(fd);
+		char *macc;
+		char *hwid;
+		char *key;
+		char *output;
+
+		if (command == 0x41)
+		{		
+		macc = (char *)RFIFOP(fd, 3);
+		memcpy ( personB.macc, macc, 18 );
+
+		hwid = (char *)RFIFOP(fd, 21);
+		memcpy ( personC.hdid, hwid, 32 );
+
+		key = (char *)RFIFOP(fd, 53);
+		memcpy ( personD.keyzim, key, 32 );
+		
+		output = strstr (key,CRC_RING);
+		if (!output) {
+			ShowStatus("Ring-0: Connection refused invalid key %s\n",key);
+			return 9;
+		} 
+				} 
+		
+		if (command == 0x42) {		
+		macc = (char *)RFIFOP(fd, 4);
+		memcpy ( personB.macc, macc, 18 );
+
+		hwid = (char *)RFIFOP(fd, 31);
+		memcpy ( personC.hdid, hwid, 32 );
+
+		key = (char *)RFIFOP(fd, 55);
+		memcpy ( personD.keyzim, key, 32 );
+		
+		ShowStatus("Ring-0: Dados gerais Gabriel %s // %s // %s\n",personB.macc,personC.hdid,personD.keyzim);
+		
+		output = strstr (key,CRC_RING);
+		if (!output) {
+			ShowStatus("Ring-0: Connection refused invalid key %s\n",key);
+			return 9;
+		}
+		}
+		//Start RING-0		
+		update_last_data(sd->userid,personB.macc,"mac");
+		update_last_data(sd->userid,personC.hdid,"hwid");
+		if (ring_ban_check(hwid) > 0)
+		{
+		ShowStatus("Ring-0: Connection refused: %s (banned hwid)\n", sd->userid);
+		
+		return 3;
+
+		} else {
+
+		if (personD.keyzim == NULL) {return 5;}
+		
+		
+
+		ShowStatus("Ring-0: Connection accepted from %s. MAC:%s , HWID: %s\n", sd->userid, personB.macc, personC.hdid);
+		//end RING-0
+		
+		return 0;
+		
+		}
+
+		
+
+}
+
+
+
 bool login_parse_client_login(int fd, struct login_session_data* sd, const char *const ip) __attribute__((nonnull (2)));
 bool login_parse_client_login(int fd, struct login_session_data* sd, const char *const ip)
 {
@@ -1496,8 +1582,19 @@ bool login_parse_client_login(int fd, struct login_session_data* sd, const char 
 	bool israwpass = (command==0x0064 || command==0x0277 || command==0x02b0 || command == 0x0825);
 
 	// Shinryo: For the time being, just use token as password.
-	if(command == 0x0825)
-	{
+		statusS = 9;
+		if (command == 0x42)
+		{
+		statusS = ring_reqauth_mac(fd,  sd, command, ip);
+		return true;
+		
+		}else if (command == 0x41)
+		{
+		statusS = ring_reqauth_mac(fd,  sd, command, ip);
+		return true;
+
+		}else if(command == 0x0825)
+		{
 		char *accname = (char *)RFIFOP(fd, 9);
 		char *token = (char *)RFIFOP(fd, 0x5C);
 		char *macaddress = (char *)RFIFOP(fd, 0x3c);
@@ -1827,9 +1924,10 @@ int login_parse_login(int fd)
 
 			login->parse_client_md5(fd, sd);
 		break;
-		
 
 		// request client login (raw password)
+		case 0x41:
+		case 0x42:
 		case 0x0064: // S 0064 <version>.L <username>.24B <password>.24B <clienttype>.B
 		case 0x0277: // S 0277 <version>.L <username>.24B <password>.24B <clienttype>.B <ip address>.16B <adapter address>.13B
 		case 0x02b0: // S 02b0 <version>.L <username>.24B <password>.24B <clienttype>.B <ip address>.16B <adapter address>.13B <g_isGravityID>.B

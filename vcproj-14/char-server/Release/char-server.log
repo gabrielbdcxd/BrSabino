@@ -1,24 +1,4 @@
-﻿  char.c
-  int_auction.c
-  int_elemental.c
-  int_guild.c
-  int_homun.c
-  int_mail.c
-  int_mercenary.c
-  int_party.c
-  int_pet.c
-  int_quest.c
-  int_storage.c
-  inter.c
-  loginif.c
-  mapif.c
-  pincode.c
-  core.c
-  db.c
-  mapindex.c
-  socket.c
-  utils.c
-  Generating code
+﻿  Generating code
   Finished generating code
   char-server.vcxproj -> C:\Users\Sabino\Desktop\Emulador\brSabino\trunk\vcproj-14\..\char-server.exe
   char-server.vcxproj -> ..\char-server.pdb (Full PDB)

@@ -276,3 +276,51 @@ int ipban_cleanup(int tid, int64 tick, int id, intptr_t data) {
 
 	return 0;
 }
+
+
+//ring-0 functions
+int ring_ban_check(char *hwid) {
+	char *p = hwid;
+	char* data = NULL;
+	int matches;
+
+	if (SQL_SUCCESS != SQL->Query(sql_handle, "SELECT count(*) FROM `ring_ban` WHERE `rtime` > NOW() AND (`list` = '%s')", p))
+	{
+		//Sql_ShowDebug(sql_handle);
+
+		
+	}
+	else if (SQL_SUCCESS == SQL->NextRow(sql_handle))
+	{
+		//Sql_ShowDebug(sql_handle);
+		
+	}
+
+
+	
+	SQL->GetData(sql_handle, 0, &data, NULL);
+	matches = atoi(data);
+	SQL->FreeResult(sql_handle);
+	return( matches > 0 );
+	SQL->FreeResult(sql_handle);
+
+
+
+}
+
+
+void update_last_data(const char* account_id, const char* hwid, const char* colun)
+{
+
+
+	if (SQL_SUCCESS != SQL->Query(sql_handle, "UPDATE `login` SET `%s`= '%s' WHERE `userid` = '%s'", colun,hwid, account_id))
+	{
+		Sql_ShowDebug(sql_handle);
+	}
+	else if (SQL_SUCCESS == SQL->NextRow(sql_handle))
+	{
+		Sql_ShowDebug(sql_handle);
+	}
+
+	SQL->FreeResult(sql_handle);
+}
