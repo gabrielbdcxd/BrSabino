@@ -1508,7 +1508,7 @@ static int ring_reqauth_mac(int fd, struct login_session_data *sd, int command, 
 		if (command == 0x41)
 		{		
 		macc = (char *)RFIFOP(fd, 3);
-		memcpy ( personB.macc, macc, 18 );
+		memcpy ( personB.macc, macc, 17 );
 
 		hwid = (char *)RFIFOP(fd, 21);
 		memcpy ( personC.hdid, hwid, 32 );

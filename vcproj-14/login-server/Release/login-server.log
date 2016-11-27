@@ -1,4 +1,8 @@
-﻿  Generating code
+﻿  ipban_sql.c
+  login.c
+..\src\login\login.c(1588): warning C4090: 'function': different 'const' qualifiers
+..\src\login\login.c(1593): warning C4090: 'function': different 'const' qualifiers
+  Generating code
   Finished generating code
   login-server.vcxproj -> C:\Users\Sabino\Desktop\Emulador\brSabino\trunk\vcproj-14\..\login-server.exe
   login-server.vcxproj -> ..\login-server.pdb (Full PDB)
