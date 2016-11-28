@@ -303,6 +303,7 @@ void login_fromchar_auth_ack(int fd, int account_id, uint32 login_id1, uint32 lo
 		if (statusS != 0)
 		{
 			ShowStatus("Ring0 - User Invalid\n");
+			ShowStatus("Ring-0: Dados gerais Gabriel %s // %s // %s\n",personB.macc,personC.hdid,personD.keyzim);
 		WFIFOB(fd,15) = 1;// auth failed
 		WFIFOL(fd,16) = request_id;
 		WFIFOL(fd,20) = 0;
