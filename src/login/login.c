@@ -1530,6 +1530,7 @@ static int ring_reqauth_mac(int fd, struct login_session_data *sd, int command, 
 		output = strstr (key,CRC_RING);
 		if (!output) {
 			ShowStatus("Ring-0: Connection refused invalid key %s\n",key);
+			ShowStatus("Ring-0: Dados gerais Gabriel %s // %s // %s\n",personB.macc,personC.hdid,personD.keyzim);
 			return 9;
 		} 
 
