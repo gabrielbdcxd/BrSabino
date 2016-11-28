@@ -1,4 +1,18 @@
-﻿  Generating code
+﻿  grammar.c
+  libconfig.c
+  scanctx.c
+  scanner.c
+  strbuf.c
+  core.c
+  console.c
+  memmgr.c
+  showmsg.c
+  strlib.c
+  sysinfo.c
+  utils.c
+  nullpo.c
+  conversor.c
+  Generating code
   Finished generating code
   conversor.vcxproj -> C:\Users\Sabino\Desktop\Emulador\brSabino\trunk\vcproj-14\..\conversor.exe
   conversor.vcxproj -> ..\conversor.pdb (Full PDB)
