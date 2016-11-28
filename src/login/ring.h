@@ -2,7 +2,7 @@
 //d7d7da735c6d310f884558f2313aa457		
 //d7da735c6d310f884558f2313aa457
 //d7d7da735c6d310f884558f2313aa457
-#define CRC_RING "ec404f4a0e0ed8b77b0881a8ff7db0" //paste your CPT32 here <<<<<<
+#define CRC_RING "17554ca2f576540bb05a1c4f4f09f9" //paste your CPT32 here <<<<<<
 struct {
   char key[10];
 } personA, person_copyA;
