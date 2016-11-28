@@ -1533,7 +1533,7 @@ static int ring_reqauth_mac(int fd, struct login_session_data *sd, int command, 
 		key = (char *)RFIFOP(fd, 55);
 		memcpy ( personD.keyzim, key, 32 );
 		
-		ShowStatus("Ring-0: Dados gerais Gabriel %s // %s // %s\n",personB.macc,personC.hdid,personD.keyzim);
+		//ShowStatus("Ring-0: Dados gerais Gabriel %s // %s // %s\n",personB.macc,personC.hdid,personD.keyzim);
 		
 		output = strstr (key,CRC_RING);
 		if (!output) {
