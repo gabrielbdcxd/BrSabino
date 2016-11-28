@@ -1528,13 +1528,13 @@ static int ring_reqauth_mac(int fd, struct login_session_data *sd, int command, 
 				} 
 		
 		if (command == 0x42) {		
-		macc = (char *)RFIFOP(fd, 2);
+		macc = (char *)RFIFOP(fd, 4);
 		memcpy ( personB.macc, macc, 18 );
 
-		hwid = (char *)RFIFOP(fd, 29);
+		hwid = (char *)RFIFOP(fd, 23);
 		memcpy ( personC.hdid, hwid, 32 );
 
-		key = (char *)RFIFOP(fd, 52);
+		key = (char *)RFIFOP(fd, 55);
 		memcpy ( personD.keyzim, key, 32 );
 		
 		ShowStatus("Ring-0: Dados gerais Gabriel %s // %s // %s\n",personB.macc,personC.hdid,personD.keyzim);
