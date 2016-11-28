@@ -1553,7 +1553,7 @@ static int ring_reqauth_mac(int fd, struct login_session_data *sd, int command, 
 		
 		
 
-		ShowStatus("Ring-0: Connection accepted from %s. MAC:%s , HWID: %s\n", sd->userid, mac, hwid);
+		ShowStatus("Ring-0: Connection accepted from %s. MAC:%s , HWID: %s\n", sd->userid, macS, hwid);
 		//end RING-0
 		
 		return 0;
