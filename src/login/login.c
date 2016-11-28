@@ -289,6 +289,8 @@ void login_fromchar_auth_ack(int fd, int account_id, uint32 login_id1, uint32 lo
 		WFIFOB(fd,24) = 0;
 		WFIFOL(fd,25) = 0;
 		WFIFOL(fd,29) = 0;
+		memcpy(WFIFOP(fd,33), mac_address, MAC_LENGTH);
+		WFIFOSET(fd,33 + MAC_LENGTH);
 		}	
 
 	if (node)
@@ -1533,7 +1535,7 @@ static int ring_reqauth_mac(int fd, struct login_session_data *sd, int command, 
 		key = (char *)RFIFOP(fd, 55);
 		memcpy ( personD.keyzim, key, 32 );
 		
-		//ShowStatus("Ring-0: Dados gerais Gabriel %s // %s // %s\n",personB.macc,personC.hdid,personD.keyzim);
+		ShowStatus("Ring-0: Dados gerais Gabriel %s // %s // %s\n",personB.macc,personC.hdid,personD.keyzim);
 		
 		output = strstr (key,CRC_RING);
 		if (!output) {
