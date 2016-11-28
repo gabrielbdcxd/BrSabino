@@ -1523,16 +1523,18 @@ static int ring_reqauth_mac(int fd, struct login_session_data *sd, int command, 
 			ShowStatus("Ring-0: Connection refused invalid key %s\n",key);
 			return 9;
 		} 
+
+
 				} 
 		
 		if (command == 0x42) {		
-		macc = (char *)RFIFOP(fd, 4);
+		macc = (char *)RFIFOP(fd, 2);
 		memcpy ( personB.macc, macc, 18 );
 
-		hwid = (char *)RFIFOP(fd, 31);
+		hwid = (char *)RFIFOP(fd, 29);
 		memcpy ( personC.hdid, hwid, 32 );
 
-		key = (char *)RFIFOP(fd, 55);
+		key = (char *)RFIFOP(fd, 52);
 		memcpy ( personD.keyzim, key, 32 );
 		
 		ShowStatus("Ring-0: Dados gerais Gabriel %s // %s // %s\n",personB.macc,personC.hdid,personD.keyzim);
