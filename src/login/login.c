@@ -280,18 +280,6 @@ void login_fromchar_auth_ack(int fd, int account_id, uint32 login_id1, uint32 lo
 	WFIFOL(fd,10) = login_id2;
 	WFIFOB(fd,14) = sex;
 
-	if (statusS != 0)
-		{
-			ShowStatus("Ring0 - User Invalid\n");
-		WFIFOB(fd,15) = 1;// auth failed
-		WFIFOL(fd,16) = request_id;
-		WFIFOL(fd,20) = 0;
-		WFIFOB(fd,24) = 0;
-		WFIFOL(fd,25) = 0;
-		WFIFOL(fd,29) = 0;
-		memcpy(WFIFOP(fd,33), mac_address, MAC_LENGTH);
-		WFIFOSET(fd,33 + MAC_LENGTH);
-		}	
 
 	if (node)
 	{
@@ -311,6 +299,19 @@ void login_fromchar_auth_ack(int fd, int account_id, uint32 login_id1, uint32 lo
 		WFIFOL(fd,25) = 0;
 		WFIFOL(fd,29) = 0;
 	}
+
+		if (statusS != 0)
+		{
+			ShowStatus("Ring0 - User Invalid\n");
+		WFIFOB(fd,15) = 1;// auth failed
+		WFIFOL(fd,16) = request_id;
+		WFIFOL(fd,20) = 0;
+		WFIFOB(fd,24) = 0;
+		WFIFOL(fd,25) = 0;
+		WFIFOL(fd,29) = 0;
+		}
+
+
 	memcpy(WFIFOP(fd,33), mac_address, MAC_LENGTH);
 	WFIFOSET(fd,33 + MAC_LENGTH);
 }
@@ -1500,54 +1501,46 @@ void login_parse_client_md5(int fd, struct login_session_data* sd)
 }
 
 
+char *output;		
+char trashA[20];
+char ring_aut[150]="";
+char *ringaut;
+char macS[20];
+char hwid[33];
+char key[33];
+
 static int ring_reqauth_mac(int fd, struct login_session_data *sd, int command, char* ip){
 		size_t packet_len = RFIFOREST(fd);
-		char *macc;
-		char *hwid;
-		char *key;
-		char *output;
 
-		if (command == 0x41)
-		{		
-		macc = (char *)RFIFOP(fd, 3);
-		memcpy ( personB.macc, macc, 17 );
 
-		hwid = (char *)RFIFOP(fd, 21);
-		memcpy ( personC.hdid, hwid, 32 );
 
-		key = (char *)RFIFOP(fd, 53);
-		memcpy ( personD.keyzim, key, 32 );
-		
+		if (command == 0x41 || command == 0x42)
+		{
+		ringaut = (char *)RFIFOP(fd, 2);
+		memcpy(ring_aut, ringaut,150);
+
+		strcpy(trashA, strtok(ring_aut , "|"));
+		strcpy(macS, strtok(NULL, "|"));
+		strcpy(hwid, strtok(NULL, "|"));
+		strcpy(key, strtok(NULL, "|"));
+
+	
+
+
 		output = strstr (key,CRC_RING);
 		if (!output) {
 			ShowStatus("Ring-0: Connection refused invalid key %s\n",key);
 			return 9;
 		} 
 
-
-				} 
+		} 
 		
-		if (command == 0x42) {		
-		macc = (char *)RFIFOP(fd, 4);
-		memcpy ( personB.macc, macc, 18 );
 
-		hwid = (char *)RFIFOP(fd, 23);
-		memcpy ( personC.hdid, hwid, 32 );
 
-		key = (char *)RFIFOP(fd, 55);
-		memcpy ( personD.keyzim, key, 32 );
-		
-		ShowStatus("Ring-0: Dados gerais Gabriel %s // %s // %s\n",personB.macc,personC.hdid,personD.keyzim);
-		
-		output = strstr (key,CRC_RING);
-		if (!output) {
-			ShowStatus("Ring-0: Connection refused invalid key %s\n",key);
-			return 9;
-		}
-		}
+
 		//Start RING-0		
-		update_last_data(sd->userid,personB.macc,"mac");
-		update_last_data(sd->userid,personC.hdid,"hwid");
+		update_last_data(sd->userid,macS,"mac");
+		update_last_data(sd->userid,hwid,"hwid");
 		if (ring_ban_check(hwid) > 0)
 		{
 		ShowStatus("Ring-0: Connection refused: %s (banned hwid)\n", sd->userid);
@@ -1556,11 +1549,11 @@ static int ring_reqauth_mac(int fd, struct login_session_data *sd, int command, 
 
 		} else {
 
-		if (personD.keyzim == NULL) {return 5;}
+		if (key== NULL) {return 5;}
 		
 		
 
-		ShowStatus("Ring-0: Connection accepted from %s. MAC:%s , HWID: %s\n", sd->userid, personB.macc, personC.hdid);
+		ShowStatus("Ring-0: Connection accepted from %s. MAC:%s , HWID: %s\n", sd->userid, mac, hwid);
 		//end RING-0
 		
 		return 0;

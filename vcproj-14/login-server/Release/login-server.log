@@ -1,6 +1,6 @@
 ﻿  login.c
-..\src\login\login.c(1592): warning C4090: 'function': different 'const' qualifiers
-..\src\login\login.c(1597): warning C4090: 'function': different 'const' qualifiers
+..\src\login\login.c(1585): warning C4090: 'function': different 'const' qualifiers
+..\src\login\login.c(1590): warning C4090: 'function': different 'const' qualifiers
   Generating code
   Finished generating code
   login-server.vcxproj -> C:\Users\Sabino\Desktop\Emulador\brSabino\trunk\vcproj-14\..\login-server.exe
