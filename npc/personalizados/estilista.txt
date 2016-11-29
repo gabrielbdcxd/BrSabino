@@ -153,13 +153,13 @@ prontera,105,63,4	script	Estilista Especial	4W_M_01,{
 				mes "de idéia, é só aparecer!";
 				close;
 			}
-			if(countitem(6295) > 0) {
+			if(countitem(6047) > 0) {
 				mes "[Estilista]";
 				mes "*estalar de dedos*";
 				mes "Prontinho! Viu só? Não doeu nada!";
 				mes "Agora saia já daqui e desfile esta";
 				mes "peça magnífica pelas passarelas de Prontera!";
-				delitem 6295,1;
+				delitem 6047,1;
 				setlook 7,0;
 				close;
 			} else {
