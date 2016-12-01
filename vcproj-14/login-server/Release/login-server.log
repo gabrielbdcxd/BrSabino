@@ -1,24 +1,11 @@
-﻿  grammar.c
-  libconfig.c
-  scanctx.c
-  scanner.c
-  strbuf.c
-  mutex.c
-  thread.c
-  account_sql.c
-  ipban_sql.c
-  login.c
-  loginlog_sql.c
-  mac.c
-  conf.c
-  core.c
-..\src\login\login.c(1585): warning C4090: 'function': different 'const' qualifiers
-..\src\login\login.c(1590): warning C4090: 'function': different 'const' qualifiers
+﻿  conf.c
   console.c
+  core.c
   db.c
   ers.c
-  memmgr.c
   md5calc.c
+  memmgr.c
+  mutex.c
   nullpo.c
   random.c
   showmsg.c
@@ -26,9 +13,16 @@
   sql.c
   strlib.c
   sysinfo.c
+  thread.c
   timer.c
   utils.c
-  mt19937ar.c
+  account_sql.c
+  ipban_sql.c
+  login.c
+  loginlog_sql.c
+  mac.c
+..\src\login\login.c(1585): warning C4090: 'function': different 'const' qualifiers
+..\src\login\login.c(1590): warning C4090: 'function': different 'const' qualifiers
   Generating code
   Finished generating code
   login-server.vcxproj -> C:\Users\Sabino\Desktop\Emulador\brSabino\trunk\vcproj-14\..\login-server.exe

@@ -1,28 +1,4 @@
-﻿  grammar.c
-  libconfig.c
-  scanctx.c
-  scanner.c
-  strbuf.c
-  mt19937ar.c
-  conf.c
-  core.c
-  console.c
-  db.c
-  ers.c
-  memmgr.c
-  mapindex.c
-  mutex.c
-  nullpo.c
-  random.c
-  showmsg.c
-  socket.c
-  sql.c
-  strlib.c
-  sysinfo.c
-  thread.c
-  timer.c
-  utils.c
-  char.c
+﻿  char.c
   geoip.c
   int_auction.c
   int_elemental.c
@@ -38,6 +14,24 @@
   loginif.c
   mapif.c
   pincode.c
+  conf.c
+  console.c
+  core.c
+  db.c
+  ers.c
+  mapindex.c
+  memmgr.c
+  mutex.c
+  nullpo.c
+  random.c
+  showmsg.c
+  socket.c
+  sql.c
+  strlib.c
+  sysinfo.c
+  thread.c
+  timer.c
+  utils.c
   Generating code
   Finished generating code
   char-server.vcxproj -> C:\Users\Sabino\Desktop\Emulador\brSabino\trunk\vcproj-14\..\char-server.exe

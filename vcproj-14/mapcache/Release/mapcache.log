@@ -1,14 +1,14 @@
-﻿  core.c
-  console.c
+﻿  console.c
+  core.c
   des.c
   grfio.c
+  mapindex.c
   memmgr.c
+  nullpo.c
   showmsg.c
   strlib.c
   sysinfo.c
   utils.c
-  nullpo.c
-  mapindex.c
   mapcache.c
   Generating code
   Finished generating code
