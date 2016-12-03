@@ -24,8 +24,8 @@
 
 	OnPCLoginEvent:
 
-setarray @itens[0],5583,601,5319,12411,7180,7059,16683,7059,7060; //Aqui você adiciona o ID dos itens 
-setarray @qtd[0],1,30,1,10,1,20,1,10,10;	//Aqui você colocará a quantidade de cada um
+setarray @itens[0],601,5319,7059,7060; //Aqui você adiciona o ID dos itens 
+setarray @qtd[0],30,1,20,20;	//Aqui você colocará a quantidade de cada um
 
 
 
@@ -41,7 +41,7 @@ end;
 if (#jarecebeu == 1) goto Negado;
 	
 	
-mes "^00FF00 Bem Vindo^000000 ao ^FF0000BRO Clássico ^000000";
+mes "^00FF00 Bem Vindo^000000 ao ^FF0000UnityRO ^000000";
 mes "";
 mes "Vejo que você é novo por aqui, então vou te dar o Pack Iniciante!!";
 mes "Você receberá no Pack, os seguintes itens:";
@@ -59,10 +59,10 @@ set #jarecebeu,1;
 set @dias,03;
 next;
 mes "Prontinho, faça bom uso!! ^^";
-next;
-mes "Parábens Você Acabou de adquirir 3 dias de vip ^FF0000Relogue^000000";
-mes "^00FF00Para que você passa aproveitar o VIP!^000000";
-query_sql "UPDATE `login` SET `group_id`='1',`diasvip`=`diasvip`+"+@dias+" WHERE `account_id`='"+ getcharid(3) +"'";
+//next;
+//mes "Parábens Você Acabou de adquirir 3 dias de vip ^FF0000Relogue^000000";
+//mes "^00FF00Para que você passa aproveitar o VIP!^000000";
+//query_sql "UPDATE `login` SET `group_id`='1',`diasvip`=`diasvip`+"+@dias+" WHERE `account_id`='"+ getcharid(3) +"'";
 close;
 end;
 
