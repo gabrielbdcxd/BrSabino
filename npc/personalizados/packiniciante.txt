@@ -69,10 +69,12 @@ set #jarecebeu,1;
 //end;
 
 }
-else
-set #jarecebeu,1;
-if (@exist3$!=@accid$){
-query_sql("insert into redlist (account,hwid,ip) values ('"+getcharid(3)+"', '"+escape_sql(@hwid$)+"', '"+escape_sql(@ip$)+"')");
+else{
+	set #jarecebeu,1;
+	if (@exist3$!=@accid$){
+	query_sql("insert into redlist (account,hwid,ip) values ('"+getcharid(3)+"', '"+escape_sql(@hwid$)+"', '"+escape_sql(@ip$)+"')");
+	end;
+	}
+	}
 end;
 }
-end;
