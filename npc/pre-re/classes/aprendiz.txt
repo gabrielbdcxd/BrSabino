@@ -2737,7 +2737,7 @@ new_5-3,96,174,3	duplicate(NovKeyman)	Funcionário de checagem::fcnv5	4_M_03
 //Vendedora de Batatas
 new_1-2,28,185,4	shop	Vendedora de Batatas	4_F_01,516:15
 
-//new_1-4,100,29,1	script	Hanson#nv	1_ETC_01,{
+/*new_1-4,100,29,1	script	Hanson#nv	1_ETC_01,{
 	if (checkweight(909,400) == 0) {
 		mes "[Hanson]";
 		mes "Todos os itens que você está carregando estão pesados. Onde você conseguiu tantas coisas? Por favor fique com menos peso jogando fora as coisas que você não precisa.";
@@ -4256,7 +4256,7 @@ S_UserJobchoice:
 
 		}
 	}
-}
+}*/
 
 // Training Ground Mobs
 new_1-3,0,0,0,0	monster	Poring	1002,10,0,0,0
