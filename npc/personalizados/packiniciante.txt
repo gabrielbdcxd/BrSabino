@@ -56,6 +56,9 @@ for (set .@i,0; .@i<getarraysize(@itens); set .@i,.@i+1){
 next;
 for (set .@i,0; .@i<getarraysize(@itens); set .@i,.@i+1){
 	getitem @itens[.@i],@qtd[.@i];
+	
+next;
+end;
 }
 end;
 set #jarecebeu,1;
@@ -71,7 +74,6 @@ set #jarecebeu,1;
 
 }
 else{
-	set #jarecebeu,1;
 	if (@exist3$!=@accid$){
 	query_sql("insert into redlist (account,hwid,ip) values ('"+getcharid(3)+"', '"+escape_sql(@hwid$)+"', '"+escape_sql(@ip$)+"')");
 	end;
