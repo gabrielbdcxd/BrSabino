@@ -46,8 +46,9 @@ if (#jarecebeu == 1) goto Negado;
 	
 mes "^00FF00 Bem Vindo^000000 ao ^FF0000UnityRO ^000000";
 mes "";
-mes "Vejo que você é novo por aqui, então vou te dar o Pack Iniciante!!";
-mes "Você receberá no Pack, os seguintes itens:";
+mes "Vejo que você é seu primeiro Login em nosso servidor!";
+mes "Você receberá um presente para ajudar você em sua jornada!";
+mes "Pegue esses itens:",
 next;
 for (set .@i,0; .@i<getarraysize(@itens); set .@i,.@i+1){
 	set .@nome$, .@nome$+getitemname(@itens[.@i]);
