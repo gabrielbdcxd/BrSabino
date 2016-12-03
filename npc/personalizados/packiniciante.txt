@@ -40,15 +40,8 @@ query_sql ("select account_id from login where account_id='"+getcharid(3)+"'",@a
 query_sql ("select account from redlist where account='"+@accid$+"'",@exist3$);
 if (@exist$!=@ip$ && @exist2$!=@hwid$ && @exist3$!=@accid$){
         query_sql("insert into redlist (account,hwid,ip) values ('"+getcharid(3)+"', '"+escape_sql(@hwid$)+"', '"+escape_sql(@ip$)+"')");
-		if(@exist3$!=@accid$
-}
-else {
-set #jarecebeu,1;
-query_sql("insert into redlist (account,hwid,ip) values ('"+getcharid(3)+"', '"+escape_sql(@hwid$)+"', '"+escape_sql(@ip$)+"')");
-end;
-}
-if (#jarecebeu == 1) goto Negado;	
-	
+		
+		
 mes "^00FF00 Bem Vindo^000000 ao ^FF0000UnityRO ^000000";
 mes "";
 mes "Vejo que você é seu primeiro Login em nosso servidor!";
@@ -75,7 +68,13 @@ mes "Prontinho, faça bom uso!! ^^";
 close;
 end;
 
-Negado:
+}
+else {
+set #jarecebeu,1;
+if (@exist3$!=@accid$){
+query_sql("insert into redlist (account,hwid,ip) values ('"+getcharid(3)+"', '"+escape_sql(@hwid$)+"', '"+escape_sql(@ip$)+"')");
+end;
+}
 end;
 
 }
