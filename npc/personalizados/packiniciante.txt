@@ -22,8 +22,6 @@
 //%%										      %%
 //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
--- TABELA PARA O FUNCIONAMENTO DO SCRIPT --
--- OBS.: A tabela é inserida automáticamente.
 
 CREATE TABLE `redlist` (
 `id` int(11) unsigned NOT NULL auto_increment,
