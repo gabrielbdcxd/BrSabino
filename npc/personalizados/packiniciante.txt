@@ -16,6 +16,7 @@
 //%%  `id` int(11) unsigned NOT NULL auto_increment,				      %%
 //%%  `account` int(11) unsigned NOT NULL default '0',				      %%
 //%%  `ip` varchar(100) NOT NULL default '',				      %%
+//%%  `hwid` varchar(100) NOT NULL default '',
 //%%  PRIMARY KEY (`id`)							      %%
 //%%  )ENGINE=MyISAM;								      %%
 //%%										      %%
@@ -31,6 +32,8 @@ setarray @qtd[0],30,1,20,20,1,5;	//Aqui você colocará a quantidade de cada um
 
 query_sql ("select hwid from login where account_id='"+getcharid(3)+"'",@ip$);
 query_sql ("select hwid from redlist where ip='"+@ip$+"'",@exist$);
+query_sql ("select last_ip from login where account_id='"+getcharid(3)+"'",@ip$);
+query_sql ("select ip from redlist where ip='"+@ip$+"'",@exist$);
 if (@exist$!=@ip$){
 query_sql("insert into `redlist` (account,hwid) values ('"+getcharid(3)+"', '"+@ip$+"')");
 }
