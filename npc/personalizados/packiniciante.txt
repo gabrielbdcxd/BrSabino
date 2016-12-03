@@ -24,8 +24,8 @@
 
 	OnPCLoginEvent:
 
-setarray @itens[0],601,5319,7059,7060; //Aqui você adiciona o ID dos itens 
-setarray @qtd[0],30,1,20,20;	//Aqui você colocará a quantidade de cada um
+setarray @itens[0],601,5319,7059,7060,14508; //Aqui você adiciona o ID dos itens 
+setarray @qtd[0],30,1,20,20,1;	//Aqui você colocará a quantidade de cada um
 
 
 

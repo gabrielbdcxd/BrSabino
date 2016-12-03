@@ -22,12 +22,12 @@
 //   | - Anotações                                            |
 //   \________________________________________________________/
 
-izlude,201,181,2	duplicate(Sailor_izlude)	Marinheiro#izlude	4W_SAILOR
-izlude,55,74,2	duplicate(Bonne_izlude)	Paula#izlude	4_F_01
-izlude,135,78,2	duplicate(Charfri_izlude)	Charfri#izlude	4_F_02
-izlude,119,121,2	duplicate(Cuskoal_izlude)	Cuskoal#izlude	4_F_TELEPORTER
-izlude,150,118,2	duplicate(Dega_izlude)	Dega#izlude	4_M_02
+izlude,201,212,2	duplicate(Sailor_izlude)	Marinheiro#izlude	4W_SAILOR
+izlude,44,94,2	duplicate(Bonne_izlude)	Paula#izlude	4_F_01
+izlude,135,104,2	duplicate(Charfri_izlude)	Charfri#izlude	4_F_02
+izlude,126,151,2	duplicate(Cuskoal_izlude)	Cuskoal#izlude	4_F_TELEPORTER
+izlude,159,183,2	duplicate(Dega_izlude)	Dega#izlude	4_M_02
 izlude,150,143,2	duplicate(Kylick_izlude)	Charfri#izlude2	4W_M_01
-izlude,56,126,2	duplicate(Red_izlude)	Dan#izlude	4_M_03
-izlude,58,126,2	duplicate(Cebalis_izlude)	Rami#izlude	4W_M_02
-izlude,124,178,2	duplicate(Soldier_izlude)	Soldado#izlude	8W_SOLDIER
+izlude,56,146,2	duplicate(Red_izlude)	Dan#izlude	4_M_03
+izlude,58,146,2	duplicate(Cebalis_izlude)	Rami#izlude	4W_M_02
+izlude,116,158,2	duplicate(Soldier_izlude)	Soldado#izlude	8W_SOLDIER

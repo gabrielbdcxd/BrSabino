@@ -23,4 +23,4 @@
 // \___________________________________________________________________/
 //
 
-izlude,206,55,3	duplicate(Airship_Staff_izlude)	Assistente do Aeroplano#izlude	4_F_01
+izlude,202,75,3	duplicate(Airship_Staff_izlude)	Assistente do Aeroplano#izlude	4_F_01
