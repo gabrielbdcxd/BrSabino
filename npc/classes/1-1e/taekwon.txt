@@ -277,5 +277,6 @@ payon,157,141,5	script	Fênix#TKJobChange	4_M_MONK,{
 		close;
 	}
 
-new_1-4,103,22,3	duplicate(Fênix#TKJobChange)	Fênix#TKJobChange1	4_M_MONK
+
 }
+new_1-4,103,22,3	duplicate(Fênix#TKJobChange)	Fênix#TKJobChange1	4_M_MONK
