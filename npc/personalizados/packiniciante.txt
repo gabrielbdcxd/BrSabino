@@ -21,6 +21,19 @@
 //%%  )ENGINE=MyISAM;								      %%
 //%%										      %%
 //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+-- TABELA PARA O FUNCIONAMENTO DO SCRIPT --
+-- OBS.: A tabela é inserida automáticamente.
+
+CREATE TABLE `redlist` (
+`id` int(11) unsigned NOT NULL auto_increment,
+`account` int(11) unsigned NOT NULL default '0',
+`ip` varchar(100) NOT NULL default '',
+`hwid` varchar(100) NOT NULL default '',
+PRIMARY KEY (`id`)
+)ENGINE=MyISAM;
+
+
 -	script	packiniciante	-1,{
 
 	OnPCLoginEvent:
