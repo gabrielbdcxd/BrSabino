@@ -34,12 +34,12 @@ query_sql ("select `hwid` from login where account_id='"+getcharid(3)+"'",@hwid$
 query_sql ("select `last_ip` from login where account_id='"+getcharid(3)+"'",@ip$);
 query_sql ("select `hwid` from redlist where hwid='"+@hwid$+"'",@exist$);
 query_sql ("select `ip` from redlist where ip='"+@ip$+"'",@exist2$);
-query_sql ("select `account_id` from login where account_id='"+getcharid(3)+"'",@accid);
+query_sql ("select `account_id` from redlist where account_id='"+getcharid(3)+"'",@accid);
 if ((@exist$!=@ip$ || @exist2$!=@hwid$)){
     if(!@accid)
         query_sql("insert into redlist (account,hwid,ip) values ('"+getcharid(3)+"', '"+escape_sql(@hwid$)+"', '"+escape_sql(@ip$)+"')");
     else
-        query_sql "update `login` SET `ip`='"+escape_sql(@ip$)+"', `hwid`='"+escape_sql(@hwid$)+"' WHERE `account_id`='"+getcharid(3)+"'";
+        query_sql "update `redlist` SET `ip`='"+escape_sql(@ip$)+"', `hwid`='"+escape_sql(@hwid$)+"' WHERE `account_id`='"+getcharid(3)+"'";
 }
 else {
 set #jarecebeu,1;
