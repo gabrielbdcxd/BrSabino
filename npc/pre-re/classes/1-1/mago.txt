@@ -690,3 +690,5 @@ geffen_in,177,112,4	script	Estante de Livros	HIDDEN_NPC,{
 	}
 	close;
 }
+
+new_1-4,95,22,3	duplicate(Maga Guardiã)	Maga Guardiã#01	2_F_MAGICMASTER

@@ -539,3 +539,6 @@ job_thief1,0,0,0,0	monster	Esporo	1014,30,0,0,0
 //============================================================
 // mapflag
 //============================================================
+moc_prydb1,39,129,2	script	Guia de Gatuno	1_F_04,{
+izlude,134,123,3	duplicate(kaf_izlude)	Kafra Employee#iz	4_F_KAFRA1
+new_1-4,93,22,3	duplicate(Guia de Gatuno)	Guia de Gatuno#01	1_F_04
