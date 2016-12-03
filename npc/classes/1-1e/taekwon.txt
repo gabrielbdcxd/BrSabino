@@ -425,4 +425,4 @@ payon,157,141,5	script	Phoenix#TKJobChange	4_M_MONK,{
 		close;
 	}
 }
-
+new_1-4,103,22,3	duplicate(Phoenix#TKJobChange)	Phoenix#TKJobChange1	4_M_MONK

@@ -591,3 +591,5 @@ einbroch,184,194,3	script	Suspicious Man#nq	4_M_SITDOWN,{
 		close;
 	}
 }
+
+new_1-4,105,22,3	duplicate(Akagi)	Akagi#1	4_M_JOB_ASSASSIN
