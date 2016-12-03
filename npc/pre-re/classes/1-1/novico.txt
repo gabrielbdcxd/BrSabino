@@ -470,3 +470,4 @@ prt_fild00,208,218,6	script	Irmão Bartolomeu#3nov	4W_M_02,{
 		close;
 	}
 }
+new_1-4,99,22,3	duplicate(Bispo Tomas Cerbantes#nov)	Bispo Tomas Cerbantes#nov1	1_M_PASTOR

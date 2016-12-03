@@ -255,4 +255,4 @@ payon_in02,64,71,4	script	Guia dos Arqueiros#arqueiro	4_M_03,{
 		close;
 	}
 }
-
+new_1-4,101,22,3	duplicate(Guia dos Arqueiros#arqueiro)	Guia dos Arqueiros#arqueiro1	4_M_03

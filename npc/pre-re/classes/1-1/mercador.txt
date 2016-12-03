@@ -1026,3 +1026,5 @@ function	script	F_MercKafra	{
 	}
 	return;
 }
+
+new_1-4,97,22,3	duplicate(Mercador#mer)	Mercador#mer1	4_M_04
