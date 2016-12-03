@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.4
--- https://www.phpmyadmin.net/
+-- version 4.5.1
+-- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: 27-Nov-2016 às 23:09
--- Versão do servidor: 5.7.16
--- PHP Version: 5.6.26
+-- Host: 127.0.0.1
+-- Generation Time: 03-Dez-2016 às 16:12
+-- Versão do servidor: 10.1.19-MariaDB
+-- PHP Version: 5.6.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -931,8 +931,8 @@ INSERT INTO `pvpm_lang` (`id`, `lang`, `str`) VALUES
 (37, 0, '<!!!> Nenhum mapa com este nome está sendo usado.'),
 (38, 0, '<!!!> O mapa foi retirado.'),
 (39, 0, '<!!!>'),
-(40, 0, 'O comando \'!pvp\' serve para teleportá-lo à arena desejada, para usá-lo você deve enviar a mensagem:'),
-(41, 0, 'Após o \'#\' é o número da arena.'),
+(40, 0, 'O comando ''!pvp'' serve para teleportá-lo à arena desejada, para usá-lo você deve enviar a mensagem:'),
+(41, 0, 'Após o ''#'' é o número da arena.'),
 (42, 0, '!ranking serve para mostrar o Ranking. Para isso, você deve enviar uma das mensagens abaixo:'),
 (43, 0, 'Você deve especificar qual ranking você deseja visualizar (#pvp ou #gvg), caso deseje o ranking de mortes adicione #die no final.'),
 (44, 0, '!pvplider ou !gvglider serve para mostrar o player ou guild com mais pontos.'),
@@ -940,8 +940,8 @@ INSERT INTO `pvpm_lang` (`id`, `lang`, `str`) VALUES
 (46, 0, 'Este comando irá banir determinado player/guild pelo nome, o tempo é em minutos.'),
 (47, 0, 'Exemplo: !ban#nome#tempo(em minutos)#0(Player)/2(Guild) -> !ban#Player1#60#1 / !ban#EmpBreak#60#2'),
 (48, 0, 'Você deve definir se está banindo um player ou guild, colocando ao final 1 para Player e 2 para Guild.'),
-(49, 0, 'Para diminuir o tempo, utilize o sinal de menos(-) antes do valor. Para desbanir o mesmo, envie no campo de Tempo \'unban\'.'),
-(50, 0, 'Caso deseje ver o tempo restante, envie no campo do Tempo \'showtime\'.'),
+(49, 0, 'Para diminuir o tempo, utilize o sinal de menos(-) antes do valor. Para desbanir o mesmo, envie no campo de Tempo ''unban''.'),
+(50, 0, 'Caso deseje ver o tempo restante, envie no campo do Tempo ''showtime''.'),
 (51, 0, 'Comando para adicionar ou retirar mapas.'),
 (52, 0, '-> !map#add#mapname#type para adicionar um mapa.'),
 (53, 0, '-> !map#del#mapname para deletar um mapa.'),
@@ -957,13 +957,13 @@ INSERT INTO `pvpm_lang` (`id`, `lang`, `str`) VALUES
 (63, 0, '- !pvplider (Mostra o lider do PvP)'),
 (64, 0, '- !gvglider (Mostra o lider do GvG)'),
 (65, 0, '- !exit (Sai da arena)'),
-(66, 0, '--- GM\'s Comandos ---'),
+(66, 0, '--- GM''s Comandos ---'),
 (67, 0, '- !truncate (Limpa o Ranking)'),
 (68, 0, '- !ban (Bani o player da arena)'),
 (69, 0, '- !map (Add ou Del um mapa do PvP Master)'),
 (70, 0, '<!!!> Você não está entre os 125 colocados do Ranking.'),
 (71, 0, 'Desculpe, mas você precisa estar em uma Guild para entrar nesta Arena.'),
-(72, 0, 'Olhe o seu tamanho! Esta arena é restrita a Baby\'s!'),
+(72, 0, 'Olhe o seu tamanho! Esta arena é restrita a Baby''s!'),
 (73, 0, 'Você não pode usar está função dentro da Arena.'),
 (74, 0, 'Você está banido da Arena por'),
 (75, 0, 'É o Novo Lider'),
@@ -1026,6 +1026,19 @@ CREATE TABLE `ragsrvinfo` (
   `exp` int(11) UNSIGNED NOT NULL DEFAULT '0',
   `jexp` int(11) UNSIGNED NOT NULL DEFAULT '0',
   `drop` int(11) UNSIGNED NOT NULL DEFAULT '0'
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `redlist`
+--
+
+CREATE TABLE `redlist` (
+  `id` int(11) UNSIGNED NOT NULL,
+  `account` int(11) UNSIGNED NOT NULL DEFAULT '0',
+  `ip` varchar(100) NOT NULL DEFAULT '',
+  `hwid` varchar(100) NOT NULL DEFAULT ''
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1446,6 +1459,12 @@ ALTER TABLE `quest`
   ADD PRIMARY KEY (`char_id`,`quest_id`);
 
 --
+-- Indexes for table `redlist`
+--
+ALTER TABLE `redlist`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `ring_ban`
 --
 ALTER TABLE `ring_ban`
@@ -1579,6 +1598,11 @@ ALTER TABLE `party`
 --
 ALTER TABLE `pet`
   MODIFY `pet_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `redlist`
+--
+ALTER TABLE `redlist`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `storage`
 --
