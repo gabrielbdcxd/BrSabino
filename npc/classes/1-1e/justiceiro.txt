@@ -293,3 +293,5 @@ payon,184,65,3	script	Sábio Chifre de Touro	4_M_LGTGRAND,{
 	mes "^333333*Uff*^000000";
 	close;
 }
+
+new_1-4,107,22,3	duplicate(Master Miller)	Master Miller#1	4_M_HUOLDARMY

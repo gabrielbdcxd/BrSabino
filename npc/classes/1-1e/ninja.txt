@@ -399,4 +399,6 @@ einbroch,184,194,3	script	Homem Suspeito#nq	4_M_SITDOWN,{
 		mes "Eu viajei para muitos países, mas nunca estive em um prédio tão alto como a Torre de Einbroch.";
 		mes "Todos os prédios na minha cidade natal são minúsculos em comparação...";
 	}
+	
+new_1-4,105,22,3	duplicate(Akagi)	Akagi#1	4_M_JOB_ASSASSIN
 }

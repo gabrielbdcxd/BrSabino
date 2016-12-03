@@ -276,4 +276,6 @@ payon,157,141,5	script	Fênix#TKJobChange	4_M_MONK,{
 		mes "Esperto te ver novamente algum dia, "+strcharinfo(0)+".";
 		close;
 	}
+
+new_1-4,103,22,3	duplicate(Fênix#TKJobChange)	Fênix#TKJobChange1	4_M_MONK
 }
