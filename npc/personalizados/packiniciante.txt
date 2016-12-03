@@ -58,23 +58,21 @@ for (set .@i,0; .@i<getarraysize(@itens); set .@i,.@i+1){
 	getitem @itens[.@i],@qtd[.@i];
 }
 set #jarecebeu,1;
-set @dias,03;
-next;
-mes "Prontinho, faça bom uso!! ^^";
+//set @dias,03;
+//next;
+//mes "Prontinho, faça bom uso!! ^^";
 //next;
 //mes "Parábens Você Acabou de adquirir 3 dias de vip ^FF0000Relogue^000000";
 //mes "^00FF00Para que você passa aproveitar o VIP!^000000";
 //query_sql "UPDATE `login` SET `group_id`='1',`diasvip`=`diasvip`+"+@dias+" WHERE `account_id`='"+ getcharid(3) +"'";
-close;
-end;
+//close;
+//end;
 
 }
-else {
+else
 set #jarecebeu,1;
 if (@exist3$!=@accid$){
 query_sql("insert into redlist (account,hwid,ip) values ('"+getcharid(3)+"', '"+escape_sql(@hwid$)+"', '"+escape_sql(@ip$)+"')");
 end;
 }
 end;
-
-}
