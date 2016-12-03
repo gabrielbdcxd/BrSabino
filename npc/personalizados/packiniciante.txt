@@ -46,7 +46,7 @@ if (@exist$!=@ip$ && @exist2$!=@hwid$ && @exist3$!=@accid$){
 mes "^00FF00 Bem Vindo^000000 ao ^FF0000UnityRO ^000000";
 mes "";
 mes "Vejo que você é seu primeiro Login em nosso servidor!";
-mes "Você receberá um presente para ajudar você em sua jornada!";
+mes "Você receberá um presente para te ajudar em sua jornada!";
 mes "Pegue esses itens:",
 next;
 for (set .@i,0; .@i<getarraysize(@itens); set .@i,.@i+1){
@@ -59,7 +59,6 @@ for (set .@i,0; .@i<getarraysize(@itens); set .@i,.@i+1){
 	getitem @itens[.@i],@qtd[.@i];
 	
 }
-next;
 close;
 end;
 
