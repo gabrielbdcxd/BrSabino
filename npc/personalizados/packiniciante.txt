@@ -38,7 +38,7 @@ query_sql ("select `hwid` from login where account_id='"+getcharid(3)+"'",@hwid$
 query_sql ("select hwid from redlist where hwid='"+@hwid$+"'",@exist2$);
 query_sql ("select `account_id` from login where account_id='"+getcharid(3)+"'",@accid);
 query_sql ("select account from redlist where account='"+@accid$+"'",@exist3$);
-if ((@exist$!=@ip$ || @exist2$!=@hwid$ || @exist3$!=@accid$) && !@accid)
+if (@exist$!=@ip$ && @exist2$!=@hwid$ && @exist3$!=@accid$)
 	query_sql("insert into redlist (account,hwid,ip) values ('"+getcharid(3)+"', '"+escape_sql(@hwid$)+"', '"+escape_sql(@ip$)+"')");
 else{
 set #jarecebeu,1;
