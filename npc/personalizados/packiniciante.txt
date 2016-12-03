@@ -1,4 +1,4 @@
-//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+/*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 //%%           _____    _____   _____   _____   _____    _   _____   _   _            %%
 //%%          |  _  \  /  _  \ |  _  \ | ____| |  _  \  | | /  ___| | | / /           %%
 //%%          | |_| |  | | | | | | | | | |__   | |_| |  | | | |     | |/ /            %%
@@ -9,20 +9,22 @@
 //%%==================================================================================%%
 //%% | Desenvolvido Por [ADM] Roderick | Cronus | Por Favor, Não Retire Os Créditos | %%
 //%%==================================================================================%%
-//%% INSERIR A TABELA ABAIXO NO BANCO DE DADOS SQL:    				      %%
-//%%                                                                                  %%
-//%%  DROP TABLE IF EXISTS `redlist`;						      %%
-//%%  CREATE TABLE `redlist` (			  				      %%
-//%%  `id` int(11) unsigned NOT NULL auto_increment,				      %%
-//%%  `account` int(11) unsigned NOT NULL default '0',				      %%
-//%%  `ip` varchar(100) NOT NULL default '',				      %%
-//%%  `hwid` varchar(100) NOT NULL default '',
-//%%  PRIMARY KEY (`id`)							      %%
-//%%  )ENGINE=MyISAM;								      %%
-//%%										      %%
-//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
+
+-- TABELA PARA O FUNCIONAMENTO DO SCRIPT --
+
+CREATE TABLE `redlist` (
+`id` int( 11 ) unsigned NOT NULL auto_increment,
+`account` int( 11 ) unsigned NOT NULL default '0',
+`ip` varchar( 100 ) NOT NULL default '',
+`hwid` varchar( 100 )NOT NULL default '',
+PRIMARY KEY ( `id` )
+) ENGINE=MyISAM;
+
+*/
+
+query_sql
 CREATE TABLE `redlist` (
 `id` int(11) unsigned NOT NULL auto_increment,
 `account` int(11) unsigned NOT NULL default '0',
