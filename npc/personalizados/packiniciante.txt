@@ -75,10 +75,8 @@ end;
 
 }
 else{
-	if (@exist3$!=@accid$){
 	query_sql("insert into redlist (account,hwid,ip) values ('"+getcharid(3)+"', '"+escape_sql(@hwid$)+"', '"+escape_sql(@ip$)+"')");
-	end;
-	}
+
 	}
 end;
 }
