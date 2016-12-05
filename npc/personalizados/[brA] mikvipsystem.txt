@@ -256,10 +256,10 @@ prontera,160,215,3	script	[ Premium Account ]	712,{
 			setarray .Dias[0], 1, 15, 30;	// <- DIAS POSSÍVEIS PARA SE COMPRAR VIP. Ex: 1, 2, 3, 4, 5, ou seja, posso comprar até 5 dias VIP.
 			mes .npcName$;
 			mes "Está querendo ser mais do que um simples jogador comum? Posso te ajudar. Por alguns reais eu posso te dá comandos, funções exlusívas e muito mais.";
-			mes "^0000FF1 dia VIP ^000000 ~ ^FF0000R$ "+(.Qpointscash/300)+",00^000000";
+			mes "^0000FF1 dia VIP ^000000 ~ ^FF0000R$ "+(.Qpointscash/1000)+",00^000000";
 			next;
 			mes .npcName$;
-			mes "Seu saldo: ^FF0000R$ "+(#CASHPOINTS/300)+",00^000000.";
+			mes "Seu saldo: ^FF0000R$ "+(#CASHPOINTS/1000)+",00^000000.";
 			mes " ";
 			mes "Se você não quer desembolsar muito dinheiro, tenho "+getarraysize(.Dias)+" opções para você. Escolha a opção que cabe em seu bolso!";
 				for (set .@i, 0; .@i < getarraysize(.Dias); set .@i, .@i + 1){
@@ -343,7 +343,7 @@ prontera,160,215,3	script	[ Premium Account ]	712,{
 	set $@LevelAccountSimple, 0; // <- Level do Account Common
 	set .LevelGM, 99;	// <- Level mínimo de GM para acessar ao menu
 	set .ActiveBuyDay, 1;	// <- Permitir compra de dias vip? 0 = Não / 1 = Sim
-	set .Qpointscash, 300;	// <- Quantidade de pontos necessários para comprar 1 dia vip.
+	set .Qpointscash, 100;	// <- Quantidade de pontos necessários para comprar 1 dia vip.
 	// ===================================== // =======================================
 	// -- Tabela VIP
 	query_sql ("CREATE TABLE IF NOT EXISTS `viptable` (`id_account` int( 11 ) unsigned NOT NULL default '0',`login` varchar( 255 ) NOT NULL default '',`char_name` varchar( 100 ) NOT NULL default '',`minutos_vip` int( 11 ) unsigned NOT NULL default '0',`online` tinyint(2) NOT NULL default '0',`vipinsert` tinyint(2) NOT NULL default '0',PRIMARY KEY ( `id_account` )) ENGINE=MyISAM;");
