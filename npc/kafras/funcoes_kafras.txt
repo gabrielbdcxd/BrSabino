@@ -680,10 +680,10 @@ function	script	F_KafSet	{
 		setarray @wrpD$, "Rachel";
 		setarray @wrpP, 2200;
 	}else if(strnpcinfo(4) == "new_1-4") {
-		setarray @wrpD$, "Izlude", "Geffen", "Payon", "Morroc", "Caverna dos Orcs", "Alberta";
-		setarray @wrpP, 600, 1200, 1200, 1200, 1200, 1800;
-		setarray @viewpX, 128, 29, 282, 152;
-		setarray @viewpY, 114, 207, 200, 326;
+		setarray @wrpD$, "Geffen", "Payon", "Morroc", "Caverna dos Orcs", "Alberta";
+		setarray @wrpP, 1200, 1200, 1200, 1200, 1800;
+		setarray @viewpX, 29, 282, 152;
+		setarray @viewpY, 207, 200, 326;
 	}
 	for (.@i = 0; .@i < getarraysize(@wrpD$); ++.@i)
 		@wrpC$[.@i] = @wrpD$[.@i]+" -> "+@wrpP[.@i];
