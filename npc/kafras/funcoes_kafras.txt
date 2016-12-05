@@ -358,7 +358,7 @@ function	script	F_KafTele	{
 	else if (@wrpD$[.@j] == "Comodo") warp "comodo", 209, 143;
 	else if (@wrpD$[.@j] == "Comodo Ilha do Farol") warp "cmd_fild07", 127, 134;
 	else if (@wrpD$[.@j] == "Geffen") warp "geffen", 120, 39;
-	else if (@wrpD$[.@j] == "Izlude") { if (RENEWAL) warp "izlude", 128, 98; else warp "izlude", 91, 105; }
+	else if (@wrpD$[.@j] == "Izlude") { if (RENEWAL) warp "izlude", 128, 114; else warp "izlude", 128, 114; }
 	else if (@wrpD$[.@j] == "Juno") warp "yuno", 158, 125;
 	else if (@wrpD$[.@j] == "Mina Abandonada de Mjolnir") warp "mjolnir_02", 99, 351;
 	else if (@wrpD$[.@j] == "Morroc") warp "morocc", 156, 46;
