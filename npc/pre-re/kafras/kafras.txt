@@ -20,4 +20,4 @@
 // Izlude
 //============================================================
 izlude,134,123,3	duplicate(kaf_izlude)	Kafra Employee#iz	4_F_KAFRA1
-new_1-4,107,16,3	duplicate(kaf_izlude)	Kafra Employee#aprendiz	4_F_KAFRA1
+new_1-4,107,16,3	duplicate(kaf_izlude)	Kafra Gildete#aprendiz	4_F_KAFRA1
