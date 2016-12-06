@@ -788,20 +788,19 @@ function	script	pvpm_func	{
 function	script	getMesPM	{ return getd("$@PM_Lang"+PM_Lang+"$["+getarg(0)+"]"); }
 
 //================== DUPLICATE =====================
-prontera,162,178,4	duplicate(PM_source)	[PvP] Arena#1	4_F_JOB_BLACKSMITH
-morocc,152,97,4	duplicate(PM_source)	[PvP] Arena#2	4_F_JOB_BLACKSMITH
-geffen,127,65,4	duplicate(PM_source)	[PvP] Arena#3	4_F_JOB_BLACKSMITH
-alberta,26,240,4	duplicate(PM_source)	[PvP] Arena#4	4_F_JOB_BLACKSMITH
-izlude,122,119,4	duplicate(PM_source)	[PvP] Arena#5	4_F_JOB_BLACKSMITH
-aldebaran,147,119,4	duplicate(PM_source)	[PvP] Arena#6	4_F_JOB_BLACKSMITH
-xmas,145,136,4	duplicate(PM_source)	[PvP] Arena#7	4_F_JOB_BLACKSMITH
-comodo,184,158,4	duplicate(PM_source)	[PvP] Arena#8	4_F_JOB_BLACKSMITH
-gonryun,161,126,4	duplicate(PM_source)	[PvP] Arena#9	4_F_JOB_BLACKSMITH
-louyang,226,106,4	duplicate(PM_source)	[PvP] Arena#10	4_F_JOB_BLACKSMITH
-ayothaya,155,121,4	duplicate(PM_source)	[PvP] Arena#11	4_F_JOB_BLACKSMITH
-hugel,87,164,4	duplicate(PM_source)	[PvP] Arena#12	4_F_JOB_BLACKSMITH
-moscovia,209,190,5	duplicate(PM_source)	[PvP] Arena#13	4_F_JOB_BLACKSMITH
-sec_in02,144,155,4	duplicate(PM_source)	[PvP] Arena#14	4_F_JOB_BLACKSMITH
+prontera,151,193,4	duplicate(PM_source)	[PvP] Arena#1	899
+morocc,152,97,4	duplicate(PM_source)	[PvP] Arena#2	899
+geffen,127,65,4	duplicate(PM_source)	[PvP] Arena#3	899
+alberta,26,240,4	duplicate(PM_source)	[PvP] Arena#4	899
+izlude,122,119,4	duplicate(PM_source)	[PvP] Arena#5	899
+aldebaran,147,119,4	duplicate(PM_source)	[PvP] Arena#6	899
+xmas,145,136,4	duplicate(PM_source)	[PvP] Arena#7	899
+comodo,184,158,4	duplicate(PM_source)	[PvP] Arena#8	899
+gonryun,161,126,4	duplicate(PM_source)	[PvP] Arena#9	899
+louyang,226,106,4	duplicate(PM_source)	[PvP] Arena#10	899
+ayothaya,155,121,4	duplicate(PM_source)	[PvP] Arena#11	899
+hugel,87,164,4	duplicate(PM_source)	[PvP] Arena#12	899
+moscovia,209,190,5	duplicate(PM_source)	[PvP] Arena#13	899
 //================== WOE =====================
 
 //Necessário para ativar o sistema de contagem dos pontos na woe.
