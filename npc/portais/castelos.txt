@@ -24,7 +24,7 @@
 //= 2.7 Updated WoE:FE warps. [Masao]
 //============================================================
 
-//Prontera Castle Map
+/*Prontera Castle Map
 prt_gld,159,298,0	warp	prtg01_NorthField	1,1,prt_fild01,199,30
 prt_gld,159,25,0	warp	prtg02_Castle	1,1,prt_castle,102,178
 prt_gld,129,65,0	warp	prtg-1_prtg-1-01	1,1,prtg_cas01,99,32
@@ -528,3 +528,4 @@ gld_dun03,238,274,0	warp	gdun03a_prtg	1,1,prt_gld,252,247
 gld_dun03,42,30,0	warp	gdun03b_prtg	1,1,prt_gld,63,66
 gld_dun04,37,230,0	warp	gdun04_g13a	1,1,gef_fild13,42,331
 gld_dun04,110,20,0	warp	gdun04_g13b	1,1,gef_fild13,373,62
+*/
