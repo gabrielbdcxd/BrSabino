@@ -65,7 +65,7 @@ struct login_session_data {
 
 	uint8 client_hash[16];
 	int has_client_hash;
-	int keypass;
+
 	int fd;
 
 	time_t expiration_time;
