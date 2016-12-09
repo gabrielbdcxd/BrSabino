@@ -26,8 +26,8 @@
 
 //Prontera Castle Map
 prt_gld,159,298,0	warp	prtg01_NorthField	1,1,prt_fild01,199,30
-/*prt_gld,159,25,0	warp	prtg02_Castle	1,1,prt_castle,102,178
-prt_gld,129,65,0	warp	prtg-1_prtg-1-01	1,1,prtg_cas01,99,32
+prt_gld,159,25,0	warp	prtg02_Castle	1,1,prt_castle,102,178
+/*prt_gld,129,65,0	warp	prtg-1_prtg-1-01	1,1,prtg_cas01,99,32
 prt_gld,240,124,0	warp	prtg-2_prtg-2	1,1,prtg_cas02,43,229
 prt_gld,153,141,0	warp	prtg-3_prtg-3	1,1,prtg_cas03,168,12
 prt_gld,107,240,0	warp	prtg-4_prtg-4	1,1,prtg_cas04,86,13
