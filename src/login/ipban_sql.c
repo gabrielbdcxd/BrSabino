@@ -324,3 +324,18 @@ void update_last_data(const char* account_id, const char* hwid, const char* colu
 
 	SQL->FreeResult(sql_handle);
 }
+
+
+char* CpyData(char *inputS, char* delS)
+{
+	char *st1 = inputS;
+	char* outS;
+	const char * delimeter = delS;
+	outS = strtok(st1, delimeter);
+	// Handle parsed 	
+	outS = strtok(NULL, delimeter);
+
+	if (outS == NULL) {return "Error";}
+
+	return outS;
+}

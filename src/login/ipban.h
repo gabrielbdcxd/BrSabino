@@ -38,9 +38,11 @@ void ipban_log(uint32 ip);
 
 // parses configuration option
 bool ipban_config_read(const char *key, const char* value);
-#endif // BRATHENA_CORE
 //Ring-0 
 void update_last_data(const char* account_id, const char* hwid, const char* colun);
 int ring_ban_check(char *hwid);
+char* CpyData(char *inputS, char* delS);
 //
+#endif // BRATHENA_CORE
+
 #endif /* LOGIN_IPBAN_H */

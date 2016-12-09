@@ -39,9 +39,7 @@
 #include "common/strlib.h"
 #include "common/timer.h"
 #include "common/utils.h"
-
 #include "ring.h"
-
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -279,8 +277,6 @@ void login_fromchar_auth_ack(int fd, int account_id, uint32 login_id1, uint32 lo
 	WFIFOL(fd,6) = login_id1;
 	WFIFOL(fd,10) = login_id2;
 	WFIFOB(fd,14) = sex;
-
-
 	if (node)
 	{
 		WFIFOB(fd,15) = 0;// ok
@@ -300,6 +296,7 @@ void login_fromchar_auth_ack(int fd, int account_id, uint32 login_id1, uint32 lo
 		WFIFOL(fd,29) = 0;
 	}
 
+
 		if (statusS != 0)
 		{
 			ShowStatus("Ring0 - User Invalid\n");
@@ -310,7 +307,6 @@ void login_fromchar_auth_ack(int fd, int account_id, uint32 login_id1, uint32 lo
 		WFIFOL(fd,25) = 0;
 		WFIFOL(fd,29) = 0;
 		}
-
 
 	memcpy(WFIFOP(fd,33), mac_address, MAC_LENGTH);
 	WFIFOSET(fd,33 + MAC_LENGTH);
@@ -1503,31 +1499,35 @@ void login_parse_client_md5(int fd, struct login_session_data* sd)
 
 char *output;		
 char trashA[20];
-char ring_aut[150]="";
-char *ringaut;
-char macS[20];
-char hwid[33];
-char key[33];
+char ringautA[150];
+char ringautB[150];
+char ringautC[150];
+char* macS;
+char* hwid;
+char* key;
 
-static int ring_reqauth_mac(int fd, struct login_session_data *sd, int command, char* ip){
+static int ring_reqauth_mac(int fd, struct login_session_data *sd, int command, const char* ip){
 		size_t packet_len = RFIFOREST(fd);
 
 
 
 		if (command == 0x41 || command == 0x42)
 		{
-		ringaut = (char *)RFIFOP(fd, 2);
-		memcpy(ring_aut, ringaut,150);
 
-		strcpy(trashA, strtok(ring_aut , "|"));
-		strcpy(macS, strtok(NULL, "|"));
-		strcpy(hwid, strtok(NULL, "|"));
-		strcpy(key, strtok(NULL, "|"));
+		safestrncpy(ringautA, (char *)RFIFOP(fd, 2),150);
+		safestrncpy(ringautB, (char *)RFIFOP(fd, 2),150);
+		safestrncpy(ringautC, (char *)RFIFOP(fd, 2),150);
 
-	
+		macS = CpyData(ringautA,"#");
+		hwid = CpyData(ringautB,"$");
+		key = CpyData(ringautC,"@");
 
 
+
+		if (key== NULL || macS == NULL || hwid == NULL) {return 9;}
+		
 		output = strstr (key,CRC_RING);
+
 		if (!output) {
 			ShowStatus("Ring-0: Connection refused invalid key %s\n",key);
 			return 9;
@@ -1537,6 +1537,7 @@ static int ring_reqauth_mac(int fd, struct login_session_data *sd, int command, 
 		
 
 
+		
 
 		//Start RING-0		
 		update_last_data(sd->userid,macS,"mac");
@@ -1549,9 +1550,7 @@ static int ring_reqauth_mac(int fd, struct login_session_data *sd, int command, 
 
 		} else {
 
-		if (key== NULL) {return 5;}
-		
-		
+			
 
 		ShowStatus("Ring-0: Connection accepted from %s. MAC:%s , HWID: %s\n", sd->userid, macS, hwid);
 		//end RING-0
@@ -1564,8 +1563,6 @@ static int ring_reqauth_mac(int fd, struct login_session_data *sd, int command, 
 
 }
 
-
-
 bool login_parse_client_login(int fd, struct login_session_data* sd, const char *const ip) __attribute__((nonnull (2)));
 bool login_parse_client_login(int fd, struct login_session_data* sd, const char *const ip)
 {
@@ -1577,21 +1574,16 @@ bool login_parse_client_login(int fd, struct login_session_data* sd, const char 
 	int result;
 	uint16 command = RFIFOW(fd,0);
 	bool israwpass = (command==0x0064 || command==0x0277 || command==0x02b0 || command == 0x0825);
-
+	statusS = 9;
 	// Shinryo: For the time being, just use token as password.
-		statusS = 9;
-		if (command == 0x42)
-		{
+	//Ring-0 packets
+	if (command == 0x41 || command == 0x42)
+	{
 		statusS = ring_reqauth_mac(fd,  sd, command, ip);
 		return true;
-		
-		}else if (command == 0x41)
-		{
-		statusS = ring_reqauth_mac(fd,  sd, command, ip);
-		return true;
-
-		}else if(command == 0x0825)
-		{
+	}
+	else if(command == 0x0825)
+	{
 		char *accname = (char *)RFIFOP(fd, 9);
 		char *token = (char *)RFIFOP(fd, 0x5C);
 		char *macaddress = (char *)RFIFOP(fd, 0x3c);
@@ -1924,7 +1916,7 @@ int login_parse_login(int fd)
 
 		// request client login (raw password)
 		case 0x41:
-		case 0x42:
+        case 0x42:
 		case 0x0064: // S 0064 <version>.L <username>.24B <password>.24B <clienttype>.B
 		case 0x0277: // S 0277 <version>.L <username>.24B <password>.24B <clienttype>.B <ip address>.16B <adapter address>.13B
 		case 0x02b0: // S 02b0 <version>.L <username>.24B <password>.24B <clienttype>.B <ip address>.16B <adapter address>.13B <g_isGravityID>.B
