@@ -171,7 +171,7 @@ alberta,189,151,5	script	Marinheiro#alb	4W_SAILOR,{
 			if(RENEWAL)
 				warp "izlude",195,212;
 			else
-				warp "izlude",176,182;
+				warp "izlude",195,212;
 			end;
 		case 3:
 			mes "[Marinheiro]";
