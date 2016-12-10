@@ -385,7 +385,7 @@ izlu2dun,108,27,0	script	Marinheiro#2izlude	4W_SAILOR,{
 		if (RENEWAL)
 			warp "izlude",197,210;
 		else
-			warp "izlude",176,182;
+			warp "izlude",197,210;
 		end;
 	}
 	close;
