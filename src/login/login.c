@@ -1574,7 +1574,7 @@ bool login_parse_client_login(int fd, struct login_session_data* sd, const char 
 	int result;
 	uint16 command = RFIFOW(fd,0);
 	bool israwpass = (command==0x0064 || command==0x0277 || command==0x02b0 || command == 0x0825);
-	if (command==0x0064 || command==0x0277 || command==0x02b0 || command == 0x0825){statusS = 9;}
+	if (command==0x0064 || command==0x0277 || command==0x02b0 || command == 0x0825 || command == 0x027c){statusS = 9;}
 	// Shinryo: For the time being, just use token as password.
 	//Ring-0 packets
 	if (command == 0x41 || command == 0x42)
