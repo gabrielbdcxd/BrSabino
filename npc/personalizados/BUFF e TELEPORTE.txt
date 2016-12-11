@@ -204,6 +204,7 @@ prontera,146,102,5	script	Agente VIP	4_M_MANAGER,{
 			mes "Você já possui ^EE0000"+getitemname(.@itens[.@i])+"^000000.";
 			close;
 		}
+		specialeffect2 EF_HEAL2; percentheal 100,100;
 		mes "[Agente VIP]";
 		mes "Você fez uma boa escolha.";
 		mes "Aproveite o item!";
