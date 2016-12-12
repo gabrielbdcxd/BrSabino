@@ -3793,7 +3793,7 @@ OnTouch:
 
 ra_temple,116,174,3	script	Nemma#ra_temple	4_F_TRAINEE,{
 	cutin "ra_nemma02",2;
-	if ($rachel_donate < 10000) {
+	if ($rachel_donate < 1) {
 		if (ra_have_donated == 0) {
 			cutin "ra_nemma03",2;
 			mes "[Priestess Nemma]";
