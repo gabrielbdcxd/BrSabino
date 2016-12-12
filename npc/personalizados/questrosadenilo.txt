@@ -1,0 +1,70 @@
+//=============================================
+//== Cronus Tools :: Gerador de Quest's =======
+//== Versão: ==================================
+//== 1.0
+//== Autor: ===================================
+//== RoM
+//=============================================
+prontera,128,209,6	script	Joaquim	54,{
+	mes "[Joaquim]";
+	mes "Olá "+strcharinfo(0)+"!";
+	mes "Eu tenho alguns itens interessantes aqui, deseja dar uma olhada?";
+	next;
+	if( select("Claro!:Talvez mais tarde...") == 2 )
+	{
+		mes "[Joaquim]";
+		mes "Tudo bem, estarei aqui se você mudar de idéia.";
+		close;
+	}
+	mes "[Joaquim]";
+	mes "Bem, estes são os itens que eu tenho...";
+	mes "Sobre qual deles vai querer saber mais?";
+	next;
+	switch(select("Rosa de Nilo:Nenhum"))
+	{
+	case 1:
+		mes "[Rosa de Nilo]";
+		mes "Recompensa:";
+		mes "1x "+getitemname(2647);
+		mes " ";
+		mes "Requerimento:";
+		mes "1x "+getitemname(2627);
+		mes "30x "+getitemname(984);
+		mes "30x "+getitemname(985);
+		mes "30x "+getitemname(7126);
+		mes "30x "+getitemname(909);
+		mes "550000 Zenys";
+		next;
+		mes "[Joaquim]";
+		mes "Deseja fazer esta quest?";
+		next;
+		if( select("Sim!:Agora não...") == 2 )
+		{
+			mes "[Joaquim]";
+			mes "Tudo bem... Até mais!";
+			close;
+		}
+		if(countitem(2627) >= 1 && countitem(984) >= 30 && countitem(985) >= 30 && countitem(7126) >= 30 && countitem(909) >= 30 && Zeny >= 550000)
+		{
+			delitem 2627,1;
+			delitem 984,30;
+			delitem 985,30;
+			delitem 7126,30;
+			delitem 909,30;
+			set Zeny,Zeny-550000;
+			getitem 2647,1;
+			mes "[Joaquim]";
+			mes "Parabéns! Aqui está!";
+			close;
+		}
+		break;
+	case 2:
+		mes "[Joaquim]";
+		mes "Tudo bem, estarei aqui se você mudar de idéia.";
+		close;
+	}
+	mes "[Joaquim]";
+	mes "Me desculpe, mas você não tem todos os itens necessários para esta quest.";
+	mes "Volte quando você tiver todos os itens!";
+	close;
+	}
