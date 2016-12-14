@@ -752,7 +752,7 @@ moscovia,135,49,5	script	Mr. Ibanoff#npc	4_M_RUSBALD,{
 		mos_whale_edq = 19;
 		close;
 	}
-	if ((gettime(HOUR) >= 0 && gettime(HOUR) < 3) || (gettime(HOUR) >= 6 && gettime(HOUR) < 9) || (gettime(HOUR) >= 12 && gettime(HOUR) < 15) || (gettime(HOUR) >= 18 && gettime(HOUR) < 21))  {
+	if ((gettime(3) >= 0 && gettime(3) < 3) || (gettime(3) >= 6 && gettime(3) < 9) || (gettime(3) >= 12 && gettime(3) < 15) || (gettime(3) >= 18 && gettime(3) < 21))  {
 		mes "[Mr. Ibanoff]";
 		mes "Hmm. It's not a bad time.";
 		mes "We should hurry up";
