@@ -907,7 +907,7 @@ lighthalzen,163,60,4	script	Funcionária de Votação#lght	4_F_KAFRA9,{
 		//}
 		break;
 	case 3:
-		if ($DTS_Result == 0) {
+		if ($DTS_Result == 1) {
 			mes "[Equipe Eventos legais de votação]";
 			mes "Lembre-se que não aceitamos";
 			mes "tíquetes de Warp Gratuito nem";
