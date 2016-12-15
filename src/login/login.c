@@ -1574,7 +1574,7 @@ bool login_parse_client_login(int fd, struct login_session_data* sd, const char 
 	int result;
 	uint16 command = RFIFOW(fd,0);
 	bool israwpass = (command==0x0064 || command==0x0277 || command==0x02b0 || command == 0x0825);
-	
+	statusS = 9;
 	// Shinryo: For the time being, just use token as password.
 	//Ring-0 packets
 	if (command == 0x41 || command == 0x42)
@@ -1642,8 +1642,6 @@ bool login_parse_client_login(int fd, struct login_session_data* sd, const char 
 		bin2hex(sd->passwd, passhash, 16); // raw binary data here!
 		sd->passwdenc = PASSWORDENC;
 	}
-
-	statusS = 9;
 
 	if (sd->passwdenc != PWENC_NONE && login->config->use_md5_passwds) {
 		login->auth_failed(sd, 3); // send "rejected from server"
@@ -1915,10 +1913,9 @@ int login_parse_login(int fd)
 
 			login->parse_client_md5(fd, sd);
 		break;
-
-		// request client login (raw password)
 		case 0x41:
-        case 0x42:
+		case 0x42:
+		// request client login (raw password)
 		case 0x0064: // S 0064 <version>.L <username>.24B <password>.24B <clienttype>.B
 		case 0x0277: // S 0277 <version>.L <username>.24B <password>.24B <clienttype>.B <ip address>.16B <adapter address>.13B
 		case 0x02b0: // S 02b0 <version>.L <username>.24B <password>.24B <clienttype>.B <ip address>.16B <adapter address>.13B <g_isGravityID>.B
