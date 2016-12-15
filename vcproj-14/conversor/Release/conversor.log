@@ -1,11 +1,16 @@
-﻿  console.c
+﻿  grammar.c
+  libconfig.c
+  scanctx.c
+  scanner.c
+  strbuf.c
   core.c
+  console.c
   memmgr.c
-  nullpo.c
   showmsg.c
   strlib.c
   sysinfo.c
   utils.c
+  nullpo.c
   conversor.c
   Generating code
   Finished generating code
