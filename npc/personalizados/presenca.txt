@@ -196,10 +196,10 @@ OnInit:
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 	// ITENS
-	setarray $@hourlyitens[0],	12208,14004,13989,12902,12922,12901;
+	setarray $@hourlyitens[0],	12208,14004,13989,12902,12922,12901,1005,714;
 								
 	// PRICE							
-	setarray $@hourlyprice[0],	15,20,20,17,17,17;
+	setarray $@hourlyprice[0],	15,20,20,17,17,17,3,5;
 
 	npcshopdelitem "shop_hourly",512;
 	if(getarraysize( $@hourlyitens) >= 1) {
