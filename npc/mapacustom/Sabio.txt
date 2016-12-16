@@ -1,5 +1,5 @@
 myscenia,208,99,4	script	Sabio	866,{
-	mes "Olá "+strcharInfo(0)+"!";
+	mes "Olá ! Jovem sejá bem vindo.";
 	mes "Minha equipe e eu estavamos estudando";
 	mes "Sobre os portais mitologicos, e descobrimos";
 	mes "um novo lugar que não se encontra nessa dimensão.";
