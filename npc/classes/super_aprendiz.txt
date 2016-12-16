@@ -332,7 +332,7 @@ aldeba_in,223,167,3	script	Tzerero#sn	4_M_SEAMAN,{
 	}
 }
 
-//aldeba_in,216,169,5	script	Esseray#sn	4_M_04,{
+aldeba_in,216,169,5	script	Esseray#sn	4_M_04,{
 	if (Class == Job_Super_Novice_E || Class == Job_Super_Baby_E) {
 		mes "[Esseray]";
 		mes "You! Stronger than before.";
