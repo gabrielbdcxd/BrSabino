@@ -1,16 +1,21 @@
 myscenia,208,99,4	script	Sabio	866,{
+	mes "[Heimdall]"; 
 	mes "Olá ! Jovem sejá bem vindo.";
-	mes "Minha equipe e eu estavamos estudando";
-	mes "Sobre os portais mitologicos, e descobrimos";
+	mes "Minha equipe e eu estavamos estudando, sobre os portais mitologicos, e descobrimos,";
 	mes "um novo lugar que não se encontra nessa dimensão.";
 	next;
-	mes "Estamos recrutando novos exploradores para";
-	mes "desbravar essa nova dimensão";
-	switch(select("Guia")){
+	mes "[Heimdall]";
+	mes "Estamos recrutando novos exploradores para, desbravar essa nova dimensão";
+	switch(select("Ir para a nova dimensão.:Ficar em Midgard")){
 		case 1:
 			mes "Até mais!";
 			close2;
 			warp "myscenia",200,82;
 			end;
+	
+		case 2:
+			close;
+			end;
 	}
+	
 }
