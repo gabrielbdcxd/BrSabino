@@ -19,3 +19,4 @@ myscenia,208,99,4	script	Sabio	866,{
 	}
 	
 }
+myscenia,199,78,0	warp	mys	2,2,izlude,90,118
