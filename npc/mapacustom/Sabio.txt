@@ -1,0 +1,16 @@
+Prontera,208,99,4	script	Sabio	866,{
+	mes "Olá "+StrCharInfo(0)+"!";
+	mes "Minha equipe e eu estavamos estudando";
+	mes "Sobre os portais mitologicos, e descobrimos";
+	mes "um novo lugar que não se encontra nessa dimensão.";
+	next;
+	mes "Estamos recrutando novos exploradores para";
+	mes "desbravar essa nova dimensão";
+	switch(select("Guia")){
+		case 1:
+			mes "Até mais!";
+			close2;
+			warp "myscenia",200,82;
+			end;
+	}
+}
