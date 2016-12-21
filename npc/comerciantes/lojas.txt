@@ -1544,6 +1544,7 @@ OnInit:
 	sellitem Banana;
 	sellitem Carrot;
 	sellitem Sweet_Potato;
+	sellitem Strawberry;
 }
 
 moscovia,199,110,3	trader	Vendor from Milk Ranch#m	4_F_RUSWOMAN1,{
