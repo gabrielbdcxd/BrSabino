@@ -691,6 +691,7 @@ int64 battle_addmastery(struct map_session_data *sd,struct block_list *target,in
 			#ifdef RENEWAL
 				if((skill_lv = pc->checkskill(sd,AM_AXEMASTERY)) > 0)
 					damage += (skill_lv * 3);
+				FALLTHROUGH
 			#endif
 		case W_DAGGER:
 			if((skill_lv = pc->checkskill(sd,SM_SWORD)) > 0)
@@ -702,7 +703,6 @@ int64 battle_addmastery(struct map_session_data *sd,struct block_list *target,in
 			#ifdef RENEWAL
 				if((skill_lv = pc->checkskill(sd,AM_AXEMASTERY)) > 0)
 					damage += (skill_lv * 3);
-				FALLTHROUGH
 			#endif
 			if((skill_lv = pc->checkskill(sd,SM_TWOHAND)) > 0)
 				damage += (skill_lv * 4);
@@ -6552,7 +6552,7 @@ int battle_check_target( struct block_list *src, struct block_list *target,int f
 						if( !map->list[m].flag.pvp && !map->list[m].flag.gvg )
 							break;
 						FALLTHROUGH
-					case 0://you can hit them without skills
+					case 0: //you can hit them without skills
 					case MA_REMOVETRAP:
 					case HT_REMOVETRAP:
 					case AC_SHOWER:
