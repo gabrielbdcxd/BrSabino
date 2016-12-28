@@ -1,0 +1,48 @@
+﻿Build started 28/12/2016 16:21:27.
+     1>Project "C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\conversor.vcxproj" on node 4 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "conversor\Release\conversor.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\src /I..\3rdparty /I..\3rdparty\zlib\include /I..\3rdparty\msinttypes\include /Zi /nologo /W3 /WX- /MP /O2 /Ob2 /Oi /Ot /Oy /GT /GL /D WIN32 /D _WIN32 /D __WIN32 /D NDEBUG /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D MINICORE /D LIBCONFIG_STATIC /D YY_USE_CONST /D _MBCS /GF /Gm- /EHsc /MT /GS /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Fo"conversor\Release\\" /Fd"conversor\Release\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt ..\3rdparty\libconfig\grammar.c ..\3rdparty\libconfig\libconfig.c ..\3rdparty\libconfig\scanctx.c ..\3rdparty\libconfig\scanner.c ..\3rdparty\libconfig\strbuf.c ..\src\common\core.c ..\src\common\console.c ..\src\common\memmgr.c ..\src\common\showmsg.c ..\src\common\strlib.c ..\src\common\sysinfo.c ..\src\common\utils.c ..\src\common\nullpo.c ..\src\tool\conversor.c
+         grammar.c
+         libconfig.c
+         scanctx.c
+         scanner.c
+         strbuf.c
+         core.c
+         console.c
+         memmgr.c
+         showmsg.c
+         strlib.c
+         sysinfo.c
+         utils.c
+         nullpo.c
+         conversor.c
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"..\conversor.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:..\3rdparty\zlib\lib libcmt.lib oldnames.lib zdll.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB /MANIFEST /ManifestFile:"conversor\Release\conversor.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"..\conversor.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE:NO /IMPLIB:"..\conversor.lib" /MACHINE:X86 conversor\Release\grammar.obj
+         conversor\Release\libconfig.obj
+         conversor\Release\scanctx.obj
+         conversor\Release\scanner.obj
+         conversor\Release\strbuf.obj
+         conversor\Release\core.obj
+         conversor\Release\console.obj
+         conversor\Release\memmgr.obj
+         conversor\Release\showmsg.obj
+         conversor\Release\strlib.obj
+         conversor\Release\sysinfo.obj
+         conversor\Release\utils.obj
+         conversor\Release\nullpo.obj
+         conversor\Release\conversor.obj
+         Generating code
+         Finished generating code
+         conversor.vcxproj -> C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\..\conversor.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"..\conversor.exe;#1" /manifest conversor\Release\conversor.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         Deleting file "conversor\Release\conversor.unsuccessfulbuild".
+         Touching "conversor\Release\conversor.lastbuildstate".
+     1>Done Building Project "C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\conversor.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:05.88
