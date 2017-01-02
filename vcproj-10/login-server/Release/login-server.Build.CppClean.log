@@ -1,54 +1,53 @@
 ..\login-server.pdb
-C:\USERS\SABINO\DOCUMENTS\EMULADORRO\SABINOBRA\TRUNK\LOGIN-SERVER.EXE
-C:\USERS\SABINO\DOCUMENTS\EMULADORRO\SABINOBRA\TRUNK\LOGIN-SERVER.PDB
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\..\login-server.exe
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\login-server\Release\account_sql.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\login-server\Release\CL.1732.read.1.tlog
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\login-server\Release\CL.1732.write.1.tlog
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\login-server\Release\CL.2296.read.1.tlog
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\login-server\Release\CL.2296.write.1.tlog
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\login-server\Release\CL.6720.read.1.tlog
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\login-server\Release\CL.6720.write.1.tlog
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\login-server\Release\CL.844.read.1.tlog
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\login-server\Release\CL.844.write.1.tlog
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\login-server\Release\cl.command.1.tlog
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\login-server\Release\CL.read.1.tlog
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\login-server\Release\cl.write.1.tlog
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\login-server\Release\conf.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\login-server\Release\console.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\login-server\Release\core.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\login-server\Release\db.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\login-server\Release\ers.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\login-server\Release\grammar.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\login-server\Release\ipban_sql.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\login-server\Release\libconfig.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\login-server\Release\link.command.1.tlog
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\login-server\Release\link.read.1.tlog
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\login-server\Release\link.write.1.tlog
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\login-server\Release\login.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\login-server\Release\loginlog_sql.obj
-C:\USERS\SABINO\DOCUMENTS\EMULADORRO\SABINOBRA\TRUNK\VCPROJ-10\LOGIN-SERVER\RELEASE\LOGIN-SERVER.EXE.INTERMEDIATE.MANIFEST
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\login-server\Release\login-server.vcxprojResolveAssemblyReference.cache
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\login-server\Release\login-server.write.1.tlog
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\login-server\Release\mac.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\login-server\Release\md5calc.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\login-server\Release\memmgr.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\login-server\Release\mt.command.1.tlog
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\login-server\Release\mt.read.1.tlog
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\login-server\Release\mt.write.1.tlog
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\login-server\Release\mt19937ar.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\login-server\Release\mutex.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\login-server\Release\nullpo.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\login-server\Release\random.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\login-server\Release\scanctx.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\login-server\Release\scanner.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\login-server\Release\showmsg.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\login-server\Release\socket.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\login-server\Release\sql.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\login-server\Release\strbuf.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\login-server\Release\strlib.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\login-server\Release\sysinfo.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\login-server\Release\thread.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\login-server\Release\timer.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\login-server\Release\utils.obj
-C:\USERS\SABINO\DOCUMENTS\EMULADORRO\SABINOBRA\TRUNK\VCPROJ-10\LOGIN-SERVER\RELEASE\VC100.PDB
+C:\USERS\SABINO\DOCUMENTS\EMULADOR RO\BRSABINO\TRUNK\LOGIN-SERVER.EXE
+C:\USERS\SABINO\DOCUMENTS\EMULADOR RO\BRSABINO\TRUNK\LOGIN-SERVER.PDB
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\..\login-server.exe
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\login-server\Release\account_sql.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\login-server\Release\CL.1960.read.1.tlog
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\login-server\Release\CL.1960.write.1.tlog
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\login-server\Release\CL.5248.read.1.tlog
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\login-server\Release\CL.5248.write.1.tlog
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\login-server\Release\CL.7484.read.1.tlog
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\login-server\Release\CL.7484.write.1.tlog
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\login-server\Release\CL.8980.read.1.tlog
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\login-server\Release\CL.8980.write.1.tlog
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\login-server\Release\cl.command.1.tlog
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\login-server\Release\CL.read.1.tlog
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\login-server\Release\cl.write.1.tlog
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\login-server\Release\conf.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\login-server\Release\console.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\login-server\Release\core.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\login-server\Release\db.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\login-server\Release\ers.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\login-server\Release\grammar.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\login-server\Release\ipban_sql.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\login-server\Release\libconfig.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\login-server\Release\link.command.1.tlog
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\login-server\Release\link.read.1.tlog
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\login-server\Release\link.write.1.tlog
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\login-server\Release\login.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\login-server\Release\loginlog_sql.obj
+C:\USERS\SABINO\DOCUMENTS\EMULADOR RO\BRSABINO\TRUNK\VCPROJ-10\LOGIN-SERVER\RELEASE\LOGIN-SERVER.EXE.INTERMEDIATE.MANIFEST
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\login-server\Release\login-server.write.1.tlog
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\login-server\Release\mac.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\login-server\Release\md5calc.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\login-server\Release\memmgr.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\login-server\Release\mt.command.1.tlog
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\login-server\Release\mt.read.1.tlog
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\login-server\Release\mt.write.1.tlog
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\login-server\Release\mt19937ar.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\login-server\Release\mutex.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\login-server\Release\nullpo.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\login-server\Release\random.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\login-server\Release\scanctx.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\login-server\Release\scanner.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\login-server\Release\showmsg.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\login-server\Release\socket.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\login-server\Release\sql.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\login-server\Release\strbuf.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\login-server\Release\strlib.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\login-server\Release\sysinfo.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\login-server\Release\thread.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\login-server\Release\timer.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\login-server\Release\utils.obj
+C:\USERS\SABINO\DOCUMENTS\EMULADOR RO\BRSABINO\TRUNK\VCPROJ-10\LOGIN-SERVER\RELEASE\VC100.PDB

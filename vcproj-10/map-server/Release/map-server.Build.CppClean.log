@@ -1,90 +1,89 @@
 ..\map-server.pdb
-C:\USERS\SABINO\DOCUMENTS\EMULADORRO\SABINOBRA\TRUNK\MAP-SERVER.EXE
-C:\USERS\SABINO\DOCUMENTS\EMULADORRO\SABINOBRA\TRUNK\MAP-SERVER.PDB
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\..\map-server.exe
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\atcommand.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\battle.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\battleground.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\buyingstore.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\channel.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\chat.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\chrif.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\CL.3992.read.1.tlog
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\CL.3992.write.1.tlog
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\CL.496.read.1.tlog
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\CL.496.write.1.tlog
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\CL.5740.read.1.tlog
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\CL.5740.write.1.tlog
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\CL.7084.read.1.tlog
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\CL.7084.write.1.tlog
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\cl.command.1.tlog
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\CL.read.1.tlog
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\cl.write.1.tlog
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\clif.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\conf.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\console.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\core.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\date.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\db.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\des.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\duel.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\elemental.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\ers.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\grammar.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\grfio.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\guild.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\homunculus.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\instance.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\intif.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\itemdb.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\libconfig.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\link.command.1.tlog
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\link.read.1.tlog
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\link.write.1.tlog
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\log.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\mail.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\map.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\mapindex.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\mapreg_sql.obj
-C:\USERS\SABINO\DOCUMENTS\EMULADORRO\SABINOBRA\TRUNK\VCPROJ-10\MAP-SERVER\RELEASE\MAP-SERVER.EXE.INTERMEDIATE.MANIFEST
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\map-server.vcxprojResolveAssemblyReference.cache
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\map-server.write.1.tlog
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\md5calc.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\memmgr.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\mercenary.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\mob.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\mt.command.1.tlog
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\mt.read.1.tlog
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\mt.write.1.tlog
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\mt19937ar.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\mutex.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\npc.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\npc_chat.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\nullpo.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\party.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\path.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\pc.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\pc_groups.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\pet.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\quest.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\random.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\scanctx.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\scanner.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\script.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\searchstore.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\showmsg.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\skill.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\socket.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\sql.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\status.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\storage.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\strbuf.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\strlib.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\sysinfo.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\thread.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\timer.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\trade.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\unit.obj
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\utils.obj
-C:\USERS\SABINO\DOCUMENTS\EMULADORRO\SABINOBRA\TRUNK\VCPROJ-10\MAP-SERVER\RELEASE\VC100.PDB
-C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server\Release\vending.obj
+C:\USERS\SABINO\DOCUMENTS\EMULADOR RO\BRSABINO\TRUNK\MAP-SERVER.EXE
+C:\USERS\SABINO\DOCUMENTS\EMULADOR RO\BRSABINO\TRUNK\MAP-SERVER.PDB
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\..\map-server.exe
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\atcommand.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\battle.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\battleground.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\buyingstore.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\channel.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\chat.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\chrif.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\CL.5832.read.1.tlog
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\CL.5832.write.1.tlog
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\CL.6960.read.1.tlog
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\CL.6960.write.1.tlog
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\CL.7840.read.1.tlog
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\CL.7840.write.1.tlog
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\CL.8728.read.1.tlog
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\CL.8728.write.1.tlog
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\cl.command.1.tlog
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\CL.read.1.tlog
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\cl.write.1.tlog
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\clif.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\conf.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\console.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\core.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\date.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\db.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\des.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\duel.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\elemental.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\ers.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\grammar.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\grfio.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\guild.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\homunculus.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\instance.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\intif.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\itemdb.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\libconfig.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\link.command.1.tlog
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\link.read.1.tlog
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\link.write.1.tlog
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\log.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\mail.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\map.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\mapindex.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\mapreg_sql.obj
+C:\USERS\SABINO\DOCUMENTS\EMULADOR RO\BRSABINO\TRUNK\VCPROJ-10\MAP-SERVER\RELEASE\MAP-SERVER.EXE.INTERMEDIATE.MANIFEST
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\map-server.write.1.tlog
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\md5calc.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\memmgr.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\mercenary.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\mob.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\mt.command.1.tlog
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\mt.read.1.tlog
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\mt.write.1.tlog
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\mt19937ar.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\mutex.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\npc.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\npc_chat.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\nullpo.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\party.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\path.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\pc.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\pc_groups.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\pet.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\quest.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\random.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\scanctx.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\scanner.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\script.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\searchstore.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\showmsg.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\skill.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\socket.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\sql.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\status.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\storage.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\strbuf.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\strlib.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\sysinfo.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\thread.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\timer.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\trade.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\unit.obj
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\utils.obj
+C:\USERS\SABINO\DOCUMENTS\EMULADOR RO\BRSABINO\TRUNK\VCPROJ-10\MAP-SERVER\RELEASE\VC100.PDB
+C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server\Release\vending.obj

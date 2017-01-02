@@ -1,5 +1,5 @@
-﻿Build started 28/12/2016 16:21:14.
-     1>Project "C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server.vcxproj" on node 3 (build target(s)).
+﻿Build started 02/01/2017 13:19:51.
+     1>Project "C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server.vcxproj" on node 3 (build target(s)).
      1>InitializeBuildStatus:
          Creating "map-server\Release\map-server.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
@@ -137,14 +137,14 @@
          "map-server\Release\vending.obj"
          Generating code
          Finished generating code
-         map-server.vcxproj -> C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\..\map-server.exe
+         map-server.vcxproj -> C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\..\map-server.exe
        Manifest:
          C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"..\map-server.exe;#1" /manifest "map-server\Release\map-server.exe.intermediate.manifest"
        FinalizeBuildStatus:
          Deleting file "map-server\Release\map-server.unsuccessfulbuild".
          Touching "map-server\Release\map-server.lastbuildstate".
-     1>Done Building Project "C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\map-server.vcxproj" (build target(s)).
+     1>Done Building Project "C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\map-server.vcxproj" (build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:46.80
+Time Elapsed 00:00:43.61

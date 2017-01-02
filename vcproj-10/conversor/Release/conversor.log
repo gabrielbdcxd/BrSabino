@@ -1,5 +1,5 @@
-﻿Build started 28/12/2016 16:21:27.
-     1>Project "C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\conversor.vcxproj" on node 4 (build target(s)).
+﻿Build started 02/01/2017 13:20:02.
+     1>Project "C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\conversor.vcxproj" on node 4 (build target(s)).
      1>InitializeBuildStatus:
          Creating "conversor\Release\conversor.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
@@ -35,14 +35,14 @@
          conversor\Release\conversor.obj
          Generating code
          Finished generating code
-         conversor.vcxproj -> C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\..\conversor.exe
+         conversor.vcxproj -> C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\..\conversor.exe
        Manifest:
          C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"..\conversor.exe;#1" /manifest conversor\Release\conversor.exe.intermediate.manifest
        FinalizeBuildStatus:
          Deleting file "conversor\Release\conversor.unsuccessfulbuild".
          Touching "conversor\Release\conversor.lastbuildstate".
-     1>Done Building Project "C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\conversor.vcxproj" (build target(s)).
+     1>Done Building Project "C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\conversor.vcxproj" (build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:05.88
+Time Elapsed 00:00:07.73

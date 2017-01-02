@@ -1,5 +1,5 @@
-﻿Build started 28/12/2016 16:21:14.
-     1>Project "C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\login-server.vcxproj" on node 4 (build target(s)).
+﻿Build started 02/01/2017 13:19:51.
+     1>Project "C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\login-server.vcxproj" on node 4 (build target(s)).
      1>InitializeBuildStatus:
          Creating "login-server\Release\login-server.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
@@ -65,14 +65,14 @@
          "login-server\Release\mt19937ar.obj"
          Generating code
          Finished generating code
-         login-server.vcxproj -> C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\..\login-server.exe
+         login-server.vcxproj -> C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\..\login-server.exe
        Manifest:
          C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"..\login-server.exe;#1" /manifest "login-server\Release\login-server.exe.intermediate.manifest"
        FinalizeBuildStatus:
          Deleting file "login-server\Release\login-server.unsuccessfulbuild".
          Touching "login-server\Release\login-server.lastbuildstate".
-     1>Done Building Project "C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\login-server.vcxproj" (build target(s)).
+     1>Done Building Project "C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\login-server.vcxproj" (build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:18.00
+Time Elapsed 00:00:10.81

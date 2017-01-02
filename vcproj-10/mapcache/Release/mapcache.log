@@ -1,5 +1,5 @@
-﻿Build started 28/12/2016 16:21:13.
-     1>Project "C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\mapcache.vcxproj" on node 2 (build target(s)).
+﻿Build started 02/01/2017 13:19:51.
+     1>Project "C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\mapcache.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "mapcache\Release\mapcache.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
@@ -31,14 +31,14 @@
          mapcache\Release\mapcache.obj
          Generating code
          Finished generating code
-         mapcache.vcxproj -> C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\..\mapcache.exe
+         mapcache.vcxproj -> C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\..\mapcache.exe
        Manifest:
          C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"..\mapcache.exe;#1" /manifest mapcache\Release\mapcache.exe.intermediate.manifest
        FinalizeBuildStatus:
          Deleting file "mapcache\Release\mapcache.unsuccessfulbuild".
          Touching "mapcache\Release\mapcache.lastbuildstate".
-     1>Done Building Project "C:\Users\Sabino\Documents\EmuladorRO\sabinobrA\trunk\vcproj-10\mapcache.vcxproj" (build target(s)).
+     1>Done Building Project "C:\Users\Sabino\Documents\Emulador RO\brSabino\trunk\vcproj-10\mapcache.vcxproj" (build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:13.92
+Time Elapsed 00:00:12.37
